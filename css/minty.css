@@ -1,4 +1,13 @@
-/* REVISED 2015-11-02 */ 
+/* TABLE OF CONTENTS
+ * 1. Overall layout: body, main
+ * 2a. header and footer for page (avoid confusion if use those elements in articles)
+ * 2b. principle <nav>s 
+ * 3. <article> and <section> 
+ * 4. Misc elements, inline and block
+ * 4b. Theme- tables
+ * 4c. Theme- forms
+ * 5. basic CSS for Prism.js generated <code> and <pre> 
+*/ 
 /* SECTION: OVERALL LAYOUT ................................................. */
 
 body {
@@ -14,37 +23,47 @@ body {
     font-family: Candara, Tahoma, Geneva, "Open Sans", Sans-Serif;
     font-size: 1.1em;
     line-height: 1.4em;
-    margin: 0 auto;
-}
-
-header {
-    background-color: white;
-    box-shadow: 0px 6px 4px rgba(60,60,60,.5);
-    margin-bottom: 1em;
-    text-align: center;
-    z-index: 2;
+    margin: 0;
 }
 
 main {
     margin: 0 auto;
     max-width: 800px;
+    /* No fancy flex here, just plain old 2010 web 2.0 style centering */
 }
 
-footer {
+/* HEADER AND FOOTER ------------------------------------------------------- */
+
+/* Using flex for layout, is mostly working, except IE11 smaller than ~450px  
+ * wide it just falls to bits. Suggested fixes do nothing. Since big works and 
+ * barely used on phones will just put on bug list. 
+*/
+
+.page-header {
     background-color: white;
-    margin-top: 1em; 
-    padding: 0.5em; 
-    /* needs padding all around or doesn't touch bottom of browser window */
+    box-shadow: 0px 6px 4px rgba(60,60,60,.5);
+    padding: .1em .5em;
+    margin-bottom: 2em;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
-/* SECTION: MISC ELEMENTS -------------------------------------------------- */
+/* Gonna make the links and search box each be pushed to the side like Twitter 
+ * This means using @media for tiny screens once more...
+*/
 
-a {
-    text-decoration: none;
+@media screen and ( max-width: 480px ) {
+    .page-header { 
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
 }
 
-a:hover {
-    text-decoration: underline;
+.page-nav {
+    flex: 1 0 0%;
 }
 
 /* needed some spacing */
@@ -59,45 +78,28 @@ nav a {
     margin: 0 auto;
 }
 
-blockquote {
-    border-left: 1px solid rgb(176, 148, 127);
-    border-top:  1px solid rgb(176, 148, 127);
-    margin: 0;
-    padding-left: 0.333em;
+/* SEARCH FORM - double check basic form styles down below */
+
+/* a bit of extra code but using flex squishes the form and button together */
+.search-form {
+    display: flex;
 }
 
-h1, h2, h3, h4, h5, h6{
-    font-family: Cambria, Georgia, Palatino, serif;
+.search-box {
+    flex: 1 0 200px;
 }
 
-ul, ol {
-    background-color: rgb(245, 240, 220);
-    border: 1px solid rgb(176, 148, 127);
-    padding: 0.5em 0;
+.search-button{
+    border: 1px solid rgb(176,224,230);
+    border-radius: 0 10px 10px 0;
 }
 
-ol {
-    list-style-position: inside;
-}
 
-ul li {
-    list-style-type: none;
-}
-
-ul li:before {
-    content: "\2744"; /* special snowflake */
-}
-
-.bubble {
+.page-footer {
     background-color: white;
-    border-radius: 12px;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.5);
-}
-
-/* want this to be standalone */
-video {
-    display: block; 
-    margin: 1em 0;
+    margin-top: 1em; 
+    padding: 0.5em; 
+    /* needs padding all around or doesn't touch bottom of browser window */
 }
 
 
@@ -105,17 +107,32 @@ video {
  * ARTICLE RELATED
  */
 
+article {
+    margin-bottom: 2em;
+}
+
+/*  .post functions as a row */
 .post {
     display: flex;
     align-items: flex-start;
 }
 
+/* set up so small screens will have icon on top instead of side- i.e. they'll
+ * stack like plain old css boxes.
+*/
+@media screen and ( max-width: 480px ) {
+    .post { 
+        flex-direction: column;
+    }
+}
+
+/* the column elements */
 .post-icon {
     margin-right: .5em;
 }
 
 .post-body {
-    flex: 1;
+    flex: 1 0 0%; /* another IE fix!? It never ends! */
     background-color: white;
     border-radius: 12px;
     margin-bottom: 0.5em;
@@ -152,6 +169,70 @@ p + p {
     text-indent: 1.5em; 
 }
 
+/* SECTION: MISC ELEMENTS -------------------------------------------------- */
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+blockquote {
+    border-left: 1px solid rgb(176, 148, 127);
+    border-top:  1px solid rgb(176, 148, 127);
+    margin: 0;
+    padding-left: 0.333em;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: Cambria, Georgia, Palatino, serif;
+}
+
+/* tame any giant images so layout won't get wrecked */
+
+img {
+    max-width: 600px;
+}
+
+@media screen and ( max-width: 400px ) {
+    img {
+        max-width: 300px;
+    }
+}
+
+
+ul, ol {
+    background-color: rgb(245, 240, 220);
+    border: 1px solid rgb(176, 148, 127);
+    padding: 0.5em 0;
+}
+
+ol {
+    list-style-position: inside;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+ul li:before {
+    content: "\2744"; /* special snowflake */
+}
+
+.bubble {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.5);
+}
+
+/* want this to be standalone */
+video {
+    display: block; 
+    margin: 1em 0;
+}
+
 /* TABLES ------------------------------------------------------------------ */
 
 table{ 
@@ -159,7 +240,7 @@ table{
     margin: 12px 0;
 }
 
-tr:nth-of-type(2n) {
+tr:nth-of-type(odd) {
     background-color: rgb(245,240,222);
 }
 
@@ -167,14 +248,6 @@ tr:nth-of-type(2n) {
 
 form {
     background-color: rgb(255,255,255);
-    margin: 0 auto;
-    padding: .5em 0em;
-}
-
-/* a bit of extra code but using flex squishes the form and button together */
-.search-form {
-    display: flex;
-    max-width: 350px;
 }
 
 button {
@@ -189,15 +262,6 @@ button:hover{
 input:focus, 
 textarea:focus {
     border-color: rgb(176,224,230);
-}
-
-.search-box {
-    flex: 1;
-}
-
-.search-button{
-    border: 1px solid rgb(176,224,230);
-    border-radius: 0 10px 10px 0;
 }
 
 .submit-button{
@@ -216,7 +280,9 @@ legend{
 	font-weight: bold;
 }
 
-/** prism.js, I've stripped this to 2k. ------------------------------------ */
+/* prism.js, I've stripped this to 2k. 
+ * Optional? is on site code worth the few kb? 
+---------------------------------------------------------------------------- */
 
 code[class*="language-"],
 pre[class*="language-"] {

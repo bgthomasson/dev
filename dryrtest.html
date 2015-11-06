@@ -8,13 +8,14 @@
     <link rel="stylesheet" media="all" href="css/minty.css" />
 </head>
 <body>
-<header>
-    <nav>
-        <a href="jstest.html"><h1 class="nomen">dryr</h1></a>
+<header class="page-header">
+    <nav class="page-nav">
+        <a href="#"><h1 class="nomen">dryr</h1></a>
         <a href="#">&#x270d; Post</a> 
         <a href="#">&#x272a; Your Page</a> 
         <a href="#">&#x2709; Messages</a> 
         <a href="#">&#x21af; Settings</a> 
+        <a href="#">&#x2205; Log out</a>
     </nav>
     <form name="searchform" class="search-form" method="POST" action="search.php">
         <input type="search" name="searchbox" class="search-box" placeholder="Search Dryr" />
@@ -24,19 +25,32 @@
 </header>
 
 <main>
+
 <article class="post">
-<a href="/userpage"><img src="img/summer-11.png" alt="usericon" class="post-icon" /></a>
+<div class="post-icon">
+    <a href="/userpage">
+    <img src="img/summer-11.png" alt="usericon" />
+    </a>
+</div>
+
 <section class="post-body">
     <section class="post-content">
     <h2>Some Content</h2>
     <p>
-        Baseline targets: IE11, FF38, Chrome 40, Safari 8, Android 4
+        Baseline targets: IE11 (Windows 7), FF38 (long term release), 
+        Chrome 40 (nice round number), Safari 8, Android 4
+    </p>
+    
+    <p>
+    Keep the main menu w/ very few items and slim like it is now, but for 
+    -search- have drop down options of tags, usernames, etc? At least on 
+    results page have all sorts of links to help dig around. 
     </p>
 
     <ul>
         <li>AJAX- emote buttons</li>
         <li>When click emote buttons, their bgcolor should change.</li>
-        <li>CSS split into modules on dev end but recombined into 1 file on production end</li>
+        <li>CSS split into modules on dev end but recombined into 1 to min/gzip etc</li>
     </ul>
     
     <ol>
@@ -47,47 +61,35 @@
     
     <blockquote>
         <p>Use BABEL to transpile ES6 to ES5.</p>
-        <blockquote><p>use SASS on CSS.</p></blockquote>
+        <blockquote>
+            <p>use SASS on CSS.</p>
+        </blockquote>
     </blockquote>
-
-    <p>
-    <audio id="clank" controls="controls">
-        <source src="audio/clank.ogg">
-        <source src="audio/clank.mp3">
-	</audio>
-    </p>
-
-    <video controls preload="none" poster="img/mickey-mouse-stencil-240x240.jpg">
-        <source src="http://v2v.cc/~j/theora_testsuite/320x240.ogg" type="video/webm" >
-        <source src="/video/zombies.mp4" type="video/mp4">
-    </video>
-
     
     <table>
         <tr>
-            <th>Name</th>
+            <th>Pet</th>
             <th>Birthday</th>
             <th>Age</th>
             <th>Days old</th>
-            
         </tr>
         <tr>
-            <td>Bennu</td>
-            <td>April 14, 1980</td>
-            <td>35</td>
-            <td>13,000</td>
+            <td>Cat</td>
+            <td>October 2000</td>
+            <td>15</td>
+            <td>5400</td>
         </tr>
         <tr>
-            <td>Yata</td>
-            <td>August 7, 1981</td>
-            <td>34</td>
-            <td>12,600</td>
-        </tr>
-        <tr>
-            <td>Vasanta</td>
-            <td>April 3, 2010</td>
+            <td>Dog</td>
+            <td>August 2010</td>
             <td>5</td>
-            <td>1,900</td>
+            <td>1650</td>
+        </tr>
+        <tr>
+            <td>Hamster</td>
+            <td>April 3, 2014</td>
+            <td>1</td>
+            <td>550</td>
         </tr>
     </table>
     
@@ -105,8 +107,42 @@
 </section>
 </article>
 
+
 <article class="post">
-    <img src="img/summer-13.png" alt="usericon" class="post-icon" />
+<section class="post-icon">
+    <a href="/userpage">
+    <img src="img/summer-11.png" alt="usericon" />
+    </a>
+</section>
+<section class="post-body">
+    <section class="post-content">
+    <h2>My cool drawing</h2>
+    <a href="http://imgur.com/usI1TR9"><img src="http://i.imgur.com/usI1TR9.jpg" title="source: imgur.com" /></a>
+    <p>
+    For an actual website there would be thumbnails with a predetermined size. 
+    Doing perfect mixed multimedia should be number one on to-do list. 
+    Also note FF expands the content container around the image but Chrome doesn't. 
+    </p>
+    
+    </section>
+    <section class="post-tags">
+        <p><a href="#">#testing</a></p>
+    </section>
+    <section class="post-controls">
+        <button type="button">&#x21bb; Reblog</button>
+        <button type="button">&#x2714; Like</button>
+        <button type="button">&#x2764; Sympathy</button>
+        <button type="button">&#x2718; Disagree</button>
+    </section>
+    
+</section>
+</article>
+
+<article class="post">
+    <div class="post-icon">
+    <img src="img/summer-13.png" alt="usericon" />
+    </div>
+    
     <section class="post-body">
     
     <section class="post-content">
@@ -146,12 +182,16 @@
 
 </main>
 
-<footer>
+<footer class="page-footer">
+    <nav>
+        <a href="#">Help</a>
+        <a href="#">Bug bounty</a>
+        <a href="#">TOS</a>
+    </nav>
     <p>
-    All code is under the MIT license unless otherwise noted. &#169; &#8492; 
-    Uses <a href="http://prismjs.com/index.html">Prism</a> to make code samples pretty. 
-    Uses Pikaday for the javascript date picker. 
-    Various bits of CSS borrowed as noted in dev logs. 
+    Never sell out. Monetization is a dirty word. I got bills to pay and dragons to lay. 
+    We're in this together. This is the revolution. Where's my jetpack? 
+    Don't become Tumblr. Back in -my- day MTV|G4|History|Discovery was GOOD.
     </p>
 </footer>
 <!-- JAVASCRIPT AREA ..................................................... -->

@@ -1,6 +1,7 @@
 
 body {
     background-color: rgb(64,16,0);
+    background: linear-gradient(rgb(64,16,0) 10%, rgb(243,134,48) 90%);
 	font-family: Candara, Tahoma, Geneva, Sans-Serif;
 	font-size: 1em;
 	line-height: 1.3em;

@@ -1,0 +1,25 @@
+BUG LIST ---------------------------------------------------------------------|
+
+HI: modern browsers (as of 2015)
+LO: obscure Linux stuff, IE8/9/10, etc
+NO: IE6 etc. 
+
+1. FLEXBOX
+A. Not available in older browsers 
+Suggested fix: some fallback CSS to keep it usable, low level to-do list
+Also add in -webkit versions?
+Cynical fix: for those at work, a link to download portable firefox! 
+that's still a thing right? Oh it is! 
+http://portableapps.com/apps/internet/firefox_portable
+
+
+B. Not a final version as of 2015, so may have some odd behavior
+Suggested fix: wait for complaints so know what to fix...
+bug hunting bounty??? 
+
+
+C. IE 11 misplaces everything when the browser is shrunk below 500px, even when 
+try some of this- https://github.com/philipwalton/flexbugs
+Suggested fix: ??? I don't have time for this! 
+Cynical fix: hope nobody notices??
+
