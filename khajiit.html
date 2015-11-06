@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en-US"> 
+<head>
+    <meta charset="utf-8" />
+    <title>Khajiit Character Generator</title>
+    <link rel="stylesheet" media="all" href="css/khajiit.css" />
+</head>
+<body>
+
+<main>
+
+<form name="kcg">
+
+<h1>Khajiit Character Generator for PNP</h1>
+
+<fieldset>
+<label for="charname">Name </label>
+<input type="text" name="charname" size="26" />
+
+<label for="charage">Age </label>
+<input type="text" name="charage" size="8" />
+
+<label for="chargend">Gender </label>
+<input type="text" name="chargend" size="8" />
+</fieldset>
+
+<fieldset>
+<legend>Role</legend>
+
+<label for="magic">
+<input type="radio" name="role" id="magic" value="magic" /> 
+Magic: +10 Wisdom, +50 magicka, +10 all magic skills
+</label>
+
+<label for="combat">
+<input type="radio" name="role" id="combat" value="combat" /> 
+Combat: +10 Strength, +50 health, +10 all combat skills
+</label>
+
+<label for="stealth">
+<input type="radio" name="role" id="stealth" value="stealth" /> 
+Stealth: +10 Agility, +50 stamina, +10 all stealth skills
+</label>
+
+<label for="craft">
+<input type="radio" name="role" id="craft" value="craft" /> 
+Craft: +10 Intelligence, +10 Luck, +10 all craft skills
+</label>
+
+</fieldset>
+
+<fieldset>
+<legend>Morph</legend>
+<label for="ohmes"><input type="radio" name="morph" id="ohmes" value="ohmes" /> 
+<abbr title="Elven, only slightly fuzzy">Ohmes</abbr>: +5 charisma, -5 strength, +10 Disguise
+</label>
+
+<label for="dagi"><input type="radio" name="morph" id="dagi" value="dagi" /> 
+<abbr title="pymgy cat-person">Dagi</abbr>: +10 wisdom, -10 strength, +10 magicka, +10 sneak
+</label>
+
+<label for="suthay"><input type="radio" name="morph" id="suthay" value="suthay" /> 
+<abbr title="average size cat-person">Suthay</abbr>: (base stats)
+</label>
+
+<label for="cathay"><input type="radio" name="morph" id="cathay" value="cathay" /> 
+<abbr title="tall cat-person">Cathay</abbr>: +5 strength, -5 agility, +10 stamina
+</label>
+
+<label for="alfiq"><input type="radio" name="morph" id="alfiq" value="alfiq" /> 
+<abbr title="house cat sized quadruped cat">Alfiq</abbr>: +10 agility, -10 strength, 
++5 Unarmed, +10 Sneak, 0 in all hand skills
+</label>
+
+<label for="pahmar"><input type="radio" name="morph" id="pahmar" value="pahmar" /> 
+<abbr title="jaguar sized quadruped cat">Pahmar</abbr>: +5 strength, +10 Unarmed, 
++10 speed, 0 in all hand skills
+</label>
+
+<label for="senche"><input type="radio" name="morph" id="senche" value="senche" /> 
+<abbr title="tiger sized quadruped cat">Senche</abbr>: +10 strength, -10 agility, 
++15 Unarmed, +10 health, 0 in all hand skills
+</label>
+
+</fieldset>
+
+<button type="button" name="kcg-btn" onclick="generateCharacterSheet(this.kcg);">
+Create your character!
+</button>
+</form>
+
+
+<div class="row">
+<article class="col">
+<h2>Khajiit subspecies</h2>
+<p>
+For obvious reasons all quadrupeds have zero skills in those that require 
+opposable thumbs- Archery, Handcraft, One Handed, Two Handed, Smith. 
+They can learn some alchemy from eating ingredients.
+To make up for the lack of weapons, quads have 
+higher Unarmed skill, as well as a bite attack. 
+It is also worth noting that they do wear clothing, although obviously it 
+requires some help to put on. 
+</p>
+
+<p>
+Ohmes resemble Bosmer or even Altmer (aside from the tail!) and so can 
+disguise themselves more easily, unless they have unique tattoos. 
+Being less bestial, they have more charisma to man and mer, but are shorter 
+than average (about 5 feet) and thus less strong. 
+An Ohmes character's back story is inclined to include diplomacy amongst men 
+and mer, whether politics or espionage. 
+</p>
+
+<p>
+Dagi are small (3 to 4 feet) and light, live in the jungle treetops, and are 
+magically inclined. 
+A Dagi character is suited best to stealth magic and unconventional tactics. 
+Due to the heat and humidity of their home, natives of Tengmar Forest are 
+habitually scantily dressed, which scandalizes conservative desert dwellers.
+</p>
+
+<p>
+Suthay are the common cat-men seen in Morrowind, and thus have base stats. 
+They are inclined to be rogues, rangers, and other light to medium styles. 
+</p>
+
+<p>
+Cathay are similar to Suthay, only larger(6-7 feet) and thus more inclined to 
+mixing heavier tactics in with guerrilla styles. 
+</p>
+
+<p>
+Alfiq appear to be house cats. Apparently they cannot speak normally, but 
+are reputed to have magical abilities and be used as spies and saboteurs. 
+</p>
+
+<p>
+Pahmar are jaguar sized, swift and vicious. They are best suited to stealth 
+kills, especially in forests where they can drag the victims into the trees. 
+</p>
+
+<p>
+Senche are tiger sized, 800 pounds when full grown, and serve as tanks and 
+intelligent battlemounts. 
+They are most effective against lightly armed and armored opponents who are 
+easy to maul and trample while the Senche riders shoot and spear. 
+</p>
+
+<p>
+For further explanation of the various kinds of Khajiit, 
+<a href="http://www.uesp.net/wiki/Lore:Khajiit">see this page for details.</a>
+</p>
+
+</article>
+
+<article class="col">
+
+<h3>Mage</h3>
+<ul>
+<li>Alteration manipulates the laws of nature and physical objects.</li>
+<li>Conjuration summons creatures and equipment from other planes.</li>
+<li>Destruction damages attributes.</li>
+<li>Enchantment binds the energy of living beings to objects.</li>
+<li>Illusion alters perception.</li>
+<li>Restoration restores attributes.</li>
+</ul>
+
+<h3>Warrior</h3>
+<ul>
+<li>Archery: bows, crossbows, darts, blowguns</li>
+<li>Block: use of shields</li>
+<li>Heavy Armor: obvious</li>
+<li>One Handed: daggers, axes, and other smaller weapons</li>
+<li>Two Handed: broadswords, warhammers, spears, etc.</li>
+<li>Unarmed: the use of fists and feet</li>
+</ul>
+
+<h3>Rogue</h3>
+<ul>
+<li>Acrobatics: jumping, running, climbing</li>
+<li>Disguise: the ability to maintain a false identity</li>
+<li>Light Armor: obvious</li>
+<li>Fraud: blackmail, forgery, embezzlement, insider trading</li>
+<li>Security: lockpicking, escaping</li>
+<li>Sneak: stealth, sleight of hand, pickpocket</li>
+</ul>
+
+<h3>Peasant</h3>
+<ul>
+<li>Alchemy</li>
+<li>Speech: barter, persuade</li>
+<li>Linguistics: how well you learn new languages</li>
+<li>Handcraft: working in mundane materials like wood, clay, cloth</li>
+<li>Perform: singing, dancing, erotic</li>
+<li>Smith: working with metals</li>
+</ul>
+
+</article>
+
+</div>
+
+
+<table>
+<caption>Attributes: Level 1 defaults</caption>
+<tr>
+	<td>Health</td>
+	<td>Magicka</td>
+	<td>Stamina</td>
+    <td>Speed</td>
+</tr>
+<tr>
+	<td>100</td>
+	<td>50</td>
+	<td>150</td>
+    <td>30</td>
+</tr>
+<tr>
+	<td>Strength</td>
+	<td>Wisdom</td>
+	<td>Endurance</td>
+	<td>Charisma</td>
+	<td>Intelligence</td>
+	<td>Agility</td>
+	<td>Luck</td>
+</tr>
+<tr>
+	<td>35</td>
+	<td>30</td>
+	<td>35</td>
+	<td>40</td>
+	<td>40</td>
+	<td>50</td>
+	<td>40</td>
+</tr>
+</table>
+
+<table>
+<caption>Skills: Level 1 defaults</caption>
+<tr>
+	<td>Alteration</td>
+	<td>Conjuration</td>
+	<td>Destruction</td>
+	<td>Illusion</td>
+	<td>Restoration</td>
+	<td>Enchantment</td>
+</tr>
+<tr>
+	<td>10</td>
+	<td>10</td>
+	<td>10</td>
+	<td>10</td>
+	<td>10</td>
+	<td>10</td>
+</tr>
+
+<tr>
+	<td>Archery</td>
+	<td>Block</td>
+	<td>Heavy Armor</td>
+	<td>One handed</td>
+	<td>Two Handed</td>
+	<td>Unarmed</td>
+</tr>
+<tr>
+	<td>10</td>
+	<td>10</td>
+	<td>10</td>
+	<td>10</td>
+	<td>10</td>
+	<td>15</td>
+</tr>
+
+<tr>
+	<td>Acrobatics</td>
+	<td>Disguise</td>
+	<td>Light Armor</td>
+	<td>Fraud</td>
+	<td>Security</td>
+	<td>Sneak</td>
+</tr>
+<tr>
+	<td>25</td>
+	<td>10</td>
+	<td>15</td>
+	<td>10</td>
+	<td>15</td>
+	<td>20</td>
+</tr>
+
+<tr>
+	<td>Alchemy</td>
+	<td>Speech</td>
+	<td>Language</td>
+	<td>Handcraft</td>
+	<td>Perform</td>
+	<td>Smith</td>
+</tr>
+<tr>
+	<td>10</td>
+	<td>10</td>
+	<td>15</td>
+	<td>20</td>
+	<td>10</td>
+	<td>10</td>
+</tr>
+</table>
+
+<article>
+<p>
+Note this is my own mix of all TES games, with some of my own added in. 
+Legal disclaimer about being unsanctioned homebrew, copyright, etc. 
+</p>
+<p>
+I'm not sure how to handle Speed, do like DND? Also, should health/magic/stamina 
+be on 100 point system like all other attributes?? would require total rewrite!!! 
+</p>
+
+</article>
+
+</main>
+
+<script type="text/javascript" src="js/kcg.js"></script>
+</body>
+</html>

@@ -1,0 +1,340 @@
+/* REVISED 2015-11-02 */ 
+/* SECTION: OVERALL LAYOUT ................................................. */
+
+body {
+        /* http://lea.verou.me/css3patterns/ */
+    background-color: rgb(143,188,143); /* DarkSeaGreen */
+    background-image: 
+        linear-gradient(90deg, rgba(190,235,190,.07) 50%, transparent 50%),
+        linear-gradient(90deg, rgba(153,198,153,.13) 50%, transparent 50%),
+        linear-gradient(90deg, transparent 50%, rgba(128,163,128,.17) 50%),
+        linear-gradient(90deg, transparent 50%, rgba(190,235,190,.19) 50%);
+    background-size: 13px, 29px, 37px, 53px;
+    
+    font-family: Candara, Tahoma, Geneva, "Open Sans", Sans-Serif;
+    font-size: 1.1em;
+    line-height: 1.4em;
+    margin: 0 auto;
+}
+
+header {
+    background-color: white;
+    box-shadow: 0px 6px 4px rgba(60,60,60,.5);
+    margin-bottom: 1em;
+    text-align: center;
+    z-index: 2;
+}
+
+main {
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+footer {
+    background-color: white;
+    margin-top: 1em; 
+    padding: 0.5em; 
+    /* needs padding all around or doesn't touch bottom of browser window */
+}
+
+/* SECTION: MISC ELEMENTS -------------------------------------------------- */
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* needed some spacing */
+nav a {
+    color: black;
+    padding: 0 .2em;
+}
+
+/* want the h1 for SEO/access but w/out using too much space... */
+.nomen {
+    display: inline;
+    margin: 0 auto;
+}
+
+blockquote {
+    border-left: 1px solid rgb(176, 148, 127);
+    border-top:  1px solid rgb(176, 148, 127);
+    margin: 0;
+    padding-left: 0.333em;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: Cambria, Georgia, Palatino, serif;
+}
+
+ul, ol {
+    background-color: rgb(245, 240, 220);
+    border: 1px solid rgb(176, 148, 127);
+    padding: 0.5em 0;
+}
+
+ol {
+    list-style-position: inside;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+ul li:before {
+    content: "\2744"; /* special snowflake */
+}
+
+.bubble {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.5);
+}
+
+/* want this to be standalone */
+video {
+    display: block; 
+    margin: 1em 0;
+}
+
+
+/* ----------------------------------------------------------------------------
+ * ARTICLE RELATED
+ */
+
+.post {
+    display: flex;
+    align-items: flex-start;
+}
+
+.post-icon {
+    margin-right: .5em;
+}
+
+.post-body {
+    flex: 1;
+    background-color: white;
+    border-radius: 12px;
+    margin-bottom: 0.5em;
+    padding: 0.5em 1em;
+}
+
+/* the strip under posts with save, like, reblog, etc */
+.post-controls, 
+.post-tags {
+    border-top: 1px solid rgb(176, 148, 127); 
+    font-size: 0.9em;
+}
+
+.post-tags a {
+    color: rgb(112,128,144);
+    padding: 0 .2em;
+}
+
+.activated {
+    background-color: rgb(224,245,255);
+    color: black;
+}
+
+/* For first paragraph in serious news/thoughtful story, larger font to grab 
+ * readers and pull in. 
+ */ 
+.leader {
+    font-size: 1.2em;
+}
+
+/* make all paragraphs after first be indented, oldschool printing style */
+
+p + p {
+    text-indent: 1.5em; 
+}
+
+/* TABLES ------------------------------------------------------------------ */
+
+table{ 
+    border: 1px solid rgb(176,148,127);
+    margin: 12px 0;
+}
+
+tr:nth-of-type(2n) {
+    background-color: rgb(245,240,222);
+}
+
+/* SECTION: FORM ELEMENTS -------------------------------------------------- */
+
+form {
+    background-color: rgb(255,255,255);
+    margin: 0 auto;
+    padding: .5em 0em;
+}
+
+/* a bit of extra code but using flex squishes the form and button together */
+.search-form {
+    display: flex;
+    max-width: 350px;
+}
+
+button {
+    background-color: rgb(255,255,255);
+    border: none;
+}
+
+button:hover{
+    background-color: rgb(176,224,230);
+}
+
+input:focus, 
+textarea:focus {
+    border-color: rgb(176,224,230);
+}
+
+.search-box {
+    flex: 1;
+}
+
+.search-button{
+    border: 1px solid rgb(176,224,230);
+    border-radius: 0 10px 10px 0;
+}
+
+.submit-button{
+    border: 1px solid rgb(176,224,230);
+    border-radius: 10px;
+}
+
+label {
+    display: inline-block;
+    width: 40em;
+    text-align: right;
+}
+
+legend{
+	font-size: 1.1em;
+	font-weight: bold;
+}
+
+/** prism.js, I've stripped this to 2k. ------------------------------------ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	font-family: "DejaVu Sans Mono", Consolas, Monaco, 'Andale Mono', monospace;
+	tab-size: 4;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+	background: rgb(245, 240, 220);
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+	background: rgb(245, 240, 220);
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+    border: 1px solid rgb(176, 148, 127);
+	margin: .5em 0;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #708090;
+}
+
+.token.punctuation {
+	color: #999;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol {
+	color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.builtin {
+	color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #a67f59;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+	color: #07a;
+}
+
+.token.regex,
+.token.important {
+	color: #e90;
+}
+
+.token.important {
+	font-weight: bold;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+pre.line-numbers {
+	position: relative;
+	padding-left: 3.8em;
+	counter-reset: linenumber;
+}
+
+pre.line-numbers > code {
+	position: relative;
+}
+
+.line-numbers .line-numbers-rows {
+	position: absolute;
+	pointer-events: none;
+	top: 0;
+	font-size: 100%;
+	left: -3.8em;
+	width: 3em; /* works for line-numbers below 1000 lines */
+	letter-spacing: -1px;
+	border-right: 1px solid #999;
+}
+
+.line-numbers-rows > span {
+	pointer-events: none;
+	display: block;
+	counter-increment: linenumber;
+}
+
+.line-numbers-rows > span:before {
+	content: counter(linenumber);
+	color: #999;
+	display: block;
+	padding-right: 0.8em;
+	text-align: right;
+}
+
+
+/*EOF*/

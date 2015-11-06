@@ -1,0 +1,265 @@
+/* REVISED 2015-11-02 */
+/* LAYOUT and block level elements ---------------------------------------- */
+
+body {
+	background: #deb887;
+	font-family: Candara, Tahoma, Geneva, Sans-Serif;
+    font-size: 1.1em;
+    line-height: 1.4em;
+	margin: 0 auto;
+}
+
+footer {
+	border-top: 1px dotted #333;
+}
+
+header {
+    background-color: rgb(255, 248, 230);
+	margin-bottom: 2em;
+    padding: .5em;
+    text-align: center;
+}
+
+main {
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+/* Various elements -------------------------------------------------------- */
+
+blockquote {
+    border-left: 1px solid rgb(176, 148, 127);
+    border-top:  1px solid rgb(176, 148, 127);
+    margin: 0;
+    padding-left: 0.333em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Constantia, "Palatino Linotype", Palatino, Gentium, serif;
+	margin-top: 0px;
+}
+
+ol {
+    list-style-position: inside;
+}
+
+/* for any special stuff like warnings, etc. bright red is too ominous */
+
+.bubble {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.5);
+}
+
+/* just another test of things */
+
+.ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* Hide visually and from screenreaders, but maintain layout */
+.hidden {
+    visibility: hidden;
+}
+
+/*completely hide, resist jokes about left beef and this little piggy */
+.none {
+	display: none;
+}
+
+/* a very simple multi colum set-up
+ * http://www.taniarascia.com/easiest-flex-grid-ever/
+ * see also http://philipwalton.github.io/solved-by-flexbox/demos/grids/
+ * and https://www.youtube.com/watch?v=_98SE8WUvLk
+*/
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.col {
+    flex-basis: 100%;
+}
+
+@media screen and (min-width: 800px) {
+  .col {
+    flex: 1;
+  }
+}
+
+/* this version will give auto-resizing columns. to make fixed width, 
+ * specify elements like article, aside, etc 
+ * see also- http://philipwalton.github.io/solved-by-flexbox/demos/holy-grail/
+ */
+
+.aligner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.aligner-center {
+    max-width: 50%;
+}
+
+.aligner-top {
+    align-self: flex-start;
+}
+
+/* and we can do this to replicate tumblr's icon placement on posts... 
+ * the problem with this is that it doesn't minimize well, the icon 'column' 
+ * takes up space even when shrink browser, when would prefer that it bump up
+ * or something like that.
+*/
+
+.post {
+    display: flex;
+    align-items: flex-start;
+}
+
+.post-icon {
+    margin-right: .5em;
+}
+
+.post-body {
+    flex: 1;
+    background-color: rgb(255, 250, 240);
+    border-radius: 12px;
+    margin-bottom: 0.5em;
+    padding: 0.5em 1em;
+}
+
+/* I was doing something... */
+#picturebox {
+	overflow: hidden;
+	position: absolute;
+	top: 40px;
+	left: 40px;
+	border: 5px solid #000;
+	width: 400px;
+	height: 600px;
+	cursor: move;
+}
+
+/* the section under posts with save, like, reblog, etc */
+.post-controls, 
+.post-tags {
+    border-top: 1px solid rgb(176, 148, 127); 
+    font-size: 0.9em;
+}
+
+.post-tags a {
+    color: rgb(112,128,144);
+    padding: 0 .2em;
+}
+
+.activated {
+    background-color: rgb(224,245,255);
+    color: black;
+}
+
+/* INLINE ELEMENTS --------------------------------------------------------- */
+a {
+    text-decoration: none;
+}
+
+p a {
+	border-bottom: 2px solid #029902;
+}
+
+nav a {
+    color: black;
+    padding: 0 .2em;
+}
+
+.nomen {
+    display: inline;
+    margin: 0 auto;
+}
+
+code {
+    font-family: "DejaVu Sans Mono", Consolas, Monaco, 'Andale Mono', monospace;
+}
+
+/* experimental */
+.tilt36 {
+    transform: rotate(36deg) translate(12px);
+}
+
+
+/* FORMS ------------------------------------------------------------------- 
+* https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/Styling_HTML_forms
+*/
+
+form {
+    padding: .5em 0em;
+}
+
+button, 
+input, 
+select, 
+textarea {
+    box-sizing: border-box;
+    vertical-align: baseline; 
+}
+
+button {
+    background-color: rgba(204,255,204,.5);
+    border: 1px solid rgb(176,224,230);
+    border-radius: 10px;
+    margin-top: 0.25em;
+}
+
+button:hover {
+    background-color: rgb(204,255,204);
+}
+
+input {
+    margin-bottom: 0.25em;
+}
+
+input:focus, textarea:focus {
+    background-color: rgba(204,255,204,.5);
+    outline: none;
+}
+
+label {
+    display: list-item;
+    list-style-type: none;
+}
+
+legend{
+	font-size: 1.1em;
+	font-weight: bold;
+}
+
+.button-lime {
+    background-color: rgb(176,224,230);
+	padding: 1em;
+    transition: background-color 0.5s;
+}
+
+.button-lime:hover {
+    background-color: lime;
+}
+
+
+/* TABLES ------------------------------------------------------------------ */
+
+table {
+	margin: 0 auto;
+}
+
+td, th {
+    border-bottom: 1px solid rgb(176, 148, 127); 
+}
+
+tr:hover {
+	background-color: rgb(176,224,230);
+}
+
+/*EOF*/
