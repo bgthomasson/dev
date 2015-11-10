@@ -1,8 +1,7 @@
-/* REVISED 2015-11-02 */
 /* LAYOUT and block level elements ---------------------------------------- */
 
 body {
-	background: #deb887;
+	background: #deb887; /* rgb(222,184,135)*/
 	font-family: Candara, Tahoma, Geneva, Sans-Serif;
     font-size: 1.1em;
     line-height: 1.4em;
@@ -14,7 +13,7 @@ footer {
 }
 
 header {
-    background-color: rgb(255, 248, 230);
+    background-color: #f5deb3;
 	margin-bottom: 2em;
     padding: .5em;
     text-align: center;
@@ -23,9 +22,16 @@ header {
 main {
     margin: 0 auto;
     max-width: 800px;
+    display: block; /* IE 11 fix */
 }
 
 /* Various elements -------------------------------------------------------- */
+
+article {
+    background-color: rgb(255,248,230);
+    margin-bottom: 2em;
+    padding: 1em;
+}
 
 blockquote {
     border-left: 1px solid rgb(176, 148, 127);
@@ -36,22 +42,18 @@ blockquote {
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: Constantia, "Palatino Linotype", Palatino, Gentium, serif;
-	margin-top: 0px;
+    margin-top: .25em;
 }
 
 ol {
     list-style-position: inside;
 }
 
-/* for any special stuff like warnings, etc. bright red is too ominous */
-
 .bubble {
     background-color: white;
     border-radius: 12px;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.5);
+    box-shadow: 0 1px 6px rgba(0,0,0,.5);
 }
-
-/* just another test of things */
 
 .ellipsis {
     overflow: hidden;
@@ -69,12 +71,6 @@ ol {
 	display: none;
 }
 
-/* a very simple multi colum set-up
- * http://www.taniarascia.com/easiest-flex-grid-ever/
- * see also http://philipwalton.github.io/solved-by-flexbox/demos/grids/
- * and https://www.youtube.com/watch?v=_98SE8WUvLk
-*/
-
 .row {
     display: flex;
     flex-direction: row;
@@ -91,31 +87,6 @@ ol {
   }
 }
 
-/* this version will give auto-resizing columns. to make fixed width, 
- * specify elements like article, aside, etc 
- * see also- http://philipwalton.github.io/solved-by-flexbox/demos/holy-grail/
- */
-
-.aligner {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.aligner-center {
-    max-width: 50%;
-}
-
-.aligner-top {
-    align-self: flex-start;
-}
-
-/* and we can do this to replicate tumblr's icon placement on posts... 
- * the problem with this is that it doesn't minimize well, the icon 'column' 
- * takes up space even when shrink browser, when would prefer that it bump up
- * or something like that.
-*/
-
 .post {
     display: flex;
     align-items: flex-start;
@@ -127,39 +98,22 @@ ol {
 
 .post-body {
     flex: 1;
-    background-color: rgb(255, 250, 240);
+    background-color: rgb(255,248,230);
     border-radius: 12px;
     margin-bottom: 0.5em;
     padding: 0.5em 1em;
 }
 
-/* I was doing something... */
-#picturebox {
-	overflow: hidden;
-	position: absolute;
-	top: 40px;
-	left: 40px;
-	border: 5px solid #000;
-	width: 400px;
-	height: 600px;
-	cursor: move;
-}
-
 /* the section under posts with save, like, reblog, etc */
 .post-controls, 
 .post-tags {
-    border-top: 1px solid rgb(176, 148, 127); 
+    border-top: 1px solid rgb(176,148,127); 
     font-size: 0.9em;
 }
 
 .post-tags a {
-    color: rgb(112,128,144);
+    color: rgb(112,112,112);
     padding: 0 .2em;
-}
-
-.activated {
-    background-color: rgb(224,245,255);
-    color: black;
 }
 
 /* INLINE ELEMENTS --------------------------------------------------------- */
@@ -168,7 +122,7 @@ a {
 }
 
 p a {
-	border-bottom: 2px solid #029902;
+	border-bottom: 2px solid rgb(25,255,81);
 }
 
 nav a {
@@ -182,7 +136,11 @@ nav a {
 }
 
 code {
-    font-family: "DejaVu Sans Mono", Consolas, Monaco, 'Andale Mono', monospace;
+    font-family: "DejaVu Sans Mono", "Source Code Pro", monospace;
+}
+
+.center {
+    text-align: center;
 }
 
 /* experimental */
@@ -208,14 +166,14 @@ textarea {
 }
 
 button {
-    background-color: rgba(204,255,204,.5);
-    border: 1px solid rgb(176,224,230);
+    background-color: rgba(25,255,81,.5);
+    border: 1px solid rgb(25,255,81);
     border-radius: 10px;
     margin-top: 0.25em;
 }
 
 button:hover {
-    background-color: rgb(204,255,204);
+    background-color: rgb(25,255,81);
 }
 
 input {
@@ -223,7 +181,7 @@ input {
 }
 
 input:focus, textarea:focus {
-    background-color: rgba(204,255,204,.5);
+    background-color: rgba(25,255,81,.5);
     outline: none;
 }
 
@@ -237,16 +195,6 @@ legend{
 	font-weight: bold;
 }
 
-.button-lime {
-    background-color: rgb(176,224,230);
-	padding: 1em;
-    transition: background-color 0.5s;
-}
-
-.button-lime:hover {
-    background-color: lime;
-}
-
 
 /* TABLES ------------------------------------------------------------------ */
 
@@ -255,11 +203,11 @@ table {
 }
 
 td, th {
-    border-bottom: 1px solid rgb(176, 148, 127); 
+    border-bottom: 1px solid rgb(176,148,127); 
 }
 
 tr:hover {
-	background-color: rgb(176,224,230);
+	background-color: rgb(220,207,240);
 }
 
 /*EOF*/

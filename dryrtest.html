@@ -13,7 +13,7 @@
         <a href="#"><h1 class="nomen">dryr</h1></a>
         <a href="#">&#x270d; Post</a> 
         <a href="#">&#x272a; Your Page</a> 
-        <a href="#">&#x2709; Messages</a> 
+        <a href="#" id="mailbox" class="mailbox">&#x2709; Messages</a> 
         <a href="#">&#x21af; Settings</a> 
         <a href="#">&#x2205; Log out</a>
     </nav>
@@ -28,7 +28,7 @@
 
 <article class="post">
 <div class="post-icon">
-    <a href="/userpage">
+    <a href="#">
     <img src="img/summer-11.png" alt="usericon" />
     </a>
 </div>
@@ -37,32 +37,33 @@
     <section class="post-content">
     <h2>Some Content</h2>
     <p>
-        Baseline targets: IE11 (Windows 7), FF38 (long term release), 
-        Chrome 40 (nice round number), Safari 8, Android 4
-    </p>
-    
-    <p>
-    Keep the main menu w/ very few items and slim like it is now, but for 
-    -search- have drop down options of tags, usernames, etc? At least on 
-    results page have all sorts of links to help dig around. 
+        This is just the style test, not writing a site top to bottom. 
+        I like it enough to use for my own personal blog type thing.         
     </p>
 
     <ul>
-        <li>AJAX- emote buttons</li>
-        <li>When click emote buttons, their bgcolor should change.</li>
-        <li>CSS split into modules on dev end but recombined into 1 to min/gzip etc</li>
+        <li>IE 11 (Windows 7, and good enough to need little special care)</li>
+        <li>Firefox 38 (long term release)</li>
+        <li>Chrome 40 (round number)</li>
+        <li>Safari 8</li>
+        <li>Android 4.x</li>
     </ul>
     
     <ol>
-        <li>One list item!</li>
-        <li>Two list items, ha ha.</li>
-        <li>Three! Three list items, ha ha ha!</li>
+        <li>CSS/HTML: multi/mixed media posting</li>
+        <li>CSS/JS: Emote buttons need efficient JS</li>
+        <li>?: include Prism? Adds 14.5kb JS and 2kb CSS</li>
     </ol>
+    <p>
+    Bare HTML/CSS loads in under 200ms on DSL (according to Chrome at least), so I think 
+    I can relax about that for now. Using the minimized unified file so will stop 
+    picking at it.  
+    </p>
     
     <blockquote>
         <p>Use BABEL to transpile ES6 to ES5.</p>
         <blockquote>
-            <p>use SASS on CSS.</p>
+            <p>use SASS on CSS... eventually...</p>
         </blockquote>
     </blockquote>
     
@@ -98,10 +99,10 @@
         <p><a href="#">#testing</a></p>
     </section>
     <section class="post-controls">
-        <button type="button">&#x21bb; Reblog</button>
-        <button type="button" class="" id="like">&#x2714; Like</button>
-        <button type="button">&#x2764; Sympathy</button>
-        <button type="button">&#x2718; Disagree</button>
+        <button type="button" class="ctrl-btn">&#x21bb; Reblog</button>
+        <button type="button" class="ctrl-btn" id="like">&#x2714; Like</button>
+        <button type="button" class="ctrl-btn">&#x2764; Sympathy</button>
+        <button type="button" class="ctrl-btn">&#x2718; Disagree</button>
     </section>
     
 </section>
@@ -110,7 +111,7 @@
 
 <article class="post">
 <section class="post-icon">
-    <a href="/userpage">
+    <a href="#">
     <img src="img/summer-11.png" alt="usericon" />
     </a>
 </section>
@@ -172,10 +173,10 @@
         </p>
     </section>
     <section class="post-controls">
-        <button type="button" class="cs-reblog">&#x21bb; Reblog</button>
-        <button type="button" class="cs-agree">&#x2714; Agree</button>
-        <button type="button" class="cs-sympathy">&#x2764; Sympathy</button>
-        <button type="button" class="cs-disagree">&#x2718; Disagree</button>
+        <button type="button">&#x21bb; Reblog</button>
+        <button type="button">&#x2714; Agree</button>
+        <button type="button">&#x2764; Sympathy</button>
+        <button type="button">&#x2718; Disagree</button>
     </section>
     </section>
 </article>
@@ -184,15 +185,11 @@
 
 <footer class="page-footer">
     <nav>
+        Missing links: 
         <a href="#">Help</a>
         <a href="#">Bug bounty</a>
         <a href="#">TOS</a>
     </nav>
-    <p>
-    Never sell out. Monetization is a dirty word. I got bills to pay and dragons to lay. 
-    We're in this together. This is the revolution. Where's my jetpack? 
-    Don't become Tumblr. Back in -my- day MTV|G4|History|Discovery was GOOD.
-    </p>
 </footer>
 <!-- JAVASCRIPT AREA ..................................................... -->
 <script src="js/addClass.js"></script>

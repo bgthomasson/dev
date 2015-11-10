@@ -2,7 +2,7 @@
 <html lang="en-US"> 
 <head>
     <meta charset="utf-8" />
-    <title>Khajiit Character Generator</title>
+    <title>Khajiit Character Generator v 0.7</title>
     <link rel="stylesheet" media="all" href="css/khajiit.css" />
 </head>
 <body>
@@ -11,7 +11,7 @@
 
 <form name="kcg">
 
-<h1>Khajiit Character Generator for PNP</h1>
+<h1>Tabletop Khajiit Character Generator</h1>
 
 <fieldset>
 <label for="charname">Name </label>
@@ -89,7 +89,6 @@ Create your character!
 </button>
 </form>
 
-
 <div class="row">
 <article class="col">
 <h2>Khajiit subspecies</h2>
@@ -155,7 +154,7 @@ For further explanation of the various kinds of Khajiit,
 </article>
 
 <article class="col">
-
+<h2>Roles and skills</h2>
 <h3>Mage</h3>
 <ul>
 <li>Alteration manipulates the laws of nature and physical objects.</li>
@@ -173,16 +172,16 @@ For further explanation of the various kinds of Khajiit,
 <li>Heavy Armor: obvious</li>
 <li>One Handed: daggers, axes, and other smaller weapons</li>
 <li>Two Handed: broadswords, warhammers, spears, etc.</li>
-<li>Unarmed: the use of fists and feet</li>
+<li>Unarmed: the use of fists and feet, claws and teeth</li>
 </ul>
 
 <h3>Rogue</h3>
 <ul>
-<li>Acrobatics: jumping, running, climbing</li>
+<li>Acrobatics: jumping, running, climbing, escaping</li>
 <li>Disguise: the ability to maintain a false identity</li>
 <li>Light Armor: obvious</li>
 <li>Fraud: blackmail, forgery, embezzlement, insider trading</li>
-<li>Security: lockpicking, escaping</li>
+<li>Security: lockpicking, traps</li>
 <li>Sneak: stealth, sleight of hand, pickpocket</li>
 </ul>
 
@@ -196,6 +195,11 @@ For further explanation of the various kinds of Khajiit,
 <li>Smith: working with metals</li>
 </ul>
 
+<p>
+Tempting to combine speech and linguistics and add woodlore/survival. 
+Also very tempting to drop the "role" thing and let pick 6-7 skills.  
+</p>
+
 </article>
 
 </div>
@@ -208,12 +212,18 @@ For further explanation of the various kinds of Khajiit,
 	<td>Magicka</td>
 	<td>Stamina</td>
     <td>Speed</td>
+    <td>Morph</td>
+    <td>Age</td>
+    <td>Gender</td>
 </tr>
 <tr>
 	<td>100</td>
 	<td>50</td>
 	<td>150</td>
     <td>30</td>
+    <td>Any</td>
+    <td>Any</td>
+    <td>Any</td>
 </tr>
 <tr>
 	<td>Strength</td>
@@ -236,7 +246,7 @@ For further explanation of the various kinds of Khajiit,
 </table>
 
 <table>
-<caption>Skills: Level 1 defaults</caption>
+<caption>Skills: Level 1 defaults, no role</caption>
 <tr>
 	<td>Alteration</td>
 	<td>Conjuration</td>
@@ -306,14 +316,130 @@ For further explanation of the various kinds of Khajiit,
 </tr>
 </table>
 
+
+<p>
+I'm not sure where to put the output table right now so down here works, 
+aside from being hidden from the user, oops. 
+</p>
+
+<h2>$Character</h2>
+<table id="output">
+<caption>Attributes</caption>
+<tr>
+	<td>Health</td>
+	<td>Magicka</td>
+	<td>Stamina</td>
+    <td>Speed</td>
+    <td>Morph</td>
+    <td>Age</td>
+    <td>Gender</td>
+</tr>
+<tr>
+	<td id="health">100</td>
+	<td id="magicka">50</td>
+	<td id="stamina">150</td>
+    <td id="speed">30</td>
+    <td id="morph"></td>
+    <td id="age"></td>
+    <td id="gender"></td>
+</tr>
+<tr>
+	<td>Strength</td>
+	<td>Wisdom</td>
+	<td>Endurance</td>
+	<td>Charisma</td>
+	<td>Intelligence</td>
+	<td>Agility</td>
+	<td>Luck</td>
+</tr>
+<tr>
+	<td id="str">35</td>
+	<td id="wis">30</td>
+	<td id="end">35</td>
+	<td id="cha">40</td>
+	<td id="int">40</td>
+	<td id="agi">50</td>
+	<td id="luck">40</td>
+</tr>
+</table>
+
+<table>
+<caption>Skills based on role as $role</caption>
+<tr>
+	<td>Alteration</td>
+	<td>Conjuration</td>
+	<td>Destruction</td>
+	<td>Illusion</td>
+	<td>Restoration</td>
+	<td>Enchantment</td>
+</tr>
+<tr>
+	<td id="alteration">10</td>
+	<td id="conjuration">10</td>
+	<td id="destruction">10</td>
+	<td id="illusion">10</td>
+	<td id="restoration">10</td>
+	<td id="enchantment">10</td>
+</tr>
+
+<tr>
+	<td>Archery</td>
+	<td>Block</td>
+	<td>Heavy Armor</td>
+	<td>One handed</td>
+	<td>Two Handed</td>
+	<td>Unarmed</td>
+</tr>
+<tr>
+	<td id="archery">10</td>
+	<td id="block">10</td>
+	<td id="harmor">10</td>
+	<td id="onehand">10</td>
+	<td id="twohand">10</td>
+	<td id="unarmed">15</td>
+</tr>
+
+<tr>
+	<td>Acrobatics</td>
+	<td>Disguise</td>
+	<td>Light Armor</td>
+	<td>Fraud</td>
+	<td>Security</td>
+	<td>Sneak</td>
+</tr>
+<tr>
+	<td id="acro">25</td>
+	<td id="disguise">10</td>
+	<td id="larmor">15</td>
+	<td id="fraud">10</td>
+	<td id="security">15</td>
+	<td id="sneak">20</td>
+</tr>
+
+<tr>
+	<td>Alchemy</td>
+	<td>Speech</td>
+	<td>Language</td>
+	<td>Handcraft</td>
+	<td>Perform</td>
+	<td>Smith</td>
+</tr>
+<tr>
+	<td id="alchemy">10</td>
+	<td id="speech">10</td>
+	<td id="language">15</td>
+	<td id="handcraft">20</td>
+	<td id="perform">10</td>
+	<td id="smith">10</td>
+</tr>
+</table>
+
 <article>
 <p>
-Note this is my own mix of all TES games, with some of my own added in. 
-Legal disclaimer about being unsanctioned homebrew, copyright, etc. 
-</p>
-<p>
-I'm not sure how to handle Speed, do like DND? Also, should health/magic/stamina 
-be on 100 point system like all other attributes?? would require total rewrite!!! 
+TODO: The JS should output in this page in the output table. Instead of having list in JS, 
+just pull defaults from table, do math with, then replace with result as textContent. 
+For morph/age/gender just add in user input as textContent. 
+How do we strip tags, Bobby Tables, etc? Always used PHP with forms, not JS. 
 </p>
 
 </article>

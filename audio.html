@@ -7,40 +7,52 @@
     <link rel="stylesheet" type="text/css" media="all" href="css/ng.css" />
 </head>
 <body>	
+<header>
+    <h1 class="center">Audio and Video element notes</h1>
+</header>
+<main>
     <article>
 	<table>
     <caption><h2>Browser support</h2></caption>
 	<tr><th>type</th> <th>Firefox</th> <th>Chrome</th> <th>IE</th> <th>Safari</th></tr>
 	<tr><td>MP3</td>  <td>23</td>      <td>yes</td>    <td>9</td>  <td>yes</td>   </tr>
+    <tr><td>OGG</td>  <td>yes</td>     <td>yes</td>    <td>no</td>  <td>no</td>   </tr>
+    <tr><td>AAC</td>  <td>??</td>      <td>yes</td>    <td>9</td>  <td>yes</td>   </tr>
 	<tr><td>VP8/9</td><td>yes</td>     <td>yes</td>    <td>no</td> <td>no</td>    </tr>
 	<tr><td>H264</td> <td>22</td>      <td>yes</td>    <td>9</td>  <td>yes</td>   </tr>
 	</table>
+    <p>
+    Note: "To avoid patent issues, support for MPEG 4, H.264, MP3 and AAC is not built 
+    directly into Firefox on desktop and mobile" so it relies on the OS, so Debian etc 
+    requires .ogg Vorbis audio files. 
+    <p>
     </article>
     
 	<article>
 	<h2>Audio element</h2>
     <p>
     MP3 works on 99% but if use more than one (AAC, OGG), use the <code>source</code> element. 
+    Note that AAC must be in an MP4 container. You really only need Ogg Vorbis 
+    if you have Linux users. 
+    Either one of those may compress smaller than MP3 though. 
 	</p>
-	<audio id="clank2" controls="controls">
-	<source src="audio/clank.ogg">
-	<source src="audio/clank.mp3">
-	<p>Here is a link to the MP3 since you live in Bedrock with the Flintstones</p>
-	</audio>
-	<p>
-	If you don't specify for controls to display, the element is invisible, which means you can 
-	plug it into other elements like buttons, if your users have fast internet and tolerance for 
-    shenannigans. Note that WAV isn't supported by IE, I forgot why I used that instead of MP3 here, 
-    whoops. Also it uss inline JS which is gross. 
-	</p>
-	<audio id="n1"><source src="audio/noise1.wav" type="audio/wav"></audio>
-	<button type="button" id="b1" class="button-lime" onclick="getElementById('n1').play()">Booip</button>
+<pre class="bubble">
+<code>
+audio controls="controls"
+source src="audio/ThemeSong.ogg"
+source src="audio/ThemeSong.mp3"
+A link to download the MP3 since you live in 1999 or use Lynx.
+/audio
+</code>
+</pre>
+
 	</article>
 	
 	<article>
 	<h2>Video element</h2>
     <p>
-    Use H.264 (MP4) for IE/Safari and VP9 (WEBM) for FF/Chrome (because it's half the bandwidth of VP8.) 
+    Use H.264 (MP4) for IE/Safari and VP9 (WEBM) for FF/Chrome 29+ 
+    (because it's half the bandwidth of VP8.) 
     Put the "src" in a source element (which is self-closing.)
     </p>
 <pre class="bubble">
@@ -48,7 +60,7 @@
 video controls preload="metadata"
 source src="/video/zombies.webm" type="video/webm" 
 source src="/video/zombies.mp4" type="video/mp4"
-Your browser doesn't support the video element, how will you watch the animes!?!?1? 
+Your browser doesn't support the video element... 
 /video
 </code>
 </pre>
@@ -59,5 +71,6 @@ Your browser doesn't support the video element, how will you watch the animes!?!
     </p>
 	</article>
 
+</main>
 </body>
 </html>
