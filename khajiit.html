@@ -2,7 +2,7 @@
 <html lang="en-US"> 
 <head>
     <meta charset="utf-8" />
-    <title>Khajiit Character Generator v 0.7</title>
+    <title>Khajiit Character Generator v 0.8</title>
     <link rel="stylesheet" media="all" href="css/khajiit.css" />
 </head>
 <body>
@@ -51,35 +51,41 @@ Craft: +10 Intelligence, +10 Luck, +10 all craft skills
 
 <fieldset>
 <legend>Morph</legend>
-<label for="ohmes"><input type="radio" name="morph" id="ohmes" value="ohmes" /> 
-<abbr title="Elven, only slightly fuzzy">Ohmes</abbr>: +5 charisma, -5 strength, +10 Disguise
+<label for="ohmes">
+<input type="radio" name="morph" id="ohmes" value="ohmes" /> 
+Ohmes: +5 charisma, -5 strength, +10 Disguise
 </label>
 
-<label for="dagi"><input type="radio" name="morph" id="dagi" value="dagi" /> 
-<abbr title="pymgy cat-person">Dagi</abbr>: +10 wisdom, -10 strength, +10 magicka, +10 sneak
+<label for="dagi">
+<input type="radio" name="morph" id="dagi" value="dagi" /> 
+Dagi: +10 wisdom, -10 strength, +10 magicka, +10 sneak
 </label>
 
-<label for="suthay"><input type="radio" name="morph" id="suthay" value="suthay" /> 
-<abbr title="average size cat-person">Suthay</abbr>: (base stats)
+<label for="suthay">
+<input type="radio" name="morph" id="suthay" value="suthay" /> 
+Suthay: (base stats)
 </label>
 
-<label for="cathay"><input type="radio" name="morph" id="cathay" value="cathay" /> 
-<abbr title="tall cat-person">Cathay</abbr>: +5 strength, -5 agility, +10 stamina
+<label for="cathay">
+<input type="radio" name="morph" id="cathay" value="cathay" /> 
+Cathay: +5 strength, -5 agility, +10 stamina
 </label>
 
-<label for="alfiq"><input type="radio" name="morph" id="alfiq" value="alfiq" /> 
-<abbr title="house cat sized quadruped cat">Alfiq</abbr>: +10 agility, -10 strength, 
+<label for="alfiq">
+<input type="radio" name="morph" id="alfiq" value="alfiq" /> 
+Alfiq: +10 agility, -10 strength, 
 +5 Unarmed, +10 Sneak, 0 in all hand skills
 </label>
 
-<label for="pahmar"><input type="radio" name="morph" id="pahmar" value="pahmar" /> 
-<abbr title="jaguar sized quadruped cat">Pahmar</abbr>: +5 strength, +10 Unarmed, 
+<label for="pahmar">
+<input type="radio" name="morph" id="pahmar" value="pahmar" /> 
+Pahmar: +5 strength, +10 Unarmed, 
 +10 speed, 0 in all hand skills
 </label>
 
-<label for="senche"><input type="radio" name="morph" id="senche" value="senche" /> 
-<abbr title="tiger sized quadruped cat">Senche</abbr>: +10 strength, -10 agility, 
-+15 Unarmed, +10 health, 0 in all hand skills
+<label for="senche">
+<input type="radio" name="morph" id="senche" value="senche" /> 
+Senche: +10 strength, -10 agility, +15 Unarmed, +10 health, 0 in all hand skills
 </label>
 
 </fieldset>
@@ -87,68 +93,175 @@ Craft: +10 Intelligence, +10 Luck, +10 all craft skills
 <button type="button" name="kcg-btn" onclick="generateCharacterSheet(this.kcg);">
 Create your character!
 </button>
+
 </form>
+
+<article id="outputs">
+<h2 id="charname">Your Character</h2>
+<table>
+<caption>Attributes</caption>
+<tr>
+	<td>Health</td>
+	<td>Magicka</td>
+	<td>Stamina</td>
+    <td>Speed</td>
+    <td>Morph</td>
+    <td>Age</td>
+    <td>Gender</td>
+</tr>
+<tr id="attributes1">
+</tr>
+<tr>
+	<td>Strength</td>
+	<td>Wisdom</td>
+	<td>Endurance</td>
+	<td>Charisma</td>
+	<td>Intelligence</td>
+	<td>Agility</td>
+	<td>Luck</td>
+</tr>
+<tr id="attributes2">
+</tr>
+</table>
+
+<table>
+<caption>Skills based on specialty in <span id="rolecall"></span></caption>
+<tr>
+	<td>Alteration</td>
+	<td>Conjuration</td>
+	<td>Destruction</td>
+	<td>Illusion</td>
+	<td>Restoration</td>
+	<td>Enchantment</td>
+</tr>
+<tr id="skills_magic">
+</tr>
+
+<tr>
+	<td>Archery</td>
+	<td>Block</td>
+	<td>Heavy Armor</td>
+	<td>One handed</td>
+	<td>Two Handed</td>
+	<td>Unarmed</td>
+</tr>
+<tr id="skills_combat">
+</tr>
+
+<tr>
+	<td>Acrobatics</td>
+	<td>Disguise</td>
+	<td>Light Armor</td>
+	<td>Fraud</td>
+	<td>Security</td>
+	<td>Sneak</td>
+</tr>
+<tr id="skills_rogue">
+</tr>
+
+<tr>
+	<td>Alchemy</td>
+	<td>Speech</td>
+	<td>Survival</td>
+	<td>Handcraft</td>
+	<td>Perform</td>
+	<td>Smith</td>
+</tr>
+<tr id="skills_craft">
+</tr>
+</table>
+
+
+<h4>Morph Abilities</h4>
+<p id="morph_abilities"></p>
+
+<h4>Spells known</h4>
+<p>All Khajiit have the Eye of Fear power (Hysteria once daily).</p>
+<p id="spells1"></p>
+<p id="spells2"></p>
+
+<h4>Inventory</h4>
+<p id="inventory"></p>
+
+</article>
 
 <div class="row">
 <article class="col">
 <h2>Khajiit subspecies</h2>
+
+<p>
+In general it seems there are three major types: Elven, biped feline, and quadruped feline. 
+The latter two are themselves divided into three groups by size. 
+It seems often they are further subdivided into 16 to 20 types, but for the 
+purposes of this I sought simplicity. 
+For further details on the various kinds of Khajiit, as well as culture etc, 
+<a href="http://www.uesp.net/wiki/Lore:Khajiit">see this page.</a>
+</p>
+
 <p>
 For obvious reasons all quadrupeds have zero skills in those that require 
 opposable thumbs- Archery, Handcraft, One Handed, Two Handed, Smith. 
 They can learn some alchemy from eating ingredients.
-To make up for the lack of weapons, quads have 
-higher Unarmed skill, as well as a bite attack. 
+To make up for the lack of weapons, quads have higher Unarmed skill, 
+as well as a bite attack. 
 It is also worth noting that they do wear clothing, although obviously it 
-requires some help to put on. 
+requires some help to put on. They are sensitive to their bestial appearance and 
+take pains to appear sentient, even with other Khajiit. 
 </p>
 
+<h3>Ohmes</h3>
 <p>
-Ohmes resemble Bosmer or even Altmer (aside from the tail!) and so can 
+resemble Bosmer (aside from the tail!) and so can 
 disguise themselves more easily, unless they have unique tattoos. 
-Being less bestial, they have more charisma to man and mer, but are shorter 
+Being less bestial, they have more charisma to other races, but are shorter 
 than average (about 5 feet) and thus less strong. 
-An Ohmes character's back story is inclined to include diplomacy amongst men 
-and mer, whether politics or espionage. 
+An Ohmes character's back story is inclined to include diplomacy and trade 
+amongst men and mer. 
 </p>
 
+<h3>Dagi</h3>
 <p>
-Dagi are small (3 to 4 feet) and light, live in the jungle treetops, and are 
-magically inclined. 
-A Dagi character is suited best to stealth magic and unconventional tactics. 
+are a rare, small (3 to 4 feet) bipedal feline, native to the jungle where they live 
+in treetops and treehouses. Dagi have an affinity for magic, and ride large 
+quad Khajiit into battle slinging spells and casting buffs, so a 
+Dagi character is suited best to stealth magic and unconventional tactics. 
 Due to the heat and humidity of their home, natives of Tengmar Forest are 
 habitually scantily dressed, which scandalizes conservative desert dwellers.
 </p>
 
+<h3>Suthay</h3>
 <p>
-Suthay are the common cat-men seen in Morrowind, and thus have base stats. 
+are the common cat-men seen in Morrowind, and thus have base stats. 
 They are inclined to be rogues, rangers, and other light to medium styles. 
+Their fur ranges in color and pattern from tiger to leopard to cheetah. 
+Most likely to have ancestors from MOrrowind as Dunmer preferred to enslave this type. 
 </p>
 
+<h3>Cathay</h3>
 <p>
-Cathay are similar to Suthay, only larger(6-7 feet) and thus more inclined to 
+are similar to Suthay, only larger(6-7 feet) and thus more inclined to 
 mixing heavier tactics in with guerrilla styles. 
 </p>
 
+<h3>Alfiq</h3>
 <p>
-Alfiq appear to be house cats. Apparently they cannot speak normally, but 
-are reputed to have magical abilities and be used as spies and saboteurs. 
+appear to be house cats. Apparently they cannot speak normally, but can 
+understand spoken language. 
+They are reputed to have magical abilities and be used as spies and saboteurs. 
 </p>
 
+<h3>Pahmar</h3>
 <p>
-Pahmar are jaguar sized, swift and vicious. They are best suited to stealth 
+are jaguar to tiger sized, swift and vicious. They are best suited to stealth 
 kills, especially in forests where they can drag the victims into the trees. 
 </p>
 
+<h3>Senche</h3>
 <p>
-Senche are tiger sized, 800 pounds when full grown, and serve as tanks and 
-intelligent battlemounts. 
-They are most effective against lightly armed and armored opponents who are 
-easy to maul and trample while the Senche riders shoot and spear. 
-</p>
-
-<p>
-For further explanation of the various kinds of Khajiit, 
-<a href="http://www.uesp.net/wiki/Lore:Khajiit">see this page for details.</a>
+Roughly the same height as the average Altmer, with an average weight comparable to that of twenty Altmer. 
+Their forelimbs are thick and half again as long as their rears, giving them an apelike appearance. 
+They are most effective as intelligent tanks against lightly armed and armored 
+opponents who are easy to maul and trample while the Senche riders shoot and spear. 
 </p>
 
 </article>
@@ -188,17 +301,12 @@ For further explanation of the various kinds of Khajiit,
 <h3>Peasant</h3>
 <ul>
 <li>Alchemy</li>
-<li>Speech: barter, persuade</li>
-<li>Linguistics: how well you learn new languages</li>
+<li>Speech: barter, persuade, how well you learn new languages</li>
+<li>Survival: ability to live off the land</li>
 <li>Handcraft: working in mundane materials like wood, clay, cloth</li>
 <li>Perform: singing, dancing, erotic</li>
 <li>Smith: working with metals</li>
 </ul>
-
-<p>
-Tempting to combine speech and linguistics and add woodlore/survival. 
-Also very tempting to drop the "role" thing and let pick 6-7 skills.  
-</p>
 
 </article>
 
@@ -301,7 +409,7 @@ Also very tempting to drop the "role" thing and let pick 6-7 skills.
 <tr>
 	<td>Alchemy</td>
 	<td>Speech</td>
-	<td>Language</td>
+	<td>Survival</td>
 	<td>Handcraft</td>
 	<td>Perform</td>
 	<td>Smith</td>
@@ -317,131 +425,19 @@ Also very tempting to drop the "role" thing and let pick 6-7 skills.
 </table>
 
 
-<p>
-I'm not sure where to put the output table right now so down here works, 
-aside from being hidden from the user, oops. 
-</p>
-
-<h2>$Character</h2>
-<table id="output">
-<caption>Attributes</caption>
-<tr>
-	<td>Health</td>
-	<td>Magicka</td>
-	<td>Stamina</td>
-    <td>Speed</td>
-    <td>Morph</td>
-    <td>Age</td>
-    <td>Gender</td>
-</tr>
-<tr>
-	<td id="health">100</td>
-	<td id="magicka">50</td>
-	<td id="stamina">150</td>
-    <td id="speed">30</td>
-    <td id="morph"></td>
-    <td id="age"></td>
-    <td id="gender"></td>
-</tr>
-<tr>
-	<td>Strength</td>
-	<td>Wisdom</td>
-	<td>Endurance</td>
-	<td>Charisma</td>
-	<td>Intelligence</td>
-	<td>Agility</td>
-	<td>Luck</td>
-</tr>
-<tr>
-	<td id="str">35</td>
-	<td id="wis">30</td>
-	<td id="end">35</td>
-	<td id="cha">40</td>
-	<td id="int">40</td>
-	<td id="agi">50</td>
-	<td id="luck">40</td>
-</tr>
-</table>
-
-<table>
-<caption>Skills based on role as $role</caption>
-<tr>
-	<td>Alteration</td>
-	<td>Conjuration</td>
-	<td>Destruction</td>
-	<td>Illusion</td>
-	<td>Restoration</td>
-	<td>Enchantment</td>
-</tr>
-<tr>
-	<td id="alteration">10</td>
-	<td id="conjuration">10</td>
-	<td id="destruction">10</td>
-	<td id="illusion">10</td>
-	<td id="restoration">10</td>
-	<td id="enchantment">10</td>
-</tr>
-
-<tr>
-	<td>Archery</td>
-	<td>Block</td>
-	<td>Heavy Armor</td>
-	<td>One handed</td>
-	<td>Two Handed</td>
-	<td>Unarmed</td>
-</tr>
-<tr>
-	<td id="archery">10</td>
-	<td id="block">10</td>
-	<td id="harmor">10</td>
-	<td id="onehand">10</td>
-	<td id="twohand">10</td>
-	<td id="unarmed">15</td>
-</tr>
-
-<tr>
-	<td>Acrobatics</td>
-	<td>Disguise</td>
-	<td>Light Armor</td>
-	<td>Fraud</td>
-	<td>Security</td>
-	<td>Sneak</td>
-</tr>
-<tr>
-	<td id="acro">25</td>
-	<td id="disguise">10</td>
-	<td id="larmor">15</td>
-	<td id="fraud">10</td>
-	<td id="security">15</td>
-	<td id="sneak">20</td>
-</tr>
-
-<tr>
-	<td>Alchemy</td>
-	<td>Speech</td>
-	<td>Language</td>
-	<td>Handcraft</td>
-	<td>Perform</td>
-	<td>Smith</td>
-</tr>
-<tr>
-	<td id="alchemy">10</td>
-	<td id="speech">10</td>
-	<td id="language">15</td>
-	<td id="handcraft">20</td>
-	<td id="perform">10</td>
-	<td id="smith">10</td>
-</tr>
-</table>
-
 <article>
 <p>
-TODO: The JS should output in this page in the output table. Instead of having list in JS, 
-just pull defaults from table, do math with, then replace with result as textContent. 
-For morph/age/gender just add in user input as textContent. 
-How do we strip tags, Bobby Tables, etc? Always used PHP with forms, not JS. 
+Maybe: a "save your character" option, but how? DB, JSON file, HTML file? 
+I think JSON fits in with the JS use but how make sure input is clean? 
+I know how to do such in PHP but not JS, don't want Bobby Tables. 
 </p>
-
+<p>
+MAYBE: instead of "roles", let choose 6 or 7 skills, although that'll be harder- 
+will have to figure out how to limit the input. Also how to do the JS. 
+</p>
+<p>
+Disclaimer about copyright etc. (Filling this out is on to-do list...)
+</p>
 </article>
 
 </main>
