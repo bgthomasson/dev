@@ -12,21 +12,26 @@
 <main>
 <form name="pfcg">
 <fieldset>
-<label for="charname">Name </label>
-<input type="text" name="charname" size="26" />
+<label for="charname">
+    Name 
+    <input type="text" name="charname" size="26" />
+</label>
 
-<label for="alignment">Alignment </label>
-<select name="alignment">
-    <option value="lg">Lawful Good</option>
-    <option value="ln">Lawful Neutral</option>
-    <option value="le">Lawful Evil</option>
-    <option value="ng">Neutral Good</option>
-    <option value="nn">Neutral Neutral</option>
-    <option value="ne">Neutral Evil</option>
-    <option value="cg">Chaotic Good</option>
-    <option value="cn">Chaotic Neutral</option>
-    <option value="ce">Chaotic Evil</option>
-</select>
+<label for="alignment">
+    Alignment 
+    <select name="alignment">
+        <option value="lg">Lawful Good</option>
+        <option value="ln">Lawful Neutral</option>
+        <option value="le">Lawful Evil</option>
+        <option value="ng">Neutral Good</option>
+        <option value="nn">Neutral Neutral</option>
+        <option value="ne">Neutral Evil</option>
+        <option value="cg">Chaotic Good</option>
+        <option value="cn">Chaotic Neutral</option>
+        <option value="ce">Chaotic Evil</option>
+    </select>
+</label>
+
 </fieldset>
 
 <fieldset>
@@ -76,57 +81,57 @@ Bovini
 <legend>Class</legend>
 
 <label for="barbarian">
-<input type="radio" name="class" id="barbarian" value="barbarian" /> 
+<input type="radio" name="role" id="barbarian" value="barbarian" /> 
 Barbarian
 </label>
 
 <label for="bard">
-<input type="radio" name="class" id="bard" value="bard" /> 
+<input type="radio" name="role" id="bard" value="bard" /> 
 Bard
 </label>
 
 <label for="cleric">
-<input type="radio" name="class" id="cleric" value="cleric" /> 
+<input type="radio" name="role" id="cleric" value="cleric" /> 
 Cleric
 </label>
 
 <label for="druid">
-<input type="radio" name="class" id="druid" value="druid" /> 
+<input type="radio" name="role" id="druid" value="druid" /> 
 Druid
 </label>
 
 <label for="fighter">
-<input type="radio" name="class" id="fighter" value="fighter" /> 
+<input type="radio" name="role" id="fighter" value="fighter" /> 
 Fighter
 </label>
 
 <label for="monk">
-<input type="radio" name="class" id="monk" value="monk" /> 
+<input type="radio" name="role" id="monk" value="monk" /> 
 Monk
 </label>
 
 <label for="paladin">
-<input type="radio" name="class" id="paladin" value="paladin" /> 
+<input type="radio" name="role" id="paladin" value="paladin" /> 
 Paladin
 </label>
 
 <label for="ranger">
-<input type="radio" name="class" id="ranger" value="ranger" /> 
+<input type="radio" name="role" id="ranger" value="ranger" /> 
 Ranger
 </label>
 
 <label for="rogue">
-<input type="radio" name="class" id="rogue" value="rogue" /> 
+<input type="radio" name="role" id="rogue" value="rogue" /> 
 Rogue
 </label>
 
 <label for="sorcerer">
-<input type="radio" name="class" id="sorcerer" value="sorcerer" /> 
+<input type="radio" name="role" id="sorcerer" value="sorcerer" /> 
 Sorcerer
 </label>
 
 <label for="wizard">
-<input type="radio" name="class" id="wizard" value="wizard" /> 
+<input type="radio" name="role" id="wizard" value="wizard" /> 
 Wizard
 </label>
 
@@ -141,15 +146,15 @@ Wizard
 <h2 id="charname_output">Your Character</h2>
 
 <table>
-<tr><td>HP</td><td id="hp_output"></td>
-<tr><td>Speed</td><td id="speed_output"></td>
-<tr><td>Climb</td><td id="climb_output"></td>
-<tr><td>Strength</td><td id="str_output"></td>
-<tr><td>Dexterity</td><td id="dex_output"></td>
-<tr><td>Constitution</td><td id="con_output"></td>
-<tr><td>Intelligence</td><td id="int_output"></td>
-<tr><td>Wisdom</td><td id="wis_output"></td>
-<tr><td>Charisma</td><td id="cha_output"></td>
+    <tr><td>HP</td><td id="hp_output"></td></tr>
+    <tr><td>Alignment</td><td id="align_output"></td></tr>
+    <tr><td>Speed</td><td id="speed_output"></td></tr>
+    <tr><td>Strength</td><td id="str_output"></td></tr>
+    <tr><td>Dexterity</td><td id="dex_output"></td></tr>
+    <tr><td>Constitution</td><td id="con_output"></td></tr>
+    <tr><td>Intelligence</td><td id="int_output"></td></tr>
+    <tr><td>Wisdom</td><td id="wis_output"></td></tr>
+    <tr><td>Charisma</td><td id="cha_output"></td></tr>
 </table>
 
 <table>
@@ -158,15 +163,15 @@ Wizard
         <th>Ability mod.</th>
         <th>Misc mod.</th>
     </tr>
-    <tr>
+    <tr id="acro_row_output">
         <td>Acrobatics</td>
         <td id="acro_am_output"></td>
         <td id="acro_misc_output"></td>
     </tr>
     <tr>
         <td>Appraise</td>
-        <td id="appr_am_output"></td>
-        <td id="appr_misc_output"></td>
+        <td id="appraise_am_output"></td>
+        <td id="appraise_misc_output"></td>
     </tr>
     <tr>
         <td>Bluff</td>
@@ -185,8 +190,8 @@ Wizard
     </tr>
     <tr>
         <td>Diplomacy</td>
-        <td id="dip_am_output"></td>
-        <td id="dip_misc_output"></td>
+        <td id="diplomacy_am_output"></td>
+        <td id="diplomacy_misc_output"></td>
     </tr>
     <tr>
         <td>Disable Device</td>
@@ -205,13 +210,13 @@ Wizard
     </tr>
     <tr>
         <td>Fly</td>
-        <td id="fly_am_output"></td>
-        <td id="fly_misc_output"></td>
+        <td id="fly_skill_am_output"></td>
+        <td id="fly_skill_misc_output"></td>
     </tr>
     <tr>
         <td>Handle Animal</td>
-        <td id="handimal_am_output"></td>
-        <td id="handimal_misc_output"></td>
+        <td id="handle_animal_am_output"></td>
+        <td id="handle_animal_misc_output"></td>
     </tr>
     <tr>
         <td>Heal</td>
@@ -225,12 +230,12 @@ Wizard
     </tr>
     <tr>
         <td>K: Arcana</td>
-        <td id=""></td>
-        <td id=""></td>
+        <td id="k_arcana_am_output"></td>
+        <td id="k_arcana_misc_output"></td>
     </tr>
     <tr>
         <td>K: Dungeoneering</td>
-        <td id=""></td>
+        <td id="k_dung"></td>
         <td id=""></td>
     </tr>
     <tr>

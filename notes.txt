@@ -19,12 +19,57 @@ this is just to do rough grunt work then copy to paper so skip some inputs
 on the skills, will need to do a LOOP that prints out 
 $skillName, $totalbonus, $abilityModifier, $miscModifier
 
+Note: because of reserved words I can't really use "class" as a variable. 
 
 It's really frustrating, either I do it all inline in JS like old khajiit thing, 
 so have HUGE file there, or do it all inline in HTML and hope I can autogen efficiently, 
 it's all so much typing and potential for typos and clusterfuk. 
 
+for the attributes it seems simple enough to do textContent but for the skills 
+it seems it would keep things cleaner to do innerHTML so won't have to keep 
+bouncing between files to double check what abbr I used
 
+to get the ability modifier, need like a crossjoin database, mark which skill 
+is connected to which attribute and then pull the modifier M from the db/array
+
+will need loop to set modifier! and not like a case statement either, something 
+programmatic, automatic, and values <10 need negatives
+also hard minimum of 1 or 0 when rolling stats.... 
+
+yes. two values. set default skill value like 'acro', when do race and such, 
+you modify -that- one, output as skill_misc_output
+-then- automagically pull ability mod and insert as skill_am_output
+
+a class skills array? start it empty, then like kobold always has traps and stealth, 
+we push into the array as we go, 
+
+var skillArray = [];
+
+skillArray.push("craft trapmaking");
+
+wow this is going to take so much typing...
+
+
+
+
+
+
+
+
+
+--------------
+OK I want a jquery style $() thingy that's a shorthand for document.getElementById
+
+bonus: one line it, instead of
+var a = $('elid');
+b.textContent = a.value;
+
+which is really how I'd do in PHP, run the input value through strip_tags() etc
+which we'd only need to do for name input, BUT doing double checks to make sure 
+radio buttons are selected etc is mandatory. eventually. 
+
+I want something like
+b.textContent = $('elid').value;
 
 
 
@@ -44,4 +89,8 @@ you can feed in a sample of you fictional language and it'll generate either
 - evolve the language by choosing random mutations
 
 
+
+
+DUMB but funny IDEA
+a password generator that's a cat walking on a keyboard
 
