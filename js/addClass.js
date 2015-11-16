@@ -5,7 +5,7 @@ Element.prototype.on = Element.prototype.addEventListener;
 $('#like')[0].on('click', addClass);
 
 function addClass(){
-  const className = "activated";
+  var className = "activated";
   if (this.classList) {
     this.classList.add(className);
   } else {

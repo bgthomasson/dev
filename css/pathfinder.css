@@ -1,0 +1,92 @@
+
+body {
+    background-color: rgb(112,128,144);
+	font-family: 'Open Sans', Candara, Tahoma, Geneva, sans-serif;
+	font-size: 1em;
+	line-height: 1.4em;
+    margin: 0;
+}
+
+main {
+    background-color: rgb(255,255,240);
+    display: block;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+h1, 
+h2, 
+h3 {
+	font-family: Constantia, Gentium, Palatino, serif;
+    text-align: center;
+}
+
+article {
+    padding: .5em;
+}
+
+
+/* FORMS ------------------------------------------------------------------- */
+
+form {
+    padding: 1em;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+fieldset {
+    border: 1px solid rgb(176,148,127);
+	margin-bottom: 1em;
+}
+
+legend {
+    font-size: 1.1em;
+    font-weight: 700;
+}
+
+label {
+    display: list-item;
+    list-style-type: none;
+    margin: .5em 0;
+}
+
+button,
+input,
+select {
+    color: inherit; 
+    font: inherit; 
+    margin: 0; 
+}
+
+button {
+    background-color: rgba(105,210,231,.5);
+    border: none;
+    border-radius: 12px;
+    box-shadow: 5px 5px 5px rgba(64,16,0,.4);
+    cursor: pointer;
+    padding: 1em;
+    transition: all 0.4s;
+    width: 100%;
+}
+
+button:hover {
+    background-color: rgb(105,210,231);
+    box-shadow: 5px 5px 5px rgba(64,16,0,.8);
+}
+
+/* TABLES ------------------------------------------------------------------ */
+
+table {
+	margin: 0 auto;
+    margin-bottom: 2em;
+}
+
+tr:nth-of-type(2n){
+    background-color: rgb(240,240,240);
+}
+
+td {
+    padding-top: .3em;
+}
+
+/*EOF*/

@@ -1,12 +1,4 @@
-﻿/* prism.js, I've stripped this to 2k. 
- * Consider this optional for the moment. 
----------------------------------------------------------------------------- */
-
-code[class*="language-"],
-pre[class*="language-"] {
-	font-family: "DejaVu Sans Mono", Consolas, Monaco, 'Andale Mono', monospace;
-	tab-size: 4;
-}
+/* prism.js --------------------------------------------------------------- */
 
 pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
 code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
@@ -32,8 +24,7 @@ pre[class*="language-"] {
 
 .token.comment,
 .token.prolog,
-.token.doctype,
-.token.cdata {
+.token.doctype {
 	color: #708090;
 }
 

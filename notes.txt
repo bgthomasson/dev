@@ -1,0 +1,45 @@
+DESIGN NOTES___________________________________________________________________
+
+Khajiit to Pathfinder
+convert "role" to class and "morph" to race, easy. 
+change attributes and skills to match pathfinder, easy but laborious. 
+
+series 1 will have limited details to preserve sanity. 
+races: human, dwarf, orc, kobold, tengu; kernuni, yuanren, bovini 
+just a sample, can add more as needed. focus on architecture. 
+
+harder: 
+will need to ROLL for HP and main 6 attributes 
+and att modifier will add to skills
+this is just to do rough grunt work then copy to paper so skip some inputs 
+! for human they can choose to increase any ability modifier! hmm. 
+
+> needs to mark your class skills! if skill = primarySkill then style = something
+
+on the skills, will need to do a LOOP that prints out 
+$skillName, $totalbonus, $abilityModifier, $miscModifier
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/-----------------------------------------------------------------------------/
+Whoa cool
+A generator, once more, only this has various rules of grammar and phonetics 
+you can feed in a sample of you fictional language and it'll generate either
+- more new words
+- evolve the language by choosing random mutations
+
+
+

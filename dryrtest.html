@@ -10,15 +10,17 @@
 <body>
 <header class="page-header">
     <nav class="page-nav">
-        <a href="#"><h1 class="nomen">dryr</h1></a>
+        
         <a href="#">&#x270d; Post</a> 
-        <a href="#">&#x272a; Your Page</a> 
         <a href="#" id="mailbox" class="mailbox">&#x2709; Messages</a> 
+        <a href="dryrtest.html"><h1 class="nomen">Home</h1></a>
+        <a href="#">&#x272a; $Username</a> 
         <a href="#">&#x21af; Settings</a> 
         <a href="#">&#x2205; Log out</a>
+        
     </nav>
     <form name="searchform" class="search-form" method="POST" action="search.php">
-        <input type="search" name="searchbox" class="search-box" placeholder="Search Dryr" />
+        <input type="search" name="searchbox" class="search-box" placeholder="Search" />
         <input type="hidden" name="stage" value="process" />
         <button type="submit" name="searchbutton" class="search-button">Go</button>
     </form>
@@ -35,10 +37,41 @@
 
 <section class="post-body">
     <section class="post-content">
-    <h2>Some Content</h2>
+    <h2>Content</h2>
+    
     <p>
-        This is just the style test, not writing a site top to bottom. 
-        I like it enough to use for my own personal blog type thing.         
+    Let's go over the nav menu, it's the logged in state obviously. 
+    Someone who isn't would just see the main dryr homepage link and log-in link 
+    (and search too of course).
+    I tried (it's hard) to seperate major actions, so "post" and "mail" are 
+    in the corner, easy to find and hit. Problem is it looks funny to have the h1... 
+    oh I can CSS the fuck out of it. hmm. 
+    </p>
+    <p>
+    POST: since this is mixed media by default, it doesn't have singular options 
+    directly in the menu like tumblr or twitter, just hit post and then have them 
+    there. 
+    </p>
+    <p>
+    MESSAGES: chatmail and mentions
+    </p>
+    <p>
+    MAIN: website homepage
+    </p>
+    <p>
+    $USERNAME: the user's homepage with all their posts. Also has stats link there. 
+    (Intend to minimalize "popularity")
+    </p>
+    <p>
+    SETTINGS: all the stuff like CSS (minor customization options like font size, colors); 
+    maybe hide thumbnails?? for slow connections. 
+    Oh, "Adult" confirmation, I forget about that. Default language. 
+    Block people. Customize privacy of posts! (Very important!!!) 
+    Display name and/or URL. All that sort of stuff. 
+    </p>
+    <p>
+    LOG OUT: have a confirmation thingy, less irritating than accidentally doing it. 
+    Obvious too like "Yes log me out" and "wait no I didn't mean to hit that!" (lol)
     </p>
 
     <ul>

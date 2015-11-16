@@ -1,14 +1,14 @@
 /* TABLE OF CONTENTS
  * 1. Overall layout: body, main
- * 2a. header and footer for page (avoid confusion if use those elements in articles)
- * 2b. principle <nav>s 
+ * 2a. header and footer for page (to avoid confusion if use those elements in articles)
+ * 2b. <nav> in header and footer 
  * 3. <article> and <section> 
  * 4. Misc elements, inline and block
- * 4b. Theme- tables
- * 4c. Theme- forms
- * 5. basic CSS for Prism.js generated <code> and <pre> 
+ * 5. Tables
+ * 6. Forms default, search-form 
+ * 7. Custom styles that can be used on any block and/or inline
 */ 
-/* SECTION: OVERALL LAYOUT ................................................. */
+/* SECTION 1: OVERALL LAYOUT ................................................. */
 
 body {
         /* http://lea.verou.me/css3patterns/ */
@@ -32,7 +32,7 @@ main {
     /* No fancy flex here, just plain old 2010 web 2.0 style centering */
 }
 
-/* HEADER AND FOOTER ------------------------------------------------------- */
+/* 2A: HEADER AND FOOTER ------------------------------------------------------- */
 
 /* Using flex for layout, is mostly working, except IE11 smaller than ~450px  
  * wide it just falls to bits. Suggested fixes do nothing. Since big works and 
@@ -62,8 +62,19 @@ main {
     }
 }
 
+.page-footer {
+    background-color: white;
+    margin-top: 1em; 
+    padding: 0.5em; 
+    /* needs padding all around or doesn't touch bottom of browser window */
+}
+
+
+/* 2B: MAIN PAGE NAV in header ------------------------------------------------ */
+
 .page-nav {
     flex: 1 0 0%;
+    font-size: 1.2em;
 }
 
 /* needed some spacing */
@@ -76,35 +87,15 @@ nav a {
 .nomen {
     display: inline;
     margin: 0 auto;
+    font-size: inherit;
 }
 
-/* SEARCH FORM - double check basic form styles down below */
-
-/* a bit of extra code but using flex squishes the form and button together */
-.search-form {
-    display: flex;
-}
-
-.search-box {
-    flex: 1 0 200px;
-}
-
-.search-button{
-    border: 1px solid rgb(176,224,230);
-    border-radius: 0 10px 10px 0;
-}
-
-
-.page-footer {
-    background-color: white;
-    margin-top: 1em; 
-    padding: 0.5em; 
-    /* needs padding all around or doesn't touch bottom of browser window */
-}
+/* SEARCH FORM is below basic form layout, logic of being subset is more important 
+than ordering by overall page layout */
 
 
 /* ----------------------------------------------------------------------------
- * ARTICLE RELATED
+ * SECTION 3: ARTICLE RELATED
  */
 
 article {
@@ -169,7 +160,7 @@ p + p {
     text-indent: 1.5em; 
 }
 
-/* SECTION: MISC ELEMENTS -------------------------------------------------- */
+/* SECTION 4: MISC ELEMENTS ------------------------------------------------ */
 
 a {
     text-decoration: none;
@@ -190,19 +181,7 @@ h1, h2, h3, h4, h5, h6{
     font-family: Cambria, Georgia, Palatino, serif;
 }
 
-/* tame any giant images so layout won't get wrecked */
-
-img {
-    max-width: 600px;
-}
-
-@media screen and ( max-width: 400px ) {
-    img {
-        max-width: 300px;
-    }
-}
-
-
+/* LIST ELEMENTS */
 ul, ol {
     background-color: rgb(245, 240, 220);
     border: 1px solid rgb(176, 148, 127);
@@ -221,10 +200,19 @@ ul li:before {
     content: "\2744"; /* special snowflake */
 }
 
-.bubble {
-    background-color: white;
-    border-radius: 12px;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.5);
+
+/* 4B: MULTIMEDIA */
+
+/* tame any giant images so layout won't get wrecked */
+
+img {
+    max-width: 600px;
+}
+
+@media screen and ( max-width: 400px ) {
+    img {
+        max-width: 300px;
+    }
 }
 
 /* want this to be standalone */
@@ -233,7 +221,19 @@ video {
     margin: 1em 0;
 }
 
-/* TABLES ------------------------------------------------------------------ */
+/* 4C: CODE- basics, rest covered if include Prism css/js. Regardless, code 
+ * SHOULD BE marked up in the same way, "style=language-abcd" 
+
+*/
+
+code, 
+code[class*="language-"],
+pre[class*="language-"] {
+	font-family: 'Source Code Pro', 'DejaVu Sans Mono', Consolas, monospace;
+}
+
+
+/* SECTION 5: TABLES ------------------------------------------------------ */
 
 table{ 
     border: 1px solid rgb(176,148,127);
@@ -244,7 +244,7 @@ tr:nth-of-type(odd) {
     background-color: rgb(245,240,222);
 }
 
-/* SECTION: FORM ELEMENTS -------------------------------------------------- */
+/* SECTION 6:: FORM ELEMENTS ----------------------------------------------- */
 
 form {
     background-color: rgb(255,255,255);
@@ -278,4 +278,28 @@ label {
 legend{
 	font-size: 1.1em;
 	font-weight: bold;
+}
+
+/* SEARCH FORM ------------------------------------------------------------ */
+
+/* a bit of extra code but using flex squishes the form and button together */
+.search-form {
+    display: flex;
+}
+
+.search-box {
+    flex: 1 0 200px;
+}
+
+.search-button{
+    border: 1px solid rgb(176,224,230);
+    border-radius: 0 10px 10px 0;
+}
+
+/* SECTION 7 -------------------------------------------------------------- */
+
+.bubble {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.5);
 }
