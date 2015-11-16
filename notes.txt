@@ -20,7 +20,9 @@ on the skills, will need to do a LOOP that prints out
 $skillName, $totalbonus, $abilityModifier, $miscModifier
 
 
-
+It's really frustrating, either I do it all inline in JS like old khajiit thing, 
+so have HUGE file there, or do it all inline in HTML and hope I can autogen efficiently, 
+it's all so much typing and potential for typos and clusterfuk. 
 
 
 

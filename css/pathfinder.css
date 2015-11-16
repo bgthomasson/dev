@@ -1,12 +1,14 @@
 
 body {
     background-color: rgb(112,128,144);
+    background: linear-gradient(rgb(135,206,235) 10%, rgb(0,0,64) 90%);
 	font-family: 'Open Sans', Candara, Tahoma, Geneva, sans-serif;
 	font-size: 1em;
 	line-height: 1.4em;
     margin: 0;
 }
 
+h1, 
 main {
     background-color: rgb(255,255,240);
     display: block;
@@ -19,6 +21,10 @@ h2,
 h3 {
 	font-family: Constantia, Gentium, Palatino, serif;
     text-align: center;
+}
+
+h1 {
+    padding: 1em 0;
 }
 
 article {
@@ -59,10 +65,10 @@ select {
 }
 
 button {
-    background-color: rgba(105,210,231,.5);
+    background-color: rgba(243,134,48,.5);
     border: none;
     border-radius: 12px;
-    box-shadow: 5px 5px 5px rgba(64,16,0,.4);
+    box-shadow: 5px 5px 5px rgba(32,32,64,.5);
     cursor: pointer;
     padding: 1em;
     transition: all 0.4s;
@@ -70,8 +76,8 @@ button {
 }
 
 button:hover {
-    background-color: rgb(105,210,231);
-    box-shadow: 5px 5px 5px rgba(64,16,0,.8);
+    background-color: rgb(243,134,48);
+    box-shadow: 5px 5px 5px rgb(32,32,64);
 }
 
 /* TABLES ------------------------------------------------------------------ */

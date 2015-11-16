@@ -6,6 +6,9 @@
     <link rel="stylesheet" media="all" href="css/pathfinder.css" />
 </head>
 <body>
+
+<h1>Pathfinder Character Generator</h1>
+
 <main>
 <form name="pfcg">
 <fieldset>
@@ -28,177 +31,320 @@
 
 <fieldset>
 <legend>Race</legend>
-<label for="">
-<input type="radio" name="" id="" value="" /> 
+<label for="human">
+<input type="radio" name="race" id="human" value="human" /> 
 Human
 </label>
 
-<label for="">
-<input type="radio" name="" id="" value="" /> 
+<label for="dwarf">
+<input type="radio" name="race" id="dwarf" value="dwarf" /> 
 Dwarf
 </label>
 
-<label for="">
-<input type="radio" name="" id="" value="" /> 
+<label for="orc">
+<input type="radio" name="race" id="orc" value="orc" /> 
 Orc
 </label>
 
-<label for="">
-<input type="radio" name="" id="" value="" /> 
+<label for="kobold">
+<input type="radio" name="race" id="kobold" value="kobold" /> 
 Kobold
 </label>
 
-<label for="">
-<input type="radio" name="" id="" value="" /> 
+<label for="tengu">
+<input type="radio" name="race" id="tengu" value="tengu" /> 
 Tengu
 </label>
 
-<label for="">
-<input type="radio" name="" id="" value="" /> 
+<label for="kernuni">
+<input type="radio" name="race" id="kernuni" value="kernuni" /> 
 Kernuni
 </label>
 
-<label for="">
-<input type="radio" name="" id="" value="" /> 
+<label for="yuanren">
+<input type="radio" name="race" id="yuanren" value="yuanren" /> 
 Yuan ren
 </label>
 
-<label for="">
-<input type="radio" name="" id="" value="" /> 
+<label for="bovini">
+<input type="radio" name="race" id="bovini" value="bovini" /> 
 Bovini
 </label>
 </fieldset>
 
 <fieldset>
 <legend>Class</legend>
-<label for="">
-<input type="radio" name="" id="" value="" /> 
+
+<label for="barbarian">
+<input type="radio" name="class" id="barbarian" value="barbarian" /> 
 Barbarian
 </label>
 
-<label for="">
-<input type="radio" name="" id="" value="" /> 
+<label for="bard">
+<input type="radio" name="class" id="bard" value="bard" /> 
 Bard
 </label>
 
-<label for="">
-<input type="radio" name="" id="" value="" /> 
+<label for="cleric">
+<input type="radio" name="class" id="cleric" value="cleric" /> 
 Cleric
 </label>
 
-<label for="">
-<input type="radio" name="" id="" value="" /> 
+<label for="druid">
+<input type="radio" name="class" id="druid" value="druid" /> 
 Druid
 </label>
 
-<label for="">
-<input type="radio" name="" id="" value="" /> 
+<label for="fighter">
+<input type="radio" name="class" id="fighter" value="fighter" /> 
 Fighter
 </label>
 
-<label for="">
-<input type="radio" name="" id="" value="" /> 
+<label for="monk">
+<input type="radio" name="class" id="monk" value="monk" /> 
 Monk
 </label>
 
-<label for="">
-<input type="radio" name="" id="" value="" /> 
+<label for="paladin">
+<input type="radio" name="class" id="paladin" value="paladin" /> 
 Paladin
 </label>
 
-<label for="">
-<input type="radio" name="" id="" value="" /> 
+<label for="ranger">
+<input type="radio" name="class" id="ranger" value="ranger" /> 
 Ranger
 </label>
 
-<label for="">
-<input type="radio" name="" id="" value="" /> 
+<label for="rogue">
+<input type="radio" name="class" id="rogue" value="rogue" /> 
 Rogue
 </label>
 
-<label for="">
-<input type="radio" name="" id="" value="" /> 
+<label for="sorcerer">
+<input type="radio" name="class" id="sorcerer" value="sorcerer" /> 
 Sorcerer
 </label>
 
-<label for="">
-<input type="radio" name="" id="" value="" /> 
+<label for="wizard">
+<input type="radio" name="class" id="wizard" value="wizard" /> 
 Wizard
 </label>
 
 </fieldset>
 
+<button type="button" id="create">Create your character!</button>
+
 </form>
 
 <article id="outputs">
-<h2 id="charname">Your Character</h2>
+
+<h2 id="charname_output">Your Character</h2>
+
 <table>
-<tr>
-	<td>HP</td>
-    <td>Speed</td>
-    <td>Climb</td>
-</tr>
-<tr id="attributes1">
-</tr>
-<tr>
-	<td>Strength</td>
-	<td>Dexterity</td>
-	<td>Constitution</td>
-	<td>Intelligence</td>
-	<td>Wisdom</td>
-    <td>Charisma</td>
-</tr>
-<tr id="attributes2">
-</tr>
+<tr><td>HP</td><td id="hp_output"></td>
+<tr><td>Speed</td><td id="speed_output"></td>
+<tr><td>Climb</td><td id="climb_output"></td>
+<tr><td>Strength</td><td id="str_output"></td>
+<tr><td>Dexterity</td><td id="dex_output"></td>
+<tr><td>Constitution</td><td id="con_output"></td>
+<tr><td>Intelligence</td><td id="int_output"></td>
+<tr><td>Wisdom</td><td id="wis_output"></td>
+<tr><td>Charisma</td><td id="cha_output"></td>
 </table>
 
 <table>
-<tr><th>SKILL</th><th>BONUS</th><th>Attribute</th><th>Misc</th>
-<tr><td>Acrobatics</td><td id=""></td><td id=""></td><td id=""></td></tr>
-<tr><td>Appraise</td><td id=""></td><td id=""></td><td id=""></td></tr>
-<tr><td>Bluff</td><td id=""></td><td id=""></td><td id=""></td></tr>
-<tr><td>Climb</td><td id=""></td><td id=""></td><td id=""></td></tr>
-<tr><td>Craft ___</td><td id=""></td><td id=""></td><td id=""></td></tr>
-<tr><td>Diplomacy</td><td id=""></td><td id=""></td><td id=""></td></tr>
-<tr><td>Disable Device</td><td id=""></td><td id=""></td><td id=""></td></tr>
-<tr><td>Disguise</td><td id=""></td><td id=""></td><td id=""></td></tr>
-<tr><td>Escape Artist</td><td id=""></td><td id=""></td><td id=""></td></tr>
-<tr><td>Fly</td><td id=""></td><td id=""></td><td id=""></td></tr>
-<tr><td>Handle Animal</td><td id=""></td><td id=""></td><td id=""></td></tr>
-<tr><td>Heal</td><td id=""></td><td id=""></td><td id=""></td></tr>
-<tr><td>Intimidate</td><td id=""></td><td id=""></td><td id=""></td></tr>
-<tr><td>K: Arcana</td><td id=""></td><td id=""></td><td id=""></td></tr>
-<tr><td>K: Dungeoneering</td><td id=""></td><td id=""></td><td id=""></td></tr>
-<tr><td>K: Engineering</td><td id=""></td><td id=""></td><td id=""></td></tr>
-<tr><td>K: Geography</td><td id=""></td><td id=""></td><td id=""></td></tr>
-<tr><td>K: History</td><td id=""></td><td id=""></td><td id=""></td></tr>
-<tr><td>K: Local</td><td id=""></td><td id=""></td><td id=""></td></tr>
-<tr><td>K: Nature</td><td id=""></td><td id=""></td><td id=""></td></tr>
-<tr><td>K: Nobility</td><td id=""></td><td id=""></td><td id=""></td></tr>
-<tr><td>K: Planes</td><td id=""></td><td id=""></td><td id=""></td></tr>
-<tr><td>K: Religion</td><td id=""></td><td id=""></td><td id=""></td></tr>
-<tr><td>Linguistics</td><td id=""></td><td id=""></td><td id=""></td></tr>
-<tr><td>Perception</td><td id=""></td><td id=""></td><td id=""></td></tr>
-<tr><td>Perform ___</td><td id=""></td><td id=""></td><td id=""></td></tr>
-<tr><td>Profession ___</td><td id=""></td><td id=""></td><td id=""></td></tr>
-<tr><td>Ride</td><td id=""></td><td id=""></td><td id=""></td></tr>
-<tr><td>Sense Motive</td><td id=""></td><td id=""></td><td id=""></td></tr>
-<tr><td>Sleight of Hand</td><td id=""></td><td id=""></td><td id=""></td></tr>
-<tr><td>Spellcraft</td><td id=""></td><td id=""></td><td id=""></td></tr>
-<tr><td>Stealth</td><td id=""></td><td id=""></td><td id=""></td></tr>
-<tr><td>Survival</td><td id=""></td><td id=""></td><td id=""></td></tr>
-<tr><td>Swim</td><td id=""></td><td id=""></td><td id=""></td></tr>
-<tr><td>Use Magic Device</td><td id=""></td><td id=""></td><td id=""></td></tr>
+    <tr>
+        <th>SKILL</th>
+        <th>Ability mod.</th>
+        <th>Misc mod.</th>
+    </tr>
+    <tr>
+        <td>Acrobatics</td>
+        <td id="acro_am_output"></td>
+        <td id="acro_misc_output"></td>
+    </tr>
+    <tr>
+        <td>Appraise</td>
+        <td id="appr_am_output"></td>
+        <td id="appr_misc_output"></td>
+    </tr>
+    <tr>
+        <td>Bluff</td>
+        <td id="bluff_am_output"></td>
+        <td id="bluff_misc_output"></td>
+    </tr>
+    <tr>
+        <td>Climb</td>
+        <td id="climb_am_output"></td>
+        <td id="climb_misc_output"></td>
+    </tr>
+    <tr>
+        <td>Craft ___</td>
+        <td id="craft_am_output"></td>
+        <td id="craft_misc_output"></td>
+    </tr>
+    <tr>
+        <td>Diplomacy</td>
+        <td id="dip_am_output"></td>
+        <td id="dip_misc_output"></td>
+    </tr>
+    <tr>
+        <td>Disable Device</td>
+        <td id="disdev_am_output"></td>
+        <td id="disdev_misc_output"></td>
+    </tr>
+    <tr>
+        <td>Disguise</td>
+        <td id="disguise_am_output"></td>
+        <td id="disguise_misc_output"></td>
+    </tr>
+    <tr>
+        <td>Escape Artist</td>
+        <td id="esc_am_output">
+        </td><td id="esc_misc_output"></td>
+    </tr>
+    <tr>
+        <td>Fly</td>
+        <td id="fly_am_output"></td>
+        <td id="fly_misc_output"></td>
+    </tr>
+    <tr>
+        <td>Handle Animal</td>
+        <td id="handimal_am_output"></td>
+        <td id="handimal_misc_output"></td>
+    </tr>
+    <tr>
+        <td>Heal</td>
+        <td id="heal_am_output">
+        </td><td id="heal_misc_output"></td>
+    </tr>
+    <tr>
+        <td>Intimidate</td>
+        <td id="intim_am_output"></td>
+        <td id="intim_misc_output"></td>
+    </tr>
+    <tr>
+        <td>K: Arcana</td>
+        <td id=""></td>
+        <td id=""></td>
+    </tr>
+    <tr>
+        <td>K: Dungeoneering</td>
+        <td id=""></td>
+        <td id=""></td>
+    </tr>
+    <tr>
+        <td>K: Engineering</td>
+        <td id=""></td>
+        <td id=""></td>
+    </tr>
+    <tr>
+        <td>K: Geography</td>
+        <td id=""></td>
+        <td id=""></td>
+    </tr>
+    <tr>
+        <td>K: History</td>
+        <td id=""></td>
+        <td id=""></td>
+    </tr>
+    <tr>
+        <td>K: Local</td>
+        <td id=""></td>
+        <td id=""></td>
+    </tr>
+    <tr>
+        <td>K: Nature</td>
+        <td id=""></td>
+        <td id=""></td>
+    </tr>
+    <tr>
+        <td>K: Nobility</td>
+        <td id=""></td>
+        <td id=""></td>
+    </tr>
+    <tr>
+        <td>K: Planes</td>
+        <td id=""></td>
+        <td id=""></td>
+    </tr>
+    <tr>
+        <td>K: Religion</td>
+        <td id=""></td>
+        <td id=""></td>
+    </tr>
+    <tr>
+        <td>Linguistics</td>
+        <td id="ling_am_output"></td>
+        <td id="ling_misc_output"></td>
+    </tr>
+    <tr>
+        <td>Perception</td>
+        <td id="perc_am_output"></td>
+        <td id="perc_misc_output"></td>
+    </tr>
+    <tr>
+        <td>Perform ___</td>
+        <td id="perform_am_output"></td>
+        <td id="perform_misc_output"></td>
+    </tr>
+    <tr>
+        <td>Profession ___</td>
+        <td id=""></td>
+        <td id=""></td>
+    </tr>
+    <tr>
+        <td>Ride</td><td id=""></td>
+        <td id=""></td>
+    </tr>
+    <tr>
+        <td>Sense Motive</td>
+        <td id=""></td>
+        <td id=""></td>
+    </tr>
+    <tr>
+        <td>Sleight of Hand</td>
+        <td id=""></td>
+        <td id=""></td>
+    </tr>
+    <tr>
+        <td>Spellcraft</td>
+        <td id=""></td>
+        <td id=""></td>
+    </tr>
+    <tr>
+        <td>Stealth</td>
+        <td id=""></td>
+        <td id=""></td>
+    </tr>
+    <tr>
+        <td>Survival</td>
+        <td id="surv_am_output"></td>
+        <td id="surv_misc_output"></td>
+    </tr>
+    <tr>
+        <td>Swim</td>
+        <td id="swim_am_output"></td>
+        <td id="swim_misc_output"></td>
+    </tr>
+    <tr>
+        <td>Use Magic Device</td>
+        <td id="umd_am_output"></td>
+        <td id="umd_misc_output"></td>
+    </tr>
 </table>
 
 <h3>Feats</h3>
-<p id="feats"></p>
+<p id="feats_output"></p>
 
 <h3>Special Abilities</h3>
-<p class="specab"></p>
+<p id="specab_output"></p>
 
 </article>
 
 </main>
+
+<script type="text/javascript" src="js/pfcg.js"></script>
+
 </body>
 </html>

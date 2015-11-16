@@ -42,16 +42,17 @@ article {
     padding: .5em;
 }
 
+caption, 
+legend {
+    font-size: 1.1em;
+    font-weight: 700;
+    padding: 0;
+}
 
 /* FORMS ------------------------------------------------------------------- */
 
 form {
     padding: 1em;
-}
-
-legend {
-	font-weight: 700;
-    padding: 0;
 }
 
 fieldset {
@@ -111,11 +112,6 @@ td {
 tr:nth-of-type(2n+1) {
     background-color: rgb(255,235,200);
 	font-weight: 700;
-}
-
-caption {
-    font-size: 120%;
-    font-weight: 700;   
 }
 
 /*EOF*/
