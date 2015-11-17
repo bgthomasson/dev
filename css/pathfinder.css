@@ -83,6 +83,7 @@ button:hover {
 /* TABLES ------------------------------------------------------------------ */
 
 table {
+    border: 1px solid rgb(230,230,215);
 	margin: 0 auto;
     margin-bottom: 2em;
 }
@@ -92,7 +93,7 @@ tr:nth-of-type(2n){
 }
 
 td {
-    padding-top: .3em;
+    padding: .3em;
 }
 
 /*EOF*/

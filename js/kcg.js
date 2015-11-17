@@ -1,52 +1,53 @@
-
-// oldskool version had onclick() on button, changed to this miniAJAX instead
+// it works so start breaking into modules
 
 var $ = document.querySelectorAll.bind(document);
 Element.prototype.on = Element.prototype.addEventListener;
 $('#create')[0].on('click', generateCharacterSheet);
 
+// define all attributes and skills at default level one values
+var strength = 35;
+var wisdom = 30;
+var endurance = 35;
+var charisma = 40;
+var intelligence = 40;
+var agility = 50;
+var luck = 40;
+var speed = 30;
+var health = 100;
+var magicka = 50;
+var stamina = 150;
+var alteration = 10;
+var conjuration = 10;
+var destruction = 10;
+var illusion = 10;
+var restoration = 10;
+var enchantment = 10;
+var archery = 10; 
+var block = 10;
+var heavyarmor = 10;
+var onehanded = 10;
+var twohanded = 10;
+var unarmed = 15;
+var acrobatics = 25;
+var disguise = 10;
+var lightarmor = 15;
+var fraud = 10;
+var security = 15;
+var sneak = 20;
+var alchemy = 10;
+var speech = 10;
+var survival = 15;
+var handcraft = 20;
+var perform = 10;
+var smith = 10;
+
+var role = 'role';
+var morph = 'morph';
+
 function generateCharacterSheet() {
-  // math section:
-	// define all attributes and skills at default level one values
-	var strength = 35;
-	var wisdom = 30;
-	var endurance = 35;
-	var charisma = 40;
-	var intelligence = 40;
-	var agility = 50;
-	var luck = 40;
-	var speed = 30;
-	var health = 100;
-	var magicka = 50;
-	var stamina = 150;
-	var alteration = 10;
-	var conjuration = 10;
-	var destruction = 10;
-	var illusion = 10;
-	var restoration = 10;
-	var enchantment = 10;
-	var archery = 10; 
-	var block = 10;
-	var heavyarmor = 10;
-	var onehanded = 10;
-	var twohanded = 10;
-	var unarmed = 15;
-	var acrobatics = 25;
-	var disguise = 10;
-	var lightarmor = 15;
-	var fraud = 10;
-	var security = 15;
-	var sneak = 20;
-	var alchemy = 10;
-	var speech = 10;
-	var survival = 15;
-	var handcraft = 20;
-	var perform = 10;
-	var smith = 10;
 	
-	var role = 'role';
-	var morph = 'morph';
-	
+  // is it logical to have this bit in this function? 
+  
 	var rolecheck = document.kcg.elements[role];
    for(var i = 0; i < rolecheck.length; i++) {
       if(rolecheck[i].checked) { 
@@ -170,8 +171,8 @@ function generateCharacterSheet() {
 		default:
 		break;
 	}
+  
 	//---------------------------------------------------------------------------
-  // yes I know this should probably be put into another function...
 	// grab the elements we want to print results to:
   
   var outputs = document.getElementById('outputs');

@@ -1,16 +1,30 @@
-
+//---------------------------------------------------------------------------||
 var $ = document.querySelectorAll.bind(document);
 Element.prototype.on = Element.prototype.addEventListener;
 $('#create')[0].on('click', generateCharacterSheet);
 
-// math section:
 // define all attributes and skills at default level one values
 // which is easy, skills are 0 and atts are... hmm... uh oh.
-// make a random att generator??? that can fudge based on race and class.
+// random gen for attributes, but how handle? works better multi-stage.
+// also have to output the modifiers since they affect skill level.
 
-// misc things
+
+
+// health
 
 var hitdie; // assigned by class 
+var hp; // determined with hitdie
+
+function getHealthy() {
+  var hp1 = Math.floor(Math.random() * (hitdie + 1));
+  var hp2 = Math.floor(Math.random() * (hitdie + 1));
+  // you get two rolls and take the biggest, how nice. 
+  
+  if (hp1 > hp2) hp = hp1;
+  else hp = hp2;
+  
+  return hp;
+}
 
 var speed_base = 30; //unless modified by race
 var speed_fly = 0; // only winged creatures like gryphon, tengu, dragon, etc
@@ -56,7 +70,8 @@ var survival = 0;
 var swim = 0;
 var umd = 0;
 
-// create an array for class skills, feats, special abilities
+// create an array for class skills, feats, special abilities 
+// under the idea we can use that to mark them in the output table...
 var classSkillArray = [];
 var featArray = [];
 var specialAbilityArray = [];
@@ -64,25 +79,13 @@ var specialAbilityArray = [];
 
 function generateCharacterSheet() {
 
-// ALL of this stuff up top needs to be put into other function(s)
-
-// this can be one function
-
 	// race and class, which might be reserved so alias...
   var race = 'race';
 	var role = 'role';
   
-	// find what's been selected
-  
-	var rolecheck = document.kcg.elements[role];
-   for(var i = 0; i < rolecheck.length; i++) {
-      if(rolecheck[i].checked) { 
-        role = rolecheck[i].value;
-      }
-      // else ???
-   }   
+	// RACE
    
-	var racecheck = document.kcg.elements[race];
+	var racecheck = document.pfcg.elements[race];
    for(var i = 0; i < racecheck.length; i++) {
       if(racecheck[i].checked) {
         race = racecheck[i].value;
@@ -119,20 +122,9 @@ function generateCharacterSheet() {
       con -= 2;
       dex += 2;
       size = "Small";
-      craft = "2 trapmaking";
-      profession = "2 mining";
-      classSkillArray.push("craft", "stealth");
+      classSkillArray.push("stealth");
+      specialAbilityArray.push("craft trapmaking +2", "profession mining +2");
     break;
-    
-    case 'tengu':
-      dex += 2;
-      con -= 2;
-      wis += 2;
-      perception += 2;
-      stealth += 2;
-      linguistics +=4;
-      
-		break;
     
     case 'kernuni':
       cha += 2;
@@ -150,213 +142,107 @@ function generateCharacterSheet() {
       
 		break;
     
-    case 'bovini':
-      str += 2;
-      dex -= 2;
-      intimidate += 2;
-      survival += 2;
-      size = 'Large';
-      speed_base = 25;
-      
-		break;
-    
     default:
     break;
   }
   
+  // ROLE aka CLASS
+  var rolecheck = document.pfcg.elements[role];
+   for(var i = 0; i < rolecheck.length; i++) {
+      if(rolecheck[i].checked) { 
+        role = rolecheck[i].value;
+      }
+      // else ???
+   }
+   
 	// make changes depending on role chosen
 	switch (role) {
 		case 'barbarian':
-      classSkillArray.push("acro");
-      classSkillArray.push("climb");
-      classSkillArray.push("craft");
-      classSkillArray.push("handle_animal");
-      classSkillArray.push("intimidate");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
+      classSkillArray.push("acro", "climb", "craft", "handle_animal", "intimidate", 
+        "k_nature", "perc", "ride", "survival", "swim");
+      specialAbilityArray.push("fast movement", "rage");
       hitdie = 12;
 		break;
     
     case 'bard':
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
+      classSkillArray.push("acro", "appraise", "bluff", "climb", "craft", 
+        "diplomacy", "disguise", "esc", "intimidate", "linguistics", "perc", 
+        "perform", "profession", "sense_motive", "sleight", "spellcraft", 
+        "stealth", "umd");
+      specialAbilityArray.push("bardic knowledge", "bardic performance", 
+        "cantrips", "countersong", "distraction", "fascinate", "inspire courage");
       hitdie = 8;
 		break;
     
     case 'cleric':
-      classSkillArray.push();
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
+      classSkillArray.push("appraise", "craft", "diplomacy", "heal", "k_arcana", 
+        "k_history", "k_nobility", "k_planes", "k_religion", "linguistics", 
+        "profession", "sense_motive", "spellcraft");
+      specialAbilityArray.push("aura", "channel energy 1d6", "domains", "orisons", 
+        "spontaneous casting");
       hitdie = 8;
 		break;
     
     case 'druid':
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
+      classSkillArray.push("climb", "craft", "fly_skill", "handle_animal", 
+        "k_geography", "k_nature", "perception", "professsion", "ride", "spellcraft", 
+        "survival", "swim");
+      specialAbilityArray.push("nature bond", "nature sense", "orissons", "wild empathy");
       hitdie = 8;
 		break;
     
     case 'fighter':
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
+      classSkillArray.push("climb", "craft", "handle_animal", "intimidate", 
+        "k_dung", "k_eng", "profession", "ride", "survival", "swim");
+      specialAbilityArray.push("bonus feat");
       hitdie = 10;
 		break;
     
     case 'monk':
-      classSkillArray.push();
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
+      classSkillArray.push("acro", "climb", "craft", "esc", "intimidate", 
+        "k_history", "k_religion", "perc", "perform", "profession", "ride", 
+        "sense_motive", "stealth", "swim");
+      specialAbilityArray.push("bonus feat", "flurry of blows", "stunning fist", 
+        "unarmed strike");
       hitdie = 8;
 		break;
     
     case 'paladin':
-      classSkillArray.push();
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
+      classSkillArray.push("craft", "diplomacy", "handle_animal", "heal", 
+        "k_nobility", "k_religion", "profession", "ride", "sense_motive", "spellcraft");
+      specialAbilityArray.push("aura of good", "detect evil", "smite evil");
       hitdie = 10;
 		break;
     
     case 'ranger':
-      classSkillArray.push();
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
+      classSkillArray.push("climb", "craft", "heal", "intimidate", 
+        "k_dung", "k_geo", "k_nature", "perc", "profession", "ride", 
+        "spellcraft", "stealth", "survival", "swim");
+      specialAbilityArray.push("1st favored enemy", "track", "wild empathy");
       hitdie = 10;
 		break;
     
     case 'rogue':
-      classSkillArray.push("acro");
-      classSkillArray.push("appraise");
-      classSkillArray.push("bluff");
-      classSkillArray.push("climb");
-      classSkillArray.push("craft");
-      classSkillArray.push("diplomacy");
-      classSkillArray.push("disable_device");
-      classSkillArray.push("disguise");
-      classSkillArray.push("esc");
-      classSkillArray.push("intimidate");
-      classSkillArray.push("k_dung");
-      classSkillArray.push("k_local");
-      classSkillArray.push("linguistics");
-      classSkillArray.push("perception");
-      classSkillArray.push("perform");
-      classSkillArray.push("profession");
-      classSkillArray.push("sense_motive");
-      classSkillArray.push("sleight");
-      classSkillArray.push("stealth");
-      classSkillArray.push("swim");
-      classSkillArray.push("umd");
+      classSkillArray.push("acro", "appraise", "bluff", "climb", "craft", 
+        "diplomacy", "disable_device", "disguise", "esc", "intimidate", 
+        "k_dung", "k_local", "linguistics", "perc", "perform", 
+        "profession", "sense_motive", "sleight", "stealth", "swim", "umd");
+      specialAbilityArray.push("sneak attack 1d6", "trapfinding");  
       hitdie = 8;
 		break;
     
     case 'sorcerer':
-      classSkillArray.push();
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
+      classSkillArray.push("appraise", "bluff", "craft", "fly", "intimidate", 
+        "k_arcana", "profession", "spellcraft", "umd");
+      specialAbilityArray.push("bloodline power", "cantrips", "eschew materials");
       hitdie = 6;
 		break;
     
     case 'wizard':
-      classSkillArray.push();
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
-      classSkillArray.push("");
+      classSkillArray.push("appraise", "craft", "fly", "k_arcana", 
+        "linguistics", "profession", "spellcraft");
+      specialAbilityArray.push("arcane bond (familiar or bonded object)", 
+        "arcane school", "cantrips", "scribe scroll");
       hitdie = 6;
 		break;
     
@@ -367,21 +253,38 @@ function generateCharacterSheet() {
   
   //-------------------------------------------------------------------------//
   // OUTPUT RESULTS which should be the only thing in generate function...
-  // MAKE SURE THAT VAR NAMES FOR HTML INPUT AND OUTPUT DO NOT CONFLICT ! ! ! !
+  // MAKE SURE THAT VAR NAMES DO NOT CONFLICT 
 
-  var charname = document.getElementById('charname');
-  charname_output.textContent = charname.value;
+  var charname = document.pfcg.charname.value;
+    if (charname.length == 0) {
+      charname_output.textContent = "A horse with no name";
+    } else {
+      charname_output.textContent = charname;
+    }
   
-  var align = document.getElementById('alignment');
-  align_output.textContent = align.value;
+  // generate some hp
+  getHealthy();
+  hp_output.textContent = hp;
+  
+  // print out chosen alignment
+  var align = document.pfcg.alignment.value;
+  align_output.textContent = align;
+  
+  // stuff with abilities/attributes
+  
+	str_output.textContent = str;
+  dex_output.textContent = dex;
+  con_output.textContent = con;
+  int_output.textContent = intelligence;
+  wis_output.textContent = wis;
+  cha_output.textContent = cha; 
 
-	document.getElementById('str_output').textContent = str;
-  document.getElementById('dex_output').textContent = dex;
-  document.getElementById('con_output').textContent = con;
-  document.getElementById('int_output').textContent = intelligence;
-  document.getElementById('wis_output').textContent = wis;
-  document.getElementById('cha_output').textContent = cha; 
-
+  //skills!
+  
+  // run the alignment bonus func here
+  // run some func that goes thru classSkillArray and adds class="class_skill"
+  // to appropriate tr:first-child
+  
   var acro_row_output = getElementById('acro_row_output');
 	acro_row_output.innerHTML = "<td>Acrobatics</td><td>" + acro_am_output 
       + "</td><td>" + acro_misc_output + "</td>";
@@ -390,8 +293,10 @@ function generateCharacterSheet() {
       + "</td><td>" + _misc_output + "</td>";
   // yeah this is the part I really want automated!!!
   
+  // FEATS ETC
   
-  
+  feats_output.textContent = featsArray;
+  specab_output.textContent = specialAbilityArray;
   
   
 }

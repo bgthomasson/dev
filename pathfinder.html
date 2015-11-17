@@ -14,7 +14,7 @@
 <fieldset>
 <label for="charname">
     Name 
-    <input type="text" name="charname" size="26" />
+    <input type="text" name="charname" size="26" required >
 </label>
 
 <label for="alignment">
@@ -56,11 +56,6 @@ Orc
 Kobold
 </label>
 
-<label for="tengu">
-<input type="radio" name="race" id="tengu" value="tengu" /> 
-Tengu
-</label>
-
 <label for="kernuni">
 <input type="radio" name="race" id="kernuni" value="kernuni" /> 
 Kernuni
@@ -71,10 +66,6 @@ Kernuni
 Yuan ren
 </label>
 
-<label for="bovini">
-<input type="radio" name="race" id="bovini" value="bovini" /> 
-Bovini
-</label>
 </fieldset>
 
 <fieldset>
@@ -82,7 +73,7 @@ Bovini
 
 <label for="barbarian">
 <input type="radio" name="role" id="barbarian" value="barbarian" /> 
-Barbarian
+Barbarian (alignment cannot be lawful)
 </label>
 
 <label for="bard">
@@ -92,12 +83,12 @@ Bard
 
 <label for="cleric">
 <input type="radio" name="role" id="cleric" value="cleric" /> 
-Cleric
+Cleric (alignment must be one step from deity)
 </label>
 
 <label for="druid">
 <input type="radio" name="role" id="druid" value="druid" /> 
-Druid
+Druid (alignment must be neutral)
 </label>
 
 <label for="fighter">
@@ -112,7 +103,7 @@ Monk
 
 <label for="paladin">
 <input type="radio" name="role" id="paladin" value="paladin" /> 
-Paladin
+Paladin (must be lawful good)
 </label>
 
 <label for="ranger">
@@ -149,12 +140,16 @@ Wizard
     <tr><td>HP</td><td id="hp_output"></td></tr>
     <tr><td>Alignment</td><td id="align_output"></td></tr>
     <tr><td>Speed</td><td id="speed_output"></td></tr>
-    <tr><td>Strength</td><td id="str_output"></td></tr>
-    <tr><td>Dexterity</td><td id="dex_output"></td></tr>
-    <tr><td>Constitution</td><td id="con_output"></td></tr>
-    <tr><td>Intelligence</td><td id="int_output"></td></tr>
-    <tr><td>Wisdom</td><td id="wis_output"></td></tr>
-    <tr><td>Charisma</td><td id="cha_output"></td></tr>
+</table>
+
+<table>
+    <tr><th>Ability</th><th>Score</th><th>Modifier</th></tr>
+    <tr><td>Strength</td><td id="str_output"></td><td id="str_mod_output"></td></tr>
+    <tr><td>Dexterity</td><td id="dex_output"></td><td id="dex_mod_output"></td></tr>
+    <tr><td>Constitution</td><td id="con_output"></td><td id="con_mod_output"></td></tr>
+    <tr><td>Intelligence</td><td id="int_output"></td><td id="int_mod_output"></td></tr>
+    <tr><td>Wisdom</td><td id="wis_output"></td><td id="wis_mod_output"></td></tr>
+    <tr><td>Charisma</td><td id="cha_output"></td><td id="cha_mod_output"></td></tr>
 </table>
 
 <table>

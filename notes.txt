@@ -1,58 +1,35 @@
 DESIGN NOTES___________________________________________________________________
-
-Khajiit to Pathfinder
-convert "role" to class and "morph" to race, easy. 
-change attributes and skills to match pathfinder, easy but laborious. 
-
-series 1 will have limited details to preserve sanity. 
-races: human, dwarf, orc, kobold, tengu; kernuni, yuanren, bovini 
-just a sample, can add more as needed. focus on architecture. 
-
-harder: 
-will need to ROLL for HP and main 6 attributes 
-and att modifier will add to skills
-this is just to do rough grunt work then copy to paper so skip some inputs 
-! for human they can choose to increase any ability modifier! hmm. 
-
-> needs to mark your class skills! if skill = primarySkill then style = something
-
-on the skills, will need to do a LOOP that prints out 
-$skillName, $totalbonus, $abilityModifier, $miscModifier
-
-Note: because of reserved words I can't really use "class" as a variable. 
-
-It's really frustrating, either I do it all inline in JS like old khajiit thing, 
-so have HUGE file there, or do it all inline in HTML and hope I can autogen efficiently, 
-it's all so much typing and potential for typos and clusterfuk. 
-
-for the attributes it seems simple enough to do textContent but for the skills 
-it seems it would keep things cleaner to do innerHTML so won't have to keep 
-bouncing between files to double check what abbr I used
-
-to get the ability modifier, need like a crossjoin database, mark which skill 
-is connected to which attribute and then pull the modifier M from the db/array
-
-will need loop to set modifier! and not like a case statement either, something 
-programmatic, automatic, and values <10 need negatives
-also hard minimum of 1 or 0 when rolling stats.... 
-
-yes. two values. set default skill value like 'acro', when do race and such, 
-you modify -that- one, output as skill_misc_output
--then- automagically pull ability mod and insert as skill_am_output
-
-a class skills array? start it empty, then like kobold always has traps and stealth, 
-we push into the array as we go, 
-
-var skillArray = [];
-
-skillArray.push("craft trapmaking");
-
-wow this is going to take so much typing...
+OUTLINE
+. miniquery for button
+. health stuff, 
+^ getHealthy()
+. attributes
+. misc speed etc
+. skills vars, arrays
+^ generateCharacterSheet()
 
 
+MAJOR:
+
+> ability score and modifiers
+> work out how to make a join db/array of ability mods and classes.
+
+> finish output
+
+> error catch input
+# name and alignment input work, tho not optimized
 
 
+MINOR
 
+> alignment gets some influence, e.g. evil unicorns are vampiric not healers
+not sure how to set this up cleanly
+> barbarians can't be lawful! how handle?
+
+> alt racial traits
+> favored class bonuses
+> archetypes 
+> ranger has animal companion!
 
 
 
