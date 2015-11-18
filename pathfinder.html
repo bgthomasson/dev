@@ -128,9 +128,27 @@ Wizard
 
 </fieldset>
 
-<button type="button" id="create">Create your character!</button>
+<button type="button" id="roll1">Roll for ability scores</button>
+
+<p>
+You can re-roll as many times as you like. 
+</p>
+
+<table>
+    <tr><th>Ability</th><th>Score</th></tr>
+    <tr><td>Strength</td><td id="str_output"></td></tr>
+    <tr><td>Dexterity</td><td id="dex_output"></td></tr>
+    <tr><td>Constitution</td><td id="con_output"></td></tr>
+    <tr><td>Intelligence</td><td id="int_output"></td></tr>
+    <tr><td>Wisdom</td><td id="wis_output"></td></tr>
+    <tr><td>Charisma</td><td id="cha_output"></td></tr>
+</table>
+
+<button type="button" id="create">Create your ref sheet!</button>
 
 </form>
+
+<!-- --------------------------------------------------------------------- -->
 
 <article id="outputs">
 
@@ -158,180 +176,41 @@ Wizard
         <th>Ability mod.</th>
         <th>Misc mod.</th>
     </tr>
-    <tr id="acro_row_output">
-        <td>Acrobatics</td>
-        <td id="acro_am_output"></td>
-        <td id="acro_misc_output"></td>
-    </tr>
-    <tr>
-        <td>Appraise</td>
-        <td id="appraise_am_output"></td>
-        <td id="appraise_misc_output"></td>
-    </tr>
-    <tr>
-        <td>Bluff</td>
-        <td id="bluff_am_output"></td>
-        <td id="bluff_misc_output"></td>
-    </tr>
-    <tr>
-        <td>Climb</td>
-        <td id="climb_am_output"></td>
-        <td id="climb_misc_output"></td>
-    </tr>
-    <tr>
-        <td>Craft ___</td>
-        <td id="craft_am_output"></td>
-        <td id="craft_misc_output"></td>
-    </tr>
-    <tr>
-        <td>Diplomacy</td>
-        <td id="diplomacy_am_output"></td>
-        <td id="diplomacy_misc_output"></td>
-    </tr>
-    <tr>
-        <td>Disable Device</td>
-        <td id="disdev_am_output"></td>
-        <td id="disdev_misc_output"></td>
-    </tr>
-    <tr>
-        <td>Disguise</td>
-        <td id="disguise_am_output"></td>
-        <td id="disguise_misc_output"></td>
-    </tr>
-    <tr>
-        <td>Escape Artist</td>
-        <td id="esc_am_output">
-        </td><td id="esc_misc_output"></td>
-    </tr>
-    <tr>
-        <td>Fly</td>
-        <td id="fly_skill_am_output"></td>
-        <td id="fly_skill_misc_output"></td>
-    </tr>
-    <tr>
-        <td>Handle Animal</td>
-        <td id="handle_animal_am_output"></td>
-        <td id="handle_animal_misc_output"></td>
-    </tr>
-    <tr>
-        <td>Heal</td>
-        <td id="heal_am_output">
-        </td><td id="heal_misc_output"></td>
-    </tr>
-    <tr>
-        <td>Intimidate</td>
-        <td id="intim_am_output"></td>
-        <td id="intim_misc_output"></td>
-    </tr>
-    <tr>
-        <td>K: Arcana</td>
-        <td id="k_arcana_am_output"></td>
-        <td id="k_arcana_misc_output"></td>
-    </tr>
-    <tr>
-        <td>K: Dungeoneering</td>
-        <td id="k_dung"></td>
-        <td id=""></td>
-    </tr>
-    <tr>
-        <td>K: Engineering</td>
-        <td id=""></td>
-        <td id=""></td>
-    </tr>
-    <tr>
-        <td>K: Geography</td>
-        <td id=""></td>
-        <td id=""></td>
-    </tr>
-    <tr>
-        <td>K: History</td>
-        <td id=""></td>
-        <td id=""></td>
-    </tr>
-    <tr>
-        <td>K: Local</td>
-        <td id=""></td>
-        <td id=""></td>
-    </tr>
-    <tr>
-        <td>K: Nature</td>
-        <td id=""></td>
-        <td id=""></td>
-    </tr>
-    <tr>
-        <td>K: Nobility</td>
-        <td id=""></td>
-        <td id=""></td>
-    </tr>
-    <tr>
-        <td>K: Planes</td>
-        <td id=""></td>
-        <td id=""></td>
-    </tr>
-    <tr>
-        <td>K: Religion</td>
-        <td id=""></td>
-        <td id=""></td>
-    </tr>
-    <tr>
-        <td>Linguistics</td>
-        <td id="ling_am_output"></td>
-        <td id="ling_misc_output"></td>
-    </tr>
-    <tr>
-        <td>Perception</td>
-        <td id="perc_am_output"></td>
-        <td id="perc_misc_output"></td>
-    </tr>
-    <tr>
-        <td>Perform ___</td>
-        <td id="perform_am_output"></td>
-        <td id="perform_misc_output"></td>
-    </tr>
-    <tr>
-        <td>Profession ___</td>
-        <td id=""></td>
-        <td id=""></td>
-    </tr>
-    <tr>
-        <td>Ride</td><td id=""></td>
-        <td id=""></td>
-    </tr>
-    <tr>
-        <td>Sense Motive</td>
-        <td id=""></td>
-        <td id=""></td>
-    </tr>
-    <tr>
-        <td>Sleight of Hand</td>
-        <td id=""></td>
-        <td id=""></td>
-    </tr>
-    <tr>
-        <td>Spellcraft</td>
-        <td id=""></td>
-        <td id=""></td>
-    </tr>
-    <tr>
-        <td>Stealth</td>
-        <td id=""></td>
-        <td id=""></td>
-    </tr>
-    <tr>
-        <td>Survival</td>
-        <td id="surv_am_output"></td>
-        <td id="surv_misc_output"></td>
-    </tr>
-    <tr>
-        <td>Swim</td>
-        <td id="swim_am_output"></td>
-        <td id="swim_misc_output"></td>
-    </tr>
-    <tr>
-        <td>Use Magic Device</td>
-        <td id="umd_am_output"></td>
-        <td id="umd_misc_output"></td>
-    </tr>
+    <tr id="acro_row_output"></tr>
+    <tr id="appraise_row_output"></tr>
+    <tr id="bluff_row_output"></tr>
+    <tr id="climb_row_output"></tr>
+    <tr id="craft_row_output"></tr>
+    <tr id="diplomacy_row_output"></tr>
+    <tr id="disdev_row_output"></tr>
+    <tr id="disguise_row_output"></tr>
+    <tr id="esc_row_output"></tr>
+    <tr id="fly_skill_row_output"></tr>
+    <tr id="handle_animal_row_output"></tr>
+    <tr id="heal_row_output"></tr>
+    <tr id="intimidate_row_output"></tr>
+    <tr id="k_arcanarow_output"></tr>
+    <tr id="k_dung_row_output"></tr>
+    <tr id="k_eng_row_output"></tr>
+    <tr id="k_geo_row_output"></tr>
+    <tr id="k_history_row_output"></tr>
+    <tr id="k_local_row_output"></tr>
+    <tr id="k_nature_row_output"></tr>
+    <tr id="k_nob_row_output"></tr>
+    <tr id="k_planes_row_output"></tr>
+    <tr id="k_religion_row_output"></tr>
+    <tr id="ling_row_output"></tr>
+    <tr id="perc_row_output"></tr>
+    <tr id="perform_row_output"></tr>
+    <tr id="profession_row_output"></tr>
+    <tr id="ride_row_output"></tr>
+    <tr id="sense_motive_row_output"></tr>
+    <tr id="sleight_row_output"></tr>
+    <tr id="spellcraft_row_output"></tr>
+    <tr id="stealth_row_output"></tr>
+    <tr id="survival_row_output"></tr>
+    <tr id="swim_row_output"></tr>
+    <tr id="umd_row_output"></tr>
 </table>
 
 <h3>Feats</h3>

@@ -80,6 +80,7 @@ button {
     border-radius: 12px;
     box-shadow: 5px 5px 5px rgba(64,16,0,.4);
     cursor: pointer;
+    font-weight: 700;
     padding: 1em;
     transition: all 0.4s;
 }

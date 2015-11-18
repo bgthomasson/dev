@@ -3,17 +3,77 @@ var $ = document.querySelectorAll.bind(document);
 Element.prototype.on = Element.prototype.addEventListener;
 $('#create')[0].on('click', generateCharacterSheet);
 
-// define all attributes and skills at default level one values
-// which is easy, skills are 0 and atts are... hmm... uh oh.
-// random gen for attributes, but how handle? works better multi-stage.
-// also have to output the modifiers since they affect skill level.
 
+function generateCharacterSheet() {
+  
+  // ALL VARs FIRST ... 
+  // race and class, which might be reserved so alias...
+  var race = 'race';
+  var role = 'role';
 
+  // health
+  var hitdie; // assigned by class 
+  var hp; // determined with hitdie
 
-// health
+  //abilities set at 10
+  var str = 10;
+  var dex = 10;
+  var con = 10;
+  var intelligence = 10;
+  var wis = 10;
+  var cha = 10;
 
-var hitdie; // assigned by class 
-var hp; // determined with hitdie
+  var speed_base = 30; //unless modified by race
+  var speed_fly = 0; // right?
+  var speed_swim = 10;
+  var speed_climb = 10;
+
+  var size = 'Med'; // most of these are
+
+  // skills all set to 0
+  var acro = 0;
+  var appraise = 0;
+  var bluff = 0;
+  var climb = 0;
+  var craft = 0;
+  var diplomacy = 0;
+  var disdev = 0;
+  var disguise = 0;
+  var esc = 0;
+  var fly_skill = 0;
+  var handle_animal = 0;
+  var heal = 0;
+  var intimidate = 0;
+  var k_arcana = 0;
+  var k_dung = 0;
+  var k_eng = 0;
+  var k_geo = 0;
+  var k_hist = 0;
+  var k_local = 0;
+  var k_nature = 0;
+  var k_nob = 0;
+  var k_planes = 0;
+  var k_rel = 0;
+  var ling = 0;
+  var perc = 0;
+  var perform = 0;
+  var profession = 0;
+  var ride = 0;
+  var sense_motive = 0;
+  var sleight = 0;
+  var spellcraft = 0;
+  var stealth = 0;
+  var survival = 0;
+  var swim = 0;
+  var umd = 0;
+
+  // create an array for class skills, feats, special abilities 
+  // under the idea we can use that to mark them in the output table...
+  var classSkillArray = [];
+  var featArray = [];
+  var specialAbilityArray = [];
+
+// START WITH SMALL FUNCs
 
 function getHealthy() {
   var hp1 = Math.floor(Math.random() * (hitdie + 1));
@@ -26,65 +86,7 @@ function getHealthy() {
   return hp;
 }
 
-var speed_base = 30; //unless modified by race
-var speed_fly = 0; // only winged creatures like gryphon, tengu, dragon, etc
-var speed_swim = 10;
-var speed_climb = 10;
-
-var size = 'Med'; // most of these are
-
-// skills all set to 0
-var acro = 0;
-var appraise = 0;
-var bluff = 0;
-var climb = 0;
-var craft = 0;
-var diplomacy = 0;
-var disdev = 0;
-var disguise = 0;
-var esc = 0;
-var fly_skill = 0;
-var handle_animal = 0;
-var heal = 0;
-var intimidate = 0;
-var k_arcana = 0;
-var k_dung = 0;
-var k_eng = 0;
-var k_geo = 0;
-var k_hist = 0;
-var k_local = 0;
-var k_nature = 0;
-var k_nob = 0;
-var k_planes = 0;
-var k_rel = 0;
-var ling = 0;
-var perc = 0;
-var perform = 0;
-var profession = 0;
-var ride = 0;
-var sense_motive = 0;
-var sleight = 0;
-var spellcraft = 0;
-var stealth = 0;
-var survival = 0;
-var swim = 0;
-var umd = 0;
-
-// create an array for class skills, feats, special abilities 
-// under the idea we can use that to mark them in the output table...
-var classSkillArray = [];
-var featArray = [];
-var specialAbilityArray = [];
-
-
-function generateCharacterSheet() {
-
-	// race and class, which might be reserved so alias...
-  var race = 'race';
-	var role = 'role';
-  
-	// RACE
-   
+//function chooseRace() {
 	var racecheck = document.pfcg.elements[race];
    for(var i = 0; i < racecheck.length; i++) {
       if(racecheck[i].checked) {
@@ -145,8 +147,10 @@ function generateCharacterSheet() {
     default:
     break;
   }
-  
-  // ROLE aka CLASS
+//}
+
+//function chooseRole() {
+    // ROLE aka CLASS
   var rolecheck = document.pfcg.elements[role];
    for(var i = 0; i < rolecheck.length; i++) {
       if(rolecheck[i].checked) { 
@@ -166,7 +170,7 @@ function generateCharacterSheet() {
     
     case 'bard':
       classSkillArray.push("acro", "appraise", "bluff", "climb", "craft", 
-        "diplomacy", "disguise", "esc", "intimidate", "linguistics", "perc", 
+        "diplomacy", "disguise", "esc", "intimidate", "ling", "perc", 
         "perform", "profession", "sense_motive", "sleight", "spellcraft", 
         "stealth", "umd");
       specialAbilityArray.push("bardic knowledge", "bardic performance", 
@@ -176,7 +180,7 @@ function generateCharacterSheet() {
     
     case 'cleric':
       classSkillArray.push("appraise", "craft", "diplomacy", "heal", "k_arcana", 
-        "k_history", "k_nobility", "k_planes", "k_religion", "linguistics", 
+        "k_history", "k_nob", "k_planes", "k_religion", "ling", 
         "profession", "sense_motive", "spellcraft");
       specialAbilityArray.push("aura", "channel energy 1d6", "domains", "orisons", 
         "spontaneous casting");
@@ -224,8 +228,8 @@ function generateCharacterSheet() {
     
     case 'rogue':
       classSkillArray.push("acro", "appraise", "bluff", "climb", "craft", 
-        "diplomacy", "disable_device", "disguise", "esc", "intimidate", 
-        "k_dung", "k_local", "linguistics", "perc", "perform", 
+        "diplomacy", "disdev", "disguise", "esc", "intimidate", 
+        "k_dung", "k_local", "ling", "perc", "perform", 
         "profession", "sense_motive", "sleight", "stealth", "swim", "umd");
       specialAbilityArray.push("sneak attack 1d6", "trapfinding");  
       hitdie = 8;
@@ -240,7 +244,7 @@ function generateCharacterSheet() {
     
     case 'wizard':
       classSkillArray.push("appraise", "craft", "fly", "k_arcana", 
-        "linguistics", "profession", "spellcraft");
+        "ling", "profession", "spellcraft");
       specialAbilityArray.push("arcane bond (familiar or bonded object)", 
         "arcane school", "cantrips", "scribe scroll");
       hitdie = 6;
@@ -249,15 +253,13 @@ function generateCharacterSheet() {
 		default:
 		break;
 	}
-	
-  
-  //-------------------------------------------------------------------------//
-  // OUTPUT RESULTS which should be the only thing in generate function...
-  // MAKE SURE THAT VAR NAMES DO NOT CONFLICT 
+//}
+
+
 
   var charname = document.pfcg.charname.value;
     if (charname.length == 0) {
-      charname_output.textContent = "A horse with no name";
+      charname_output.textContent = "Clint Eastwood";
     } else {
       charname_output.textContent = charname;
     }
@@ -285,13 +287,44 @@ function generateCharacterSheet() {
   // run some func that goes thru classSkillArray and adds class="class_skill"
   // to appropriate tr:first-child
   
-  var acro_row_output = getElementById('acro_row_output');
-	acro_row_output.innerHTML = "<td>Acrobatics</td><td>" + acro_am_output 
+  
+	acro_row_output.innerHTML = "<td>Acrobatics</td><td>" + dex_am_output 
       + "</td><td>" + acro_misc_output + "</td>";
-  var _row_output = getElementById('_row_output');
-	_row_output.innerHTML = "<td></td><td>" + _am_output 
-      + "</td><td>" + _misc_output + "</td>";
-  // yeah this is the part I really want automated!!!
+  
+	appraise_row_output.innerHTML = "<td></td><td>" + int_am_output 
+    + "</td><td>" + appraise_misc_output + "</td>";
+  
+  _row_output.innerHTML = "<td></td><td>" + _am_output + "</td><td>" + _misc_output + "</td>";
+  
+  _row_output.innerHTML = "<td></td><td>" + _am_output + "</td><td>" + _misc_output + "</td>";
+  
+  _row_output.innerHTML = "<td></td><td>" + _am_output + "</td><td>" + _misc_output + "</td>";
+  
+  _row_output.innerHTML = "<td></td><td>" + _am_output + "</td><td>" + _misc_output + "</td>";
+  
+  _row_output.innerHTML = "<td></td><td>" + _am_output + "</td><td>" + _misc_output + "</td>";
+  
+  _row_output.innerHTML = "<td></td><td>" + _am_output + "</td><td>" + _misc_output + "</td>";
+  
+  _row_output.innerHTML = "<td></td><td>" + _am_output + "</td><td>" + _misc_output + "</td>";
+  
+  _row_output.innerHTML = "<td></td><td>" + _am_output + "</td><td>" + _misc_output + "</td>";
+  
+  _row_output.innerHTML = "<td></td><td>" + _am_output + "</td><td>" + _misc_output + "</td>";
+  
+  _row_output.innerHTML = "<td></td><td>" + _am_output + "</td><td>" + _misc_output + "</td>";
+  
+  _row_output.innerHTML = "<td></td><td>" + _am_output + "</td><td>" + _misc_output + "</td>";
+  
+  _row_output.innerHTML = "<td></td><td>" + _am_output + "</td><td>" + _misc_output + "</td>";
+  
+  _row_output.innerHTML = "<td></td><td>" + _am_output + "</td><td>" + _misc_output + "</td>";
+
+  
+  
+  
+  
+  // this is the part I really want automated!!!
   
   // FEATS ETC
   

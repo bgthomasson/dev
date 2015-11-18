@@ -12,12 +12,28 @@ OUTLINE
 MAJOR:
 
 > ability score and modifiers
+let's put this in a different file, in the form have a button to roll before
+submit form, so can pick out what like, use the textContent to ajax it. 
+can you do that? not really a form inside a form, just a button and output table
+
+??? should I do roll 4d6 which is fairly simple
+OR do the point buy, it's more customizable but will need 
+1. incremental thingies to scroll numbers
+2. instant AJAX to add and subtract from total points allowed (7 is -4, 17 is +13)
+so all the scrollers start at 10 (cost of 0) and has box w/ remaining points
+! would have to stop user if try to go past... 
+!! also have to factor in racial stats!! so this func would have to reuse 
+the radio btn check....
+AHAh. set the abilities at 10, then run that to add/sub. 
+
+
 > work out how to make a join db/array of ability mods and classes.
+OR if I'm typing out the tmplate by hand I can just put in the correct $ability_mod 
+hmmmm
 
 > finish output
 
-> error catch input
-# name and alignment input work, tho not optimized
+> ERROR CATCH RADIO BUTTONS
 
 
 MINOR
@@ -31,6 +47,20 @@ not sure how to set this up cleanly
 > archetypes 
 > ranger has animal companion!
 
+
+--------------
+KHAJIIT notes that affect this as well
+1. RESET! running once, thne choosing new radio buttons and clicking again will 
+simply pile on numbers, whooops. it seems to be aaving the previous selection 
+and running that again on top of the new one, each time! 
+oh I see the content isn't changing on race and role, hmm...
+but it does on name! wtf. oh it gets output directly from the input. mhmm. 
+
+so should be built in failsafe that resets each click of the button. right? 
+ironically i think the problem is breaking the one big function up, trying 
+to do it "right" just fucks everything up...
+
+oh hey you can put functions inside functions... hmm... 
 
 
 
