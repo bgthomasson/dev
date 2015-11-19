@@ -3,6 +3,20 @@ var $ = document.querySelectorAll.bind(document);
 Element.prototype.on = Element.prototype.addEventListener;
 $('#create')[0].on('click', generateCharacterSheet);
 
+function isUsernameSet(namecheck) {  
+  if(namecheck == null || namecheck.length == 0){
+    errorbox.textContent += "You have no name. ";
+  } else {
+    charname_output.textContent = namecheck;
+  }
+}
+
+function validateRadio(radio) {
+  for(var i = 0; i < radio.length; i++) {
+    if(radio[i].checked) return true;
+  }
+  return false;
+}
 
 function generateCharacterSheet() {
   
@@ -87,13 +101,17 @@ function getHealthy() {
 }
 
 //function chooseRace() {
-	var racecheck = document.pfcg.elements[race];
+	var racecheck = pfcg.elements[race];
+  
+  if(validateRadio(racecheck)){
    for(var i = 0; i < racecheck.length; i++) {
       if(racecheck[i].checked) {
         race = racecheck[i].value;
       }
-      // else ???
-   }
+    }
+  } else {
+    errorbox.textContent = "You need to select a race.";
+  }
 	
   switch (race) {
     case 'human' :
@@ -150,14 +168,18 @@ function getHealthy() {
 //}
 
 //function chooseRole() {
-    // ROLE aka CLASS
-  var rolecheck = document.pfcg.elements[role];
-   for(var i = 0; i < rolecheck.length; i++) {
+  // ROLE aka CLASS
+  var rolecheck = pfcg.elements[role];
+  
+  if(validateRadio(rolecheck)){
+    for(var i = 0; i < rolecheck.length; i++) {
       if(rolecheck[i].checked) { 
         role = rolecheck[i].value;
       }
-      // else ???
-   }
+    }
+  } else {
+    errorbox.textContent = "You need to select a class.";
+  }
    
 	// make changes depending on role chosen
 	switch (role) {
@@ -255,21 +277,15 @@ function getHealthy() {
 	}
 //}
 
-
-
-  var charname = document.pfcg.charname.value;
-    if (charname.length == 0) {
-      charname_output.textContent = "Clint Eastwood";
-    } else {
-      charname_output.textContent = charname;
-    }
+  // print out their name
+  isUsernameSet(pfcg.charname.value);
   
   // generate some hp
   getHealthy();
   hp_output.textContent = hp;
   
   // print out chosen alignment
-  var align = document.pfcg.alignment.value;
+  var align = pfcg.alignment.value;
   align_output.textContent = align;
   
   // stuff with abilities/attributes
@@ -286,7 +302,7 @@ function getHealthy() {
   // run the alignment bonus func here
   // run some func that goes thru classSkillArray and adds class="class_skill"
   // to appropriate tr:first-child
-  
+  // I really don't want to doo all this manually! surely there's some way to automate.
   
 	acro_row_output.innerHTML = "<td>Acrobatics</td><td>" + dex_am_output 
       + "</td><td>" + acro_misc_output + "</td>";
@@ -321,10 +337,6 @@ function getHealthy() {
   _row_output.innerHTML = "<td></td><td>" + _am_output + "</td><td>" + _misc_output + "</td>";
 
   
-  
-  
-  
-  // this is the part I really want automated!!!
   
   // FEATS ETC
   

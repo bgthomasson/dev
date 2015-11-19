@@ -4,11 +4,20 @@ var $ = document.querySelectorAll.bind(document);
 Element.prototype.on = Element.prototype.addEventListener;
 $('#create')[0].on('click', generateCharacterSheet);
 
+function isUsernameSet(namecheck) {  
+  if(namecheck == null || namecheck.length == 0){
+    errorbox.textContent += "You have no name. ";
+  } else {
+    charname_output.textContent = namecheck;
+  }
+}
 
-
-	//help from http://www.javascript-coder.com/javascript-form/javascript-get-check.phtml
-	//and http://www.openjs.com/tutorials/advanced_tutorial/choices.php
-	// as there is a dearth of info on using radio buttons with JS
+function validateRadio(radio) {
+  for(var i = 0; i < radio.length; i++) {
+    if(radio[i].checked) return true;
+  }
+  return false;
+}
 
 function generateCharacterSheet() {
   
@@ -48,19 +57,21 @@ function generateCharacterSheet() {
   var handcraft = 20;
   var perform = 10;
   var smith = 10;
+  
 
+  // should be a function but needs all those vars
   var role = 'role';
-  var rolecheck = document.kcg.elements[role];
+  var rolecheck = kcg.elements[role];
   
-  var morph = 'morph';
-	var morphcheck = document.kcg.elements[morph];
-  
-  
-  for(var i = 0; i < rolecheck.length; i++) {
+  if(validateRadio(rolecheck)){
+    for(var i = 0; i < rolecheck.length; i++) {
       if(rolecheck[i].checked) { 
         role = rolecheck[i].value;
-      } // ELSE!
-   } 
+      } 
+    } 
+  } else {
+    errorbox.textContent = "You need to select a role.";
+  }
 
 	// make changes depending on role chosen
 	switch (role) {
@@ -112,12 +123,19 @@ function generateCharacterSheet() {
 		break;
 	}
   
+  // should be a function 
+  var morph = 'morph';
+	var morphcheck = kcg.elements[morph];
   
-   for(var i = 0; i < morphcheck.length; i++) {
+  if(validateRadio(morphcheck)){
+    for(var i = 0; i < morphcheck.length; i++) {
       if(morphcheck[i].checked) {
         morph = morphcheck[i].value;
-      } // ELSE!
-   }
+      } 
+    }
+  } else {
+    errorbox.textContent = "You need to select a morph.";
+  }
    
 	// make changes depending on morph chosen
 	switch (morph) {
@@ -175,11 +193,11 @@ function generateCharacterSheet() {
 		break;
 	}
   
-  
+  // the actual core part of this function
 	// grab the elements we want to print results to:
   
   var outputs = document.getElementById('outputs');
-  var charname = document.getElementById('charname');
+  var charname_output = document.getElementById('charname_output');
   var attributes1 = document.getElementById('attributes1');
   var attributes2 = document.getElementById('attributes2');
   var rolecall = document.getElementById('rolecall');
@@ -194,7 +212,8 @@ function generateCharacterSheet() {
   
   // and then do the do
   
-  charname.textContent = kcg.charname.value;
+  isUsernameSet(kcg.charname.value);
+  
   
 	attributes1.innerHTML = "<td>" + health + "</td><td>" + magicka + "</td><td>" 
     + stamina + "</td><td>" + speed + "</td><td>" + morph + "</td><td>" 

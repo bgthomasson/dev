@@ -14,13 +14,13 @@
 <h1>Tabletop Khajiit Character Generator</h1>
 
 <fieldset>
-<label for="charname">Name </label>
+<label for="charname">Name (required, you can find a list of options here) </label>
 <input type="text" name="charname" size="26" />
 
-<label for="charage">Age </label>
+<label for="charage">Age (optional, you can use digits or like "twenty winters" etc.) </label>
 <input type="text" name="charage" size="8" />
 
-<label for="chargend">Gender </label>
+<label for="chargend">Gender (optional) </label>
 <input type="text" name="chargend" size="8" />
 </fieldset>
 
@@ -90,12 +90,14 @@ Senche: +10 strength, -10 agility, +15 Unarmed, +10 health, 0 in all hand skills
 
 </fieldset>
 
+<p id="errorbox" class="error"></p>
+
 <button type="button" id="create">Create your character!</button>
 
 </form>
 
 <article id="outputs">
-<h2 id="charname">Your Character</h2>
+<h2 id="charname_output">Your Character</h2>
 <table>
 <caption>Attributes</caption>
 <tr>
