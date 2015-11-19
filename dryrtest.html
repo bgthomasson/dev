@@ -10,14 +10,12 @@
 <body>
 <header class="page-header">
     <nav class="page-nav">
-        
         <a href="#">&#x270d; Post</a> 
         <a href="#" id="mailbox" class="mailbox">&#x2709; Messages</a> 
-        <a href="dryrtest.html"><h1 class="nomen">Home</h1></a>
         <a href="#">&#x272a; $Username</a> 
         <a href="#">&#x21af; Settings</a> 
         <a href="#">&#x2205; Log out</a>
-        
+        <a href="dryrtest.html"><h1 class="nomen">Home</h1></a>
     </nav>
     <form name="searchform" class="search-form" method="POST" action="search.php">
         <input type="search" name="searchbox" class="search-box" placeholder="Search" />
@@ -56,11 +54,9 @@
     MESSAGES: chatmail and mentions
     </p>
     <p>
-    MAIN: website homepage
-    </p>
-    <p>
-    $USERNAME: the user's homepage with all their posts. Also has stats link there. 
-    (Intend to minimalize "popularity")
+    $USERNAME: the user's homepage with all their posts. 
+    For desktop it might work better to make this a dropmenu link, under have 
+    $userpage, stats, settings, logout. 
     </p>
     <p>
     SETTINGS: all the stuff like CSS (minor customization options like font size, colors); 
@@ -72,6 +68,9 @@
     <p>
     LOG OUT: have a confirmation thingy, less irritating than accidentally doing it. 
     Obvious too like "Yes log me out" and "wait no I didn't mean to hit that!" (lol)
+    </p>
+    <p>
+    HOME is link to website homepage. Try to get to float in the middle. 
     </p>
 
     <ul>
@@ -90,8 +89,7 @@
     </ol>
     <p>
     Bare HTML/CSS loads in under 200ms on DSL (according to Chrome at least), so I think 
-    I can relax about that for now. Using the minimized unified file so will stop 
-    picking at it.  
+    I can relax about that for now. 
     </p>
     
     <blockquote>
@@ -181,6 +179,7 @@
 </section>
 </article>
 
+
 <article class="post">
     <div class="post-icon">
     <img src="img/summer-13.png" alt="usericon" />
@@ -188,7 +187,8 @@
     
     <section class="post-body">
     
-    <section class="post-content">
+    <section class="post-content literature">
+    <h2>Literature class</h2>
     <p class="leader">At eight o'clock the sledge was ready to start.  
     The passengers took their places on it, and wrapped themselves up closely in their travelling-cloaks.  
     The two great sails were hoisted, and under the pressure of the wind the sledge slid over the hardened 
@@ -235,6 +235,7 @@
 </footer>
 <!-- JAVASCRIPT AREA ..................................................... -->
 <script src="js/addClass.js"></script>
+
 
 </body>
 </html>

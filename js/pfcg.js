@@ -3,11 +3,11 @@ var $ = document.querySelectorAll.bind(document);
 Element.prototype.on = Element.prototype.addEventListener;
 $('#create')[0].on('click', generateCharacterSheet);
 
-function isUsernameSet(namecheck) {  
-  if(namecheck == null || namecheck.length == 0){
-    errorbox.textContent += "You have no name. ";
+function isTextboxSet(txt) {  
+  if(txt == null || txt.length == 0){
+    return false;
   } else {
-    charname_output.textContent = namecheck;
+    return true;
   }
 }
 
@@ -109,8 +109,9 @@ function getHealthy() {
         race = racecheck[i].value;
       }
     }
+    error_race.textContent = "";
   } else {
-    errorbox.textContent = "You need to select a race.";
+    error_race.textContent = "You need to select a race.";
   }
 	
   switch (race) {
@@ -177,8 +178,9 @@ function getHealthy() {
         role = rolecheck[i].value;
       }
     }
+    error_roll.textContent = "";
   } else {
-    errorbox.textContent = "You need to select a class.";
+    error_roll.textContent = "You need to select a class.";
   }
    
 	// make changes depending on role chosen
@@ -278,7 +280,15 @@ function getHealthy() {
 //}
 
   // print out their name
-  isUsernameSet(pfcg.charname.value);
+  var namecheck = pfcg.charname.value;
+  
+  if(isTextboxSet(namecheck)) {
+    charname_output.textContent = namecheck;
+    error_name.textContent = "";
+  } else {
+    error_name.textContent = "You have no name.";
+  }
+  
   
   // generate some hp
   getHealthy();

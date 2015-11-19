@@ -13,34 +13,20 @@ the radio btn check....
 set the abilities at 10, then run that to add/sub. 
 
 
-
-> have input validation, at least basic, 
-but need to put into own files to be super modular
  
 > alignment gets some influence, e.g. evil unicorns are vampiric not healers
 not sure how to set this up cleanly
-
-> barbarians can't be lawful! how handle?
-
-
-
-
-> modules
-if have vars loose in file, they'll never reset when click button again... 
-
-
-
-
-PHP/JSON version? 
-have php handle all the form stuff, send back as JSON. temp save also. 
+> also barbarians can't be lawful! how handle?
 
 
 
 
 
 
-
-
+stripChars(input){
+  var angles = /[<>]/g;
+  input.replace(angles, "_");
+}
 
 
 

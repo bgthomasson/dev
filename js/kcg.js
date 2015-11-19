@@ -4,11 +4,11 @@ var $ = document.querySelectorAll.bind(document);
 Element.prototype.on = Element.prototype.addEventListener;
 $('#create')[0].on('click', generateCharacterSheet);
 
-function isUsernameSet(namecheck) {  
-  if(namecheck == null || namecheck.length == 0){
-    errorbox.textContent += "You have no name. ";
+function isTextboxSet(txt) {  
+  if(txt == null || txt.length == 0){
+    return false;
   } else {
-    charname_output.textContent = namecheck;
+    return true;
   }
 }
 
@@ -69,8 +69,9 @@ function generateCharacterSheet() {
         role = rolecheck[i].value;
       } 
     } 
+    error_role.textContent = "";
   } else {
-    errorbox.textContent = "You need to select a role.";
+    error_role.textContent = "You need to select a role.";
   }
 
 	// make changes depending on role chosen
@@ -132,9 +133,10 @@ function generateCharacterSheet() {
       if(morphcheck[i].checked) {
         morph = morphcheck[i].value;
       } 
+    error_morph.textContent = "";  
     }
   } else {
-    errorbox.textContent = "You need to select a morph.";
+    error_morph.textContent = "You need to select a morph.";
   }
    
 	// make changes depending on morph chosen
@@ -193,28 +195,19 @@ function generateCharacterSheet() {
 		break;
 	}
   
-  // the actual core part of this function
-	// grab the elements we want to print results to:
+  // the actual core part of this function -----------------------------------
   
-  var outputs = document.getElementById('outputs');
-  var charname_output = document.getElementById('charname_output');
-  var attributes1 = document.getElementById('attributes1');
-  var attributes2 = document.getElementById('attributes2');
-  var rolecall = document.getElementById('rolecall');
-  var skills_magic = document.getElementById('skills_magic');
-  var skills_combat = document.getElementById('skills_combat');
-  var skills_rogue = document.getElementById('skills_rogue');
-  var skills_craft = document.getElementById('skills_craft');
-  var morph_abilities = document.getElementById('morph_abilities');
-  var inventory = document.getElementById('inventory');
-  var spells1 = document.getElementById('spells1');
-  var spells2 = document.getElementById('spells2');
+  // error check the input
+  var namecheck = kcg.charname.value;
   
-  // and then do the do
+  if(isTextboxSet(namecheck)) {
+    charname_output.textContent = namecheck;
+    error_name.textContent = "";
+  } else {
+    error_name.textContent = "You have no name.";
+  }
   
-  isUsernameSet(kcg.charname.value);
-  
-  
+  // print out attributes
 	attributes1.innerHTML = "<td>" + health + "</td><td>" + magicka + "</td><td>" 
     + stamina + "</td><td>" + speed + "</td><td>" + morph + "</td><td>" 
     + kcg.charage.value + "</td><td>" + kcg.chargend.value + "</td>";
@@ -224,6 +217,7 @@ function generateCharacterSheet() {
     + agility + "</td><td>" + luck + "</td>";
   
   rolecall.textContent = role;
+  
 	// the skills table 
 	skills_magic.innerHTML = "<td>" + alteration + "</td><td>" + conjuration + "</td><td>" 
     + destruction + "</td><td>" + illusion + "</td><td>" + restoration + "</td><td>" 
