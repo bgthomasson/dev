@@ -15,12 +15,12 @@
         <a href="#">&#x272a; $Username</a> 
         <a href="#">&#x21af; Settings</a> 
         <a href="#">&#x2205; Log out</a>
-        <a href="dryrtest.html"><h1 class="nomen">Home</h1></a>
+        <a href="dryrtest.html"><h1 class="nomen">&#8962; Dryr </h1></a>
     </nav>
     <form name="searchform" class="search-form" method="POST" action="search.php">
         <input type="search" name="searchbox" class="search-box" placeholder="Search" />
         <input type="hidden" name="stage" value="process" />
-        <button type="submit" name="searchbutton" class="search-button">Go</button>
+        <!--<button type="submit" name="searchbutton" class="search-button">Go</button>-->
     </form>
 </header>
 
@@ -51,26 +51,21 @@
     there. 
     </p>
     <p>
-    MESSAGES: chatmail and mentions
+    MESSAGES: chatmail and replies/comments/etc. 
     </p>
     <p>
     $USERNAME: the user's homepage with all their posts. 
+    </p>
+    <p>
+    SETTINGS: content management, custom styles, etc. 
     For desktop it might work better to make this a dropmenu link, under have 
-    $userpage, stats, settings, logout. 
+    stats, settings, logout. (Make it harder to log out on accident that way)    
     </p>
     <p>
-    SETTINGS: all the stuff like CSS (minor customization options like font size, colors); 
-    maybe hide thumbnails?? for slow connections. 
-    Oh, "Adult" confirmation, I forget about that. Default language. 
-    Block people. Customize privacy of posts! (Very important!!!) 
-    Display name and/or URL. All that sort of stuff. 
-    </p>
-    <p>
-    LOG OUT: have a confirmation thingy, less irritating than accidentally doing it. 
-    Obvious too like "Yes log me out" and "wait no I didn't mean to hit that!" (lol)
-    </p>
-    <p>
-    HOME is link to website homepage. Try to get to float in the middle. 
+    I tihnk I might prefer to do the dropmenu (on desktop) and text-align center 
+    the 5 links and searchbox (if it'll behave! that's why using flex atm). 
+    And for small screen you'll just have to click thru to get to those links, 
+    or have backups down in the "missing links". hmm. 
     </p>
 
     <ul>
@@ -89,7 +84,7 @@
     </ol>
     <p>
     Bare HTML/CSS loads in under 200ms on DSL (according to Chrome at least), so I think 
-    I can relax about that for now. 
+    I can relax about that for now. &#5842;
     </p>
     
     <blockquote>
@@ -231,6 +226,10 @@
         <a href="#">Help</a>
         <a href="#">Bug bounty</a>
         <a href="#">TOS</a>
+        <a href="#">Username</a> 
+        <a href="#">Settings</a> 
+        <a href="#">Stats</a>
+        <a href="#">Friends</a>
     </nav>
 </footer>
 <!-- JAVASCRIPT AREA ..................................................... -->

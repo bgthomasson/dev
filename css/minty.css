@@ -20,10 +20,11 @@ body {
         linear-gradient(90deg, transparent 50%, rgba(190,235,190,.19) 50%);
     background-size: 13px, 29px, 37px, 53px;
     
-    font-family: Candara, Tahoma, Geneva, "Open Sans", Sans-Serif;
-    font-size: 1.1em;
+    font-family: Candara, Tahoma, Geneva, Sans-Serif;
+    font-size: 105%;
     line-height: 1.4em;
     margin: 0;
+    padding: 0;
 }
 
 main {
@@ -43,7 +44,7 @@ main {
 .page-header {
     background-color: white;
     box-shadow: 0px 6px 4px rgba(60,60,60,.5);
-    padding: .1em .5em;
+    padding: .2em 0;
     margin-bottom: 2em;
 }
 
@@ -55,11 +56,17 @@ main {
         
         position: fixed;
         top: 0px;
-        width: 99%;
-        /* for some reason 100% stretches it off screen to the right... */
+        width: 100%;
         z-index: 99;
     }
 }
+/* if you add padding to the side of the header, which I did to keep the button 
+easy to see, making the width 100% pushes the right edge out of the window, so 
+ironically causing what was trying to avoid. this is only a prob when fixed pos. 
+it may not help using flex inside the form on the box and button, which I only 
+used because I liked the look I made but nobody adds the button anymore. 
+*/
+
 
 @media screen and ( max-width: 480px ) {
     .page-header { 
@@ -81,7 +88,7 @@ main {
 
 .page-nav {
     flex: 1 0 0%;
-    font-size: 1.2em;
+    font-size: 110%;
 }
 
 /* needed some spacing */
@@ -193,7 +200,7 @@ h1, h2, h3, h4, h5, h6{
 ul, ol {
     background-color: rgb(245, 240, 220);
     border: 1px solid rgb(176, 148, 127);
-    padding: 0.5em 0;
+    padding: 0.5em;
 }
 
 ol {
@@ -267,11 +274,6 @@ button:hover{
     background-color: rgb(176,224,230);
 }
 
-input:focus, 
-textarea:focus {
-    border-color: rgb(176,224,230);
-}
-
 .submit-button{
     border: 1px solid rgb(176,224,230);
     border-radius: 10px;
@@ -290,7 +292,7 @@ legend{
 
 /* SEARCH FORM ------------------------------------------------------------ */
 
-/* a bit of extra code but using flex squishes the form and button together */
+/* a bit of extra code but using flex squishes the form and button together 
 .search-form {
     display: flex;
 }
@@ -303,6 +305,10 @@ legend{
     border: 1px solid rgb(176,224,230);
     border-radius: 0 10px 10px 0;
 }
+
+*/
+
+
 
 /* SECTION 7 -------------------------------------------------------------- */
 

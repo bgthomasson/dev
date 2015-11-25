@@ -1,6 +1,9 @@
 
 body {
     background-color: rgb(135,206,235);
+    background: linear-gradient(#00d2ff , #3a7bd5); 
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
 	font-family: 'Open Sans', Candara, Tahoma, Geneva, sans-serif;
 	font-size: 1em;
 	line-height: 1.4em;

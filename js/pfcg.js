@@ -92,7 +92,7 @@ function generateCharacterSheet() {
 function getHealthy() {
   var hp1 = Math.floor(Math.random() * (hitdie + 1));
   var hp2 = Math.floor(Math.random() * (hitdie + 1));
-  // you get two rolls and take the biggest, how nice. 
+  // you get two rolls and take the biggest, how nice.
   
   if (hp1 > hp2) hp = hp1;
   else hp = hp2;
@@ -178,9 +178,9 @@ function getHealthy() {
         role = rolecheck[i].value;
       }
     }
-    error_roll.textContent = "";
+    error_role.textContent = "";
   } else {
-    error_roll.textContent = "You need to select a class.";
+    error_role.textContent = "You need to select a class.";
   }
    
 	// make changes depending on role chosen
@@ -311,44 +311,21 @@ function getHealthy() {
   
   // run the alignment bonus func here
   // run some func that goes thru classSkillArray and adds class="class_skill"
-  // to appropriate tr:first-child
-  // I really don't want to doo all this manually! surely there's some way to automate.
+  // to appropriate tr:first-child 
   
-	acro_row_output.innerHTML = "<td>Acrobatics</td><td>" + dex_am_output 
-      + "</td><td>" + acro_misc_output + "</td>";
-  
-	appraise_row_output.innerHTML = "<td></td><td>" + int_am_output 
-    + "</td><td>" + appraise_misc_output + "</td>";
-  
-  _row_output.innerHTML = "<td></td><td>" + _am_output + "</td><td>" + _misc_output + "</td>";
-  
-  _row_output.innerHTML = "<td></td><td>" + _am_output + "</td><td>" + _misc_output + "</td>";
-  
-  _row_output.innerHTML = "<td></td><td>" + _am_output + "</td><td>" + _misc_output + "</td>";
-  
-  _row_output.innerHTML = "<td></td><td>" + _am_output + "</td><td>" + _misc_output + "</td>";
-  
-  _row_output.innerHTML = "<td></td><td>" + _am_output + "</td><td>" + _misc_output + "</td>";
-  
-  _row_output.innerHTML = "<td></td><td>" + _am_output + "</td><td>" + _misc_output + "</td>";
-  
-  _row_output.innerHTML = "<td></td><td>" + _am_output + "</td><td>" + _misc_output + "</td>";
-  
-  _row_output.innerHTML = "<td></td><td>" + _am_output + "</td><td>" + _misc_output + "</td>";
-  
-  _row_output.innerHTML = "<td></td><td>" + _am_output + "</td><td>" + _misc_output + "</td>";
-  
-  _row_output.innerHTML = "<td></td><td>" + _am_output + "</td><td>" + _misc_output + "</td>";
-  
-  _row_output.innerHTML = "<td></td><td>" + _am_output + "</td><td>" + _misc_output + "</td>";
-  
-  _row_output.innerHTML = "<td></td><td>" + _am_output + "</td><td>" + _misc_output + "</td>";
-  
-  _row_output.innerHTML = "<td></td><td>" + _am_output + "</td><td>" + _misc_output + "</td>";
+  var skillTable = getElementById(skill-table);
+  document.body.appendChild(skillTable);
+  for(i = 0; i < $numberOfSkills; i++){
+    var skillRow = "<tr><td>"$skillname_output.innerHTML + "</td><td>" 
+      + $skillname_am_output + "</td><td>"  + $skillname_misc_output 
+      + "</td></tr>";
+    skillTable.appendChild(skillRow);
+  }
+  // _row_output.innerHTML = "<td></td><td>" + _am_output + "</td><td>" + _misc_output + "</td>";
 
   
   
-  // FEATS ETC
+  // FEATS ETC. need to print out arrays properly
   
   feats_output.textContent = featsArray;
   specab_output.textContent = specialAbilityArray;

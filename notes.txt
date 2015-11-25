@@ -1,5 +1,16 @@
 DESIGN NOTES___________________________________________________________________
 
+DRYR:
+replace utf8 icons with SVG?
+http://blog.cloudfour.com/seriously-dont-use-icon-fonts/
+need ten? 
+write, mail, log in/out, home, reblog, like, disagree, sympathy
+
+
+
+
+
+-------------------------------------
 
 > ability score and modifiers
 ??? should I do roll 4d6 which is fairly simple
@@ -18,15 +29,59 @@ set the abilities at 10, then run that to add/sub.
 not sure how to set this up cleanly
 > also barbarians can't be lawful! how handle?
 
+------------------
+PHP
+need: 
+error handle form
+ 
+
+I want to put race and class stuff into some sort of DB instead of just into 
+page html becuase that way can CMS it, and also keep the radio options matching 
+the output stuff, so one source of data, sent to many functions.
+
+shit I just realized the best way to do it is have a generic template 
+that can handle pathfinder, khajiit, etc.  
+
+
+form: RACE and CLASS should be template, pull from DB in loop, func for both 
+race and class like 
+generate_radios($purpose)
+
+
+not sure about ability selector thing but using JS to change for race etc 
+sounds cool still
+
+
+
+output_skills()
+grab selected radio buttons
+use db crossjoin to get ability mods for each skill 
+do math for race etc to get the misc skill mods 
+do math to add both of these to return as default skill level
+shit- does it need a way to let user add points as well?
+
+subroutine 
+if class skill then add tr class='class-skill'
+main routine
+print "<tr> <td>$skill</td> <td>$ability_mod</td> <td>$skill_misc_mods</td> </tr>";
 
 
 
 
 
-stripChars(input){
-  var angles = /[<>]/g;
-  input.replace(angles, "_");
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
