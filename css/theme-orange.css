@@ -1,0 +1,122 @@
+/* TABLE OF CONTENTS
+ * 1. Overall layout: body, main
+ * 2a. header and footer for page (to avoid confusion if use those elements in articles)
+ * 2b. <nav> in header and footer 
+ * 3. <article> and <section> 
+ * 4. Misc elements, inline and block
+ * 5. Tables
+ * 6. Forms default, search-form 
+ * 7. Custom styles that can be used on any block and/or inline
+*/ 
+/* SECTION 1: OVERALL LAYOUT ................................................. */
+
+body {
+    background: linear-gradient(rgb(64,16,0), rgb(243,134,48));
+}
+
+/* 2A: HEADER AND FOOTER ------------------------------------------------------- */
+
+.page-header {
+    background-color: rgb(255,255,240);
+    box-shadow: 0px 6px 4px rgba(0,0,30,.5);
+}
+
+.page-footer {
+    background-color: rgb(255,255,240);
+}
+
+
+/* 2B: MAIN PAGE NAV in header ------------------------------------------------ */
+
+nav a {
+    color: black;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* ----------------------------------------------------------------------------
+ * SECTION 3: ARTICLE RELATED
+ */
+
+.post-body {
+    background-color: white;
+    border-radius: 12px;
+}
+
+.post-controls, 
+.post-tags {
+    border-top: 1px solid rgb(176, 148, 127); 
+    font-size: 0.9em;
+}
+
+.post-tags a {
+    color: #888;
+}
+
+.post-tags a:hover {
+    text-decoration: underline;
+}
+
+.activated {
+    background-color: rgb(224,245,255);
+    color: #999;
+}
+
+/* SECTION 4: MISC ELEMENTS ------------------------------------------------ */
+
+blockquote {
+    border-left: 1px solid rgb(176, 148, 127);
+    border-top:  1px solid rgb(176, 148, 127);
+}
+
+/* LIST ELEMENTS */
+ul, ol {
+    background-color: rgb(245, 240, 220);
+    border: 1px solid rgb(176, 148, 127);
+}
+
+ul li {
+    list-style-type: none;
+}
+
+ul li:before {
+    content: "\2744"; /* special snowflake */
+}
+
+
+/* SECTION 5: TABLES ------------------------------------------------------ */
+
+table{ 
+    border: 1px solid rgb(176,148,127);
+}
+
+tr:nth-of-type(odd) {
+    background-color: rgb(255,235,200);
+}
+
+/* SECTION 6: FORM ELEMENTS ----------------------------------------------- */
+
+form {
+    background-color: rgb(255,255,240);
+}
+
+input:focus {
+    background-color: rgba(190,230,250,.5);
+}
+
+button {
+    background-color: rgb(190,230,250);
+    border: none;
+    border-radius: 12px;
+}
+
+button:hover {
+    background-color: rgb(105,210,231);
+}
+
+
+
+
+

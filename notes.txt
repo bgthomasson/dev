@@ -1,16 +1,174 @@
 DESIGN NOTES___________________________________________________________________
 
 DRYR:
-replace utf8 icons with SVG?
-http://blog.cloudfour.com/seriously-dont-use-icon-fonts/
-need ten? 
-write, mail, log in/out, home, reblog, like, disagree, sympathy
+replace utf8 icons with SVG
+
+Since normalize2016.css is subset of vanilla normalize.css, can drop in replace 
+if suddenly need to support IE6 or something horrible like that. 
+In any case for production may be better to use a cdn copy of default
+
+need to stick in the pagination links at bottom
+
+
+
+-------------------------------------------------------------------------------
+RULES:
+css modules:
+> normalize- vanilla or 2016, consider 3d party either way, add nothing
+> core- default layout #1
+> color themes for each primary layout
+
+> prism and other packages, 3d party or homebrew 
+
+SASS will handle this, but notepad++ doesn't highlight natively. 
+This can be done in the style configurator (but only in that one) 
+or by defining the language with an XML file.  
+Anyways, use @import in each theme.scss and build from there. 
+
+Workflow would be
+1. write css/scss and save parts as _module.scss and each theme is theme.scss 
+that imports the modules
+2. use sass to turn that final scss into css
+3. minimize and gzip to make reallytotallyfinal-min.css
+
+Results are kinda messy but nbd. 
+
+
+1. OVERALL LAYOUT and STYLE 
+
+Layout is based on "content out": fluid, misc buzzwords. 
+Page has basic functional modules that are put together as needed. 
+NAV holds links to static pages.
+ARTICLE holds user content. 
+Article subsections:
+div for icon
+section to wrap all other content (this may change if find better way)
+section for content
+section for tags
+section for buttons
+
+Layers are nearly flat, bg layer, main content, and header and misc raised items
+this is to minimalize the chrome and focus on the content. 
+
+
+
+FONTS
+base on modern windows Candara/Cambria - clean, easy to read, no downloads 
+on main themes, but that's OK on 'fun' themes like 1337. 
+but monospace aim for Source Code Pro instead of Consolas
+
+
+LINKS 
+in NAV and tags only underline when hovered
+in text body are always underlined
+
+
+
+2. MAIN BLOCKS IN PAGE: header, footer, article, section, aside, nav
+
+HEADER
+desktop: narrow fixed horizontal strip OR narrow fixed side col
+smallscreen: flows with content
+
+
+FOOTER
+
+
+ARTICLE 
+
+
+3. OTHER CONTAINED ELEMENTS: 
+
+BLOCKQUOTE
+
+
+CODE 
+
+
+
+FORMS
+
+
+LISTS
+
+MEDIA
+
+
+TABLES
 
 
 
 
 
--------------------------------------
+
+
+PALETTES -------------------------
+
+RED VELVET:
+
+
+ORANGE SUNSET:
+base- rgb(243,134,48) 'goldfish'
+
+
+EARTHTONE: yata actually
+burlywood 222,184,135   base
+wheat 245,222,179
+cornsilk 255,248,220
+$copenhagen 26,85,158   action?
+$daisy 250,190,24       action? 
+$mauve 138,9,55
+
+
+
+MINTY:
+base- rgb(143,188,143) DarkSeaGreen 
+outlines- rgb(176, 148, 127) a kind of taupe?
+muted highlight- rgb(245,240,222) 'parchment'
+muted action- lightcyan, almost
+current action- powderblue
+
+
+
+
+BLUE GLOW:
+
+
+
+PURPLE
+
+
+BLACK 1337
+base- #111
+font- #eee, Source Code Pro etc.
+links- #0f0
+
+
+WHITE vanilla css, could just use core w/out any color theme! 
+base- white
+font- black
+links- default css
+
+
+-----------------------------------
+SCSS
+variables
+nesting
+imports
+
+MIXINS
+
+
+EXTEND
+
+
+
+
+
+
+
+
+-------------------------------------------------------------------------------
 
 > ability score and modifiers
 ??? should I do roll 4d6 which is fairly simple
@@ -78,7 +236,31 @@ print "<tr> <td>$skill</td> <td>$ability_mod</td> <td>$skill_misc_mods</td> </tr
 
 
 
+---------------------------
 
+.snip1217 a:before,
+.snip1217 a:after {
+  height: 3px;
+  position: absolute;
+  content: '';
+  transition: all 0.35s ease;
+  background-color: #9b59b6;
+  width: 0;
+}
+.snip1217 a:before {
+  top: 0;
+  left: 0;
+}
+.snip1217 a:after {
+  bottom: 0;
+  right: 0;
+}
+.snip1217 a:hover:before,
+.snip1217 .current a:before,
+.snip1217 a:hover:after,
+.snip1217 .current a:after {
+  width: 100%;
+}
 
 
 
@@ -90,15 +272,9 @@ print "<tr> <td>$skill</td> <td>$ability_mod</td> <td>$skill_misc_mods</td> </tr
 
 
 /-----------------------------------------------------------------------------/
-Whoa cool
 A generator, once more, only this has various rules of grammar and phonetics 
 you can feed in a sample of you fictional language and it'll generate either
 - more new words
 - evolve the language by choosing random mutations
 
-
-
-
-DUMB but funny IDEA
-a password generator that's a cat walking on a keyboard
 

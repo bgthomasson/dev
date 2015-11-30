@@ -1,25 +1,18 @@
 /* TABLE OF CONTENTS
  * 1. Overall layout: body, main
- * 2a. header and footer for page (to avoid confusion if use those elements in articles)
+ * 2a. header and footer for page 
  * 2b. <nav> in header and footer 
  * 3. <article> and <section> 
  * 4. Misc elements, inline and block
  * 5. Tables
  * 6. Forms default, search-form 
- * 7. Custom styles that can be used on any block and/or inline
+ * 
+ * This is the CORE LAYOUT MODULE. Default fonts are fine but no colors should 
+ * be used, they go in the color themes. 
 */ 
 /* SECTION 1: OVERALL LAYOUT ................................................. */
 
-body {
-        /* http://lea.verou.me/css3patterns/ */
-    background-color: rgb(143,188,143); /* DarkSeaGreen */
-    background-image: 
-        linear-gradient(90deg, rgba(190,235,190,.07) 50%, transparent 50%),
-        linear-gradient(90deg, rgba(153,198,153,.13) 50%, transparent 50%),
-        linear-gradient(90deg, transparent 50%, rgba(128,163,128,.17) 50%),
-        linear-gradient(90deg, transparent 50%, rgba(190,235,190,.19) 50%);
-    background-size: 13px, 29px, 37px, 53px;
-    
+body {  
     font-family: Candara, Tahoma, Geneva, Sans-Serif;
     font-size: 105%;
     line-height: 1.4em;
@@ -38,12 +31,10 @@ main {
 
 /* Using flex for layout, is mostly working, except IE11 smaller than ~450px  
  * wide it just falls to bits. Suggested fixes do nothing. Since big works and 
- * barely used on phones will just put on bug list. 
+ * IE is barely used on phones will just put on bug list. 
 */
 
 .page-header {
-    background-color: white;
-    box-shadow: 0px 6px 4px rgba(60,60,60,.5);
     padding: .2em 0;
     margin-bottom: 2em;
 }
@@ -77,7 +68,6 @@ used because I liked the look I made but nobody adds the button anymore.
 }
 
 .page-footer {
-    background-color: white;
     margin-top: 1em; 
     padding: 0.5em; 
     /* needs padding all around or doesn't touch bottom of browser window */
@@ -87,20 +77,16 @@ used because I liked the look I made but nobody adds the button anymore.
 /* 2B: MAIN PAGE NAV in header ------------------------------------------------ */
 
 .page-nav {
-    flex: 1 0 0%;
+    flex: 1;
     font-size: 110%;
 }
 
 /* needed some spacing */
 nav a {
-    color: black;
     padding: 0 .2em;
     text-decoration: none;
 }
-
-nav a:hover {
-    text-decoration: underline;
-}
+/* I tihnk this is OK for default, with hover underline optional */
 
 /* want the h1 for SEO/access but w/out using too much space... */
 .nomen {
@@ -109,8 +95,8 @@ nav a:hover {
     font-size: inherit;
 }
 
-/* SEARCH FORM is below basic form layout, logic of being subset is more important 
-than ordering by overall page layout */
+/* SEARCH FORM is below basic form layout, logic of being subset is more 
+important than ordering by overall page layout */
 
 
 /* ----------------------------------------------------------------------------
@@ -142,33 +128,21 @@ article {
 }
 
 .post-body {
-    flex: 1 0 0%; /* another IE fix!? It never ends! */
-    background-color: white;
-    border-radius: 12px;
+    flex: 1;
     margin-bottom: 0.5em;
     padding: 0.5em 1em;
 }
+/* rounded corners are optional, too */
 
 /* the strip under posts with save, like, reblog, etc */
 .post-controls, 
-.post-tags {
-    border-top: 1px solid rgb(176, 148, 127); 
+.post-tags { 
     font-size: 0.9em;
 }
 
 .post-tags a {
-    color: #888;
     padding: 0 .2em;
     text-decoration: none;
-}
-
-.post-tags a:hover {
-    text-decoration: underline;
-}
-
-.activated {
-    background-color: rgb(224,245,255);
-    color: #999;
 }
 
 /* For first paragraph in serious news/thoughtful story, larger font to grab 
@@ -188,8 +162,6 @@ article {
 /* SECTION 4: MISC ELEMENTS ------------------------------------------------ */
 
 blockquote {
-    border-left: 1px solid rgb(176, 148, 127);
-    border-top:  1px solid rgb(176, 148, 127);
     margin: 0;
     padding-left: 0.333em;
 }
@@ -200,8 +172,6 @@ h1, h2, h3, h4, h5, h6{
 
 /* LIST ELEMENTS */
 ul, ol {
-    background-color: rgb(245, 240, 220);
-    border: 1px solid rgb(176, 148, 127);
     padding: 0.5em;
 }
 
@@ -209,28 +179,7 @@ ol {
     list-style-position: inside;
 }
 
-ul li {
-    list-style-type: none;
-}
-
-ul li:before {
-    content: "\2744"; /* special snowflake */
-}
-
-
-/* 4B: MULTIMEDIA */
-
-/* tame any giant images so layout won't get wrecked */
-
-img {
-    max-width: 600px;
-}
-
-@media screen and ( max-width: 400px ) {
-    img {
-        max-width: 300px;
-    }
-}
+/* ol list-style-type should be set on each theme as can replace w/ image etc. */
 
 /* want this to be standalone */
 video {
@@ -240,7 +189,6 @@ video {
 
 /* 4C: CODE- basics, rest covered if include Prism css/js. Regardless, code 
  * SHOULD BE marked up in the same way, "style=language-abcd" 
-
 */
 
 code, 
@@ -253,33 +201,10 @@ pre[class*="language-"] {
 /* SECTION 5: TABLES ------------------------------------------------------ */
 
 table{ 
-    border: 1px solid rgb(176,148,127);
     margin: 12px 0;
 }
 
-tr:nth-of-type(odd) {
-    background-color: rgb(245,240,222);
-}
-
-/* SECTION 6:: FORM ELEMENTS ----------------------------------------------- */
-
-form {
-    background-color: rgb(255,255,255);
-}
-
-button {
-    background-color: rgb(255,255,255);
-    border: none;
-}
-
-button:hover{
-    background-color: rgb(176,224,230);
-}
-
-.submit-button{
-    border: 1px solid rgb(176,224,230);
-    border-radius: 10px;
-}
+/* SECTION 6: FORM ELEMENTS ----------------------------------------------- */
 
 label {
     display: inline-block;
@@ -290,32 +215,4 @@ label {
 legend{
 	font-size: 1.1em;
 	font-weight: bold;
-}
-
-/* SEARCH FORM ------------------------------------------------------------ */
-
-/* a bit of extra code but using flex squishes the form and button together 
-.search-form {
-    display: flex;
-}
-
-.search-box {
-    flex: 1 0 200px;
-}
-
-.search-button{
-    border: 1px solid rgb(176,224,230);
-    border-radius: 0 10px 10px 0;
-}
-
-*/
-
-
-
-/* SECTION 7 -------------------------------------------------------------- */
-
-.bubble {
-    background-color: white;
-    border-radius: 12px;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.5);
 }

@@ -89,17 +89,6 @@ function generateCharacterSheet() {
 
 // START WITH SMALL FUNCs
 
-function getHealthy() {
-  var hp1 = Math.floor(Math.random() * (hitdie + 1));
-  var hp2 = Math.floor(Math.random() * (hitdie + 1));
-  // you get two rolls and take the biggest, how nice.
-  
-  if (hp1 > hp2) hp = hp1;
-  else hp = hp2;
-  
-  return hp;
-}
-
 //function chooseRace() {
 	var racecheck = pfcg.elements[race];
   
@@ -290,9 +279,8 @@ function getHealthy() {
   }
   
   
-  // generate some hp
-  getHealthy();
-  hp_output.textContent = hp;
+  // hp at first level is just hitdie
+  hp_output.textContent = hitdie;
   
   // print out chosen alignment
   var align = pfcg.alignment.value;

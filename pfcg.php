@@ -68,13 +68,16 @@ function output_special_abs() {
 }
 
 $charname = htmlentities($_POST['charname'], ENT_QUOTES, 'UTF-8');
+$hp = $hitdie;
+$alignment = strtoupper($_POST['alignment']);
 
-// health
-// hitdie should be retrieved from class assignment.
-function getHealthy($hitdie) {
-  var hp = mt_rand(2, $hitdie);
+/* health level up
+function getHealthy($hp, $hitdie) {
+  $hp += mt_rand(2, $hitdie);
   return hp;
 }
+*/
+
 
 ?>
 
