@@ -1,0 +1,87 @@
+
+@import 'normalize2016';
+@import 'core';
+
+
+$theme-shadow: #444;
+$action-color: #c7e1fb;
+$action-muted: #ecf5fe;
+$action-shadow: darken($action-color, 80%);
+
+$th-color: #f5f5f5;
+$zebra: #f0f8ff;
+
+
+/* ------------------------------------------------------------------------- */
+
+.page-header {
+    background-color: white;
+    box-shadow: 0px 6px 4px rgba(47,79,79,.5);
+}
+
+nav a {
+    color: black;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.post-controls, 
+.post-tags {
+    border-top: 1px solid $theme-shadow; 
+    font-size: 0.9em;
+}
+
+.post-tags a {
+    color: #888;
+}
+
+.post-tags a:hover {
+    text-decoration: underline;
+}
+
+.activated {
+    background-color: $action-muted;
+    color: #888;
+}
+
+.activated:after {
+    content: "d";
+}
+
+blockquote {
+    border-left: 1px solid $theme-shadow;
+    border-top:  1px solid $theme-shadow;
+}
+
+ul, ol {
+    border: 1px solid $theme-shadow;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+table{ 
+    border: 1px solid $theme-shadow;
+}
+
+tr:nth-of-type(odd) {
+    background-color: $zebra;
+}
+
+th {
+    background-color: $th-color;
+}
+
+button {
+    background-color: white;
+    border: none;
+}
+
+button:hover {
+    background-color: $action-color;
+}
+
+

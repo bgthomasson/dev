@@ -410,71 +410,65 @@ legend {
   font-size: 1.1em;
   font-weight: bold; }
 
+/* ------------------------------------------------------------------------- */
 body {
-  background-color: darkseagreen;
-  background-image: linear-gradient(90deg, rgba(190, 235, 190, 0.07) 50%, transparent 50%), linear-gradient(90deg, rgba(153, 198, 153, 0.13) 50%, transparent 50%), linear-gradient(90deg, transparent 50%, rgba(128, 163, 128, 0.17) 50%), linear-gradient(90deg, transparent 50%, rgba(190, 235, 190, 0.19) 50%);
-  background-size: 13px, 29px, 37px, 53px; }
+  background-color: #111;
+  color: white;
+  font-family: 'Source Code Pro', monospace; }
 
 .page-header {
-  background-color: white;
-  box-shadow: 0px 6px 4px rgba(60, 60, 60, 0.5); }
-
-.page-footer {
-  background-color: white; }
+  background-color: black; }
 
 nav a {
-  color: black; }
+  color: white; }
 
 nav a:hover {
   text-decoration: underline; }
 
-.post-body {
-  background-color: white;
-  border-radius: 12px; }
-
 .post-controls,
 .post-tags {
-  border-top: 1px solid #b0947f;
+  border-top: 1px solid #444;
   font-size: 0.9em; }
 
 .post-tags a {
-  color: gray; }
+  color: #888; }
 
 .post-tags a:hover {
   text-decoration: underline; }
 
 .activated {
-  background-color: #e0f5ff;
-  color: #999; }
+  color: #888; }
+
+.activated:after {
+  content: "d"; }
 
 blockquote {
-  border-left: 1px solid #b0947f;
-  border-top: 1px solid #b0947f; }
+  border-left: 1px solid #444;
+  border-top: 1px solid #444; }
 
 ul, ol {
-  background-color: #f5f0de;
-  border: 1px solid #b0947f; }
+  border: 1px solid #444; }
 
 ul li {
   list-style-type: none; }
 
-ul li:before {
-  content: "\2744"; }
-
 table {
-  border: 1px solid #b0947f; }
+  border: 1px solid #444; }
 
 tr:nth-of-type(odd) {
-  background-color: #f5f0de; }
+  background-color: #708090; }
 
-form {
-  background-color: white; }
+th {
+  background-color: #708090; }
 
 button {
-  background-color: white;
+  background-color: #111;
   border: none; }
 
 button:hover {
-  background-color: powderblue; }
+  background-color: #00008b; }
 
-/*# sourceMappingURL=theme-minty.css.map */
+input {
+  background-color: #111; }
+
+/*# sourceMappingURL=theme-black.css.map */

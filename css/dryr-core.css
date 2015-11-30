@@ -179,7 +179,7 @@ ol {
     list-style-position: inside;
 }
 
-/* ol list-style-type should be set on each theme as can replace w/ image etc. */
+/* ul list-style-type should be set on each theme as can replace w/ image etc. */
 
 /* want this to be standalone */
 video {

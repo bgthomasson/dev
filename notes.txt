@@ -31,7 +31,8 @@ that imports the modules
 2. use sass to turn that final scss into css
 3. minimize and gzip to make reallytotallyfinal-min.css
 
-Results are kinda messy but nbd. 
+Results are kinda messy and agitate my ocd but it'll be minimized anyways. 
+ 
 
 
 1. OVERALL LAYOUT and STYLE 
@@ -46,6 +47,8 @@ section to wrap all other content (this may change if find better way)
 section for content
 section for tags
 section for buttons
+
+I'm using flexbox for this, should have fallback and doesn't feel proper
 
 Layers are nearly flat, bg layer, main content, and header and misc raised items
 this is to minimalize the chrome and focus on the content. 
@@ -104,29 +107,36 @@ TABLES
 
 PALETTES -------------------------
 
+basic colors are 
+$theme-color: ROYGBIV etc
+$theme-comp: the opposite color: Red/green, blue/orange, yellow/purple
+and can get fancy, $theme-triad2 and $theme-triad3, etc. 
+
+$theme-shadow: darken($theme, 80%);
+$comp-shadow: uses complimentary color to theme, e.g. blue shadow on orange bg
+
+$action-color: used for buttons etc, blue unless bg is blue. 
+$action-muted: a pale tint to show inactive or disabled
+
+$paper: used for most text meant to be read, usually white/off-white
+$paper2: used for secondary text, usually off-white/tan 
+
+$outlines: used for blockquotes, lists, etc. one of the shadow colors. 
+
+$th-color: table header color
+$zebra: zebra stripes on tables etc. 
+
+-------------------
+
 RED VELVET:
 
 
-ORANGE SUNSET:
-base- rgb(243,134,48) 'goldfish'
-
 
 EARTHTONE: yata actually
-burlywood 222,184,135   base
-wheat 245,222,179
-cornsilk 255,248,220
-$copenhagen 26,85,158   action?
-$daisy 250,190,24       action? 
-$mauve 138,9,55
-
-
-
-MINTY:
-base- rgb(143,188,143) DarkSeaGreen 
-outlines- rgb(176, 148, 127) a kind of taupe?
-muted highlight- rgb(245,240,222) 'parchment'
-muted action- lightcyan, almost
-current action- powderblue
+$burlywood: rgb(222,184,135);   
+$copenhagen: rgb(26,85,158);   
+$daisy: rgb(250,190,24);       
+$mauve: rgb(138,9,55);
 
 
 
@@ -138,29 +148,49 @@ BLUE GLOW:
 PURPLE
 
 
-BLACK 1337
-base- #111
-font- #eee, Source Code Pro etc.
-links- #0f0
 
 
-WHITE vanilla css, could just use core w/out any color theme! 
-base- white
-font- black
-links- default css
+COLORBLIND NOTES -----------------------
+red
+
+vivid orange will appear more tan
+
+yellow
+
+green varies the most, from off-tint to blue or yellow or even reddish!
+example- http://www.colorhexa.com/22f08c
+
+vivid blue will be very close to avg or at least blue-ish.
+
+purple
+
+
 
 
 -----------------------------------
 SCSS
+
+I'm using is because it looks like vanilla CSS. SASS looks like Python. 
+which is OK but I'd rather stick with common convention mostly. 
+
 variables
+this looks useful, help contain chaos, consistent palette
+
 nesting
+meh, I'm used to vanilla css
+
 imports
+meh, it's messy, and doesn't have a way to automagically minimize
 
 MIXINS
-
+their example is for browser extensions like -webkit
 
 EXTEND
+seems logical
 
+
+most of this I barely need for my own projects other than restraining evolution 
+into a dozen random styles 
 
 
 

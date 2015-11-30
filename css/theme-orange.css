@@ -1,122 +1,488 @@
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize 
+* experimental 2016 edit, when MS drops support for browsers before: 
+* IE11+, FF38+, Chrome 40+, Android 4+, Safari 7+
+* Note that this minimizes to 1.4 kb so I may have been overzealous.
+*/
+/**
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+details,
+main,
+summary {
+  display: block; }
+
+/**
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/* Links
+   ========================================================================== */
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0; }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold; }
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* Embedded content
+   ========================================================================== */
+/* Grouping content
+   ========================================================================== */
+/**
+ * Contain overflow in all browsers. Various bits for tidying up. 
+ */
+pre {
+  overflow: auto;
+  overflow-wrap: break-word;
+  padding: .5em;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none; }
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal; }
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box; }
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin-bottom: 1em;
+  padding: 0.35em; }
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: auto; }
+
+td,
+th {
+  padding: .5em; }
+
+th {
+  text-align: left; }
+
 /* TABLE OF CONTENTS
  * 1. Overall layout: body, main
- * 2a. header and footer for page (to avoid confusion if use those elements in articles)
+ * 2a. header and footer for page 
  * 2b. <nav> in header and footer 
  * 3. <article> and <section> 
  * 4. Misc elements, inline and block
  * 5. Tables
  * 6. Forms default, search-form 
- * 7. Custom styles that can be used on any block and/or inline
-*/ 
+ * 
+ * This is the CORE LAYOUT MODULE. Default fonts are fine but no colors should 
+ * be used, they go in the color themes. 
+*/
 /* SECTION 1: OVERALL LAYOUT ................................................. */
-
 body {
-    background: linear-gradient(rgb(64,16,0), rgb(243,134,48));
-}
+  font-family: Candara, Tahoma, Geneva, Sans-Serif;
+  font-size: 105%;
+  line-height: 1.4em;
+  margin: 0;
+  padding: 0; }
+
+main {
+  margin: 0 auto;
+  margin-top: 64px;
+  max-width: 800px;
+  /* No fancy flex here, just plain old 2010 web 2.0 style centering */ }
 
 /* 2A: HEADER AND FOOTER ------------------------------------------------------- */
-
+/* Using flex for layout, is mostly working, except IE11 smaller than ~450px  
+ * wide it just falls to bits. Suggested fixes do nothing. Since big works and 
+ * IE is barely used on phones will just put on bug list. 
+*/
 .page-header {
-    background-color: rgb(255,255,240);
-    box-shadow: 0px 6px 4px rgba(0,0,30,.5);
-}
+  padding: .2em 0;
+  margin-bottom: 2em; }
 
+@media all and (min-width: 481px) {
+  .page-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 99; } }
+/* if you add padding to the side of the header, which I did to keep the button 
+easy to see, making the width 100% pushes the right edge out of the window, so 
+ironically causing what was trying to avoid. this is only a prob when fixed pos. 
+it may not help using flex inside the form on the box and button, which I only 
+used because I liked the look I made but nobody adds the button anymore. 
+*/
+@media screen and (max-width: 480px) {
+  .page-header {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center; } }
 .page-footer {
-    background-color: rgb(255,255,240);
-}
-
+  margin-top: 1em;
+  padding: 0.5em;
+  /* needs padding all around or doesn't touch bottom of browser window */ }
 
 /* 2B: MAIN PAGE NAV in header ------------------------------------------------ */
+.page-nav {
+  flex: 1;
+  font-size: 110%; }
 
+/* needed some spacing */
 nav a {
-    color: black;
-}
+  padding: 0 .2em;
+  text-decoration: none; }
 
-nav a:hover {
-    text-decoration: underline;
-}
+/* I tihnk this is OK for default, with hover underline optional */
+/* want the h1 for SEO/access but w/out using too much space... */
+.nomen {
+  display: inline;
+  margin: 0 auto;
+  font-size: inherit; }
 
+/* SEARCH FORM is below basic form layout, logic of being subset is more 
+important than ordering by overall page layout */
 /* ----------------------------------------------------------------------------
  * SECTION 3: ARTICLE RELATED
  */
+article {
+  margin-bottom: 2em; }
+
+/*  .post functions as a row */
+.post {
+  display: flex;
+  align-items: flex-start; }
+
+/* set up so small screens will have icon on top instead of side- i.e. they'll
+ * stack like plain old css boxes.
+*/
+@media screen and (max-width: 480px) {
+  .post {
+    flex-direction: column; } }
+/* the column elements */
+.post-icon {
+  margin-right: .5em; }
 
 .post-body {
-    background-color: white;
-    border-radius: 12px;
-}
+  flex: 1;
+  margin-bottom: 0.5em;
+  padding: 0.5em 1em; }
 
-.post-controls, 
+/* rounded corners are optional, too */
+/* the strip under posts with save, like, reblog, etc */
+.post-controls,
 .post-tags {
-    border-top: 1px solid rgb(176, 148, 127); 
-    font-size: 0.9em;
-}
+  font-size: 0.9em; }
 
 .post-tags a {
-    color: #888;
-}
+  padding: 0 .2em;
+  text-decoration: none; }
 
-.post-tags a:hover {
-    text-decoration: underline;
-}
+/* For first paragraph in serious news/thoughtful story, larger font to grab 
+ * readers and pull in. I'd rather do this automagically but first-child won't 
+ * let you specify 'p' or anything. 
+ */
+.leader {
+  font-size: 1.2em; }
 
-.activated {
-    background-color: rgb(224,245,255);
-    color: #999;
-}
+/* make all paragraphs after first be indented, oldschool printing style */
+/* made this specific to text-based posts because it looks funky w/ mixed media */
+.literature p + p {
+  text-indent: 1.5em; }
 
 /* SECTION 4: MISC ELEMENTS ------------------------------------------------ */
-
 blockquote {
-    border-left: 1px solid rgb(176, 148, 127);
-    border-top:  1px solid rgb(176, 148, 127);
-}
+  margin: 0;
+  padding-left: 0.333em; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Cambria, Georgia, Palatino, serif; }
 
 /* LIST ELEMENTS */
 ul, ol {
-    background-color: rgb(245, 240, 220);
-    border: 1px solid rgb(176, 148, 127);
-}
+  padding: 0.5em; }
 
-ul li {
-    list-style-type: none;
-}
+ol {
+  list-style-position: inside; }
 
-ul li:before {
-    content: "\2744"; /* special snowflake */
-}
+/* ol list-style-type should be set on each theme as can replace w/ image etc. */
+/* want this to be standalone */
+video {
+  display: block;
+  margin: 1em 0; }
 
+/* 4C: CODE- basics, rest covered if include Prism css/js. Regardless, code 
+ * SHOULD BE marked up in the same way, "style=language-abcd" 
+*/
+code,
+code[class*="language-"],
+pre[class*="language-"] {
+  font-family: 'Source Code Pro', 'DejaVu Sans Mono', Consolas, monospace; }
 
 /* SECTION 5: TABLES ------------------------------------------------------ */
-
-table{ 
-    border: 1px solid rgb(176,148,127);
-}
-
-tr:nth-of-type(odd) {
-    background-color: rgb(255,235,200);
-}
+table {
+  margin: 12px 0; }
 
 /* SECTION 6: FORM ELEMENTS ----------------------------------------------- */
+label {
+  display: inline-block;
+  width: 40em;
+  text-align: right; }
+
+legend {
+  font-size: 1.1em;
+  font-weight: bold; }
+
+/* ------------------------------------------------------------------------- */
+body {
+  background: linear-gradient(#371e04, #f38630);
+  background-color: #f38630; }
+
+.page-header {
+  background-color: ivory;
+  box-shadow: 0px 6px 4px #051f39; }
+
+.page-footer {
+  background-color: ivory; }
+
+nav a {
+  color: black; }
+
+nav a:hover {
+  text-decoration: underline; }
+
+.post-body {
+  background-color: white;
+  border-radius: 12px; }
+
+.post-controls,
+.post-tags {
+  border-top: 1px solid #371e04;
+  font-size: 0.9em; }
+
+.post-tags a {
+  color: gray; }
+
+.post-tags a:hover {
+  text-decoration: underline; }
+
+.activated {
+  background-color: #ecf5fe;
+  color: gray; }
+
+.activated:after {
+  content: "d"; }
+
+a {
+  color: #daebfc; }
+
+blockquote {
+  border-left: 1px solid #371e04;
+  border-top: 1px solid #371e04; }
+
+ul, ol {
+  border: 1px solid #371e04; }
+
+ul li {
+  list-style-type: none; }
+
+ul li:before {
+  content: "\2744"; }
+
+table {
+  border: 1px solid #371e04; }
+
+tr:nth-of-type(odd) {
+  background-color: #ffebc8; }
+
+th {
+  background-color: #f38630; }
 
 form {
-    background-color: rgb(255,255,240);
-}
-
-input:focus {
-    background-color: rgba(190,230,250,.5);
-}
+  background-color: ivory; }
 
 button {
-    background-color: rgb(190,230,250);
-    border: none;
-    border-radius: 12px;
-}
+  background-color: white;
+  border: none; }
 
 button:hover {
-    background-color: rgb(105,210,231);
-}
+  background-color: #daebfc; }
 
-
-
-
-
+/*# sourceMappingURL=theme-orange.css.map */

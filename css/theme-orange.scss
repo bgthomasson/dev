@@ -1,0 +1,116 @@
+
+@import 'normalize2016';
+@import 'core';
+
+
+$theme-color: rgb(243,134,48);
+$theme-shadow: rgb(55,30,4);
+
+$action-color: #daebfc;
+$action-muted: #ecf5fe;
+$action-shadow: darken($action-color, 80%);
+
+$th-color: $theme-color;
+$zebra: rgb(255,235,200);
+
+
+/* ------------------------------------------------------------------------- */
+
+body {
+    background: linear-gradient($theme-shadow, $theme-color);
+    background-color: $theme-color;
+}
+
+.page-header {
+    background-color: ivory;
+    box-shadow: 0px 6px 4px $action-shadow;
+}
+
+.page-footer {
+    background-color: ivory;
+}
+
+nav a {
+    color: black;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.post-body {
+    background-color: white;
+    border-radius: 12px;
+}
+
+.post-controls, 
+.post-tags {
+    border-top: 1px solid $theme-shadow; 
+    font-size: 0.9em;
+}
+
+.post-tags a {
+    color: gray;
+}
+
+.post-tags a:hover {
+    text-decoration: underline;
+}
+
+.activated {
+    background-color: $action-muted;
+    color: gray;
+}
+
+.activated:after {
+    content: "d";
+}
+
+a {
+    color: $action-color;
+}
+
+blockquote {
+    border-left: 1px solid $theme-shadow;
+    border-top:  1px solid $theme-shadow;
+}
+
+ul, ol {
+    border: 1px solid $theme-shadow;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+ul li:before {
+    content: "\2744"; 
+}
+
+
+table{ 
+    border: 1px solid $theme-shadow;
+}
+
+tr:nth-of-type(odd) {
+    background-color: $zebra;
+}
+
+th {
+    background-color: $th-color;
+}
+
+form {
+    background-color: ivory;
+}
+
+button {
+    background-color: white;
+    border: none;
+}
+
+button:hover {
+    background-color: $action-color;
+}
+
+

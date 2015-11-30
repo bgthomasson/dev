@@ -1,0 +1,93 @@
+
+@import 'normalize2016';
+@import 'core';
+
+$theme-color: #111;
+$theme-shadow: #444;
+$action-color: #00008b;
+$action-muted: #c7e1fb;
+
+$th-color: #708090;
+$zebra: #708090;
+
+
+/* ------------------------------------------------------------------------- */
+
+body {
+    background-color: $theme-color;
+    color: white;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.page-header {
+    background-color: black;
+}
+
+nav a {
+    color: white;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.post-controls, 
+.post-tags {
+    border-top: 1px solid $theme-shadow; 
+    font-size: 0.9em;
+}
+
+.post-tags a {
+    color: #888;
+}
+
+.post-tags a:hover {
+    text-decoration: underline;
+}
+
+.activated {
+    color: #888;
+}
+
+.activated:after {
+    content: "d";
+}
+
+blockquote {
+    border-left: 1px solid $theme-shadow;
+    border-top:  1px solid $theme-shadow;
+}
+
+ul, ol {
+    border: 1px solid $theme-shadow;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+table{ 
+    border: 1px solid $theme-shadow;
+}
+
+tr:nth-of-type(odd) {
+    background-color: $zebra;
+}
+
+th {
+    background-color: $th-color;
+}
+
+button {
+    background-color: $theme-color;
+    border: none;
+}
+
+button:hover {
+    background-color: $action-color;
+}
+
+input {
+    background-color: $theme-color;
+}
+
