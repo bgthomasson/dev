@@ -1,13 +1,25 @@
 DESIGN NOTES___________________________________________________________________
 
 DRYR:
-replace utf8 icons with SVG
 
-Since normalize2016.css is subset of vanilla normalize.css, can drop in replace 
-if suddenly need to support IE6 or something horrible like that. 
-In any case for production may be better to use a cdn copy of default
+> JS that adds class to acted on button should change text: 
+>> if innerHTML = "like" then change to "liked", etc. 
 
-need to stick in the pagination links at bottom
+> JS needs to work on all ajaxian buttons
+
+> starting themes are green, blue, orange, black, white. make those look good. 
+>> TEMP: use css switcher so can look at each quickly
+
+> eventually replace UTF8 icons with SVG
+
+Backend:
+
+> pagination
+
+> quotes have 16px icon w/ username
+
+> media uploads
+
 
 
 
@@ -32,10 +44,11 @@ that imports the modules
 3. minimize and gzip to make reallytotallyfinal-min.css
 
 Results are kinda messy and agitate my ocd but it'll be minimized anyways. 
- 
+I took most comments out of the SCSS partials to help keep dev file sizes down, 
+the plain CSS versions are intact for reference.  
 
 
-1. OVERALL LAYOUT and STYLE 
+1. OVERALL LAYOUT 
 
 Layout is based on "content out": fluid, misc buzzwords. 
 Page has basic functional modules that are put together as needed. 
@@ -52,7 +65,6 @@ I'm using flexbox for this, should have fallback and doesn't feel proper
 
 Layers are nearly flat, bg layer, main content, and header and misc raised items
 this is to minimalize the chrome and focus on the content. 
-
 
 
 FONTS
@@ -105,7 +117,13 @@ TABLES
 
 
 
-PALETTES -------------------------
+PALETTES ----------------------------------------------------------------------
+Colors used should be consistenly linked to themes and actions, e.g.: 
+white = paper
+red = warning/alert
+orange/yellow/tan = special paper- lists, tables, etc.
+green = go, success
+blue = button, link
 
 basic colors are 
 $theme-color: ROYGBIV etc
@@ -126,45 +144,26 @@ $outlines: used for blockquotes, lists, etc. one of the shadow colors.
 $th-color: table header color
 $zebra: zebra stripes on tables etc. 
 
--------------------
-
-RED VELVET:
-
-
-
-EARTHTONE: yata actually
-$burlywood: rgb(222,184,135);   
-$copenhagen: rgb(26,85,158);   
-$daisy: rgb(250,190,24);       
-$mauve: rgb(138,9,55);
 
 
 
 
-BLUE GLOW:
+COLORBLIND NOTES-
 
-
-
-PURPLE
-
-
-
-
-COLORBLIND NOTES -----------------------
-red
+red (crimson) is usually muddled brick red in 3chromacy and olive in 2chromacy
 
 vivid orange will appear more tan
 
-yellow
+yellow will be paler
 
 green varies the most, from off-tint to blue or yellow or even reddish!
 example- http://www.colorhexa.com/22f08c
 
 vivid blue will be very close to avg or at least blue-ish.
 
-purple
+purple (9100ff) appears more royal blue
 
-
+magenta is more dull purple
 
 
 -----------------------------------
@@ -175,12 +174,15 @@ which is OK but I'd rather stick with common convention mostly.
 
 variables
 this looks useful, help contain chaos, consistent palette
+also if I go and make a dozen color theme for fun and then rewrite the css 
+on my primary test page, i can just drop in most of it with copy-paste
 
 nesting
-meh, I'm used to vanilla css
+not bad, but I'm used to vanilla css
 
 imports
 meh, it's messy, and doesn't have a way to automagically minimize
+I'd have to write my own script to organize and minimize. 
 
 MIXINS
 their example is for browser extensions like -webkit

@@ -4,18 +4,25 @@
 
 
 $theme-shadow: #444;
+
 $action-color: #c7e1fb;
 $action-muted: #ecf5fe;
 $action-shadow: darken($action-color, 80%);
 
-$th-color: #f5f5f5;
-$zebra: #f0f8ff;
+$paper1: white;
+$paper2: ivory;
 
+$text-muted: gray;
+
+$th-color: #f5b16a;
+$zebra: #fad8b5;
+
+$rainbow: linear-gradient(red, orange, yellow, green, blue, purple);
 
 /* ------------------------------------------------------------------------- */
 
 .page-header {
-    background-color: white;
+    background-color: $paper1;
     box-shadow: 0px 6px 4px rgba(47,79,79,.5);
 }
 
@@ -34,7 +41,7 @@ nav a:hover {
 }
 
 .post-tags a {
-    color: #888;
+    color: $text-muted;
 }
 
 .post-tags a:hover {
@@ -43,11 +50,7 @@ nav a:hover {
 
 .activated {
     background-color: $action-muted;
-    color: #888;
-}
-
-.activated:after {
-    content: "d";
+    color: $text-muted;
 }
 
 blockquote {
@@ -76,7 +79,7 @@ th {
 }
 
 button {
-    background-color: white;
+    background-color: $paper1;
     border: none;
 }
 

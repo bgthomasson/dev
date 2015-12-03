@@ -204,13 +204,16 @@ nav a {
 article {
   margin-bottom: 2em; }
 
-@media screen and (min-width: 481px) {
-  .post {
-    display: flex;
-    align-items: flex-start; }
+.post {
+  display: flex;
+  align-items: flex-start; }
 
-  .post-icon {
-    margin-right: .5em; } }
+@media screen and (max-width: 480px) {
+  .post {
+    flex-direction: column; } }
+.post-icon {
+  margin-right: .5em; }
+
 .post-body {
   flex: 1;
   margin-bottom: 0.5em;
@@ -272,72 +275,69 @@ legend {
   font-size: 1.1em;
   font-weight: bold; }
 
-/* SECTION 7 -------------------------------------------------------------- */
-.pagination {
-  display: flex;
-  flex-flow: row wrap; }
-
-.pagination-button {
-  padding: .5em;
-  border-radius: 10px;
-  flex: 1; }
-
 /* ------------------------------------------------------------------------- */
 body {
-  background-color: #111;
-  color: white;
-  font-family: 'Source Code Pro', monospace; }
+  background-color: burlywood; }
 
 .page-header {
-  background-color: black; }
+  background-color: #f6f0dc;
+  box-shadow: 0px 6px 4px #281b0b; }
+
+.page-footer {
+  background-color: #f6f0dc; }
 
 nav a {
-  color: white; }
+  color: black; }
 
 nav a:hover {
   text-decoration: underline; }
 
+.post-body {
+  background-color: white;
+  border-radius: 12px; }
+
 .post-controls,
 .post-tags {
-  border-top: 1px solid #444;
+  border-top: 1px solid #281b0b;
   font-size: 0.9em; }
 
 .post-tags a {
-  color: #399996; }
+  color: grey; }
 
 .post-tags a:hover {
   text-decoration: underline; }
 
 .activated {
-  color: #399996; }
+  background-color: #ecf5fe;
+  color: grey; }
 
 blockquote {
-  border-left: 1px solid #444;
-  border-top: 1px solid #444; }
+  border-left: 1px solid #281b0b;
+  border-top: 1px solid #281b0b; }
 
 ul, ol {
-  border: 1px solid #444; }
+  border: 1px solid #281b0b; }
 
-ul li {
-  list-style-type: none; }
+ul {
+  list-style-position: inside; }
 
 table {
-  border: 1px solid #444; }
+  border: 1px solid #281b0b; }
 
 tr:nth-of-type(odd) {
-  background-color: #708090; }
+  background-color: #fcda7c; }
 
 th {
-  background-color: #708090; }
+  background-color: #fabe18; }
+
+form {
+  background-color: #f6f0dc; }
 
 button {
-  background-color: #111;
+  background-color: white;
   border: none; }
 
 button:hover {
-  background-color: #00d2cb; }
+  background-color: #daebfc; }
 
-input {
-  background-color: #111; }
-
-/*# sourceMappingURL=theme-black.css.map */
+/*# sourceMappingURL=theme-earth.css.map */

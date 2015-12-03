@@ -4,8 +4,14 @@
 
 $theme-color: #111;
 $theme-shadow: #444;
-$action-color: #00008b;
+
+$action-color: #00d2cb;
 $action-muted: #c7e1fb;
+
+$paper1: #111;
+$paper2: black;
+
+$text-muted: #399996;
 
 $th-color: #708090;
 $zebra: #708090;
@@ -20,7 +26,7 @@ body {
 }
 
 .page-header {
-    background-color: black;
+    background-color: $paper2;
 }
 
 nav a {
@@ -38,7 +44,7 @@ nav a:hover {
 }
 
 .post-tags a {
-    color: #888;
+    color: $text-muted;
 }
 
 .post-tags a:hover {
@@ -46,11 +52,7 @@ nav a:hover {
 }
 
 .activated {
-    color: #888;
-}
-
-.activated:after {
-    content: "d";
+    color: $text-muted;
 }
 
 blockquote {

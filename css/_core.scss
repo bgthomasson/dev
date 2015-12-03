@@ -24,16 +24,9 @@ main {
     margin: 0 auto;
     margin-top: 64px;
     max-width: 800px;
-    /* No fancy flex here, just plain old 2010 web 2.0 style centering */
 }
 
 /* 2A: HEADER AND FOOTER ------------------------------------------------------- */
-
-/* Using flex for layout, is mostly working, except IE11 smaller than ~450px  
- * wide it just falls to bits. Suggested fixes do nothing. Since big works and 
- * IE is barely used on phones will just put on bug list. 
-*/
-
 .page-header {
     padding: .2em 0;
     margin-bottom: 2em;
@@ -51,13 +44,6 @@ main {
         z-index: 99;
     }
 }
-/* if you add padding to the side of the header, which I did to keep the button 
-easy to see, making the width 100% pushes the right edge out of the window, so 
-ironically causing what was trying to avoid. this is only a prob when fixed pos. 
-it may not help using flex inside the form on the box and button, which I only 
-used because I liked the look I made but nobody adds the button anymore. 
-*/
-
 
 @media screen and ( max-width: 480px ) {
     .page-header { 
@@ -86,18 +72,12 @@ nav a {
     padding: 0 .2em;
     text-decoration: none;
 }
-/* I tihnk this is OK for default, with hover underline optional */
 
-/* want the h1 for SEO/access but w/out using too much space... */
 .nomen {
     display: inline;
     margin: 0 auto;
     font-size: inherit;
 }
-
-/* SEARCH FORM is below basic form layout, logic of being subset is more 
-important than ordering by overall page layout */
-
 
 /* ----------------------------------------------------------------------------
  * SECTION 3: ARTICLE RELATED
@@ -107,24 +87,15 @@ article {
     margin-bottom: 2em;
 }
 
-/*  .post functions as a row */
-.post {
-    display: flex;
-    align-items: flex-start;
-}
-
-/* set up so small screens will have icon on top instead of side- i.e. they'll
- * stack like plain old css boxes.
-*/
-@media screen and ( max-width: 480px ) {
-    .post { 
-        flex-direction: column;
+@media screen and ( min-width: 481px ) {
+    .post {
+        display: flex;
+        align-items: flex-start;
     }
-}
 
-/* the column elements */
-.post-icon {
-    margin-right: .5em;
+    .post-icon {
+        margin-right: .5em;
+    }
 }
 
 .post-body {
@@ -132,9 +103,7 @@ article {
     margin-bottom: 0.5em;
     padding: 0.5em 1em;
 }
-/* rounded corners are optional, too */
 
-/* the strip under posts with save, like, reblog, etc */
 .post-controls, 
 .post-tags { 
     font-size: 0.9em;
@@ -145,16 +114,10 @@ article {
     text-decoration: none;
 }
 
-/* For first paragraph in serious news/thoughtful story, larger font to grab 
- * readers and pull in. I'd rather do this automagically but first-child won't 
- * let you specify 'p' or anything. 
- */ 
 .leader {
     font-size: 1.2em;
 }
 
-/* make all paragraphs after first be indented, oldschool printing style */
-/* made this specific to text-based posts because it looks funky w/ mixed media */
 .literature p + p {
     text-indent: 1.5em; 
 }
@@ -181,7 +144,6 @@ ol {
 
 /* ol list-style-type should be set on each theme as can replace w/ image etc. */
 
-/* want this to be standalone */
 video {
     display: block; 
     margin: 1em 0;
@@ -196,7 +158,6 @@ code[class*="language-"],
 pre[class*="language-"] {
 	font-family: 'Source Code Pro', 'DejaVu Sans Mono', Consolas, monospace;
 }
-
 
 /* SECTION 5: TABLES ------------------------------------------------------ */
 
@@ -216,3 +177,19 @@ legend{
 	font-size: 1.1em;
 	font-weight: bold;
 }
+
+
+
+/* SECTION 7 -------------------------------------------------------------- */
+
+.pagination {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.pagination-button {
+    padding: .5em;
+    border-radius: 10px;
+    flex: 1;
+}
+

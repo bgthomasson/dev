@@ -4,7 +4,11 @@
     <meta charset="utf-8" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>dryr CSS test page</title>
-    <link rel="stylesheet" media="all" href="css/theme-black.css" />
+    <link rel="stylesheet" media="all" title="minty" href="css/theme-minty.css" />
+    <link rel="alternate stylesheet" media="all" title="blue" href="css/theme-blue.css" />
+    <link rel="alternate stylesheet" media="all" title="orange" href="css/theme-orange.css" />
+    <link rel="alternate stylesheet" media="all" title="white" href="css/theme-white.css" />
+    <link rel="alternate stylesheet" media="all" title="black" href="css/theme-black.css" />
 </head>
 <body>
 <header class="page-header">
@@ -19,7 +23,6 @@
     <form name="searchform" class="search-form" method="POST" action="search.php">
         <input type="search" name="searchbox" class="search-box" placeholder="Search" />
         <input type="hidden" name="stage" value="process" />
-        <!--<button type="submit" name="searchbutton" class="search-button">Go</button>-->
     </form>
 </header>
 
@@ -35,7 +38,17 @@
 <section class="post-body">
     <section class="post-content">
     <h2>Content</h2>
-    
+    <p>
+    I'm not entirely happy with how this works but I need a quick way to compare themes
+    </p>
+    <p>
+    Pick a theme: 
+    <button onclick="setActiveStyleSheet('minty'); return false;">Minty</button> 
+    <button onclick="setActiveStyleSheet('blue'); return false;">Blue</button> 
+    <button onclick="setActiveStyleSheet('orange'); return false;">Orange</button> 
+    <button onclick="setActiveStyleSheet('white'); return false;">White</button> 
+    <button onclick="setActiveStyleSheet('black'); return false;">Black</button> 
+    </p>
     <p>
     Let's go over the nav menu, it's the logged in state obviously. 
     Someone who isn't would just see the main dryr homepage link and log-in link 
@@ -74,13 +87,19 @@
     </ol>
     <p>
     Bare HTML/CSS loads in under 200ms on DSL (according to Chrome at least), so I think 
-    I can relax about that for now. &#5842;
+    I can relax about that for now. <a href="#">Here's a plain old ordinary link.</a> 
     </p>
     
     <blockquote>
-        <p>Use BABEL to transpile ES6 to ES5.</p>
+        <h4>Username:</h4>
+        <p>Use BABEL to transpile ES6 to ES5... if use any, that is.</p>
         <blockquote>
-            <p>use SASS on CSS... eventually...</p>
+            <h4>Username:</h4>
+            <p>use SASS on CSS... I'm doing it now!</p>
+            <blockquote>
+                <h4>Username:</h4>
+                <p>Blockquotes- user icons or text names? Or both?</p>
+            </blockquote>
         </blockquote>
     </blockquote>
     
@@ -135,10 +154,10 @@
 <section class="post-body">
     <section class="post-content">
     <h2>My cool drawing</h2>
-    <a href="http://imgur.com/usI1TR9"><img src="http://i.imgur.com/usI1TR9.jpg" title="source: imgur.com" /></a>
+    <a href="http://imgur.com/usI1TR9"><img src="http://i.imgur.com/FVBZP6I.jpg" title="Toothless doodle" /></a>
     <p>
-    For an actual website there would be thumbnails with a predetermined size. 
-    Doing perfect mixed multimedia should be number one on to-do list. 
+    For an actual website there would be thumbnails generated from uploads with a predetermined size. 
+    Doing perfect mixed multimedia should be number one on backend to-do list. 
     Also note FF expands the content container around the image but Chrome doesn't. 
     </p>
     <p>That's what painting is all about. It should make you feel good when you paint. 
@@ -208,6 +227,11 @@
     </section>
 </article>
 
+<div class="pagination">
+<button class="pagination-button">Previous &#x2708;</button>
+<button class="pagination-button">Next &#x2708;</button>
+</div>
+
 </main>
 
 <footer class="page-footer">
@@ -224,7 +248,7 @@
 </footer>
 <!-- JAVASCRIPT AREA ..................................................... -->
 <script src="js/addClass.js"></script>
-
+<script src="js/styleswitcher.js"></script>
 
 </body>
 </html>

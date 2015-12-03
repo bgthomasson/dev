@@ -3,32 +3,31 @@
 @import 'core';
 
 
-$theme-color: rgb(243,134,48);
-$theme-shadow: rgb(55,30,4);
+$theme-color: rgb(222,184,135); 
+$theme-shadow: darken($theme-color, 60%);
 
-$action-color: #c7e1fb;
+$action-color: #daebfc;
 $action-muted: #ecf5fe;
 $action-shadow: darken($action-color, 80%);
 
 $paper1: white;
-$paper2: ivory;
+$paper2: rgb(246,240,220);
 
-$text-muted: gray;
+$text-muted: grey;
 
-$th-color: $theme-color;
-$zebra: rgb(255,235,200);
+$th-color: rgb(250,190,24);
+$zebra: lighten($th-color, 20%);
 
 
 /* ------------------------------------------------------------------------- */
 
 body {
-    background: linear-gradient($theme-color, $theme-shadow);
     background-color: $theme-color;
 }
 
 .page-header {
     background-color: $paper2;
-    box-shadow: 0px 6px 4px rgba($action-shadow, .5);
+    box-shadow: 0px 6px 4px $theme-shadow;
 }
 
 .page-footer {
@@ -67,6 +66,7 @@ nav a:hover {
     color: $text-muted;
 }
 
+
 blockquote {
     border-left: 1px solid $theme-shadow;
     border-top:  1px solid $theme-shadow;
@@ -76,14 +76,9 @@ ul, ol {
     border: 1px solid $theme-shadow;
 }
 
-ul li {
-    list-style-type: none;
+ul {
+    list-style-position: inside;
 }
-
-ul li:before {
-    content: "\2600"; 
-}
-
 
 table{ 
     border: 1px solid $theme-shadow;
@@ -109,5 +104,4 @@ button {
 button:hover {
     background-color: $action-color;
 }
-
 

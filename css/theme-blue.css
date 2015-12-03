@@ -284,60 +284,68 @@ legend {
 
 /* ------------------------------------------------------------------------- */
 body {
-  background-color: #111;
-  color: white;
-  font-family: 'Source Code Pro', monospace; }
+  background: linear-gradient(90deg, #070d11, #5a93bd, #070d11);
+  background-color: #5a93bd; }
 
 .page-header {
-  background-color: black; }
+  background-color: ivory;
+  box-shadow: 0px 6px 4px black; }
+
+.page-footer {
+  background-color: ivory; }
 
 nav a {
-  color: white; }
+  color: black; }
 
 nav a:hover {
   text-decoration: underline; }
 
+.post-body {
+  background-color: white;
+  border-radius: 12px; }
+
 .post-controls,
 .post-tags {
-  border-top: 1px solid #444;
+  border-top: 1px solid #070d11;
   font-size: 0.9em; }
 
 .post-tags a {
-  color: #399996; }
+  color: gray; }
 
 .post-tags a:hover {
   text-decoration: underline; }
 
 .activated {
-  color: #399996; }
+  background-color: #f9be90;
+  color: gray; }
 
 blockquote {
-  border-left: 1px solid #444;
-  border-top: 1px solid #444; }
+  border-left: 1px solid #070d11;
+  border-top: 1px solid #070d11; }
 
 ul, ol {
-  border: 1px solid #444; }
+  border: 1px solid #070d11; }
 
 ul li {
   list-style-type: none; }
 
 table {
-  border: 1px solid #444; }
+  border: 1px solid #070d11; }
 
 tr:nth-of-type(odd) {
-  background-color: #708090; }
+  background-color: #a3c3da; }
 
 th {
-  background-color: #708090; }
+  background-color: #5a93bd; }
+
+form {
+  background-color: ivory; }
 
 button {
-  background-color: #111;
+  background-color: white;
   border: none; }
 
 button:hover {
-  background-color: #00d2cb; }
+  background-color: #f38630; }
 
-input {
-  background-color: #111; }
-
-/*# sourceMappingURL=theme-black.css.map */
+/*# sourceMappingURL=theme-blue.css.map */

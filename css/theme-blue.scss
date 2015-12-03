@@ -3,32 +3,30 @@
 @import 'core';
 
 
-$theme-color: rgb(243,134,48);
-$theme-shadow: rgb(55,30,4);
+$theme-color: rgb(90,147,189);
+$theme-shadow: darken($theme-color, 50%);
 
-$action-color: #c7e1fb;
-$action-muted: #ecf5fe;
+$action-color: rgb(243,134,48);
+$action-muted: lighten($action-color, 20%);
 $action-shadow: darken($action-color, 80%);
 
 $paper1: white;
 $paper2: ivory;
 
-$text-muted: gray;
-
 $th-color: $theme-color;
-$zebra: rgb(255,235,200);
+$zebra: lighten($theme-color, 20%);
 
 
 /* ------------------------------------------------------------------------- */
 
 body {
-    background: linear-gradient($theme-color, $theme-shadow);
+    background: linear-gradient(90deg, $theme-shadow, $theme-color, $theme-shadow);
     background-color: $theme-color;
 }
 
 .page-header {
     background-color: $paper2;
-    box-shadow: 0px 6px 4px rgba($action-shadow, .5);
+    box-shadow: 0px 6px 4px $action-shadow;
 }
 
 .page-footer {
@@ -55,7 +53,7 @@ nav a:hover {
 }
 
 .post-tags a {
-    color: $text-muted;
+    color: gray;
 }
 
 .post-tags a:hover {
@@ -64,7 +62,7 @@ nav a:hover {
 
 .activated {
     background-color: $action-muted;
-    color: $text-muted;
+    color: gray;
 }
 
 blockquote {
@@ -78,10 +76,6 @@ ul, ol {
 
 ul li {
     list-style-type: none;
-}
-
-ul li:before {
-    content: "\2600"; 
 }
 
 
@@ -109,5 +103,4 @@ button {
 button:hover {
     background-color: $action-color;
 }
-
 
