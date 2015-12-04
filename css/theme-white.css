@@ -142,13 +142,11 @@ th {
  * 4. Misc elements, inline and block
  * 5. Tables
  * 6. Forms default, search-form 
- * 
- * This is the CORE LAYOUT MODULE. Default fonts are fine but no colors should 
- * be used, they go in the color themes. 
+ * 7. Misc special
 */
 /* SECTION 1: OVERALL LAYOUT ................................................. */
 body {
-  font-family: Candara, Tahoma, Geneva, Sans-Serif;
+  font-family: Candara, Tahoma, "Fira Sans", Roboto, Sans-Serif;
   font-size: 105%;
   line-height: 1.4em;
   margin: 0;
@@ -180,8 +178,7 @@ main {
     text-align: center; } }
 .page-footer {
   margin-top: 1em;
-  padding: 0.5em;
-  /* needs padding all around or doesn't touch bottom of browser window */ }
+  padding: 0.5em; }
 
 /* 2B: MAIN PAGE NAV in header ------------------------------------------------ */
 .page-nav {
@@ -235,28 +232,21 @@ blockquote {
   margin: 0;
   padding-left: 0.333em; }
 
+code {
+  font-family: 'Source Code Pro', 'DejaVu Sans Mono', Consolas, Monaco,  'Andale Mono', 'Ubuntu Mono', monospace; }
+
 h1, h2, h3, h4, h5, h6 {
   font-family: Cambria, Georgia, Palatino, serif; }
 
-/* LIST ELEMENTS */
 ul, ol {
   padding: 0.5em; }
 
 ol {
   list-style-position: inside; }
 
-/* ol list-style-type should be set on each theme as can replace w/ image etc. */
 video {
   display: block;
   margin: 1em 0; }
-
-/* 4C: CODE- basics, rest covered if include Prism css/js. Regardless, code 
- * SHOULD BE marked up in the same way, "style=language-abcd" 
-*/
-code,
-code[class*="language-"],
-pre[class*="language-"] {
-  font-family: 'Source Code Pro', 'DejaVu Sans Mono', Consolas, monospace; }
 
 /* SECTION 5: TABLES ------------------------------------------------------ */
 table {
@@ -281,6 +271,70 @@ legend {
   padding: .5em;
   border-radius: 10px;
   flex: 1; }
+
+/* prism lite -------------------------------------------------------------- */
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+  background: #f5f0dc; }
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+  background: #f5f0dc; }
+
+/* Code blocks */
+pre[class*="language-"] {
+  border: 1px solid #b0947f;
+  margin: .5em 0; }
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em; }
+
+.token.comment,
+.token.prolog,
+.token.doctype {
+  color: #708090; }
+
+.token.punctuation {
+  color: #999; }
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol {
+  color: #905; }
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.builtin {
+  color: #690; }
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+  color: #a67f59; }
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #07a; }
+
+.token.regex,
+.token.important {
+  color: #e90; }
+
+.token.important {
+  font-weight: bold; }
+
+.token.entity {
+  cursor: help; }
 
 /* ------------------------------------------------------------------------- */
 .page-header {

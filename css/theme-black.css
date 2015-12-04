@@ -142,13 +142,11 @@ th {
  * 4. Misc elements, inline and block
  * 5. Tables
  * 6. Forms default, search-form 
- * 
- * This is the CORE LAYOUT MODULE. Default fonts are fine but no colors should 
- * be used, they go in the color themes. 
+ * 7. Misc special
 */
 /* SECTION 1: OVERALL LAYOUT ................................................. */
 body {
-  font-family: Candara, Tahoma, Geneva, Sans-Serif;
+  font-family: Candara, Tahoma, "Fira Sans", Roboto, Sans-Serif;
   font-size: 105%;
   line-height: 1.4em;
   margin: 0;
@@ -180,8 +178,7 @@ main {
     text-align: center; } }
 .page-footer {
   margin-top: 1em;
-  padding: 0.5em;
-  /* needs padding all around or doesn't touch bottom of browser window */ }
+  padding: 0.5em; }
 
 /* 2B: MAIN PAGE NAV in header ------------------------------------------------ */
 .page-nav {
@@ -235,28 +232,21 @@ blockquote {
   margin: 0;
   padding-left: 0.333em; }
 
+code {
+  font-family: 'Source Code Pro', 'DejaVu Sans Mono', Consolas, Monaco,  'Andale Mono', 'Ubuntu Mono', monospace; }
+
 h1, h2, h3, h4, h5, h6 {
   font-family: Cambria, Georgia, Palatino, serif; }
 
-/* LIST ELEMENTS */
 ul, ol {
   padding: 0.5em; }
 
 ol {
   list-style-position: inside; }
 
-/* ol list-style-type should be set on each theme as can replace w/ image etc. */
 video {
   display: block;
   margin: 1em 0; }
-
-/* 4C: CODE- basics, rest covered if include Prism css/js. Regardless, code 
- * SHOULD BE marked up in the same way, "style=language-abcd" 
-*/
-code,
-code[class*="language-"],
-pre[class*="language-"] {
-  font-family: 'Source Code Pro', 'DejaVu Sans Mono', Consolas, monospace; }
 
 /* SECTION 5: TABLES ------------------------------------------------------ */
 table {
@@ -281,6 +271,105 @@ legend {
   padding: .5em;
   border-radius: 10px;
   flex: 1; }
+
+/* http://prismjs.com/download.html?themes=prism-okaidia&languages=markup+css+clike+javascript+php+python+scss */
+/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #f8f8f2;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none; }
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: 1em;
+  margin: .5em 0;
+  overflow: auto;
+  border-radius: 0.3em; }
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background: #272822; }
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal; }
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: slategray; }
+
+.token.punctuation {
+  color: #f8f8f2; }
+
+.namespace {
+  opacity: .7; }
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #f92672; }
+
+.token.boolean,
+.token.number {
+  color: #ae81ff; }
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #a6e22e; }
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+  color: #f8f8f2; }
+
+.token.atrule,
+.token.attr-value,
+.token.function {
+  color: #e6db74; }
+
+.token.keyword {
+  color: #66d9ef; }
+
+.token.regex,
+.token.important {
+  color: #fd971f; }
+
+.token.important,
+.token.bold {
+  font-weight: bold; }
+
+.token.italic {
+  font-style: italic; }
+
+.token.entity {
+  cursor: help; }
 
 /* ------------------------------------------------------------------------- */
 body {

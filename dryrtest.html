@@ -11,11 +11,11 @@
     <link rel="alternate stylesheet" media="all" title="black" href="css/theme-black.css" />
 </head>
 <body>
-<header class="page-header">
-    <nav class="page-nav">
+<header class="page-header" role="banner">
+    <nav class="page-nav" role="navigation">
         <a href="#">&#x270d; Post</a> 
-        <a href="#" id="mailbox" class="mailbox">&#x2709; Messages</a> 
-        <a href="#">&#x272a; $Username</a> 
+        <a href="#" id="mailbox" class="mailbox">&#x2709; Mail</a> 
+        <a href="#">@username</a> 
         <a href="#">&#x21af; Settings</a> 
         <a href="#">&#x2205; Log out</a>
         <a href="dryrtest.html"><h1 class="nomen">&#8962; Dryr </h1></a>
@@ -25,6 +25,8 @@
         <input type="hidden" name="stage" value="process" />
     </form>
 </header>
+
+<!-- MAIN ----------------------------------------------------------------- -->
 
 <main>
 
@@ -82,8 +84,8 @@
     <ol>
         <li>CSS/HTML: multi/mixed media posting</li>
         <li>CSS/JS: Emote buttons need efficient JS</li>
-        <li>The only JS should be for dynamic buttons on articles and the message/mail link.</li>
-        <li>?: include Prism? Adds 14.5kb JS and 2kb CSS</li>
+        <li>Themes are under user settings</li>
+        <li>SVG is cool</li>
     </ol>
     <p>
     Bare HTML/CSS loads in under 200ms on DSL (according to Chrome at least), so I think 
@@ -227,12 +229,95 @@
     </section>
 </article>
 
+
+<article class="post">
+    <div class="post-icon">
+    <img src="img/summer-13.png" alt="usericon" />
+    </div>
+    
+    <section class="post-body">
+    
+    <section class="post-content">
+    <h2>Code sample</h2>
+    <p>
+    Here's the CSS I use on my bookmarks page:
+    </p>
+<pre>
+<code class="language-css">
+body {
+    background-color: #111;
+    color: #fff;
+    font-family: "Source Code Pro", "DejaVu Sans Mono", monospace;
+    font-size: 1.2em;
+    margin: 0 auto;
+    max-width: 600px;
+}
+a {
+    color: #eee;
+    text-decoration: none;
+    display: list-item;
+    list-style-type: none;
+}
+a:hover {
+    color: #0f0;
+}
+p {
+    border: 1px solid #2f4f4f;
+    border-radius: 15px;
+    padding: 1em;
+    line-height: 200%;
+}
+</code>
+</pre>
+<p>
+I need to make my own font with the lowercase L from SCP and the zero from Consolas. 
+</p>
+<pre>
+<code class="language-javascript">
+// a simple AJAXian script to change bg color on clicked buttons. 
+// We also need to change tense, so "like" becomes "liked", etc. 
+
+var $ = document.querySelectorAll.bind(document);
+Element.prototype.on = Element.prototype.addEventListener;
+$('#like')[0].on('click', addClass);
+
+function addClass(){
+  var className = "activated";
+  if (this.classList) {
+    this.classList.add(className);
+  } else {
+    this.className += ' ' + className;
+  }
+}
+</code>
+</pre>
+    </section>
+    <section class="post-tags">
+        <p>
+            <a href="#">#text</a> 
+            <a href="#">#stuff</a> 
+            <a href="#">#things</a> 
+        </p>
+    </section>
+    <section class="post-controls">
+        <button type="button">&#x21bb; Reblog</button>
+        <button type="button">&#x2714; Agree</button>
+        <button type="button">&#x2764; Sympathy</button>
+        <button type="button">&#x2718; Disagree</button>
+    </section>
+    </section>
+</article>
+
+<!-- PAGINATION ----------------------------------------------------------- -->
+
 <div class="pagination">
 <button class="pagination-button">Previous &#x2708;</button>
 <button class="pagination-button">Next &#x2708;</button>
 </div>
 
 </main>
+
+<!-- FOOTER --------------------------------------------------------------- -->
 
 <footer class="page-footer">
     <nav>
@@ -249,6 +334,7 @@
 <!-- JAVASCRIPT AREA ..................................................... -->
 <script src="js/addClass.js"></script>
 <script src="js/styleswitcher.js"></script>
+<script src="js/prism.js"></script>
 
 </body>
 </html>

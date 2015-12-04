@@ -49,28 +49,9 @@ audio:not([controls]) {
     height: 0;
 }
 
-/* Links
-   ========================================================================== */
-
-/**
- * Improve readability when focused and also mouse hovered in all browsers.
- */
-
-a:active,
-a:hover {
-    outline: 0;
-}
 
 /* Text-level semantics
    ========================================================================== */
-
-/**
- * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
- */
-
-abbr[title] {
-    border-bottom: 1px dotted;
-}
 
 /**
  * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
@@ -108,11 +89,6 @@ sup {
 sub {
     bottom: -0.25em;
 }
-
-/* Embedded content
-   ========================================================================== */
-
-
 
 /* Grouping content
    ========================================================================== */
@@ -291,7 +267,7 @@ th {
 
 /* TABLE OF CONTENTS
  * 1. Overall layout: body, main
- * 2a. header and footer for page (to avoid confusion if use those elements in articles)
+ * 2a. header and footer for page 
  * 2b. <nav> in header and footer 
  * 3. <article> and <section> 
  * 4. Misc elements, inline and block
@@ -326,11 +302,6 @@ main {
 
 /* 2A: HEADER AND FOOTER ------------------------------------------------------- */
 
-/* Using flex for layout, is mostly working, except IE11 smaller than ~450px  
- * wide it just falls to bits. Suggested fixes do nothing. 
- * Will work on flex backups, will need to know regardless. 
-*/
-
 .page-header {
     background-color: white;
     box-shadow: 0px 6px 4px rgba(60,60,60,.5);
@@ -350,15 +321,6 @@ main {
         z-index: 99;
     }
 }
-/* if you add padding to the side of the header, which I did to keep the button 
-easy to see, making the width 100% pushes the right edge out of the window, so 
-ironically causing what was trying to avoid. this is only a prob when fixed pos. 
-it may not help using flex inside the form on the box and button, which I only 
-used because I liked the look I made but nobody adds the button anymore. 
-New note: button, fieldset, are funky and don't act like normal elements. 
-Another: box-sizing: border-box might help...
-*/
-
 
 @media screen and ( max-width: 480px ) {
     .page-header { 
@@ -402,7 +364,6 @@ nav a:hover {
 }
 
 
-
 /* ----------------------------------------------------------------------------
  * SECTION 3: ARTICLE RELATED
  */
@@ -413,10 +374,6 @@ article {
 
 /* testing http://philipwalton.github.io/solved-by-flexbox/demos/media-object/ 
  * .post functions as a row 
- * set up so small screens will have icon on top instead of side- i.e. they'll
- * stack like plain old css boxes. Hey I can just not give them anything, 
- * the div and section will line up by default, right??? yes! That solves the 
- * IE problem, and simplifies things. 
  * 
 */
 @media screen and ( min-width: 481px ) {
@@ -461,15 +418,13 @@ article {
 }
 
 /* For first paragraph in serious news/thoughtful story, larger font to grab 
- * readers and pull in. I'd rather do this automagically but first-child won't 
- * let you specify 'p' or anything. 
+ * readers and pull in. 
  */ 
 .leader {
     font-size: 1.2em;
 }
 
 /* make all paragraphs after first be indented, oldschool printing style */
-/* made this specific to text-based posts because it looks funky w/ mixed media */
 .literature p + p {
     text-indent: 1.5em; 
 }
@@ -503,23 +458,11 @@ ul li {
 }
 
 ul li:before {
-    content: "\2744"; /* special snowflake */
+    content: "\2744"; 
 }
 
 
 /* 4B: MULTIMEDIA */
-
-/* tame any giant images so layout won't get wrecked */
-
-img {
-    max-width: 600px;
-}
-
-@media screen and ( max-width: 400px ) {
-    img {
-        max-width: 300px;
-    }
-}
 
 /* want this to be standalone */
 video {
@@ -532,9 +475,7 @@ video {
 
 */
 
-code, 
-code[class*="language-"],
-pre[class*="language-"] {
+code {
 	font-family: 'Source Code Pro', 'DejaVu Sans Mono', Consolas, monospace;
 }
 
@@ -595,7 +536,4 @@ legend {
     border-radius: 10px;
     flex: 1;
 }
-
-
-
 

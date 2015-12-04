@@ -10,7 +10,7 @@ DRYR:
 > starting themes are green, blue, orange, black, white. make those look good. 
 >> TEMP: use css switcher so can look at each quickly
 
-> eventually replace UTF8 icons with SVG
+> replace UTF8 icons with SVG
 
 Backend:
 
@@ -52,6 +52,10 @@ the plain CSS versions are intact for reference.
 
 Layout is based on "content out": fluid, misc buzzwords. 
 Page has basic functional modules that are put together as needed. 
+
+basic structure is header and footer to contain nav/search/etc, and a central col 
+to hold content. 
+
 NAV holds links to static pages.
 ARTICLE holds user content. 
 Article subsections:
@@ -61,15 +65,18 @@ section for content
 section for tags
 section for buttons
 
-I'm using flexbox for this, should have fallback and doesn't feel proper
-
 Layers are nearly flat, bg layer, main content, and header and misc raised items
 this is to minimalize the chrome and focus on the content. 
 
+Flexbox is still messy in some minor old browsers but can add -webkit and use 
+display:table as backup where needed. 
+
 
 FONTS
-base on modern windows Candara/Cambria - clean, easy to read, no downloads 
-on main themes, but that's OK on 'fun' themes like 1337. 
+base on modern windows Candara/Cambria and iOS/Android equiv
+(expect most users will be on those three)
+
+- clean, easy to read, no downloads 
 but monospace aim for Source Code Pro instead of Consolas
 
 
@@ -91,22 +98,35 @@ FOOTER
 
 ARTICLE 
 
+Icon is on side on large screen, on top on small.
+content is kept to a max size to keep line length down for readability. 
+
+
+
 
 3. OTHER CONTAINED ELEMENTS: 
 
+
 BLOCKQUOTE
+This is for reblogs so make it logical and pretty. 
+
+MEDIA 
+critical to get this looking nice, mixing photos and videos with text, etc. 
+
+
 
 
 CODE 
-
-
-
-FORMS
+Two problems
+1. the Prism JS is at least 15kb: need webstack with Python, PHP, SCSS...
+2. would need to have at least two css files to maintain, light (custom) and dark (Okaida)
 
 
 LISTS
+I outlined under the theory it should look like a shopping list pinned to the page...
 
-MEDIA
+
+FORMS
 
 
 TABLES

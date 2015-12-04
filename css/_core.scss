@@ -6,14 +6,12 @@
  * 4. Misc elements, inline and block
  * 5. Tables
  * 6. Forms default, search-form 
- * 
- * This is the CORE LAYOUT MODULE. Default fonts are fine but no colors should 
- * be used, they go in the color themes. 
+ * 7. Misc special
 */ 
 /* SECTION 1: OVERALL LAYOUT ................................................. */
 
 body {  
-    font-family: Candara, Tahoma, Geneva, Sans-Serif;
+    font-family: Candara, Tahoma, "Fira Sans", Roboto, Sans-Serif;
     font-size: 105%;
     line-height: 1.4em;
     margin: 0;
@@ -56,7 +54,6 @@ main {
 .page-footer {
     margin-top: 1em; 
     padding: 0.5em; 
-    /* needs padding all around or doesn't touch bottom of browser window */
 }
 
 
@@ -129,11 +126,15 @@ blockquote {
     padding-left: 0.333em;
 }
 
+code {
+	font-family: 'Source Code Pro', 'DejaVu Sans Mono', Consolas, Monaco, 
+                 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+
 h1, h2, h3, h4, h5, h6{
     font-family: Cambria, Georgia, Palatino, serif;
 }
 
-/* LIST ELEMENTS */
 ul, ol {
     padding: 0.5em;
 }
@@ -142,22 +143,11 @@ ol {
     list-style-position: inside;
 }
 
-/* ol list-style-type should be set on each theme as can replace w/ image etc. */
-
 video {
     display: block; 
     margin: 1em 0;
 }
 
-/* 4C: CODE- basics, rest covered if include Prism css/js. Regardless, code 
- * SHOULD BE marked up in the same way, "style=language-abcd" 
-*/
-
-code, 
-code[class*="language-"],
-pre[class*="language-"] {
-	font-family: 'Source Code Pro', 'DejaVu Sans Mono', Consolas, monospace;
-}
 
 /* SECTION 5: TABLES ------------------------------------------------------ */
 
@@ -177,7 +167,6 @@ legend{
 	font-size: 1.1em;
 	font-weight: bold;
 }
-
 
 
 /* SECTION 7 -------------------------------------------------------------- */
