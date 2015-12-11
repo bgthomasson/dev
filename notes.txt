@@ -4,11 +4,16 @@ DRYR:
 
 > JS that adds class to acted on button should change text: 
 >> if innerHTML = "like" then change to "liked", etc. 
+>> JS needs to work on all ajaxian buttons
 
-> JS needs to work on all ajaxian buttons
 
 > starting themes are green, blue, orange, black, white. make those look good. 
 >> TEMP: use css switcher so can look at each quickly
+
+>> header menu is too hard to use on phone
+
+>> IE 10, images in links have ugly blue border
+
 
 > replace UTF8 icons with SVG
 

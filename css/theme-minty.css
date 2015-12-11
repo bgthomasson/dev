@@ -147,45 +147,54 @@ th {
 /* SECTION 1: OVERALL LAYOUT ................................................. */
 body {
   font-family: Candara, Tahoma, "Fira Sans", Roboto, Sans-Serif;
-  font-size: 105%;
-  line-height: 1.4em;
+  font-size: 1em;
+  line-height: 1.1em;
   margin: 0;
   padding: 0; }
 
 main {
-  margin: 0 auto;
-  margin-top: 64px;
-  max-width: 800px; }
+  margin: 0 auto; }
 
+@media screen and (min-width: 481px) {
+  body {
+    line-height: 1.2em; }
+
+  main {
+    margin-top: 64px;
+    width: 95%; } }
+@media screen and (min-width: 900px) {
+  body {
+    font-size: 105%;
+    line-height: 1.4em; }
+
+  main {
+    width: 800px; } }
 /* 2A: HEADER AND FOOTER ------------------------------------------------------- */
 .page-header {
-  padding: .2em 0;
-  margin-bottom: 2em; }
+  margin-bottom: 2em;
+  padding: .2em; }
 
-@media all and (min-width: 481px) {
+@media screen and (min-width: 481px) {
   .page-header {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     flex-direction: row;
     align-items: center;
     position: fixed;
     top: 0px;
     width: 100%;
-    z-index: 99; } }
-@media screen and (max-width: 480px) {
-  .page-header {
-    flex-direction: column;
-    align-items: stretch;
-    text-align: center; } }
+    z-index: 9; } }
 .page-footer {
   margin-top: 1em;
   padding: 0.5em; }
 
-/* 2B: MAIN PAGE NAV in header ------------------------------------------------ */
 .page-nav {
   flex: 1;
   font-size: 110%; }
 
-/* needed some spacing */
 nav a {
   padding: 0 .2em;
   text-decoration: none; }
@@ -195,14 +204,16 @@ nav a {
   margin: 0 auto;
   font-size: inherit; }
 
-/* ----------------------------------------------------------------------------
- * SECTION 3: ARTICLE RELATED
- */
+/* SECTION 3: ARTICLE RELATED ---------------------------------------------- */
 article {
   margin-bottom: 2em; }
 
 @media screen and (min-width: 481px) {
   .post {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     align-items: flex-start; }
 
@@ -230,7 +241,7 @@ article {
 /* SECTION 4: MISC ELEMENTS ------------------------------------------------ */
 blockquote {
   margin: 0;
-  padding-left: 0.333em; }
+  padding-left: 0.25em; }
 
 code {
   font-family: 'Source Code Pro', 'DejaVu Sans Mono', Consolas, Monaco,  'Andale Mono', 'Ubuntu Mono', monospace; }
@@ -264,6 +275,10 @@ legend {
 
 /* SECTION 7 -------------------------------------------------------------- */
 .pagination {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-flow: row wrap; }
 
@@ -375,8 +390,8 @@ nav a:hover {
   color: gray; }
 
 blockquote {
-  border-left: 1px solid #b0947f;
-  border-top: 1px solid #b0947f; }
+  border-left: 2px solid #b0947f;
+  border-top: 2px solid #b0947f; }
 
 ul, ol {
   background-color: #f5f0de;

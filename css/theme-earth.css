@@ -142,53 +142,59 @@ th {
  * 4. Misc elements, inline and block
  * 5. Tables
  * 6. Forms default, search-form 
- * 
- * This is the CORE LAYOUT MODULE. Default fonts are fine but no colors should 
- * be used, they go in the color themes. 
+ * 7. Misc special
 */
 /* SECTION 1: OVERALL LAYOUT ................................................. */
 body {
-  font-family: Candara, Tahoma, Geneva, Sans-Serif;
-  font-size: 105%;
-  line-height: 1.4em;
+  font-family: Candara, Tahoma, "Fira Sans", Roboto, Sans-Serif;
+  font-size: 1em;
+  line-height: 1.1em;
   margin: 0;
   padding: 0; }
 
 main {
-  margin: 0 auto;
-  margin-top: 64px;
-  max-width: 800px; }
+  margin: 0 auto; }
 
+@media screen and (min-width: 481px) {
+  body {
+    line-height: 1.2em; }
+
+  main {
+    margin-top: 64px;
+    width: 95%; } }
+@media screen and (min-width: 900px) {
+  body {
+    font-size: 105%;
+    line-height: 1.4em; }
+
+  main {
+    width: 800px; } }
 /* 2A: HEADER AND FOOTER ------------------------------------------------------- */
 .page-header {
-  padding: .2em 0;
-  margin-bottom: 2em; }
+  margin-bottom: 2em;
+  padding: .2em; }
 
-@media all and (min-width: 481px) {
+@media screen and (min-width: 481px) {
   .page-header {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     flex-direction: row;
     align-items: center;
     position: fixed;
     top: 0px;
     width: 100%;
-    z-index: 99; } }
-@media screen and (max-width: 480px) {
-  .page-header {
-    flex-direction: column;
-    align-items: stretch;
-    text-align: center; } }
+    z-index: 9; } }
 .page-footer {
   margin-top: 1em;
-  padding: 0.5em;
-  /* needs padding all around or doesn't touch bottom of browser window */ }
+  padding: 0.5em; }
 
-/* 2B: MAIN PAGE NAV in header ------------------------------------------------ */
 .page-nav {
   flex: 1;
   font-size: 110%; }
 
-/* needed some spacing */
 nav a {
   padding: 0 .2em;
   text-decoration: none; }
@@ -198,22 +204,21 @@ nav a {
   margin: 0 auto;
   font-size: inherit; }
 
-/* ----------------------------------------------------------------------------
- * SECTION 3: ARTICLE RELATED
- */
+/* SECTION 3: ARTICLE RELATED ---------------------------------------------- */
 article {
   margin-bottom: 2em; }
 
-.post {
-  display: flex;
-  align-items: flex-start; }
-
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 481px) {
   .post {
-    flex-direction: column; } }
-.post-icon {
-  margin-right: .5em; }
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start; }
 
+  .post-icon {
+    margin-right: .5em; } }
 .post-body {
   flex: 1;
   margin-bottom: 0.5em;
@@ -236,30 +241,23 @@ article {
 /* SECTION 4: MISC ELEMENTS ------------------------------------------------ */
 blockquote {
   margin: 0;
-  padding-left: 0.333em; }
+  padding-left: 0.25em; }
+
+code {
+  font-family: 'Source Code Pro', 'DejaVu Sans Mono', Consolas, Monaco,  'Andale Mono', 'Ubuntu Mono', monospace; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: Cambria, Georgia, Palatino, serif; }
 
-/* LIST ELEMENTS */
 ul, ol {
   padding: 0.5em; }
 
 ol {
   list-style-position: inside; }
 
-/* ol list-style-type should be set on each theme as can replace w/ image etc. */
 video {
   display: block;
   margin: 1em 0; }
-
-/* 4C: CODE- basics, rest covered if include Prism css/js. Regardless, code 
- * SHOULD BE marked up in the same way, "style=language-abcd" 
-*/
-code,
-code[class*="language-"],
-pre[class*="language-"] {
-  font-family: 'Source Code Pro', 'DejaVu Sans Mono', Consolas, monospace; }
 
 /* SECTION 5: TABLES ------------------------------------------------------ */
 table {
@@ -274,6 +272,20 @@ label {
 legend {
   font-size: 1.1em;
   font-weight: bold; }
+
+/* SECTION 7 -------------------------------------------------------------- */
+.pagination {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row wrap; }
+
+.pagination-button {
+  padding: .5em;
+  border-radius: 10px;
+  flex: 1; }
 
 /* ------------------------------------------------------------------------- */
 body {
