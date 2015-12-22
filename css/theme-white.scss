@@ -1,5 +1,5 @@
 
-@import 'normalize2016';
+@import 'normalize';
 @import 'core';
 @import 'prism-lite';
 
@@ -18,13 +18,19 @@ $text-muted: gray;
 $th-color: #f5b16a;
 $zebra: #fad8b5;
 
-$rainbow: linear-gradient(red, orange, yellow, green, blue, purple);
+$rainbow1: linear-gradient(red, orange, yellow, green, blue, purple);
+$rainbow45: linear-gradient(45deg, red, orange, yellow, green, blue, purple);
 
 /* ------------------------------------------------------------------------- */
 
 .page-header {
-    background-color: $paper1;
-    box-shadow: 0px 6px 4px rgba(47,79,79,.5);
+    background: $paper1;
+}
+
+@media screen and ( min-width: 481px ) {
+    .page-header {
+        box-shadow: 0px 6px 4px rgba(47,79,79,.5);
+    }
 }
 
 nav a {
@@ -67,7 +73,7 @@ ul li {
     list-style-type: none;
 }
 
-table{ 
+table { 
     border: 1px solid $theme-shadow;
 }
 

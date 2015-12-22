@@ -7,23 +7,36 @@ DRYR:
 >> JS needs to work on all ajaxian buttons
 
 
-> starting themes are green, blue, orange, black, white. make those look good. 
->> TEMP: use css switcher so can look at each quickly
-
->> header menu is too hard to use on phone
-
->> IE 10, images in links have ugly blue border
-
+>> header menu is too hard to use w/fingers
 
 > replace UTF8 icons with SVG
+
+
 
 Backend:
 
 > pagination
 
-> quotes have 16px icon w/ username
+> reblogs/quotes versus comments
 
 > media uploads
+>> thumbnails, 600px wide and 100kb max
+>> nice and easy file dialog
+
+
+> user settings/options:
+1. theme
+2. prism.js
+
+
+
+
+
+
+Auto-correct can be disabled by adding an autocorrect attribute to the input tag 
+and setting it to off, like this:
+
+<input type="text" autocorrect="off" autocapitalize="off" />
 
 
 

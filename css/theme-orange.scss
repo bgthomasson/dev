@@ -1,5 +1,5 @@
 
-@import 'normalize2016';
+@import 'normalize';
 @import 'core';
 @import 'prism-lite';
 
@@ -29,7 +29,12 @@ body {
 
 .page-header {
     background-color: $paper2;
-    box-shadow: 0px 6px 4px rgba($action-shadow, .5);
+}
+
+@media screen and ( min-width: 481px ) {
+    .page-header {
+        box-shadow: 0px 6px 4px rgba($action-shadow, .5);
+    }
 }
 
 .page-footer {
@@ -86,7 +91,7 @@ ul li:before {
 }
 
 
-table{ 
+table { 
     border: 1px solid $theme-shadow;
 }
 

@@ -1,5 +1,5 @@
 
-@import 'normalize2016';
+@import 'normalize';
 @import 'core';
 @import 'prism-dark';
 
@@ -70,7 +70,7 @@ ul li {
     list-style-type: none;
 }
 
-table{ 
+table { 
     border: 1px solid $theme-shadow;
 }
 

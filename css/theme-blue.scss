@@ -1,5 +1,5 @@
 
-@import 'normalize2016';
+@import 'normalize';
 @import 'core';
 @import 'prism-lite';
 
@@ -14,6 +14,8 @@ $action-shadow: darken($action-color, 80%);
 $paper1: white;
 $paper2: ivory;
 
+$text-muted: grey;
+
 $th-color: $theme-color;
 $zebra: lighten($theme-color, 20%);
 
@@ -27,7 +29,7 @@ body {
 
 .page-header {
     background-color: $paper2;
-    box-shadow: 0px 6px 4px $action-shadow;
+    box-shadow: 0px 6px 4px rgba($action-shadow, .5);
 }
 
 .page-footer {
@@ -45,6 +47,7 @@ nav a:hover {
 .post-body {
     background-color: $paper1;
     border-radius: 12px;
+    box-shadow: 6px 6px 6px $action-shadow;
 }
 
 .post-controls, 
@@ -54,7 +57,7 @@ nav a:hover {
 }
 
 .post-tags a {
-    color: gray;
+    color: $text-muted;
 }
 
 .post-tags a:hover {
@@ -63,7 +66,7 @@ nav a:hover {
 
 .activated {
     background-color: $action-muted;
-    color: gray;
+    color: $text-muted;
 }
 
 blockquote {
@@ -80,7 +83,7 @@ ul li {
 }
 
 
-table{ 
+table { 
     border: 1px solid $theme-shadow;
 }
 
