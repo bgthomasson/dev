@@ -1,0 +1,366 @@
+/* some parts from normalize.css v3.0.2 | MIT License | git.io/normalize */
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: rgb(143,188,143);
+  background-image: linear-gradient(90deg, rgba(190, 235, 190, 0.07) 50%, transparent 50%), 
+                    linear-gradient(90deg, rgba(153, 198, 153, 0.13) 50%, transparent 50%), 
+                    linear-gradient(90deg, transparent 50%, rgba(128, 163, 128, 0.17) 50%), 
+                    linear-gradient(90deg, transparent 50%, rgba(190, 235, 190, 0.19) 50%);
+  background-size: 13px, 29px, 37px, 53px;
+  font-family: Candara, Tahoma, "Fira Sans", Roboto, Sans-Serif;
+  font-size: 1em;
+  line-height: 1.1em;
+}
+
+main {
+  margin: 0 auto; 
+}
+
+@media screen and (min-width: 481px) {
+  body {
+    line-height: 1.2em; 
+    }
+
+  main {
+    margin-top: 64px;
+    width: 95%; 
+    } 
+}
+@media screen and (min-width: 900px) {
+  body {
+    font-size: 105%;
+    line-height: 1.4em; 
+    }
+
+  main {
+    width: 800px; 
+    } 
+}
+
+.page-header {
+  margin-bottom: 2em;
+}
+
+@media screen and (min-width: 481px) {
+  .page-header {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 9; 
+    } 
+}
+
+nav a {
+  color: black; 
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline; 
+}
+
+.nomen {
+  display: inline;
+  margin: 0 auto;
+  font-size: inherit; 
+}
+
+.search-form{
+    background: none;
+}
+
+article,
+aside,
+footer,
+header,
+main,
+nav,
+section {
+  display: block; 
+}
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+
+a:active,
+a:hover {
+  outline: 0; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b,
+strong {
+  font-weight: bold; }
+
+small {
+  font-size: 80%; }
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+img {
+  border: 0; 
+  max-width: 96%;
+}
+
+svg:not(:root) {
+  overflow: hidden; 
+}
+
+blockquote {
+  margin: 0;
+  padding-left: 0.25em; 
+  border-left: 1px solid #b0947f;
+  border-top: 1px solid #b0947f;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Cambria, Georgia, Palatino, serif; 
+}
+
+ol, 
+ul {
+  padding: 0.5em; 
+  list-style-position: inside; 
+  border: 1px solid #b0947f; 
+}
+
+
+label {
+  display: inline-block;
+  width: 40em;
+  text-align: right; 
+}
+
+legend {
+  font-size: 1.1em;
+  font-weight: bold; 
+}
+
+form {
+  background-color: ivory; 
+}
+
+button {
+  background-color: white;
+  border: none; 
+}
+
+button:hover {
+  background-color: rgb(176,224,230); 
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+ }
+
+button {
+  overflow: visible; }
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+
+fieldset {
+  border: 1px solid #b0947f;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; 
+}
+
+legend {
+  border: 0;
+  padding: 0;
+}
+
+textarea {
+  overflow: auto; 
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; 
+  border: 1px solid #b0947f; 
+  margin: 12px 0;
+}
+
+tr:nth-of-type(odd) {
+  background-color: #f5f0de; }
+
+th {
+  background-color: #ddcc90; }
+
+td,
+th {
+  padding: 0.5em; 
+}
+
+
+.post {
+  background-color: white;
+  border-radius: 12px;
+  margin-bottom: 3em;
+  padding: 0.5em 1em;
+}
+
+.post-tags {
+  border-top: 1px solid #b0947f;
+  font-size: 0.9em; 
+}
+
+.post-tags a {
+  color: grey; 
+}
+
+.post-tags a:hover {
+  text-decoration: underline; 
+}
+
+
+article {
+  margin-bottom: 2em; 
+}
+
+.post-tags {
+  font-size: 0.9em; 
+}
+
+.post-tags a {
+  padding: 0 .2em;
+  text-decoration: none; 
+}
+
+.leader {
+  font-size: 1.2em; 
+}
+
+.literature p + p {
+  text-indent: 1.5em; 
+}
+
+
+.pagination {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row wrap; }
+
+.pagination-button {
+  padding: .5em;
+  border-radius: 10px;
+  flex: 1; 
+}
+
+
+
+pre {
+  overflow: auto; 
+  padding: .5em;
+}
+
+code {
+  font-family: "Source Code Pro", "DejaVu Sans Mono", Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace; 
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+  background: #f5f0dc; }
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+  background: #f5f0dc; }
+
+/* Code blocks */
+pre[class*="language-"] {
+  border: 1px solid #b0947f;
+  margin: .5em 0; }
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em; }
+
+.token.comment,
+.token.prolog,
+.token.doctype {
+  color: #708090; }
+
+.token.punctuation {
+  color: #999; }
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol {
+  color: #905; }
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.builtin {
+  color: #690; }
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+  color: #a67f59; }
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #07a; }
+
+.token.regex,
+.token.important {
+  color: #e90; }
+
+.token.important {
+  font-weight: bold; }
+
+.token.entity {
+  cursor: help; 
+}
+

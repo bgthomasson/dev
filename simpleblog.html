@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>simple blog test page</title>
+    <link rel="stylesheet" media="all" title="blue" href="css/seastripe.css" />
+</head>
+<body>
+<header class="page-header" role="banner">
+    <nav><a href="dryrtest.html"><h1 class="nomen">&#8962; Ben's blog </h1></a></nav>
+    <form name="searchform" class="search-form" method="POST" action="search.php">
+        <input type="search" name="searchbox" class="search-box" placeholder="Search" />
+        <input type="hidden" name="stage" value="process" />
+    </form>
+</header>
+
+<!-- MAIN ----------------------------------------------------------------- -->
+
+<main>
+
+<article class="post">
+<section class="post-content">
+<h2>Content</h2>
+<ul>
+    <li>IE 11 (Windows 7, and good enough to need little special care)</li>
+    <li>Firefox 38 (long term release)</li>
+    <li>Chrome 40 (round number)</li>
+    <li>Safari 8</li>
+    <li>Android 4.x</li>
+</ul>
+
+<ol>
+    <li>CSS/HTML: multi/mixed media posting</li>
+    <li>CSS/JS: Emote buttons need efficient JS</li>
+    <li>Themes are under user settings</li>
+    <li>SVG is cool</li>
+</ol>
+<p>
+Bare HTML/CSS loads in under 200ms on DSL (according to Chrome at least), so I think 
+I can relax about that for now. <a href="http://www.google.com">Here's a plain old ordinary link.</a> 
+</p>
+
+<blockquote>
+    <h4><img src="img/summer-11.png" alt="usericon" class="quote-icon" /> Username:</h4>
+    <p>Use BABEL to transpile ES6 to ES5... if use any, that is.</p>
+    <blockquote>
+        <h4><img src="img/summer-13.png" alt="usericon" class="quote-icon" /> Username:</h4>
+        <p>use SASS on CSS... I'm doing it now!</p>
+        <blockquote>
+            <h4><img src="img/summer-11.png" alt="usericon" class="quote-icon" /> Username:</h4>
+            <p>Blockquotes- user icons or text names? Or both?</p>
+        </blockquote>
+    </blockquote>
+</blockquote>
+
+<table>
+    <tr>
+        <th>Pet</th>
+        <th>Birthday</th>
+        <th>Age</th>
+    </tr>
+    <tr>
+        <td>Cat</td>
+        <td>October 2000</td>
+        <td>15</td>
+    </tr>
+    <tr>
+        <td>Dog</td>
+        <td>August 2010</td>
+        <td>5</td>
+    </tr>
+    <tr>
+        <td>Hamster</td>
+        <td>April 3, 2014</td>
+        <td>1</td>
+    </tr>
+</table>
+
+</section>
+<section class="post-tags">
+    <p><a href="#">#testing</a></p>
+</section>
+
+</article>
+
+
+<article class="post">
+<section class="post-content">
+<h2>My cool drawing</h2>
+<a href="http://imgur.com/usI1TR9"><img src="http://i.imgur.com/FVBZP6I.jpg" title="Toothless doodle" /></a>
+<p>
+For an actual website there would be thumbnails generated from uploads with a predetermined size. 
+Doing perfect mixed multimedia should be number one on backend to-do list. 
+Also note FF expands the content container around the image but Chrome doesn't. 
+</p>
+<p>That's what painting is all about. It should make you feel good when you paint. 
+You have to make almighty decisions when you're the creator. Everybody needs a friend. 
+You've got to learn to fight the temptation to resist these things. Just let them happen.</p>
+</section>
+<section class="post-tags">
+    <p><a href="#">#testing</a></p>
+</section>
+</article>
+
+
+<article class="post">
+<section class="post-content literature">
+<h2>Literature class</h2>
+<p class="leader">At eight o'clock the sledge was ready to start.  
+The passengers took their places on it, and wrapped themselves up closely in their travelling-cloaks.  
+The two great sails were hoisted, and under the pressure of the wind the sledge slid over the hardened 
+snow with a velocity of forty miles an hour.</p>
+
+<p>The distance between Fort Kearney and Omaha, as the birds fly, is at most two hundred miles.  
+If the wind held good, the distance might be traversed in five hours; if no accident happened the 
+sledge might reach Omaha by one o'clock.</p>
+
+<p>What a journey!  The travellers, huddled close together, could not speak for the cold, 
+intensified by the rapidity at which they were going.  The sledge sped on as lightly as a boat over 
+the waves.  When the breeze came skimming the earth the sledge seemed to be lifted off the ground by 
+its sails.  Mudge, who was at the rudder, kept in a straight line, and by a turn of his hand checked 
+the lurches which the vehicle had a tendency to make.  All the sails were up, and the jib was so 
+arranged as not to screen the brigantine.  A top-mast was hoisted, and another jib, 
+held out to the wind, added its force to the other sails.  Although the speed could not be exactly 
+estimated, the sledge could not be going at less than forty miles an hour.</p>
+</section>
+<section class="post-tags">
+    <p>
+        <a href="#">#text</a> 
+        <a href="#">#stuff</a> 
+        <a href="#">#things</a> 
+    </p>
+</section>
+</article>
+
+
+<article class="post">
+<section class="post-content">
+<h2>Code sample</h2>
+<p>
+Here's the CSS I use on my bookmarks page:
+</p>
+<pre>
+<code class="language-css">
+body {
+    background-color: #111;
+    color: #fff;
+    font-family: "Source Code Pro", "DejaVu Sans Mono", monospace;
+    font-size: 1.2em;
+    margin: 0 auto;
+    max-width: 600px;
+}
+a {
+    color: #eee;
+    text-decoration: none;
+    display: list-item;
+    list-style-type: none;
+}
+a:hover {
+    
+}
+p {
+    border: 1px solid #2f4f4f;
+    border-radius: 15px;
+    padding: 1em;
+    line-height: 200%;
+}
+</code>
+</pre>
+<p>
+I need to make my own font with the lowercase L from SCP and the zero from Consolas. 
+</p>
+<pre>
+<code class="language-javascript">
+// a simple AJAXian script to change bg color on clicked buttons. 
+// We also need to change tense, so "like" becomes "liked", etc. 
+
+var $ = document.querySelectorAll.bind(document);
+Element.prototype.on = Element.prototype.addEventListener;
+$('#like')[0].on('click', addClass);
+
+function addClass(){
+    var className = "activated";
+    if (this.classList) {
+        this.classList.add(className);
+    } else {
+        this.className += ' ' + className;
+    }
+}
+</code>
+</pre>
+</section>
+<section class="post-tags">
+    <p>
+        <a href="#">#text</a> 
+        <a href="#">#stuff</a> 
+        <a href="#">#things</a> 
+    </p>
+</section>
+</article>
+
+<!-- PAGINATION ----------------------------------------------------------- -->
+
+<div class="pagination">
+    <button class="pagination-button">Previous &#x2708;</button>
+    <button class="pagination-button">Next &#x2708;</button>
+</div>
+
+</main>
+
+<!-- FOOTER --------------------------------------------------------------- -->
+
+<!-- JAVASCRIPT AREA ..................................................... -->
+<script src="js/prism.js"></script>
+
+</body>
+</html>

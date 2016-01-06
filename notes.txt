@@ -7,9 +7,13 @@ DRYR:
 >> JS needs to work on all ajaxian buttons
 
 
->> header menu is too hard to use w/fingers
+> header menu is too hard to use w/fingers
+  maybe display: list-item?? 
 
 > replace UTF8 icons with SVG
+
+> where to link to individual post page?
+> where to put timestamp? 
 
 
 
