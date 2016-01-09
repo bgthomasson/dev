@@ -55,7 +55,7 @@ main {
 easy to see, making the width 100% pushes the right edge out of the window, so 
 ironically causing what was trying to avoid. this is only a prob when fixed pos. 
 it may not help using flex inside the form on the box and button, which I only 
-used because I liked the look I made but nobody adds the button anymore. 
+used because I liked the look I made but almost nobody adds the button anymore. 
 */
 
 
@@ -86,7 +86,7 @@ nav a {
     padding: 0 .2em;
     text-decoration: none;
 }
-/* I tihnk this is OK for default, with hover underline optional */
+/* I think this is OK for default, with hover underline optional */
 
 /* want the h1 for SEO/access but w/out using too much space... */
 .nomen {
@@ -171,15 +171,15 @@ h1, h2, h3, h4, h5, h6{
 }
 
 /* LIST ELEMENTS */
-ul, ol {
+ol, ul {
     padding: 0.5em;
 }
 
-ol {
+ol, ul {
     list-style-position: inside;
 }
 
-/* ul list-style-type should be set on each theme as can replace w/ image etc. */
+/* list-style-type should be set on each theme as can replace w/ image etc. */
 
 /* want this to be standalone */
 video {
@@ -202,6 +202,10 @@ pre[class*="language-"] {
 
 table{ 
     margin: 12px 0;
+}
+
+th {
+    text-align: left; 
 }
 
 /* SECTION 6: FORM ELEMENTS ----------------------------------------------- */

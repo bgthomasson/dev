@@ -12,8 +12,17 @@ DRYR:
 
 > replace UTF8 icons with SVG
 
-> where to link to individual post page?
-> where to put timestamp? 
+> where to link to individual post page? h2? or timestamp? 
+> where to put timestamp? make h2 inline and put to right? 
+like: Post title, posted YYYY MM DD
+or skip formality, since barely used regardless, put it under usericon, like
+iconimage
+small YYYY MM DD which is link to unique post
+
+tumblr has little hover over hing on top right corner which is nifty but hard to find
+facebook has icon and text name over timestamp
+twitter has icon - text - stamp ... item-type, item-id... stream-item-header/footer
+
 
 
 

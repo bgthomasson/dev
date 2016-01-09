@@ -23,10 +23,10 @@
 
 @mixin flex($values) {
   -webkit-box-flex: $values;
-  -moz-box-flex:  $values;
-  -webkit-flex:  $values;
-  -ms-flex:  $values;
-  flex:  $values;
+  -moz-box-flex: $values;
+  -webkit-flex: $values;
+  -ms-flex: $values;
+  flex: $values;
 }
 
 /* VARS */
@@ -62,7 +62,7 @@ main {
 @media screen and (min-width: 900px) {
     body {
         font-size: 105%;
-        line-height: 1.4em;
+        line-height: 1.3em;
     }
     main {
         width: 800px;
@@ -95,7 +95,7 @@ main {
 }
 
 .page-nav {
-    flex: 1;
+    @include flex(1);
     font-size: 110%;
 }
 
@@ -128,7 +128,7 @@ article {
 }
 
 .post-body {
-    flex: 1;
+    @include flex(1);
     margin-bottom: 0.5em;
     padding: 0.5em 1em;
 }
@@ -150,6 +150,7 @@ article {
 .literature p + p {
     text-indent: 1.5em; 
 }
+
 
 /* SECTION 4: MISC ELEMENTS ------------------------------------------------ */
 
@@ -179,11 +180,11 @@ img {
     max-width: 96%;
 }
 
-ul, ol {
+ol, ul {
     padding: 0.5em;
 }
 
-ol {
+ol, ul {
     list-style-position: inside;
 }
 
@@ -198,6 +199,9 @@ table {
     margin: 12px 0;
 }
 
+th {
+    text-align: left; 
+}
 
 /* SECTION 6: FORM ELEMENTS ----------------------------------------------- */
 

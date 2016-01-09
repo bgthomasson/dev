@@ -12,8 +12,14 @@ $action-muted: #c7e1fb;
 
 $paper1: #111;
 $paper2: black;
+$font-color: white;
 
 $text-muted: #399996;
+
+$fonts-sans: Candara, Tahoma, "Fira Sans", Roboto, Sans-Serif;
+$fonts-serif: Cambria, Georgia, Palatino, serif;
+$fonts-mono: 'Source Code Pro', 'DejaVu Sans Mono', Consolas, Monaco, 
+                 'Andale Mono', 'Ubuntu Mono', monospace;
 
 $th-color: #708090;
 $zebra: #708090;
@@ -23,8 +29,8 @@ $zebra: #708090;
 
 body {
     background-color: $theme-color;
-    color: white;
-    font-family: 'Source Code Pro', monospace;
+    color: $font-color;
+    font-family: $fonts-mono;
 }
 
 .page-header {

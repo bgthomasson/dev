@@ -13,12 +13,13 @@
 <body>
 <header class="page-header" role="banner">
     <nav class="page-nav" role="navigation">
+        <a href="dryrtest.html"><h1 class="nomen">&#8962; Dryr </h1></a>
         <a href="#">&#x270d; Post</a> 
         <a href="#" id="mailbox" class="mailbox">&#x2709; Mail</a> 
         <a href="#">@username</a> 
         <a href="#">&#x21af; Settings</a> 
         <a href="#">&#x2205; Log out</a>
-        <a href="dryrtest.html"><h1 class="nomen">&#8962; Dryr </h1></a>
+        
     </nav>
     <form name="searchform" class="search-form" method="POST" action="search.php">
         <input type="search" name="searchbox" class="search-box" placeholder="Search" />
@@ -31,15 +32,14 @@
 <main>
 
 <article class="post">
-<div class="post-icon">
-    <a href="#">
-    <img src="img/summer-11.png" alt="usericon" />
-    </a>
-</div>
+<section class="post-icon">
+    <p><a href="#"><img src="img/summer-11.png" alt="usericon" /></a></p> 
+    <p><a href="#" class="post-timestamp">2016-01-01</a></p>
+</section>
 
 <section class="post-body">
     <section class="post-content">
-    <h2>Content</h2>
+    <p><a href="#">Username:</a></p>
     <p>
     I'm not entirely happy with how this works but I need a quick way to compare themes
     </p>
@@ -50,27 +50,6 @@
     <button onclick="setActiveStyleSheet('orange'); return false;">Orange</button> 
     <button onclick="setActiveStyleSheet('white'); return false;">White</button> 
     <button onclick="setActiveStyleSheet('black'); return false;">Black</button> 
-    </p>
-    <p>
-    Let's go over the nav menu, it's the logged in state obviously. 
-    Someone who isn't would just see the main dryr homepage link and log-in link 
-    (and search too of course).
-    </p>
-    <p>
-    POST: since this is mixed media by default, it doesn't have singular options 
-    directly in the menu like tumblr or twitter, just hit post and then have them 
-    there. 
-    </p>
-    <p>
-    MESSAGES: chatmail and replies/comments/etc. 
-    </p>
-    <p>
-    $USERNAME: the user's homepage with all their posts. 
-    </p>
-    <p>
-    SETTINGS: content management, custom styles, etc. 
-    For desktop it might work better to make this a dropmenu link, under have 
-    stats, settings, logout. (Make it harder to log out on accident that way)    
     </p>
 
     <ul>
@@ -145,13 +124,12 @@
 
 <article class="post">
 <section class="post-icon">
-    <a href="#">
-    <img src="img/summer-11.png" alt="usericon" />
-    </a>
+    <a href="#"><img src="img/summer-11.png" alt="usericon" /></a>
+    <p><a href="#" class="post-timestamp">2016-01-01</a></p>
 </section>
 <section class="post-body">
     <section class="post-content">
-    <h2>My cool drawing</h2>
+    <h2><a href="#">Username:</a> My cool drawing</h2>
     <a href="http://imgur.com/usI1TR9"><img src="http://i.imgur.com/FVBZP6I.jpg" title="Toothless doodle" /></a>
     <p>
     For an actual website there would be thumbnails generated from uploads with a predetermined size. 
@@ -161,11 +139,6 @@
     <p>That's what painting is all about. It should make you feel good when you paint. 
     You have to make almighty decisions when you're the creator. Everybody needs a friend. 
     You've got to learn to fight the temptation to resist these things. Just let them happen.</p>
-
-    <p>Everybody's different. Trees are different. Let them all be individuals. 
-    This is happy place, little squirrels live here and play. There are no limits in this world. 
-    That is when you can experience true joy, when you have no fear. I like to beat the brush.</p>
-
     
     </section>
     <section class="post-tags">
@@ -183,14 +156,15 @@
 
 
 <article class="post">
-    <div class="post-icon">
+    <section class="post-icon">
     <img src="img/summer-13.png" alt="usericon" />
-    </div>
+    <p><a href="#" class="post-timestamp">2016-01-01</a></p>
+    </section>
     
     <section class="post-body">
     
     <section class="post-content literature">
-    <h2>Literature class</h2>
+    <h2><a href="#">Username:</a> Literature class</h2>
     <p class="leader">At eight o'clock the sledge was ready to start.  
     The passengers took their places on it, and wrapped themselves up closely in their travelling-cloaks.  
     The two great sails were hoisted, and under the pressure of the wind the sledge slid over the hardened 
@@ -227,14 +201,15 @@
 
 
 <article class="post">
-    <div class="post-icon">
+    <section class="post-icon">
     <img src="img/summer-13.png" alt="usericon" />
-    </div>
+    <p><a href="#" class="post-timestamp">2016-01-01</a></p>
+    </section>
     
     <section class="post-body">
     
     <section class="post-content">
-    <h2>Code sample</h2>
+    <h2><a href="#">Username:</a> Code sample</h2>
     <p>
     Here's the CSS I use on my bookmarks page:
     </p>
@@ -326,6 +301,11 @@ function addClass(){
         <a href="#">Stats</a>
         <a href="#">Friends</a>
     </nav>
+    <p>
+    This website uses cookies, but only for functional things like user preferences. 
+    No 3<sup>d</sup> party ads (only sponsored posts), no flash (except games), 
+    no personalize analytics (only anonymous)
+    </p>
 </footer>
 <!-- JAVASCRIPT AREA ..................................................... -->
 <script src="js/addClass.js"></script>
