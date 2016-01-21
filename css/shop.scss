@@ -1,0 +1,176 @@
+/* TABLE OF CONTENTS ------------------------------------------------------- ||
+ * 0: Imports and mixins, etc
+ * 1. Overall layout: body, main
+ * 2. header and footer for page 
+ * 3. <article> and <section> 
+ * 4. Misc elements, inline and block
+ * 5. Tables
+ * 6. Forms default, search-form 
+*/ 
+
+/* IMPORTS */@import 'normalize';
+
+/* MIXINS */
+
+/* VARS */
+
+$font-sans-1: Candara, 'Lucida Sans Unicode', 'Liberation Sans', 'Fira Sans', Roboto, Sans-Serif;
+$font-serif-1: Cambria, Georgia, Palatino, serif;
+$font-serif-2: Constantia, "Palatino Linotype", Palatino, Gentium, serif;
+
+$media-small: 481px;
+$media-big: 900px;
+
+$action-color: #c7e1fb;
+$action-muted: #ecf5fe;
+$action-darker: darken($action-color, 10%);
+
+$text-color: #111;
+$text-muted: #787276;
+
+$caramel: #66360f;
+
+$pearl: #fbfcf7;
+
+$sportscar: #d31603;
+
+/* SECTION 1: OVERALL LAYOUT ................................................. */
+
+body {  
+    background-color: $pearl;
+    color: $text-color;
+    font-family: $font-sans-1;
+    font-size: 1em;
+    line-height: 1.1em;
+}
+
+
+@media screen and (min-width: $media-big) {
+    body {
+        font-size: 105%;
+        line-height: 1.2em;
+        margin: 0 auto;
+        width: 800px;
+    }
+}
+
+
+/* 2: HEADER AND FOOTER ------------------------------------------------------- */
+.page-header {
+    margin-bottom: 2em;
+    padding-top: 0.5em;
+    border-bottom: 1px dotted $caramel;
+}
+
+@media screen and ( min-width: $media-small ) {
+    .page-header {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    
+    .cell {
+        flex: 1;
+    }
+}
+
+
+.nomen {
+    display: inline;
+    margin: 0;
+}
+
+nav a {
+    padding: 0 .2em;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.page-footer {
+    border-top: 2px solid $caramel;
+    margin-top: 1em; 
+    margin-bottom: 2em;
+}
+
+
+/* SECTION 3: ARTICLE RELATED ---------------------------------------------- */
+
+article {
+    margin-bottom: 2em;
+}
+
+.product-media {
+    text-align: center;
+}
+/* media: not simply image, can be set of jpgs, <picture>, video, etc. 
+ * text is just plain text 
+*/
+
+.product-text {
+    flex: 0 0 80%;
+}
+
+.product-purchase {
+    flex: 0 0 15%;
+    padding-left: 1em;
+}
+
+.product-review {
+    border: 1px dotted $caramel;
+}
+
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/* SECTION 4: MISC ELEMENTS ------------------------------------------------ */
+
+blockquote {
+    margin: 0;
+    padding-left: 0.25em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-serif-1;
+}
+
+img {
+    max-width: 98%;
+}
+
+ol, ul {
+    padding: 0.5em;
+    list-style-position: inside;
+    border: 1px solid $caramel;
+}
+
+video { 
+    margin: 1em 0;
+}
+
+
+/* SECTION 5: TABLES ------------------------------------------------------ */
+
+table { 
+    margin: 12px 0;
+}
+
+/* SECTION 6: FORM ELEMENTS ----------------------------------------------- */
+
+button {
+    background-color: $action-color;
+    border: none;
+    border-radius: 3px;
+    padding: 0.5em;
+}
+
+button:hover {
+    background-color: $action-darker;
+}

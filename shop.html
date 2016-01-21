@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shop test</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <link rel="stylesheet" type="text/css" media="all" href="css/shop.css" />
+</head>
+<body>
+
+<header class="page-header" role="banner">
+    <h1 class="cell nomen">Orinoco</h1>
+
+    <form name="searchform" class="cell" method="POST" action="search.php">
+        <input type="search" name="searchbox" placeholder="Search" />
+    </form>
+    <nav class="cell">
+        <a href="/wishlists">wishlists</a>
+        <a href="/cart">cart</a>
+        <a href="/account">account</a>
+    </nav>
+
+</header>
+
+<main>
+
+    <article class="product-listing">
+        <section class="product-media">
+            <img src="img/apples.jpg" alt="apples" height="360px" width="360px" />
+        </section>
+        
+        <div class="row">
+        <section class="product-text">
+            <h2>Basket of Apples</h2>
+            <p>A whole dang basket of apples</p>
+            <h3>Details</h3>
+            <p>A well made basket, filled with ripe apples [fruit of Malus domestica]</p>
+            <h3>Caveat emptor:</h3>
+            <ul>
+                <li>number of apples may vary</li>
+                <li>kind of basket may include laundry and picnic</li>
+                <li>color of apples may vary</li>
+                <li>pony not included</li>
+                <li>Product of USA, Italy, Turkey, and/or Poland</li>
+            </ul>
+        </section>
+        
+        <section class="product-purchase">
+            <p>price: $19.99</p>
+            <p><button>Add to cart</button></p> 
+            <p><button>Add to a wishlist</button></p> 
+        </section>
+        </div>
+        
+        <section class="product-reviews">
+            <h4>Reviews</h4>
+            
+            <blockquote class="product-review">
+            <p class="username">Bumpkin says:</p>
+            <p>Yep that's a lotta dang ol apples man talk about fruits basket</p>
+            </blockquote>
+            <blockquote class="product-review">
+            <p class="username">Applejack says:</p>
+            <p>Mmm delicious!</p>
+            </blockquote>
+        
+        </section>
+        
+    </article>
+
+</main>
+
+<footer class="page-footer">
+    <nav>
+        <a href="/tos">TOS</a>
+        <a href="/jobs">Careers</a>
+        <a href="/about">About</a>
+    </nav>
+</footer>
+
+</body>
+</html>

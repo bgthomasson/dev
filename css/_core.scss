@@ -1,16 +1,14 @@
 /* TABLE OF CONTENTS ------------------------------------------------------- ||
  * 0: Imports and mixins, etc
  * 1. Overall layout: body, main
- * 2a. header and footer for page 
- * 2b. <nav> in header and footer 
+ * 2. header and footer for page 
  * 3. <article> and <section> 
  * 4. Misc elements, inline and block
  * 5. Tables
  * 6. Forms default, search-form 
- * 7. Misc special
+ * 7. Misc custom
 */ 
 
-/* everything is based on _normalize.scss */
 /* MIXINS */
 
 @mixin flexbox() {
@@ -35,6 +33,12 @@ $fonts-sans: Candara, Tahoma, "Fira Sans", Roboto, Sans-Serif;
 $fonts-serif: Cambria, Georgia, Palatino, serif;
 $fonts-mono: 'Source Code Pro', 'DejaVu Sans Mono', Consolas, Monaco, 
                  'Andale Mono', 'Ubuntu Mono', monospace;
+/* sans and serif might be replaced with font-body, font-headings */
+
+$media-small: 481px;
+$media-big: 900px;
+
+
 
 /* SECTION 1: OVERALL LAYOUT ................................................. */
 
@@ -49,7 +53,7 @@ main {
     margin: 0 auto;
 }
 
-@media screen and (min-width: 481px) {
+@media screen and (min-width: $media-small) {
     body {
         line-height: 1.2em;
     }
@@ -59,7 +63,7 @@ main {
     }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: $media-big) {
     body {
         font-size: 105%;
         line-height: 1.3em;
@@ -70,13 +74,13 @@ main {
 }
 
 
-/* 2A: HEADER AND FOOTER ------------------------------------------------------- */
+/* 2: HEADER AND FOOTER ------------------------------------------------------- */
 .page-header {
     margin-bottom: 2em;
     padding: .2em 0;
 }
 
-@media screen and ( min-width: 481px ) {
+@media screen and ( min-width: $media-small ) {
     .page-header{
         @include flexbox();
         flex-direction: row;
@@ -116,7 +120,7 @@ article {
     margin-bottom: 2em;
 }
 
-@media screen and ( min-width: 481px ) {
+@media screen and ( min-width: $media-small ) {
     .post {
         @include flexbox();
         align-items: flex-start;
@@ -182,9 +186,6 @@ img {
 
 ol, ul {
     padding: 0.5em;
-}
-
-ol, ul {
     list-style-position: inside;
 }
 
