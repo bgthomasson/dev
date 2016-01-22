@@ -230,8 +230,7 @@ body {
 /* 2: HEADER AND FOOTER ------------------------------------------------------- */
 .page-header {
   margin-bottom: 2em;
-  padding-top: 0.5em;
-  border-bottom: 1px dotted #66360f; }
+  padding-top: 0.5em; }
 
 @media screen and (min-width: 481px) {
   .page-header {
@@ -246,6 +245,9 @@ body {
   display: inline;
   margin: 0; }
 
+nav {
+  text-align: right; }
+
 nav a {
   padding: 0 .2em;
   text-decoration: none; }
@@ -253,8 +255,12 @@ nav a {
 nav a:hover {
   text-decoration: underline; }
 
+.search-input {
+  border: 3px solid #c7e1fb;
+  width: 300px; }
+
 .page-footer {
-  border-top: 2px solid #66360f;
+  border-top: 1px solid #66360f;
   margin-top: 1em;
   margin-bottom: 2em; }
 
@@ -268,20 +274,34 @@ article {
 /* media: not simply image, can be set of jpgs, <picture>, video, etc. 
  * text is just plain text 
 */
-.product-text {
-  flex: 0 0 80%; }
-
 .product-purchase {
-  flex: 0 0 15%;
-  padding-left: 1em; }
+  border: 1px solid #66360f;
+  text-align: center; }
 
-.product-review {
-  border: 1px dotted #66360f; }
+@media screen and (max-width: 900px) {
+  .product-listing {
+    padding-left: .3em; } }
+@media screen and (min-width: 481px) {
+  .product-text {
+    box-sizing: border-box;
+    flex: 0 0 75%; }
 
-.row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap; }
+  .product-purchase {
+    box-sizing: border-box;
+    flex: 0 0 25%; }
+
+  .product-review {
+    border: 1px dotted #66360f; }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; } }
+.stock-in {
+  color: green; }
+
+.stock-out {
+  color: #d31603; }
 
 /* SECTION 4: MISC ELEMENTS ------------------------------------------------ */
 blockquote {
@@ -296,8 +316,7 @@ img {
 
 ol, ul {
   padding: 0.5em;
-  list-style-position: inside;
-  border: 1px solid #66360f; }
+  list-style-position: inside; }
 
 video {
   margin: 1em 0; }

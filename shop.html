@@ -11,13 +11,13 @@
 <header class="page-header" role="banner">
     <h1 class="cell nomen">Orinoco</h1>
 
-    <form name="searchform" class="cell" method="POST" action="search.php">
-        <input type="search" name="searchbox" placeholder="Search" />
+    <form name="searchform" class="cell search-form" method="POST" action="search.php">
+        <input type="search" name="search-input" class="search-input" placeholder="Search here" />
     </form>
     <nav class="cell">
+        <a href="/account">account</a>
         <a href="/wishlists">wishlists</a>
         <a href="/cart">cart</a>
-        <a href="/account">account</a>
     </nav>
 
 </header>
@@ -32,14 +32,16 @@
         <div class="row">
         <section class="product-text">
             <h2>Basket of Apples</h2>
+            <p>by <a href="/apples">Apple Inc</a> item #1234567</p>
             <p>A whole dang basket of apples</p>
             <h3>Details</h3>
             <p>A well made basket, filled with ripe apples [fruit of Malus domestica]</p>
+            <p><strong>Available Colors:</strong> red, yellow, green, mixed</p>
+            <p><strong>Basket styles:</strong> traditional, laundry</p>
+            <p><strong>Shipping weight:</strong> 20 pounds</p>
             <h3>Caveat emptor:</h3>
             <ul>
                 <li>number of apples may vary</li>
-                <li>kind of basket may include laundry and picnic</li>
-                <li>color of apples may vary</li>
                 <li>pony not included</li>
                 <li>Product of USA, Italy, Turkey, and/or Poland</li>
             </ul>
@@ -47,7 +49,9 @@
         
         <section class="product-purchase">
             <p>price: $19.99</p>
+            <p><span class="stock-in">In Stock &#x2611;</span></p>
             <p><button>Add to cart</button></p> 
+            <p>You have not purchased this item before</p>
             <p><button>Add to a wishlist</button></p> 
         </section>
         </div>
@@ -56,11 +60,11 @@
             <h4>Reviews</h4>
             
             <blockquote class="product-review">
-            <p class="username">Bumpkin says:</p>
+            <p class="username">&#x2605;&#x2605;&#x2605;&#x2605;&#x2606; by Bumpkin on 2014-12-12</p>
             <p>Yep that's a lotta dang ol apples man talk about fruits basket</p>
             </blockquote>
             <blockquote class="product-review">
-            <p class="username">Applejack says:</p>
+            <p class="username">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605; by Applejack on 2015-04-05</p>
             <p>Mmm delicious!</p>
             </blockquote>
         
