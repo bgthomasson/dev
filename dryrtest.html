@@ -34,12 +34,10 @@
 <article class="post">
 <section class="post-icon">
     <p><a href="#"><img src="img/summer-11.png" alt="usericon" /></a></p> 
-    <p><a href="#" class="post-timestamp">2016-01-01</a></p>
 </section>
 
 <section class="post-body">
     <section class="post-content">
-    <h2><a href="#">Username:</a></h2>
     <p>
     I'm not entirely happy with how this works but I need a quick way to compare themes
     </p>
@@ -55,14 +53,16 @@
     <ul>
         <li>IE 11 (Windows 7, and good enough to need little special care)</li>
         <li>Firefox 38 (long term release)</li>
-        <li>Chrome 40 (round number)</li>
+        <li>Chrome 44 (round number)</li>
         <li>Safari 8</li>
         <li>Android 4.x</li>
     </ul>
     
     <ol>
         <li>CSS/HTML: multi/mixed media posting</li>
+        <li>Make sure post sections are logical!</li>
         <li>CSS/JS: Emote buttons need efficient JS</li>
+        <li>Comment threads that are good and don't suck like tumblr or twitter</li>
         <li>Themes are under user settings</li>
         <li>SVG is cool</li>
     </ol>
@@ -125,20 +125,24 @@
 <article class="post">
 <section class="post-icon">
     <a href="#"><img src="img/summer-11.png" alt="usericon" /></a>
-    <p><a href="#" class="post-timestamp">2016-01-01</a></p>
 </section>
 <section class="post-body">
     <section class="post-content">
-    <h2><a href="#">Username:</a> My cool drawing</h2>
+    <h2>My cool drawing</h2>
     <a href="http://imgur.com/usI1TR9"><img src="http://i.imgur.com/FVBZP6I.jpg" title="Toothless doodle" /></a>
     <p>
     For an actual website there would be thumbnails generated from uploads with a predetermined size. 
     Doing perfect mixed multimedia should be number one on backend to-do list. 
     Also note FF expands the content container around the image but Chrome doesn't. 
     </p>
+    </section>
+    <section class="post-comments">
+    
     <p>That's what painting is all about. It should make you feel good when you paint. 
     You have to make almighty decisions when you're the creator. Everybody needs a friend. 
-    You've got to learn to fight the temptation to resist these things. Just let them happen.</p>
+    You've got to learn to fight the temptation to resist these things. Just let them happen.
+    - <a href="#">@BobRoss</a>
+    </p>
     
     </section>
     <section class="post-tags">
@@ -158,13 +162,12 @@
 <article class="post">
     <section class="post-icon">
     <img src="img/summer-13.png" alt="usericon" />
-    <p><a href="#" class="post-timestamp">2016-01-01</a></p>
     </section>
     
     <section class="post-body">
     
-    <section class="post-content literature">
-    <h2><a href="#">Username:</a> Literature class</h2>
+    <section class="post-content">
+    <h2>Long text</h2>
     <p class="leader">At eight o'clock the sledge was ready to start.  
     The passengers took their places on it, and wrapped themselves up closely in their travelling-cloaks.  
     The two great sails were hoisted, and under the pressure of the wind the sledge slid over the hardened 
@@ -203,13 +206,12 @@
 <article class="post">
     <section class="post-icon">
     <img src="img/summer-13.png" alt="usericon" />
-    <p><a href="#" class="post-timestamp">2016-01-01</a></p>
     </section>
     
     <section class="post-body">
     
     <section class="post-content">
-    <h2><a href="#">Username:</a> Code sample</h2>
+    <h2>Code sample</h2>
     <p>
     Here's the CSS I use on my bookmarks page:
     </p>
@@ -291,7 +293,7 @@ function addClass(){
 <!-- FOOTER --------------------------------------------------------------- -->
 
 <footer class="page-footer">
-    <nav>
+    <p>
         Missing links: 
         <a href="#">Help</a>
         <a href="#">Bug bounty</a>
@@ -300,11 +302,6 @@ function addClass(){
         <a href="#">Settings</a> 
         <a href="#">Stats</a>
         <a href="#">Friends</a>
-    </nav>
-    <p>
-    This website uses cookies, but only for functional things like user preferences. 
-    No 3<sup>d</sup> party ads (only sponsored posts), no flash (except games), 
-    no personalize analytics (only anonymous)
     </p>
 </footer>
 <!-- JAVASCRIPT AREA ..................................................... -->

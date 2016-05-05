@@ -10,9 +10,7 @@ DRYR:
 > header menu is too hard to use w/fingers
 .  maybe display: list-item?? 
 
-> if have date under icon for desktop, on smallscreen should make it inline:
-[icon - timestamp]
-[post-body]
+> need a good place for a direct link to unique post page
 
 > replace UTF8 icons with SVG
 
@@ -22,12 +20,19 @@ DRYR:
 Backend:
 
 > pagination
+[load more] works best in UI tests. For search results include total #
+However it needs to respect the back button state, history.pushState()
+for example, if list of search results, click link to new page, then click back to 
+get to that search result, in the same spot on that page. 
 
 > reblogs/quotes versus comments
+I think now that a comment stream like Telegram or twitter DM is better. 
+reblog is great if just want to show off to friends, but to actually TALK need more. 
+por que no los dos?
 
 > media uploads
->> thumbnails, 600px wide and 100kb max
->> nice and easy file dialog
+thumbnails, 600px wide and 100kb max
+nice and easy file dialog
 
 
 > user settings/options:
@@ -43,6 +48,11 @@ Auto-correct can be disabled by adding an autocorrect attribute to the input tag
 and setting it to off, like this:
 
 <input type="text" autocorrect="off" autocapitalize="off" />
+
+
+You can use the <time> element to provide a machine readable date for a human date. 
+But did you know you can also use <data> to provide such data for other phrasing content? 
+Pretty cool to markup your products on a page with your IDs, UPC codes or other reference numbers. 
 
 
 
@@ -146,8 +156,6 @@ Icon is on side on large screen, on top on small.
 content is kept to a max size to keep line length down for readability. 
 33em ~= 66 characters???
 
-Note- the fancy text-indendt for first paragraphs is unneeded if preceded by a title. 
-so that save some lines of code. 
 
 
 

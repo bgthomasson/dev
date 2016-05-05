@@ -9,18 +9,19 @@
 */ 
 
 /* IMPORTS */@import 'normalize';
+@import url(https://fonts.googleapis.com/css?family=Kaushan+Script);
 
 /* MIXINS */
 
 /* VARS */
 
-$font-sans-1: Candara, 'Lucida Sans Unicode', 'Liberation Sans', 'Fira Sans', Roboto, Sans-Serif;
+$font-sans-1: 'Source Sans Pro', Candara, 'Fira Sans', Roboto, sans-serif;  
 $font-serif-1: Cambria, Georgia, Palatino, serif;
-$font-serif-2: Constantia, "Palatino Linotype", Palatino, Gentium, serif;
+$font-cursive-1: 'Kaushan Script', cursive;
 
+/* FIX THIS FOR MOBILE */
 $media-small: 481px;
 $media-big: 900px;
-
 
 $action-color: #c7e1fb;
 $action-darker: darken($action-color, 10%);
@@ -28,23 +29,13 @@ $action-darker: darken($action-color, 10%);
 $text-color: #111;
 $text-muted: #787276;
 
-$apricot: #ed810f;
-
-$buttermilk: #fdefb2;
-
-$caramel: #66360f;
+/* color palette */
 
 $koi: #f38630;
 
 $pearl: #fbfcf7;
 
-$pineapple: #ffe327;
-
 $plum: #601a36;
-
-$raspberry: #a91b0d;
-
-$sportscar: #d31603;
 
 $sky: #c7e1fb;
 
@@ -53,7 +44,15 @@ $sky: #c7e1fb;
 
 /* defaults that will work on phones */
 body {  
-    background-color: $pearl;
+    background-color: rgb(14,14,14);
+    background-image: 
+	  linear-gradient(90deg, rgba(32,32,32,.2) 50%, transparent 50%),
+	  linear-gradient(90deg, rgba(64,64,64,.2) 50%, transparent 50%),
+	  linear-gradient(90deg, transparent 50%, rgba(96,96,96,.2) 50%),
+	  linear-gradient(90deg, transparent 50%, rgba(21,21,21,.2) 50%);
+	background-size: 13px, 29px, 37px, 53px;
+    /* http://lea.verou.me/css3patterns/#cicada-stripes */
+    
     color: $text-color;
     font-family: $font-sans-1;
     font-size: 1em;
@@ -80,13 +79,17 @@ body {
 
 /* 2: HEADER AND FOOTER ------------------------------------------------------- */
 .page-header {
+    background-color: $pearl;
     margin-bottom: 2em;
-    padding-top: 0.5em;
+    padding: 0.5em 0;
 }
 
 .cell {
-    padding-bottom: 0.5em;
     max-width: 100%;
+}
+
+nav {
+    text-align: center;
 }
 
 nav a {
@@ -94,21 +97,21 @@ nav a {
 }
     
 
-
 @media screen and ( min-width: $media-small ) {
-    .page-header {
+    .strip {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         align-items: center;
+        justify-content: space-around;
+        
+        margin-bottom: 0.5em;
     }
     
     .cell {
         flex: 1;
-    }
-    
-    nav {
-        text-align: right;
+        flex-grow: 1;
+        text-align: center;
     }
 
     nav a {
@@ -117,6 +120,10 @@ nav a {
 
     nav a:hover {
         text-decoration: underline;
+    }
+    
+    .search-input {
+        width: 44em;
     }
 }
 
@@ -128,12 +135,12 @@ nav a {
 
 .search-input {
     border: 3px solid $action-color;
-    max-width: 300px;
+    max-width: 22em;
 }
 
 
 .page-footer {
-    border-top: 1px solid $caramel;
+    background-color: $pearl;
     margin-top: 1em; 
     margin-bottom: 2em;
 }
@@ -142,19 +149,19 @@ nav a {
 /* SECTION 3: ARTICLE RELATED ---------------------------------------------- */
 
 article {
+    background-color: $pearl;
+    border-radius: 1em;
     margin-bottom: 2em;
+    padding: 0.5em;
 }
 
 .product-media {
     text-align: center;
     margin-bottom: 1em;
 }
-/* media: not simply image, can be set of jpgs, <picture>, video, etc. 
- * text is just plain text 
-*/
 
 .product-purchase {
-    border: 1px solid $caramel;
+    border: 2px solid $plum;
     text-align: center;
     padding: 0 0.5em; 
 }
@@ -169,15 +176,6 @@ article {
         flex: 0 0 25%;
         align-self: flex-start;
         flex-grow: 1;
-    }
-    
-    /* IE 10-11 don't respect border-box here. You can set the total to 
-    less than 100%, but then it doesn't line up neatly on the right.  
-    However, flex-grow will let it fill up the remaining space.... 
-    */
-
-    .product-review {
-        border: 1px dotted $caramel;
     }
 
     .row {
@@ -196,21 +194,17 @@ article {
 }
 
 .stock-out {
-    color: $sportscar;
-}
-
-.warning-minor {
-    color: $apricot;
+    color: $koi;
 }
 
 /* SECTION 4: MISC ELEMENTS ------------------------------------------------ */
 
-blockquote {
-    margin: 0;
-    padding-left: 0.25em;
+h1, h2, h3 {
+    font-family: $font-cursive-1;
 }
 
-h1, h2, h3, h4, h5, h6 {
+/* for legibility, making the smaller sizes standard serifs */
+h4, h5, h6 {
     font-family: $font-serif-1;
 }
 
@@ -223,9 +217,13 @@ ol, ul {
     list-style-position: inside;
 }
 
-video { 
-    margin: 1em 0;
+ul li {
+    list-style-type: none;
 }
+
+    ul li:before {
+        content: "\2605"; 
+    }
 
 
 /* SECTION 5: TABLES ------------------------------------------------------ */
@@ -245,25 +243,5 @@ button {
 
 button:hover {
     background-color: $action-darker;
-}
-
-/* -----
-SVG Icons - svgicons.sparkk.fr
------ */
-
-.svg-icon {
-  width: 1em;
-  height: 1em;
-}
-
-.svg-icon path,
-.svg-icon polygon,
-.svg-icon rect {
-  fill: #4691f6;
-}
-
-.svg-icon circle {
-  stroke: #4691f6;
-  stroke-width: 1;
 }
 

@@ -204,17 +204,16 @@ th {
 /* TABLE OF CONTENTS ------------------------------------------------------- ||
  * 0: Imports and mixins, etc
  * 1. Overall layout: body, main
- * 2a. header and footer for page 
- * 2b. <nav> in header and footer 
+ * 2. header and footer for page 
  * 3. <article> and <section> 
  * 4. Misc elements, inline and block
  * 5. Tables
  * 6. Forms default, search-form 
- * 7. Misc special
+ * 7. Misc custom
 */
-/* everything is based on _normalize.scss */
 /* MIXINS */
 /* VARS */
+/* sans and serif might be replaced with font-body, font-headings */
 /* SECTION 1: OVERALL LAYOUT ................................................. */
 body {
   font-family: Candara, Tahoma, "Fira Sans", Roboto, Sans-Serif;
@@ -239,7 +238,7 @@ main {
 
   main {
     width: 800px; } }
-/* 2A: HEADER AND FOOTER ------------------------------------------------------- */
+/* 2: HEADER AND FOOTER ------------------------------------------------------- */
 .page-header {
   margin-bottom: 2em;
   padding: .2em 0; }
@@ -313,12 +312,6 @@ article {
 .leader {
   font-size: 1.2em; }
 
-.literature p + p {
-  text-indent: 1.5em; }
-
-h2 a {
-  font-color: inherit; }
-
 /* SECTION 4: MISC ELEMENTS ------------------------------------------------ */
 blockquote {
   margin: 0;
@@ -341,9 +334,7 @@ img {
   max-width: 96%; }
 
 ol, ul {
-  padding: 0.5em; }
-
-ol, ul {
+  padding: 0.5em;
   list-style-position: inside; }
 
 video {
@@ -444,6 +435,7 @@ pre[class*="language-"] {
 .token.entity {
   cursor: help; }
 
+/* no need to specify here but listed for consistency */
 /* ------------------------------------------------------------------------- */
 body {
   background-color: darkseagreen;
