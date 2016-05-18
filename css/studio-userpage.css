@@ -1,0 +1,383 @@
+
+/* IMPORTS */
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  }
+
+/* HTML5 display definitions
+   ========================================================================== */
+article,
+aside,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block; 
+  }
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+  }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; 
+  }
+
+[hidden],
+template {
+  display: none; 
+  }
+
+/* Links
+   ========================================================================== */
+a:active,
+a:hover {
+  outline: 0; }
+
+/* Text-level semantics
+   ========================================================================== */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+strong {
+  font-weight: bold; }
+
+small {
+  font-size: 80%; }
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* Embedded content
+   ========================================================================== */
+img {
+  border: 0; 
+}
+
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Grouping content
+   ========================================================================== */
+
+pre {
+  overflow: auto; }
+
+code,
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+/* Forms
+   ========================================================================== */
+button,
+input,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  }
+
+button {
+  overflow: visible; 
+  }
+
+button,
+select {
+  text-transform: none; 
+  }
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+  }
+
+button[disabled],
+html input[disabled] {
+  cursor: default; 
+  }
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; 
+  }
+
+input {
+  line-height: normal; 
+  }
+
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+  }
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; 
+  }
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; 
+  }
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; 
+  }
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; 
+  }
+
+textarea {
+  overflow: auto; 
+  }
+
+
+/*
+*------------------------------------------------------------------------------
+ CUSTOM STYLES
+*------------------------------------------------------------------------------
+*/
+/* SECTION 1: OVERALL LAYOUT ............................................... */
+/* defaults that will work on phones */
+body {
+  background-color: #1e1e1e;
+  color: #fbfcf7;
+  font-family: "Source Sans Pro", Candara, "Fira Sans", Roboto, sans-serif;
+  font-size: 1em;
+  line-height: 1.1em;
+  margin: 0 .3em; 
+  }
+
+/* iPads and small windows on desktop */
+@media screen and (min-width: 481px) {
+  body {
+    margin: 0 1px; 
+    } 
+    
+    main {
+    margin-top: 64px;
+    padding: 2em;
+    }
+}
+
+@media screen and (min-width: 900px) {
+  body {
+    font-size: 105%;
+    line-height: 1.2em;
+    } 
+}
+    
+/* 2: HEADER AND FOOTER ------------------------------------------------------- */  
+.page-header {
+    background-color: #0e0e0e;
+    padding: .2em 0; 
+}
+
+.cell {
+  max-width: 100%; 
+  }
+
+
+nav a {
+  padding: 0 .3em; 
+  }
+
+@media screen and (min-width: 481px) {
+  .page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 9;
+  }
+
+  .strip {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 0.5em; 
+    }
+
+  .cell {
+    flex: 1;
+    flex-grow: 1;
+    text-align: center; 
+    }
+
+  nav a {
+    text-decoration: none; 
+    }
+
+  nav a:hover {
+    text-decoration: underline; 
+    }
+
+}
+
+.nomen {
+  display: inline-block;
+  margin: 0; 
+}
+
+.page-nav {
+    flex: 1;
+    font-size: 110%;
+}
+
+.searchform {
+    flex: 1;
+}
+
+.searchform input {
+  border: 3px solid #c7e1fb;
+  width: 95%; 
+}
+
+.page-footer {
+  margin-top: 1em;
+  margin-bottom: 2em; 
+  }
+
+/* SECTION 3: ARTICLE RELATED ---------------------------------------------- */
+article {
+    background-color: #0e0e0e;
+  margin-bottom: 2em;
+  padding: 0.5em; 
+  }
+
+.product-media {
+  text-align: center;
+  margin-bottom: 1em; 
+  }
+
+.product-purchase {
+  border: 2px solid #601a36;
+  text-align: center;
+  padding: 0 0.5em; 
+  }
+
+@media screen and (min-width: 481px) {
+  .product-text {
+    flex: 0 0 70%; 
+    }
+
+  .product-purchase {
+    flex: 0 0 25%;
+    align-self: flex-start;
+    flex-grow: 1; 
+    }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    } 
+    
+  .user-acts {
+    flex: 0 0 70%; 
+    margin-left: 2em;
+    }
+
+  .user-info {
+    flex: 0 0 25%;
+    align-self: flex-start;
+    flex-grow: 1; 
+    }
+}
+
+.product-text h2 {
+  margin-top: 0; 
+  }
+
+.stock-in {
+  color: green; 
+  }
+
+.stock-out {
+  color: #f38630; 
+}
+
+.user-acts p {
+    background-color: #0e0e0e;
+    padding: 0.3em;
+}
+
+
+
+/* SECTION 4: MISC ELEMENTS ------------------------------------------------ */
+h1, h2, h3, h4, h5, h6 {
+  font-family: Cambria, Georgia, Palatino, serif; 
+  }
+
+img {
+  max-width: 98%; 
+  }
+
+ol, ul {
+  padding: 0.5em;
+  list-style-position: inside; 
+  }
+
+ul li {
+  list-style-type: none; 
+  }
+
+ul li:before {
+  content: "\2605"; 
+}
+
+
+/* SECTION 6: FORM ELEMENTS ----------------------------------------------- */
+button {
+  background-color: #c7e1fb;
+  border: none;
+  border-radius: 3px;
+  padding: 0.5em; 
+  }
+
+button:hover {
+  background-color: #97c8f8; 
+  }
+
+input {
+    background-color: #0e0e0e;
+}
