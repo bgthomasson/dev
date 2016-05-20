@@ -10,73 +10,49 @@
 
 <header class="page-header">
     <!-- site navigation and search goes here -->
-    <nav class="page-nav">
-        <a href="studio-userpage.html"><h1 class="nomen">Sitename</h1></a>
-        <a href="#">art</a>
-        <a href="#">media</a>
-        <a href="#">writing</a>
-        <a href="#">photos</a>
-        <a href="#">HELP</a>
-        <a href="#">settings</a>
-        <a href="#">INBOX</a>
-    </nav>    
-    <form name="searchform" class="searchform">
+    <nav class="page-nav header-cell">
+        <a href="#">@itsamemario</a>
+        <a href="#">Art</a>
+        <a href="#">Messages</a>
+        <a href="#">Submit</a>
+        <a href="#">[Settings]</a>
+        <a href="#">Help</a>
+        <a href="#">SFW!</a>
+    </nav>
+    
+    <form name="searchform header-cell" class="searchform">
         <input type="search" name="search-input" placeholder="Search here" />
     </form>
+
+
 </header>
 <main>
+    <!-- THIS is the nav for the userpage w/ various action buttons -->
+    <div class="strip">
+        <nav class="cell">
+            <a href="#"><img src="img/summer-11.png" alt="usericon" /> @username</a>
+            <a href="#">Watch</a>
+            <a href="#">message</a>
+            <a href="#">Block</a>
+        </nav>
+    </div>
     <!-- THIS is the banner substitute, thumbs from gallery instead -->
     <div class="strip">
-        <div class="cell">
-            <a href="#"><img src="img/apples.jpg" alt="apples" height="150px" width="150px" /></a>
-        </div>
-        <div class="cell">
-            <a href="#"><img src="img/apples.jpg" alt="apples" height="150px" width="150px" /></a>
-        </div>
-        <div class="cell">
-            <a href="#"><img src="img/apples.jpg" alt="apples" height="150px" width="150px" /></a>
-        </div>
-        <div class="cell">
-            <a href="#"><img src="img/apples.jpg" alt="apples" height="150px" width="150px" /></a>
-        </div>
-        <div class="cell">
-            <a href="#"><img src="img/apples.jpg" alt="apples" height="150px" width="150px" /></a>
-        </div>
+        <p class="cell"><a href="#"><img src="img/apples.jpg" alt="apples" height="150px" width="150px" /></a></p>
+        <p class="cell"><a href="#"><img src="img/apples.jpg" alt="apples" height="150px" width="150px" /></a></p>
+        <p class="cell"><a href="#"><img src="img/apples.jpg" alt="apples" height="150px" width="150px" /></a></p>
+        <p class="cell"><a href="#"><img src="img/apples.jpg" alt="apples" height="150px" width="150px" /></a></p>
+        <p class="cell"><a href="#"><img src="img/apples.jpg" alt="apples" height="150px" width="150px" /></a></p>        
     </div>
     
-    <div class="row">
-    <!-- a 2 col layout for static user info and dynamic activity info -->
-    <div class="user-info">
     <article>
         <h2>Commission Info</h2>
         <p>
         This and that and some of those.
         </p>
-        <p>
-        Have conundrum of the gallery banner not going well in HEADER or MAIN
-        </p>
-        <p>
-        A secondary NAV for user stuff like icon, watch, commission
-        </p>
-        <p>
-        Maybe just break into DIVS- site-nav, userpage-nav, userpage-thumbs, 
-        userpage-info (2 cols, static and dynamic), tho the nav bits would work 
-        in header, just have to set into own divs w/in it. 
-        </p>
         
     </article>
-    </div>
     
-    <div class="user-acts">
-        <p>$user followed $user</p>
-        <p>$user followed $user</p>
-        <p>$user followed $user</p>
-        <p>$user followed $user</p>
-        <p>$user followed $user</p>
-        <p>$user followed $user</p>
-        <p>$user followed $user</p>
-        <p>$user followed $user</p>
-    </div>
     
     </main>
 

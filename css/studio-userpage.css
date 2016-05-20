@@ -258,18 +258,17 @@ nav a {
   margin: 0; 
 }
 
-.page-nav {
+.header-cell {
     flex: 1;
-    font-size: 110%;
 }
 
-.searchform {
-    flex: 1;
+.page-nav {
+    font-size: 110%;
 }
 
 .searchform input {
   border: 3px solid #c7e1fb;
-  width: 95%; 
+  width: 20em; 
 }
 
 .page-footer {
@@ -312,16 +311,7 @@ article {
     flex-wrap: wrap; 
     } 
     
-  .user-acts {
-    flex: 0 0 70%; 
-    margin-left: 2em;
-    }
 
-  .user-info {
-    flex: 0 0 25%;
-    align-self: flex-start;
-    flex-grow: 1; 
-    }
 }
 
 .product-text h2 {
@@ -344,6 +334,11 @@ article {
 
 
 /* SECTION 4: MISC ELEMENTS ------------------------------------------------ */
+
+a {
+    color: white;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: Cambria, Georgia, Palatino, serif; 
   }

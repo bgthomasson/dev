@@ -10,7 +10,37 @@ It's sort of like, IDK, the image is an extra large dragon dildo, and... you can
 2. drop text up top on # followers, just have icon/username and ART ART ART
 2B. 'stream'- simply followed :icon:
 
+on second thought this whole activity stream is stupid, I want to focus on ART
+
+
+
 3. COMMISSION INFO UP HIGH with links to alt sites
 simply bio blurb, commission info, 
 
 4. customer ratings/reviews?
+
+
+STRUCTURE
+
+site-nav, sicky at top of page
+userpage-nav, for interacting w/ user, watch, message, block
+userpage-banner, thumbnails from gallery like weasyl
+userpage-info-commissions
+
+
+<h1 class="nomen"><a href="studio-userpage.html">Sitename</a></h1>
+
+I can't find a good way to pt this in the main nav bar @.@;
+
+
+
+NAV
+ART has posted arts, images, music, etc.
+MESSAGES has journals, streams, commission alerts, pms, etc
+SUBMIT is obvious
+SETTINGS is dropdown w/ link to various things
+HELP as acutal user manual!
+SFW! is boss button, smash to hide titties and weiners
+
+
+
