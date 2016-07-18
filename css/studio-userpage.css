@@ -1,5 +1,4 @@
-
-/* IMPORTS */
+/* SECTION 1: IMPORTED CODE so styling should remain untouched */
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 
 html {
@@ -169,7 +168,7 @@ textarea {
 
 /*
 *------------------------------------------------------------------------------
- CUSTOM STYLES
+SECTION 2: CUSTOM STYLES
 *------------------------------------------------------------------------------
 */
 /* SECTION 1: OVERALL LAYOUT ............................................... */
@@ -180,17 +179,13 @@ body {
   font-family: "Source Sans Pro", Candara, "Fira Sans", Roboto, sans-serif;
   font-size: 1em;
   line-height: 1.1em;
-  margin: 0 .3em; 
+  margin: 0; 
   }
 
 /* iPads and small windows on desktop */
-@media screen and (min-width: 481px) {
-  body {
-    margin: 0 1px; 
-    } 
-    
+@media screen and (min-width: 481px) {    
     main {
-    margin-top: 64px;
+    margin-top: 32px;
     padding: 2em;
     }
 }
@@ -208,8 +203,12 @@ body {
     padding: .2em 0; 
 }
 
+.strip {
+    text-align: center;
+}
+
 .cell {
-  max-width: 100%; 
+    max-width: 100%; 
   }
 
 
@@ -240,7 +239,6 @@ nav a {
   .cell {
     flex: 1;
     flex-grow: 1;
-    text-align: center; 
     }
 
   nav a {
@@ -340,7 +338,7 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Cambria, Georgia, Palatino, serif; 
+  font-family: "Gentium Basic", Cambria, Georgia, Palatino, serif; 
   }
 
 img {

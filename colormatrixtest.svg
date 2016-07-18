@@ -1,0 +1,11 @@
+<svg>
+    <filter id="banana">
+        <feColorMatrix
+            type="matrix"
+            values="1 0 0 0 0
+                    0 1 0 0 0
+                    0 0 1 0 0
+                    0 0 0 1 0
+                    0 0 0 0 1"/>
+    </filter>
+</svg>

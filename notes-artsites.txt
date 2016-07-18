@@ -1,25 +1,20 @@
-NOTES ON FN ETC
-
-FN-
-~USERPAGE
-1. THUMBNAILS FOR FUCKS SAKE or at least low-bandwidth option
-The userpage "stream" thing is cute but when you're on DSL, having the entire 
-image load is frustrating. 
-It's sort of like, IDK, the image is an extra large dragon dildo, and... you can guess the metaphor. 
-
-2. drop text up top on # followers, just have icon/username and ART ART ART
-2B. 'stream'- simply followed :icon:
-
-on second thought this whole activity stream is stupid, I want to focus on ART
+NOTES 
+------------------------------------------------------------------------------/
+main page
+browse page / gallery page
+userpage
+item page
 
 
+------------------
+need a way to resize images on smaller screen. it gets smooshed when set 
+width="500" 
+dynamic resize based on screen size sounds messy 
 
-3. COMMISSION INFO UP HIGH with links to alt sites
-simply bio blurb, commission info, 
-
-4. customer ratings/reviews?
 
 
+
+------------------
 STRUCTURE
 
 site-nav, sicky at top of page
@@ -30,17 +25,49 @@ userpage-info-commissions
 
 <h1 class="nomen"><a href="studio-userpage.html">Sitename</a></h1>
 
-I can't find a good way to pt this in the main nav bar @.@;
-
-
 
 NAV
 ART has posted arts, images, music, etc.
 MESSAGES has journals, streams, commission alerts, pms, etc
 SUBMIT is obvious
 SETTINGS is dropdown w/ link to various things
-HELP as acutal user manual!
+HELP has actual user manual!
 SFW! is boss button, smash to hide titties and weiners
+
+
+
+
+multi image submissions
+
+can organize gallery into custom folders
+
+fully multimedia text- maybe use markdown, so can embed images- 
+maybe submit images on own, then embed in story where needed to illustrate
+only have to make it so can only use thing you've submitted or collected! 
+cuz thieves would ruin this.
+
+can "collect" stuff done for you 
+can review artist on things you collect, give starts, write up blurb 
+
+regular journals for status updates, but also stream alerts and for sale signs. 
+
+groups- granular privacy like LJ did
+
+granular watches/faves- clean vs kinky- like folders, like Gmail! 
+faves: sort into folders like gallery
+inbox: like GMail inbox, have clean on top, then adult, (and custom options?)
+
+can reblog like FN, tumblr, so a tab for that in the inbox
+
+
+realtime dm/pm
+
+blocklist
+
+clean userpage, no stats, no pageviews, just ART on top
+then commission info, if have
+then bio info, watchlists
+
 
 
 

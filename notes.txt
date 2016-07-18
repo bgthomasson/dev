@@ -338,8 +338,30 @@ print "<tr> <td>$skill</td> <td>$ability_mod</td> <td>$skill_misc_mods</td> </tr
 
 
 
+------------------------------------------------------
+TUMMY RUBS
+aggregate content from tumblr
+1. copy over your watch list 
+2. scrape pure content discretely, every hour at most, so slower but actually WORKS
+[images, text, source, tags]
+
+so basically it's a custom dashboard that doesn't suck balls
 
 
+
+-----------------------
+Twitter is shit UI
+1. it takes forever to load a few kb of text because of all the bloat
+2. the JS spikes the CPU and eats up RAM
+3. comment threads are hard to follow in the modal window (which is also slow)
+- and compare this to the DM system which is smooth and legible and fast!
+4. and of course the eternal "140 characters is too fucking short"
+
+OK how do we make a twitter clone that doesn't suck, and "longer posts" doesn't 
+count everyone knows that already
+What if we used the DM system for all posts???? At least the style. 
+Which is sort of like Telegram also. So when you click/tap on the post to see 
+the comments it looks like the DM/telegram window. 
 
 
 
