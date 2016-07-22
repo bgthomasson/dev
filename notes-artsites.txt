@@ -64,9 +64,30 @@ realtime dm/pm
 
 blocklist
 
-clean userpage, no stats, no pageviews, just ART on top
+clean userpage, no stats, no pageviews, just ART on top 
+(maybe have a view more button? load in page??? instead of dedicated gallery)
 then commission info, if have
 then bio info, watchlists
+
+
+need to economize width over 800 px, make 2 col? 
+thumb strip---------
+commission | personal
+
+
+
+dark color set
+#1c3e2e green
+#1c3d3e blue
+
+
+
+
+
+
+
+
+
 
 
 
