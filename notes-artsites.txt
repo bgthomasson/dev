@@ -69,11 +69,17 @@ clean userpage, no stats, no pageviews, just ART on top
 then commission info, if have
 then bio info, watchlists
 
-
 need to economize width over 800 px, make 2 col? 
-thumb strip---------
-commission | personal
+thumb strip along top
+left col with status updates, right col with commission info and misc
 
+
+images have 2 thumbs, a 200px and a 1000px (if bigger)
+
+submission page needs org. action area should be directly under or in own col
+maybe 1/8 width on left, with 7/8 for metadata. would calc() work? flex? 
+
+also need to work in product sales modules. prints etc. 
 
 
 dark color set
