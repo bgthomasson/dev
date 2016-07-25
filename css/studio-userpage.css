@@ -2,7 +2,10 @@
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 
 /* SECTION 1: MAIN LAYOUT and MISC ELEMENTS ------------------------------- */
-/* SECTION 1A: Following code all NORMALIZE CSS */
+/* SECTION 1A: Following code all NORMALIZE CSS I've stripped down some.  
+ * It's hard to know what to keep in weird niche cases like sub/sup so I'll 
+ * leave it there in case want to play with at some point during dev cycle. 
+*/
 
 html {
     -ms-text-size-adjust: 100%;
@@ -45,10 +48,6 @@ abbr[title] {
 
 strong {
     font-weight: bold; 
-}
-
-small {
-    font-size: 80%; 
 }
 
 sub,
@@ -261,7 +260,7 @@ article {
         flex: 0 0 70%; 
     }
 
-    .product-purchase {
+    .product-metadata {
         flex: 0 0 25%;
         align-self: flex-start;
         flex-grow: 1; 

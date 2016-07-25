@@ -81,6 +81,14 @@ maybe 1/8 width on left, with 7/8 for metadata. would calc() work? flex?
 
 also need to work in product sales modules. prints etc. 
 
+I'm not sure how to do comments neatly, have the metadata and action links and then 
+nest all of it without divitis. 
+
+
+@USERNAME: need the link to have no underline at all just for this item! 
+is having a "username-link" class a good idea for other things also?? 
+
+
 
 dark color set
 #1c3e2e green
