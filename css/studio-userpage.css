@@ -97,9 +97,11 @@ body {
 
 @media screen and (min-width: 481px) {    
     main {
-        margin-top: 32px;
-        padding: 2em;
+        margin: 0 auto;
+        padding-top: 3em;
+        width: 90vw;
     }
+    
 }
 
 @media screen and (min-width: 900px) {
@@ -107,7 +109,7 @@ body {
         font-size: 105%;
         line-height: 1.2em;
     }
-    
+
     .float-left {
         float: left;
         width: 49%;
@@ -133,10 +135,6 @@ h2 {
     margin-top: 0;
 }
 
-img {
-    max-width: 98%; 
-}
-
 ol, ul {
     padding: 0.5em;
     list-style-position: inside; 
@@ -156,7 +154,7 @@ ul li:before {
 
 .page-header {
     background-color: #0e0e0e;
-    padding: .2em 0; 
+    padding: .3em 0; 
 }
 
 .strip {

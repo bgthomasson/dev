@@ -7,10 +7,12 @@ item page
 
 
 ------------------
-need a way to resize images on smaller screen. it gets smooshed when set 
-width="500" 
-dynamic resize based on screen size sounds messy 
+TO DO other than minor tweaks
 
+* need a way to resize images on smaller screen. I have the HTML set at 500px
+and then the css max-width is like 98%/100%. without that it'll go off screen. 
+but with both, it keeps it at 500px high and smooshes in the sides! 
+so SMOOSH or OVERFLOW seem like the only options
 
 
 
@@ -25,8 +27,7 @@ userpage-info-commissions
 
 <h1 class="nomen"><a href="studio-userpage.html">Sitename</a></h1>
 
-
-NAV
+NAV:
 ART has posted arts, images, music, etc.
 MESSAGES has journals, streams, commission alerts, pms, etc
 SUBMIT is obvious
@@ -75,6 +76,8 @@ left col with status updates, right col with commission info and misc
 
 
 images have 2 thumbs, a 200px and a 1000px (if bigger)
+
+
 
 submission page needs org. action area should be directly under or in own col
 maybe 1/8 width on left, with 7/8 for metadata. would calc() work? flex? 
