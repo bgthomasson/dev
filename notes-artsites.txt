@@ -13,6 +13,9 @@ TO DO other than minor tweaks
 and then the css max-width is like 98%/100%. without that it'll go off screen. 
 but with both, it keeps it at 500px high and smooshes in the sides! 
 so SMOOSH or OVERFLOW seem like the only options
+leaving out width and height will let it become resonsive but not usre if "bad" dogmaticly
+
+
 
 
 
@@ -28,10 +31,11 @@ userpage-info-commissions
 <h1 class="nomen"><a href="studio-userpage.html">Sitename</a></h1>
 
 NAV:
-ART has posted arts, images, music, etc.
-MESSAGES has journals, streams, commission alerts, pms, etc
+[BROWSE] is dropmenu with various options || or drop this and have main page link?
+INBOX has journals, streams, commission alerts, pms, etc- 
+    maybe have drop menu for each type?
 SUBMIT is obvious
-SETTINGS is dropdown w/ link to various things
+[SETTINGS] is dropdown w/ link to various things
 HELP has actual user manual!
 SFW! is boss button, smash to hide titties and weiners
 

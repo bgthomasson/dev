@@ -5,11 +5,14 @@
 /* SECTION 1A: Following code all NORMALIZE CSS I've stripped down some.  
  * It's hard to know what to keep in weird niche cases like sub/sup so I'll 
  * leave it there in case want to play with at some point during dev cycle. 
+ * Also, idea is to keep normalize as default for any theme, and then have 
+ * custom colors/fonts/etc built on top of that. consistent foundation etc. 
 */
 
 html {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
+    box-sizing: border-box; /* one thing we can add here */
 }
 
 article,
@@ -68,6 +71,7 @@ sub {
 
 img {
     border: 0; 
+    max-width: 100%; /* stick this here too, keep from overflowing on tiny screens */
 }
 
 svg:not(:root) {
@@ -104,11 +108,13 @@ body {
     
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 800px) {
     body {
         font-size: 105%;
         line-height: 1.2em;
     }
+    
+    /* jury rigged, haven't even done any -clear- on other elements >.>; */
 
     .float-left {
         float: left;
@@ -129,10 +135,14 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "Gentium Basic", Cambria, Georgia, Palatino, serif; 
 }
 
+/* plan to use h1 for main page title (so only use once)
+* and h2 for main article titles, so let's have h2 stand out a little */
+
 h2 {
-    background-color: #1c3d3e;
-    padding: 0.75em;
+    background-color: 060606;
+    padding: 0.75em 0;
     margin-top: 0;
+    text-align: center;
 }
 
 ol, ul {
@@ -242,6 +252,8 @@ article {
     padding: 0.5em; 
 }
 
+/* leaving all this product stuff so artists can sell things! */
+
 .product-media {
     text-align: center;
     margin-bottom: 1em; 
@@ -280,14 +292,15 @@ article {
     color: #f38630; 
 }
 
-/* leaving all this product stuff so artists can sell things! */
-
 .user-acts p {
     background-color: #0e0e0e;
     padding: 0.3em;
 }
 
-
+.hilite-blue {
+    background-color: #1c3d3e;
+    padding: 0.3em;
+}
 
 /* SECTION 4: FORM ELEMENTS ----------------------------------------------- */
 

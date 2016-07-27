@@ -3,16 +3,15 @@
 <head>
     <meta charset="utf-8" />
     <title>Submission page test</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="all" href="css/studio-userpage.css" />
 </head>
 <body>
 <header class="page-header">
     <nav class="page-nav header-cell">
         <a href="studio-userpage.html">@itsamemario</a>
-        <a href="#">Browse</a>
         <a href="#">Inbox</a>
-        <a href="#">Submit</a>
+        <a href="#">Post</a>
         <a href="#">[Settings]</a>
         <a href="#">Help</a>
         <a href="#">SFW!</a>
@@ -24,9 +23,10 @@
 <main>
     <article>
         <section class="product-media">
-            <img src="img/4694-icon.jpg" alt="hippo" height="500" width="500" />
-            <h2>Submission Title by <a href="#">@username</a></h2>
-            <p>
+            <img src="img/4694-icon.jpg" alt="hippo" />
+            <!-- properly should have width="" and height="" but this makes it smoosh when smaller -->
+            <h2>Submission Title by <a href="studio-userpage.html">@username</a></h2>
+            <p class="hilite-blue">
                 &#x2714; Fave . &#x21bb; Reblog . Add to Collection . Report
             </p>
         </section>
