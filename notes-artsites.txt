@@ -11,7 +11,9 @@ TO DO other than minor tweaks
 
 user comments! need to work this out decently
 
-status items, need to mark out individual items more clearly
+
+
+
 
 
 
@@ -42,6 +44,11 @@ SFW! is boss button, smash to hide titties and weiners
 multi image submissions
 
 can organize gallery into custom folders
+
+PORTFOLIO with finished works to advertise skill 
+(that may be for sale in certain forms also but primary purpose is formal display)
+and MARKET with YCH, WIPs, 
+
 
 fully multimedia text- maybe use markdown, so can embed images- 
 maybe submit images on own, then embed in story where needed to illustrate
