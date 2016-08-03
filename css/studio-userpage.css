@@ -71,7 +71,7 @@ sub {
 
 img {
     border: 0; 
-    max-width: 100%; /* stick this here too, keep from overflowing on tiny screens */
+    max-width: 100%; /* keep from overflowing on tiny screens */
 }
 
 svg:not(:root) {
@@ -131,21 +131,26 @@ a {
     color: white;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
     font-family: "Gentium Basic", Cambria, Georgia, Palatino, serif; 
 }
 
 /* plan to use h1 for main page title (so only use once)
-* and h2 for main article titles, so let's have h2 stand out a little */
+* and h2 for main article titles */
 
 h2 {
-    background-color: 060606;
-    padding: 0.75em 0;
+    padding-top: 0.75em; /* this keeps some space away from other elements */
     margin-top: 0;
     text-align: center;
 }
 
-ol, ul {
+ol, 
+ul {
     padding: 0.5em;
     list-style-position: inside; 
 }

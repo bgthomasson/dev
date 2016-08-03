@@ -9,12 +9,9 @@ item page
 ------------------
 TO DO other than minor tweaks
 
-* need a way to resize images on smaller screen. I have the HTML set at 500px
-and then the css max-width is like 98%/100%. without that it'll go off screen. 
-but with both, it keeps it at 500px high and smooshes in the sides! 
-so SMOOSH or OVERFLOW seem like the only options
-leaving out width and height will let it become resonsive but not usre if "bad" dogmaticly
+user comments! need to work this out decently
 
+status items, need to mark out individual items more clearly
 
 
 
@@ -80,8 +77,18 @@ left col with status updates, right col with commission info and misc
 
 
 images have 2 thumbs, a 200px and a 1000px (if bigger)
+prefer a larger thumb at lower res for better vis even if slightly uglier 
+
+stickers and GIFs, I don't like how DA has whole accounts just for novelty pics 
+as their avatars so ppl can use them as emotes, so build this in somehow instead. 
+If icon images can be added in, surely stickers can too. 
 
 
+
+
+
+
+--------------------------------------------------------------------------
 
 submission page needs org. action area should be directly under or in own col
 maybe 1/8 width on left, with 7/8 for metadata. would calc() work? flex? 
@@ -96,6 +103,11 @@ nest all of it without divitis.
 is having a "username-link" class a good idea for other things also?? 
 
 
+
+
+
+
+----------------------------------------------------
 
 dark color set
 #1c3e2e green
