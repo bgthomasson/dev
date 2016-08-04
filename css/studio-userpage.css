@@ -1,5 +1,7 @@
 /* some code imported from: */
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+/* for dev convenience this is all plain CSS until have stable and THEN 
+put into SCSS to use variables to make color themes.*/
 
 /* SECTION 1: MAIN LAYOUT and MISC ELEMENTS ------------------------------- */
 /* SECTION 1A: Following code all NORMALIZE CSS I've stripped down some.  
@@ -12,8 +14,10 @@
 html {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
-    box-sizing: border-box; /* one thing we can add here */
 }
+
+/* is this still useful if targeting IE11+? checked: <main> is "unknown", rest ok. 
+opera mini also considers all "unknown". so global total is ~10% that still needs this*/
 
 article,
 aside,
@@ -26,6 +30,8 @@ section,
 summary {
     display: block; 
 }
+
+/* an artsy site might need these things! */
 
 audio,
 canvas,
@@ -170,24 +176,28 @@ ul li:before {
 .page-header {
     background-color: #0e0e0e;
     padding: .3em 0; 
+    font-size: 110%;
 }
 
-.strip {
+/* sometimes you just want to shove things in the middle */
+
+.centered {
     text-align: center;
 }
 
-.cell {
-    max-width: 100%; 
-}
-
-.thumbnails {
-    display: block;
-    padding: 1em;
-    text-align: center;
+/* simply give some space below */
+ 
+.pushup {
+    margin-bottom: 1em;
 }
 
 nav a {
     padding: 0 .3em; 
+    text-decoration: none; 
+}
+
+nav a:hover {
+    text-decoration: underline; 
 }
 
 @media screen and (min-width: 481px) {
@@ -201,53 +211,19 @@ nav a {
         z-index: 9;
     }
 
-    .strip {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-around;
-        margin-bottom: 0.5em; 
-    }
-
-    .cell {
-        flex: 1;
-        flex-grow: 1;
-    }
-
-    nav a {
-        text-decoration: none; 
-    }
-
-    nav a:hover {
-        text-decoration: underline; 
-    }
-
 }
+
+/* I wanted the H1 for the page name to fit into the main nav easily */
 
 .nomen {
     display: inline-block;
     margin: 0; 
 }
 
-.header-cell {
-    flex: 1;
-}
-
-.page-nav {
-    font-size: 110%;
-}
-
 .searchform input {
     border: 3px solid #1c3e2e;
     width: 20em; 
 }
-
-.page-footer {
-    margin-top: 1em;
-    margin-bottom: 2em; 
-}
-
 
 
 /* SECTION 3: ARTICLE RELATED ---------------------------------------------- */
@@ -259,11 +235,6 @@ article {
 
 /* leaving all this product stuff so artists can sell things! */
 
-.product-media {
-    text-align: center;
-    margin-bottom: 1em; 
-}
-
 .product-purchase {
     border: 2px solid #601a36;
     text-align: center;
@@ -271,6 +242,12 @@ article {
 }
 
 @media screen and (min-width: 481px) {
+    .row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap; 
+    }
+    
     .product-text {
         flex: 0 0 70%; 
     }
@@ -281,12 +258,6 @@ article {
         flex-grow: 1; 
     }
 
-    .row {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap; 
-    }
-
 }
 
 .stock-in {
@@ -295,11 +266,6 @@ article {
 
 .stock-out {
     color: #f38630; 
-}
-
-.user-acts p {
-    background-color: #0e0e0e;
-    padding: 0.3em;
 }
 
 .hilite-blue {

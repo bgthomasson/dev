@@ -11,8 +11,8 @@ TO DO other than minor tweaks
 
 user comments! need to work this out decently
 
-
-
+JS- what would be helpful? 
+submission inbox- have button under thumb to remove ajax, and link opens in new tab 
 
 
 
@@ -47,7 +47,10 @@ can organize gallery into custom folders
 
 PORTFOLIO with finished works to advertise skill 
 (that may be for sale in certain forms also but primary purpose is formal display)
-and MARKET with YCH, WIPs, 
+and MARKET with YCH, WIPs, physical works being sold off. 
+> this might get messy tho, the basic idea is good BUT. if doing like redbubble etc. 
+then things from -portfolio- are being sold on tshirts, mugs, etc. 
+> also not everyone might be that formal, they just want to upload scooby doo fanart. 
 
 
 fully multimedia text- maybe use markdown, so can embed images- 
