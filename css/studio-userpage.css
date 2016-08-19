@@ -1,63 +1,65 @@
-/* some code imported from: */
-/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
-/* for dev convenience this is all plain CSS until have stable and THEN 
-put into SCSS to use variables to make color themes.*/
-
-/* SECTION 1: MAIN LAYOUT and MISC ELEMENTS ------------------------------- */
-/* SECTION 1A: Following code all NORMALIZE CSS I've stripped down some.  
- * It's hard to know what to keep in weird niche cases like sub/sup so I'll 
- * leave it there in case want to play with at some point during dev cycle. 
- * Also, idea is to keep normalize as default for any theme, and then have 
- * custom colors/fonts/etc built on top of that. consistent foundation etc. 
+/*! normalize.css v4.1.1 | MIT License | git.io/normalize */
+/* Edited a bit for brevity and IE11+ focus: IE 8 + 9 + 10 = 1.5% usage 
+* IE 11 is 4% global, 8% USA so still large enough and modern enough to bother. 
+* Safari 9+ is good target, older versions are > 1%
+* FF and Chrome, 45+ covers 99%  
+* Overall: 50% Chrome, 10% Safari, 7% UC browser, 6% FF, 5% Opera mini, 4% IE11, 3% samsung browser!? 
 */
+
+/**
+ * Prevent adjustments of font size after orientation changes in IE and iOS.
+ */
 
 html {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
 }
 
-/* is this still useful if targeting IE11+? checked: <main> is "unknown", rest ok. 
-opera mini also considers all "unknown". so global total is ~10% that still needs this*/
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ * 2. Add the correct display in IE.
+ */
 
 article,
 aside,
+details, /* 1 */
+figcaption,
+figure,
 footer,
 header,
-main,
+main, /* 2 */
 menu,
 nav,
 section,
-summary {
-    display: block; 
+summary { /* 1 */
+    display: block;
 }
 
-/* an artsy site might need these things! */
+/**
+ * Add the correct display in IE 9-.
+ */
 
 audio,
 canvas,
 progress,
 video {
     display: inline-block;
-    vertical-align: baseline;
 }
 
-audio:not([controls]) {
-    display: none;
-    height: 0; 
-}
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
 
-a:active,
-a:hover {
-    outline: 0; 
-}
-
-abbr[title] {
-    border-bottom: 1px dotted; 
-}
-
+b,
 strong {
-    font-weight: bold; 
+  font-weight: bolder;
 }
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
 
 sub,
 sup {
@@ -75,26 +77,28 @@ sub {
     bottom: -0.25em; 
 }
 
-img {
-    border: 0; 
-    max-width: 100%; /* keep from overflowing on tiny screens */
-}
+/**
+ * Hide the overflow in IE.
+ */
 
 svg:not(:root) {
     overflow: hidden; 
 }
 
-pre {
-    overflow: auto; 
-}
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
 
 code,
-pre {
-    font-family: monospace, monospace;
-    font-size: 1em; 
+kbd,
+pre,
+samp {
+    font-family: monospace, monospace; /* 1 */
+    font-size: 1em; /* 2 */
 }
 
-/* SECTION 1B: END NORMALIZE, BEGIN CUSTOM -------------------------------- */
+/* END NORMALIZE, BEGIN CUSTOM -------------------------------------------- */
 
 body {
     background-color: #1e1e1e;
@@ -119,8 +123,6 @@ body {
         font-size: 105%;
         line-height: 1.2em;
     }
-    
-    /* jury rigged, haven't even done any -clear- on other elements >.>; */
 
     .float-left {
         float: left;
@@ -153,6 +155,12 @@ h2 {
     padding-top: 0.75em; /* this keeps some space away from other elements */
     margin-top: 0;
     text-align: center;
+}
+
+
+img {
+    border: 0; 
+    max-width: 100%; /* keep from overflowing on tiny screens */
 }
 
 ol, 
@@ -233,8 +241,6 @@ article {
     padding: 0.5em; 
 }
 
-/* leaving all this product stuff so artists can sell things! */
-
 .product-purchase {
     border: 2px solid #601a36;
     text-align: center;
@@ -260,11 +266,13 @@ article {
 
 }
 
-.stock-in {
+/* Some generic colors for emphasis- make sure are colorblind safe */
+
+.success {
     color: green; 
 }
 
-.stock-out {
+.failure {
     color: #f38630; 
 }
 
@@ -290,8 +298,20 @@ input {
     background-color: #0e0e0e;
 }
 
+/* pretty this up a bit */
 
-/* Following code verbatim-ish from NORMALIZE.CSS -------------------------- */
+fieldset {
+    border: 1px solid rgb(123,196,134);
+    margin: 0 2px;
+    padding: 0.5em; 
+}
+
+/* put normalize form stuff down here for convenience, with some random edits */
+
+/**
+ * 1. Change font properties to `inherit` in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
 
 button,
 input,
@@ -302,70 +322,69 @@ textarea {
     margin: 0;
 }
 
-button {
-    overflow: visible; 
-}
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4. Note- still 3% usage. 
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
 
 button,
-select {
-    text-transform: none; 
+html [type="button"], /* 1 */
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button; /* 2 */
 }
 
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-    -webkit-appearance: button;
-    cursor: pointer;
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+legend {
+    box-sizing: border-box; /* 1 */
+    color: inherit; /* 2 */
+    display: table; /* 1 */
+    max-width: 100%; /* 1 */
+    padding: 0; /* 3 */
+    white-space: normal; /* 1 */
 }
 
-button[disabled],
-html input[disabled] {
-    cursor: default; 
-}
-
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-    border: 0;
-    padding: 0; 
-}
-
-input {
-    line-height: normal; 
-}
-
-
-input[type="checkbox"],
-input[type="radio"] {
-    box-sizing: border-box;
-    padding: 0;
-}
-
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-    height: auto; 
-}
-
-input[type="search"] {
-    -webkit-appearance: textfield;
-    -moz-box-sizing: content-box;
-    -webkit-box-sizing: content-box;
-    box-sizing: content-box; 
-}
-
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-    -webkit-appearance: none; 
-}
-
-fieldset {
-    border: 1px solid #c0c0c0;
-    margin: 0 2px;
-    padding: 0.35em 0.625em 0.75em; 
-}
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
 
 textarea {
-    overflow: auto; 
+    overflow: auto;
 }
 
-/* END OF NORMALIZE CSS*/
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+    -webkit-appearance: textfield; /* 1 */
+    outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Correct the text style of placeholders in Chrome, Edge, and Safari.
+ */
+
+::-webkit-input-placeholder {
+    color: inherit;
+    opacity: 0.54;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button; /* 1 */
+    font: inherit; /* 2 */
+}
+
