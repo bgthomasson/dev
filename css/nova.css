@@ -1,0 +1,120 @@
+/*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
+/* Using a few pieces, focus is on newest FF and Chrome. 
+* Some things will work in Edge, will try to note. 
+* Safari is not supported at all beyond basics */
+
+html {
+    -ms-text-size-adjust: 100%; /* 2 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+body {
+    background-color: #fbfcf7;
+    color: #1e1e1e;
+	font-family: "Source Sans Pro", Candara, Geneva, "Fira Sans", Roboto, Sans-Serif;
+	font-size: 1em;
+	line-height: 1.2em;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 481px) {
+    body {
+        width: 95vw;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    body {
+        font-size: 1.1em;
+        line-height: 1.3em;
+        width: 66vw;
+    }
+
+}
+
+a:active,
+a:hover {
+    outline-width: 0;
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, monospace; /* 1 */
+    font-family: "Source Code Pro", "DejaVu Sans Mono", Consolas, "Andale Mono", monospace;
+    /* Need to look up how their hack works. */
+    font-size: 1em; /* 2 */
+}
+
+/* Forms
+   ========================================================================== */
+
+form {
+    padding: 1em;
+}
+
+fieldset {
+    border: 1px solid rgb(176,148,127);
+	margin-bottom: 1em;
+}
+
+/* Uses labels as containers for form inputs to keep orderly visually 
+ * However this can cause issues w/ screenreaders etc. 
+*/
+label {
+    display: list-item;
+    list-style-type: none;
+    margin: .5em 0;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit; /* 1 */
+    margin: 0; /* 2 */
+}
+
+button {
+    background-color: rgb(190,230,250);
+    border: none;
+    border-radius: 12px;
+    box-shadow: 5px 5px 5px rgba(64,16,0,.4);
+    cursor: pointer;
+    font-weight: 700;
+    padding: .3em;
+    /* transforms work in IE11+ and all modern browsers */
+    transform: scale(1);
+    transition: all 0.4s;
+}
+
+button:hover {
+    background-color: rgb(105,210,231);
+    box-shadow: 5px 5px 5px rgba(64,16,0,.8);
+    transform: scale(1.25);
+}
+
+input:focus {
+    background-color: rgba(190,230,250,.5);
+    outline: none;
+}
+
+
+table {
+    background-color: rgb(255,255,240);
+    border: 1px solid rgb(176,148,127);
+    border-collapse: collapse;
+	margin: 0 auto;
+    margin-bottom: 2em;
+} 
+
+td {
+	padding: .5em;
+	text-align: center;
+}
+
+tr:nth-of-type(2n+1) {
+    background-color: rgb(255,235,200);
+	font-weight: 700;
+}
