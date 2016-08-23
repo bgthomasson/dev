@@ -1,22 +1,30 @@
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /* Using a few pieces, focus is on newest FF and Chrome. 
-* Some things will work in Edge, will try to note. 
-* Safari is not supported at all beyond basics */
+ * Some things will work in Edge, will try to note. 
+ * Safari is not supported at all beyond basics 
+ */
+
+/**
+ * Prevent adjustments of font size after orientation changes in IE and iOS.
+ */
 
 html {
-    -ms-text-size-adjust: 100%; /* 2 */
-    -webkit-text-size-adjust: 100%; /* 2 */
+    -ms-text-size-adjust: 100%; 
+    -webkit-text-size-adjust: 100%; 
 }
 
 body {
+    /* Use off-white and off-black to lessen eye strain */
     background-color: #fbfcf7;
     color: #1e1e1e;
+    /* A decent tho long font stack */
 	font-family: "Source Sans Pro", Candara, Geneva, "Fira Sans", Roboto, Sans-Serif;
 	font-size: 1em;
 	line-height: 1.2em;
     margin: 0 auto;
 }
 
+/* whatever element is used as wrapper, turn into centered single column */
 @media screen and (min-width: 481px) {
     body {
         width: 95vw;
@@ -25,6 +33,7 @@ body {
 
 @media screen and (min-width: 800px) {
     body {
+        /* desktop so give bigger font for visibility */
         font-size: 1.1em;
         line-height: 1.3em;
         width: 66vw;
@@ -37,13 +46,19 @@ a:hover {
     outline-width: 0;
 }
 
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
 code,
 kbd,
 pre,
 samp {
     font-family: monospace, monospace; /* 1 */
     font-family: "Source Code Pro", "DejaVu Sans Mono", Consolas, "Andale Mono", monospace;
-    /* Need to look up how their hack works. */
+    /* Need to look up how their hack works, it feels weird to double the font-family. */
     font-size: 1em; /* 2 */
 }
 
@@ -62,11 +77,17 @@ fieldset {
 /* Uses labels as containers for form inputs to keep orderly visually 
  * However this can cause issues w/ screenreaders etc. 
 */
+
 label {
     display: list-item;
     list-style-type: none;
     margin: .5em 0;
 }
+
+/**
+ * 1. Change font properties to `inherit` in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
 
 button,
 input,
@@ -84,16 +105,20 @@ button {
     cursor: pointer;
     font-weight: 700;
     padding: .3em;
-    /* transforms work in IE11+ and all modern browsers */
-    transform: scale(1);
     transition: all 0.4s;
 }
 
 button:hover {
     background-color: rgb(105,210,231);
     box-shadow: 5px 5px 5px rgba(64,16,0,.8);
-    transform: scale(1.25);
 }
+
+button:active {
+	background-color: rgb(105,210,231);
+	box-shadow:  0 1px 0 rgb(64,16,0);
+	transform: translateY(3px);
+}
+
 
 input:focus {
     background-color: rgba(190,230,250,.5);
