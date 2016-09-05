@@ -1,24 +1,21 @@
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
-/* Using a few pieces, focus is on newest FF and Chrome. 
- * Some things will work in Edge, will try to note. 
- * Safari is not supported at all beyond basics 
+/* FF 45+, Chrome 50+
+ * Some things work in Edge, will try to note if don't. 
+ * Safari is not supported at all beyond basics. 
  */
 
-/**
- * Prevent adjustments of font size after orientation changes in IE and iOS.
- */
-
-html {
-    -ms-text-size-adjust: 100%; 
-    -webkit-text-size-adjust: 100%; 
+*, 
+*:before,
+*:after {
+   box-sizing: border-box;  
 }
-
+ 
 body {
     /* Use off-white and off-black to lessen eye strain */
     background-color: #fbfcf7;
-    color: #1e1e1e;
-    /* A decent tho long font stack */
-	font-family: "Source Sans Pro", Candara, Geneva, "Fira Sans", Roboto, Sans-Serif;
+    color: #080401;
+    /* A decent tho long font stack. */
+	font-family: "Source Sans Pro", Candara, Geneva, "Fira Sans", Roboto, sans-serif;
 	font-size: 1em;
 	line-height: 1.2em;
     margin: 0 auto;
@@ -41,25 +38,32 @@ body {
 
 }
 
+article {
+    margin-bottom: 2em;
+}
+
+
+/* low level things -------------------------------------------------------- */
+
 a:active,
 a:hover {
     outline-width: 0;
 }
 
 
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
+/* plucked from codesmite.com: 
+ * As Raleway comes with both text figures and lining figures for web use you can 
+ * use the CSS3 descriptor "font-feature-settings" to enable lining figures. 
+ * Useful note- installing fonts in Windows is easy once you download them, just 
+ * right-click on the file, select install, done. 
  */
 
-code,
-kbd,
-pre,
-samp {
-    font-family: monospace, monospace; /* 1 */
-    font-family: "Source Code Pro", "DejaVu Sans Mono", Consolas, "Andale Mono", monospace;
-    /* Need to look up how their hack works, it feels weird to double the font-family. */
-    font-size: 1em; /* 2 */
+.raleway-lining {
+    font-family: Raleway, sans-serif;
+    font-feature-settings: "lnum"; 
+}
+.raleway-default {
+    font-family: Raleway, sans-serif;
 }
 
 /* Forms
@@ -72,16 +76,6 @@ form {
 fieldset {
     border: 1px solid rgb(176,148,127);
 	margin-bottom: 1em;
-}
-
-/* Uses labels as containers for form inputs to keep orderly visually 
- * However this can cause issues w/ screenreaders etc. 
-*/
-
-label {
-    display: list-item;
-    list-style-type: none;
-    margin: .5em 0;
 }
 
 /**
@@ -105,7 +99,8 @@ button {
     cursor: pointer;
     font-weight: 700;
     padding: .3em;
-    transition: all 0.4s;
+    /* speed should be <=200ms, just from testing by clicking repeatedly */
+    transition: all 0.1s;
 }
 
 button:hover {
@@ -119,27 +114,16 @@ button:active {
 	transform: translateY(3px);
 }
 
-
 input:focus {
     background-color: rgba(190,230,250,.5);
     outline: none;
 }
 
-
-table {
-    background-color: rgb(255,255,240);
-    border: 1px solid rgb(176,148,127);
-    border-collapse: collapse;
-	margin: 0 auto;
-    margin-bottom: 2em;
-} 
-
-td {
-	padding: .5em;
-	text-align: center;
+.moving {
+    transform: translateX(10%);
+    transition: transform 200ms linear;
+    will-change: transform;
+    
 }
 
-tr:nth-of-type(2n+1) {
-    background-color: rgb(255,235,200);
-	font-weight: 700;
-}
+
