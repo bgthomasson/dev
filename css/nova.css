@@ -18,19 +18,20 @@ body {
 	font-family: "Source Sans Pro", Candara, Geneva, "Fira Sans", Roboto, sans-serif;
 	font-size: 1em;
 	line-height: 1.2em;
-    margin: 0 auto;
 }
 
 /* whatever element is used as wrapper, turn into centered single column */
+/* Phat phone and tablet size */
 @media screen and (min-width: 481px) {
     body {
+        margin: 0 auto;
         width: 95vw;
     }
 }
 
+/* Desktop size */
 @media screen and (min-width: 800px) {
     body {
-        /* desktop so give bigger font for visibility */
         font-size: 1.1em;
         line-height: 1.3em;
         width: 66vw;
@@ -56,6 +57,8 @@ a:hover {
  * use the CSS3 descriptor "font-feature-settings" to enable lining figures. 
  * Useful note- installing fonts in Windows is easy once you download them, just 
  * right-click on the file, select install, done. 
+ * Note 2- To avoid reloading web fonts, I've installed the ones I use. 
+ * That's why there's no @import etc. YET, I'm saving that mess for last. 
  */
 
 .raleway-lining {
@@ -119,6 +122,12 @@ input:focus {
     outline: none;
 }
 
+/* Default is inline-block, which makes a mess if you want a button UNDER it */
+textarea {
+    display: block;
+    margin-bottom: 1em;
+}
+
 .moving {
     transform: translateX(10%);
     transition: transform 200ms linear;
@@ -126,4 +135,15 @@ input:focus {
     
 }
 
+/* I'm sure I've seen it before but here's an attempt at a lined paper bg. 
+ * The blue vertical line is not so useful if can't indent text! 
+ * Also, problem of adjusting line height since it changes w/ page size. 
+ * We could just set default the same as page default, then @media -
+ * but I'd rather have all @media transformers in one place for convenience. 
+*/
 
+.paperback {
+    background-image: 
+        linear-gradient(#ccc .1em, transparent .1em);
+    background-size: 100% 1.3em;
+}
