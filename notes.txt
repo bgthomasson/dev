@@ -39,10 +39,7 @@ nice and easy file dialog
 1. theme
 2. prism.js
 
-
-
-
-
+------------------------------------------------------------------------------------------
 
 Auto-correct can be disabled by adding an autocorrect attribute to the input tag 
 and setting it to off, like this:
@@ -55,24 +52,23 @@ But did you know you can also use <data> to provide such data for other phrasing
 Pretty cool to markup your products on a page with your IDs, UPC codes or other reference numbers. 
 
 
+-----------------------------------------------------------------------------------
 
-IE 7-8-9 are <5%
-IE 10-11 are 14%
+light color palette
+
+#fbfcf7; // off white
+#ffc0cb; //pink
+#ffc733; //orange
+#ffffe0; //yellow
+#98fb98; // green
+#e0ffff; // cyan  
+#b0e0e6; // blue
+#e6e6fa; // purple
+#dcdcdc; // grey
 
 
-references, good and bad:
-tumblr
-twitter
-facebutt
 
 
-
-stores:
-amazon
-best buy
-lowes
-walmart
-target
 
 
 

@@ -143,7 +143,6 @@ textarea {
 */
 
 .paperback {
-    background-image: 
-        linear-gradient(#ccc .1em, transparent .1em);
+    background-image: linear-gradient(#ccc .1em, transparent .1em);
     background-size: 100% 1.3em;
 }
