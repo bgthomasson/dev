@@ -1,6 +1,7 @@
 var range = document.querySelector("#range");
-var h1 = document.getElementsByTagName("h1")[0];
+var h1 = document.getElementsByTagName("body")[0];
 // just to mess around with selector options
+// yes I tested it on the h1 first, now testing other elements...
 
 range.addEventListener("input", function() {
   // here's the original example to make sure it works- it does for this: 

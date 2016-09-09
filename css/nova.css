@@ -1,6 +1,6 @@
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
-/* FF 45+, Chrome 50+
- * Some things work in Edge, will try to note if don't. 
+/* I borrowed a few small pieces, mostly for forms. 
+ * FF 45+, Chrome 50+. Some things work in Edge, will try to note if don't. 
  * Safari is not supported at all beyond basics. 
  */
 
@@ -51,6 +51,9 @@ a:hover {
     outline-width: 0;
 }
 
+h1 {
+    text-align: center;
+}
 
 /* plucked from codesmite.com: 
  * As Raleway comes with both text figures and lining figures for web use you can 
@@ -72,9 +75,7 @@ a:hover {
 /* Forms
    ========================================================================== */
 
-form {
-    padding: 1em;
-}
+
 
 fieldset {
     border: 1px solid rgb(176,148,127);
@@ -122,7 +123,10 @@ input:focus {
     outline: none;
 }
 
-/* Default is inline-block, which makes a mess if you want a button UNDER it */
+/* Default is inline-block, which makes a mess if you want a button UNDER it 
+ * Setting it to display:block is much simpler than trying to wrap everything  
+ * in the form with divs, or setting them all to display:list-item, lol. 
+*/
 textarea {
     display: block;
     margin-bottom: 1em;
@@ -135,11 +139,13 @@ textarea {
     
 }
 
-/* I'm sure I've seen it before but here's an attempt at a lined paper bg. 
+/* I'm sure I've seen it before but here's an attempt at a lined paper bg for text input. 
+ * Tho it's abit antiquated to make your blog look like a paper journal...
  * The blue vertical line is not so useful if can't indent text! 
  * Also, problem of adjusting line height since it changes w/ page size. 
  * We could just set default the same as page default, then @media -
  * but I'd rather have all @media transformers in one place for convenience. 
+ * Based on CSS3 patterns
 */
 
 .paperback {
