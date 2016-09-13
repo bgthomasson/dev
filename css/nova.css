@@ -3,6 +3,10 @@
  * FF 45+, Chrome 50+. Some things work in Edge, will try to note if don't. 
  * Safari is not supported at all beyond basics. 
  */
+ 
+/* Block level and global elements --------------------------------------- */
+
+/* global reset, should be harmless since this page has few elements */
 
 *, 
 *:before,
@@ -43,6 +47,17 @@ article {
     margin-bottom: 2em;
 }
 
+/* Edge doesn't support color variables, but the other main browsers do. 
+ * I think SASS works better ATM but will test for shiggles. 
+ */
+
+:root {
+    --funcolor: #123;
+}
+
+.vartest {
+    var(--funcolor);
+}
 
 /* low level things -------------------------------------------------------- */
 
@@ -51,6 +66,7 @@ a:hover {
     outline-width: 0;
 }
 
+/* Stick the h1 page title out in the middle so it'll stand out and look fancy */
 h1 {
     text-align: center;
 }
@@ -98,11 +114,12 @@ textarea {
 button {
     background-color: rgb(190,230,250);
     border: none;
-    border-radius: 12px;
+    /* try using proportional instead of pixel */
+    border-radius: .5em;
     box-shadow: 5px 5px 5px rgba(64,16,0,.4);
     cursor: pointer;
     font-weight: 700;
-    padding: .3em;
+    padding: .5em;
     /* speed should be <=200ms, just from testing by clicking repeatedly */
     transition: all 0.1s;
 }
@@ -140,12 +157,13 @@ textarea {
 }
 
 /* I'm sure I've seen it before but here's an attempt at a lined paper bg for text input. 
- * Tho it's abit antiquated to make your blog look like a paper journal...
+ * Tho it's a bit antiquated to make your blog look like a paper journal...
  * The blue vertical line is not so useful if can't indent text! 
- * Also, problem of adjusting line height since it changes w/ page size. 
+ * Also, problem of adjusting pseudo line-height since it changes w/ page size. 
  * We could just set default the same as page default, then @media -
- * but I'd rather have all @media transformers in one place for convenience. 
- * Based on CSS3 patterns
+ * but where to put it? splitting things up will get confusing sometime.  
+ *  
+ * Based on http://lea.verou.me/css3patterns/#lined-paper
 */
 
 .paperback {
