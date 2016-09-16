@@ -48,7 +48,7 @@ article {
 }
 
 /* Edge doesn't support color variables, but the other main browsers do. 
- * I think SASS works better ATM but will test for shiggles. 
+ * I think SASS works better for this ATM but will test for shiggles. 
  */
 
 :root {
@@ -76,7 +76,8 @@ h1 {
  * use the CSS3 descriptor "font-feature-settings" to enable lining figures. 
  * For Chrome 21-47 and FF 15-33 need to prefix. 
  * Works in IE10! Safari only added in 9.1 one tho, how lame.  
- * To avoid reloading web fonts, I've installed the ones I use. 
+ *
+ * Side note: To avoid reloading web fonts, I've installed the ones I use. 
  * Raleway, Source Sans Pro, etc are all free so no problem, plus more fun for me. 
  * That's why there's no @import etc. YET, I'm saving that mess for last. 
  */
@@ -166,3 +167,5 @@ textarea {
     background-image: linear-gradient(#ccc .1em, transparent .1em);
     background-size: 100% 1.3em;
 }
+
+/* All of this button and form stuff seems to work in IE10 */

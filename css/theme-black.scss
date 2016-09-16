@@ -1,5 +1,5 @@
 
-@import 'normalize';
+@import 'normalize2016';
 @import 'core';
 @import 'prism-dark';
 
@@ -89,7 +89,7 @@ th {
 }
 
 button {
-    background-color: $theme-color;
+    background-color: $action-muted;
     border: none;
 }
 
@@ -98,6 +98,6 @@ button:hover {
 }
 
 input {
-    background-color: $theme-color;
+    background-color: $action-muted;
 }
 
