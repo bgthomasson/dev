@@ -90,6 +90,15 @@ h1 {
     font-family: Raleway, sans-serif;
 }
 
+/* CSS filter effects would be great for interaction, e.g. greyscale for inactive img. 
+ * Works in FF, Chrome, Safari 9, and Edge [except for url() thingy]. 
+*/
+
+.deactivated {
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+}
+
 /* Forms
    ========================================================================== */
 

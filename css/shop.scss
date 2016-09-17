@@ -8,7 +8,13 @@
  * 6. Forms default, search-form 
 */ 
 
-/* IMPORTS */@import 'normalize';
+/* BROWSER SUPPORT
+ * Primary: current version - 2: Chrome, FF, Safari, Edge
+ * Secondary: Android 4.4, IE 8 (so can shop at work lol)
+ * Note that it currently falls apart in IE 8 and 9 as there is no flexbox fallback yet...
+*/
+
+/* IMPORTS */@import 'normalize4';
 
 /* MIXINS */
 
@@ -73,7 +79,7 @@ body {
         font-size: 105%;
         line-height: 1.2em;
         margin: 0 auto;
-        width: 800px;
+        width: 50em;
     }
 }
 
@@ -215,7 +221,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 img {
-    max-width: 98%;
+    max-width: 98vw;
 }
 
 ol, ul {
