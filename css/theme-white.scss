@@ -29,7 +29,7 @@ $rainbow45: linear-gradient(45deg, red, orange, yellow, green, blue, purple);
 
 @media screen and ( min-width: 481px ) {
     .page-header {
-        box-shadow: 0px 6px 4px rgba(47,79,79,.5);
+        border-bottom: 1px solid $theme-shadow;
     }
 }
 
@@ -73,6 +73,10 @@ ul li {
     list-style-type: none;
 }
 
+ul li:before {
+    content: "\2744"; 
+}
+
 table { 
     border: 1px solid $theme-shadow;
 }
@@ -86,7 +90,7 @@ th {
 }
 
 button {
-    background-color: $paper1;
+    background-color: $action-muted;
     border: none;
 }
 

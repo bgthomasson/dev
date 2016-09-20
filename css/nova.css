@@ -6,11 +6,11 @@
  
 /* Block level and global elements --------------------------------------- */
 
-/* global reset, should be harmless since this page has few elements */
+/* global reset, should be harmless since this page has few elements. 
+ * Hoestly I haven't seen a difference yet, so maybe I should try breaking it. 
+*/
 
-*, 
-*:before,
-*:after {
+* {
    box-sizing: border-box;  
 }
  
@@ -94,9 +94,14 @@ h1 {
  * Works in FF, Chrome, Safari 9, and Edge [except for url() thingy]. 
 */
 
-.deactivated {
+.grayscale {
     -webkit-filter: grayscale(1);
     filter: grayscale(1);
+}
+
+.blur {
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
 }
 
 /* Forms

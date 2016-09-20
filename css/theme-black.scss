@@ -21,8 +21,8 @@ $fonts-serif: Cambria, Georgia, Palatino, serif;
 $fonts-mono: 'Source Code Pro', 'DejaVu Sans Mono', Consolas, Monaco, 
                  'Andale Mono', 'Ubuntu Mono', monospace;
 
-$th-color: #708090;
-$zebra: #708090;
+$th-color: #777;
+$zebra: #222;
 
 
 /* ------------------------------------------------------------------------- */
@@ -63,6 +63,10 @@ nav a:hover {
     color: $text-muted;
 }
 
+a {
+    color: $action-muted;
+}
+
 blockquote {
     border-left: 2px solid $theme-shadow;
     border-top:  2px solid $theme-shadow;
@@ -74,6 +78,10 @@ ul, ol {
 
 ul li {
     list-style-type: none;
+}
+
+ul li:before {
+    content: "\2744"; 
 }
 
 table { 

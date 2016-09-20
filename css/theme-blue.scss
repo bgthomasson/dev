@@ -44,7 +44,7 @@ nav a:hover {
     text-decoration: underline;
 }
 
-.post-body {
+.post {
     background-color: $paper1;
     border-radius: 12px;
     box-shadow: 6px 6px 6px $action-shadow;
@@ -82,6 +82,9 @@ ul li {
     list-style-type: none;
 }
 
+ul li:before {
+    content: "\2600"; 
+}
 
 table { 
     border: 1px solid $theme-shadow;

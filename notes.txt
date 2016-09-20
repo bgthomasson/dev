@@ -2,13 +2,14 @@ DESIGN NOTES___________________________________________________________________
 
 DRYR:
 
+
+> rearrange header? like on shop test: links- search - home
+
+> rearrange articles so icon is on top? in meta bar w/ other info. 
+
 > JS that adds class to acted on button should change text: 
 >> if innerHTML = "like" then change to "liked", etc. 
 >> JS needs to work on all ajaxian buttons
-
-
-> header menu is too hard to use w/fingers
-.  maybe display: list-item?? 
 
 > need a good place for a direct link to unique post page
 

@@ -12,14 +12,13 @@
 </head>
 <body>
 <header class="page-header" role="banner">
-    <nav class="page-nav" role="navigation">
+    <nav class="cell page-nav" role="navigation">
         <a href="dryrtest.html"><h1 class="nomen">&#8962; Dryr </h1></a>
         <a href="#">&#x270d; Post</a> 
         <a href="#" id="mailbox" class="mailbox">&#x2709; Mail</a> 
         <a href="#">@username</a> 
         <a href="#">&#x21af; Settings</a> 
         <a href="#">&#x2205; Log out</a>
-        
     </nav>
     <form name="searchform" class="search-form" method="POST" action="search.php">
         <input type="search" name="searchbox" class="search-box" placeholder="Search" />
@@ -32,11 +31,10 @@
 <main>
 
 <article class="post">
-<section class="post-icon">
-    <p><a href="#"><img src="img/summer-11.png" alt="usericon" /></a></p> 
-</section>
+    <section class="post-icon">
+        <p><a href="#"><img src="img/summer-11.png" alt="usericon" /></a></p> 
+    </section>
 
-<section class="post-body">
     <section class="post-content">
     <p>
     I'm not entirely happy with how this works but I need a quick way to compare themes
@@ -52,10 +50,10 @@
 
     <ul>
         <li>IE 11 (Windows 7, and good enough to need little special care)</li>
-        <li>Firefox 38 (long term release)</li>
-        <li>Chrome 44 (round number)</li>
-        <li>Safari 8</li>
-        <li>Android 4.x</li>
+        <li>Firefox current minus 2</li>
+        <li>Chrome current minus 2</li>
+        <li>Safari 9</li>
+        <li>Android 4.4</li>
     </ul>
     
     <ol>
@@ -108,9 +106,11 @@
     </table>
     
     </section>
+    
     <section class="post-tags">
         <p><a href="#">#testing</a></p>
     </section>
+    
     <section class="post-controls">
         <button type="button" class="ctrl-btn">&#x21bb; Reblog</button>
         <button type="button" class="ctrl-btn" id="like">&#x2714; Like</button>
@@ -118,15 +118,13 @@
         <button type="button" class="ctrl-btn">&#x2718; Disagree</button>
     </section>
     
-</section>
 </article>
 
 
 <article class="post">
-<section class="post-icon">
-    <a href="#"><img src="img/summer-11.png" alt="usericon" /></a>
-</section>
-<section class="post-body">
+    <section class="post-icon">
+        <a href="#"><img src="img/summer-11.png" alt="usericon" /></a>
+    </section>
     <section class="post-content">
     <h2>My cool drawing</h2>
     <a href="http://imgur.com/usI1TR9"><img src="http://i.imgur.com/FVBZP6I.jpg" title="Toothless doodle" /></a>
@@ -155,7 +153,6 @@
         <button type="button">&#x2718; Disagree</button>
     </section>
     
-</section>
 </article>
 
 
@@ -163,8 +160,6 @@
     <section class="post-icon">
     <img src="img/summer-13.png" alt="usericon" />
     </section>
-    
-    <section class="post-body">
     
     <section class="post-content">
     <h2>Long text</h2>
@@ -186,6 +181,7 @@
     held out to the wind, added its force to the other sails.  Although the speed could not be exactly 
     estimated, the sledge could not be going at less than forty miles an hour.</p>
     </section>
+    
     <section class="post-tags">
         <p>
             <a href="#">#text</a> 
@@ -193,12 +189,12 @@
             <a href="#">#things</a> 
         </p>
     </section>
+    
     <section class="post-controls">
         <button type="button">&#x21bb; Reblog</button>
         <button type="button">&#x2714; Agree</button>
         <button type="button">&#x2764; Sympathy</button>
         <button type="button">&#x2718; Disagree</button>
-    </section>
     </section>
 </article>
 
@@ -207,8 +203,6 @@
     <section class="post-icon">
     <img src="img/summer-13.png" alt="usericon" />
     </section>
-    
-    <section class="post-body">
     
     <section class="post-content">
     <h2>Code sample</h2>
@@ -265,6 +259,7 @@ function addClass(){
 </code>
 </pre>
     </section>
+    
     <section class="post-tags">
         <p>
             <a href="#">#text</a> 
@@ -272,20 +267,20 @@ function addClass(){
             <a href="#">#things</a> 
         </p>
     </section>
+    
     <section class="post-controls">
         <button type="button">&#x21bb; Reblog</button>
         <button type="button">&#x2714; Agree</button>
         <button type="button">&#x2764; Sympathy</button>
         <button type="button">&#x2718; Disagree</button>
     </section>
-    </section>
 </article>
 
 <!-- PAGINATION ----------------------------------------------------------- -->
 
 <div class="pagination">
-<button class="pagination-button">Previous &#x2708;</button>
-<button class="pagination-button">Next &#x2708;</button>
+    <button class="pagination-button">Previous &#x2708;</button>
+    <button class="pagination-button">Next &#x2708;</button>
 </div>
 
 </main>

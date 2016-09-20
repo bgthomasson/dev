@@ -119,23 +119,26 @@ main {
 /* 2: HEADER AND FOOTER ------------------------------------------------------- */
 .page-header {
   margin-bottom: 2em;
-  padding: .2em 0; }
+  padding: .3em; }
 
 @media screen and (min-width: 481px) {
   .page-header {
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     align-items: center;
+    justify-content: space-around;
     position: fixed;
     top: 0px;
     width: 100vw;
-    z-index: 9; } }
+    z-index: 9; }
+
+  .cell {
+    flex: 1; } }
 .page-footer {
   margin-top: 1em;
   padding: 0.5em; }
 
 .page-nav {
-  flex: 1;
   font-size: 110%; }
 
 nav a {
@@ -143,7 +146,7 @@ nav a {
   text-decoration: none; }
 
 .nomen {
-  display: inline;
+  display: inline-block;
   margin: 0 auto;
   font-size: inherit; }
 
@@ -151,16 +154,7 @@ nav a {
 article {
   margin-bottom: 2em; }
 
-@media screen and (min-width: 481px) {
-  .post {
-    display: flex;
-    align-items: flex-start; }
-
-  .post-icon {
-    margin-right: .5em; } }
-.post-body {
-  flex: 1;
-  margin-bottom: 0.5em;
+.post {
   padding: 0.5em 1em; }
 
 .post-controls,
@@ -180,8 +174,8 @@ blockquote {
   padding-left: 0.25em; }
 
 .quote-icon {
-  height: 16px;
-  width: 16px; }
+  height: 1em;
+  width: 1em; }
 
 code {
   font-family: "Source Code Pro", "DejaVu Sans Mono", Consolas, monospace; }
@@ -297,7 +291,7 @@ pre[class*="language-"] {
 
 @media screen and (min-width: 481px) {
   .page-header {
-    box-shadow: 0px 6px 4px rgba(47, 79, 79, 0.5); } }
+    border-bottom: 1px solid #444; } }
 nav a {
   color: black; }
 
@@ -329,6 +323,9 @@ ul, ol {
 ul li {
   list-style-type: none; }
 
+ul li:before {
+  content: "\2744"; }
+
 table {
   border: 1px solid #444; }
 
@@ -339,7 +336,7 @@ th {
   background-color: #f5b16a; }
 
 button {
-  background-color: white;
+  background-color: #ecf5fe;
   border: none; }
 
 button:hover {
