@@ -104,6 +104,13 @@ h1 {
     filter: blur(3px);
 }
 
+
+.rainbow {
+    background: #90958a;
+    background-image: linear-gradient(90deg, #6e40aa, #be3caf, #fe4b83, #ff7747, 
+                                      #e3b62f, #b0ef5a, #53f666, #1edfa2, #23acd8, #4c6fdc, #4c6fdc);
+}
+
 /* Forms
    ========================================================================== */
 
