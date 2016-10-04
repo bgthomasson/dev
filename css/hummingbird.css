@@ -1,21 +1,16 @@
-/*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
-/* I borrowed a few small pieces, mostly for forms. 
+/* 
  * Desktop: FF 45+, Chrome 50+. 
  * Mobile: Safari, Chrome, misc I need to research as mobile centric test. 
  */
  
-/* Block level and global elements --------------------------------------- */
-
 html {
     -ms-text-size-adjust: 100%; 
     -webkit-text-size-adjust: 100%; 
 }
 
 body {
-    /* Use off-white and off-black to lessen eye strain */
     background-color: #fbfcf7;
     color: #080401;
-    /* A decent tho long font stack. */
 	font-family: Candara, Geneva, "Fira Sans", Roboto, sans-serif;
 	font-size: 1em;
 }
@@ -26,7 +21,6 @@ body {
         margin: 0 auto;
         width: 40em;
     }
-
 }
 
 article {
@@ -35,13 +29,6 @@ article {
     border-radius: 1em;
     padding: 0.5em;
 }
-
-header {
-    margin-bottom: 2em;
-    
-}
-
-/* low level things -------------------------------------------------------- */
 
 a:active,
 a:hover {
@@ -54,30 +41,9 @@ h3 {
     text-align: center; 
 }
 
-.rainbow {
-    background: #90958a;
-    background-image: linear-gradient(90deg, #6e40aa, #be3caf, #fe4b83, #ff7747, 
-                                      #e3b62f, #b0ef5a, #53f666, #1edfa2, #23acd8, 
-                                      #4c6fdc, #4c6fdc);
-    display: block;
-    height: 1em;
-}
-
-/* Forms
-   ========================================================================== */
-
-/* most of the colors here are RGB so can play with transparency.  
- * Note EVERYTHING other than IE 6-7-8 supports rgba() and hsl()
-*/
-
-/**
- * 1. Change font properties to `inherit` in all browsers (opinionated).
- * 2. Remove the margin in Firefox and Safari.
- */
-
 button {
-    font: inherit; /* 1 */
-    margin: 0; /* 2 */
+    font: inherit; 
+    margin: 0; 
     background-color: rgb(190,230,250);
     border: none;
     border-radius: .5em;
@@ -92,6 +58,5 @@ button:active {
 	box-shadow:  0 1px 0 rgb(64,16,0);
 	transform: translateY(3px);
 }
-
 
 
