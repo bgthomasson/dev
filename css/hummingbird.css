@@ -30,33 +30,20 @@ article {
     padding: 0.5em;
 }
 
-a:active,
-a:hover {
-    outline-width: 0;
-}
-
 h1, 
 h2, 
 h3 {
     text-align: center; 
 }
 
-button {
-    font: inherit; 
-    margin: 0; 
+.bubble { 
     background-color: rgb(190,230,250);
     border: none;
     border-radius: .5em;
-    box-shadow: 5px 5px 5px rgba(64,16,0,.4);
-    cursor: pointer;
     font-weight: 700;
     padding: .5em;
+    text-align: center;
 }
 
-button:active {
-	background-color: rgb(105,210,231);
-	box-shadow:  0 1px 0 rgb(64,16,0);
-	transform: translateY(3px);
-}
 
 
