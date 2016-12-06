@@ -1,0 +1,112 @@
+/* ATLAS. MIT license. 
+* -------------------------------------------------------------------------- */
+
+article,
+footer,
+header,
+main, 
+nav,
+section { 
+    display: block;
+}
+
+body {
+    background-color: #0e0e0e;
+    color: #fbfcf7;
+    font-family: "Source Sans Pro", Candara, "Fira Sans", Roboto, sans-serif;
+    font-size: 1.1em;
+    line-height: 1.2em;
+    margin: 0 auto; 
+}
+
+a {
+    color: white;
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+    font-family: "Gentium Basic", Cambria, Georgia, Palatino, serif; 
+}
+
+img {
+    border: 0; 
+    max-width: 100%; /* keep from overflowing on tiny screens */
+}
+
+ol, 
+ul {
+    padding: 0.5em;
+    list-style-position: inside; 
+}
+
+.page-header {
+    padding: .3em 0; 
+    font-size: 110%;
+}
+
+.thumb {
+    text-align: center;
+    margin: 1em;
+}
+
+nav a {
+    padding: 0 .3em; 
+    text-decoration: none; 
+}
+
+nav a:hover {
+    text-decoration: underline; 
+}
+
+.page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.searchform input {
+    border: 3px solid #1c3e2e;
+    width: 10em; 
+}
+
+
+input {
+    background-color: #0e0e0e;
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+
+article {
+    margin-bottom: 2em;
+    padding: 0.5em; 
+}
+
+@media screen and (min-width: 481px) {
+    
+    body {
+        width: 90vw;
+    }
+    
+    .comments {
+        float: left;
+        width: 45%;
+    }
+
+    .metadata {
+         float: right;
+         width: 45%;
+    }
+    
+    .searchform input {
+        width: 16em;
+    }
+
+}
+
+
+/* ------------------------------------------------------------------------- */

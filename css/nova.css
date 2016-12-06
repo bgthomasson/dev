@@ -6,14 +6,6 @@
  
 /* Block level and global elements --------------------------------------- */
 
-/* global reset, should be harmless since this page has few elements. 
- * Hoestly I haven't seen a difference yet, so maybe I should try breaking it. 
-*/
-
-* {
-   box-sizing: border-box;  
-}
- 
 body {
     /* Use off-white and off-black to lessen eye strain */
     background-color: #fbfcf7;
@@ -38,7 +30,7 @@ body {
     body {
         font-size: 1.1em;
         line-height: 1.3em;
-        width: 66vw;
+        width: 40em;
     }
 
 }
@@ -105,12 +97,6 @@ h1 {
 }
 
 
-.rainbow {
-    background: #90958a;
-    background-image: linear-gradient(90deg, #6e40aa, #be3caf, #fe4b83, #ff7747, 
-                                      #e3b62f, #b0ef5a, #53f666, #1edfa2, #23acd8, #4c6fdc, #4c6fdc);
-}
-
 /* Forms
    ========================================================================== */
 
@@ -169,24 +155,10 @@ input:focus {
  * Setting it to display:block is much simpler than trying to wrap everything  
  * in the form with divs, or setting them all to display:list-item, lol. 
 */
+
 textarea {
     display: block;
     margin-bottom: 1em;
-}
-
-/* I'm sure I've seen it before but here's an attempt at a lined paper bg for text input. 
- * Tho it's a bit antiquated to make your blog look like a paper journal...
- * The blue vertical line is not so useful if can't indent text! 
- * Also, problem of adjusting pseudo line-height since it changes w/ page size. 
- * We could just set default the same as page default, then @media -
- * but where to put it? splitting things up will get confusing sometime.  
- *  
- * Based on http://lea.verou.me/css3patterns/#lined-paper
-*/
-
-.paperback {
-    background-image: linear-gradient(#ccc .1em, transparent .1em);
-    background-size: 100% 1.3em;
 }
 
 /* All of this button and form stuff seems to work in IE10 */

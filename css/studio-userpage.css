@@ -23,28 +23,12 @@ html {
 
 article,
 aside,
-details, /* 1 */
-figcaption,
-figure,
 footer,
 header,
 main, /* 2 */
-menu,
 nav,
-section,
-summary { /* 1 */
+section { 
     display: block;
-}
-
-/**
- * Add the correct display in IE 9-.
- */
-
-audio,
-canvas,
-progress,
-video {
-    display: inline-block;
 }
 
 /**
@@ -85,19 +69,6 @@ svg:not(:root) {
     overflow: hidden; 
 }
 
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-
-code,
-kbd,
-pre,
-samp {
-    font-family: monospace, monospace; /* 1 */
-    font-size: 1em; /* 2 */
-}
-
 /* END NORMALIZE, BEGIN CUSTOM -------------------------------------------- */
 
 body {
@@ -106,12 +77,11 @@ body {
     font-family: "Source Sans Pro", Candara, "Fira Sans", Roboto, sans-serif;
     font-size: 1em;
     line-height: 1.1em;
-    margin: 0; 
+    margin: 0 auto; 
 }
 
 @media screen and (min-width: 481px) {    
     main {
-        margin: 0 auto;
         padding-top: 3em;
         width: 90vw;
     }
@@ -157,7 +127,6 @@ h2 {
     text-align: center;
 }
 
-
 img {
     border: 0; 
     max-width: 100%; /* keep from overflowing on tiny screens */
@@ -178,13 +147,25 @@ ul li:before {
 }
 
 
-
 /* SECTION 2: HEADER AND FOOTER ------------------------------------------ */
 
 .page-header {
     background-color: #0e0e0e;
     padding: .3em 0; 
     font-size: 110%;
+}
+
+@media screen and (min-width: 481px) {
+    .page-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: fixed;
+        top: 0px;
+        width: 100%;
+        z-index: 9;
+    }
+
 }
 
 /* sometimes you just want to shove things in the middle */
@@ -206,19 +187,6 @@ nav a {
 
 nav a:hover {
     text-decoration: underline; 
-}
-
-@media screen and (min-width: 481px) {
-    .page-header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        position: fixed;
-        top: 0px;
-        width: 100%;
-        z-index: 9;
-    }
-
 }
 
 /* I wanted the H1 for the page name to fit into the main nav easily */
@@ -297,8 +265,6 @@ button:hover {
 input {
     background-color: #0e0e0e;
 }
-
-/* pretty this up a bit */
 
 fieldset {
     border: 1px solid rgb(123,196,134);
