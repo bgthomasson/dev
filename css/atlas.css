@@ -1,5 +1,8 @@
-/* ATLAS. MIT license. 
+/* ATLAS. MIT license. Modern browsers, IE 11. 
+* (desktop/tablet focus since big images)
 * -------------------------------------------------------------------------- */
+
+/* just a tiny bit of normalize to make sure the HTML5 stuff works */
 
 article,
 footer,
@@ -10,11 +13,13 @@ section {
     display: block;
 }
 
+/* basic dark theme */
+
 body {
     background-color: #0e0e0e;
     color: #fbfcf7;
     font-family: "Source Sans Pro", Candara, "Fira Sans", Roboto, sans-serif;
-    font-size: 1.1em;
+    font-size: 1em;
     line-height: 1.2em;
     margin: 0 auto; 
 }
@@ -33,7 +38,6 @@ h6 {
 }
 
 img {
-    border: 0; 
     max-width: 100%; /* keep from overflowing on tiny screens */
 }
 
@@ -43,14 +47,17 @@ ul {
     list-style-position: inside; 
 }
 
+/* I'll have this header scroll with the page to maximize room for large images */
+
 .page-header {
     padding: .3em 0; 
-    font-size: 110%;
 }
+
+/* combined two generic single use classes since only used for this one thing. */
 
 .thumb {
     text-align: center;
-    margin: 1em;
+    margin: 1em 0;
 }
 
 nav a {
@@ -62,23 +69,21 @@ nav a:hover {
     text-decoration: underline; 
 }
 
+/* Yes flex even on mobile! Only 2 links in nav bar and input is short so have room */
+
 .page-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.searchform input {
-    border: 3px solid #1c3e2e;
-    width: 10em; 
-}
-
-
 input {
     background-color: #0e0e0e;
+    border: 3px solid #1c3e2e;
     color: inherit;
     font: inherit;
     margin: 0;
+    width: 10em;
 }
 
 article {
@@ -86,22 +91,27 @@ article {
     padding: 0.5em; 
 }
 
+/* let's try putting all the media query stuff in one place... */
+
 @media screen and (min-width: 481px) {
     
     body {
+        font-size: 1.1em;
         width: 90vw;
     }
     
+    /* I was trying to simplify... */
     .comments {
         float: left;
-        width: 45%;
+        width: 55%;
     }
 
     .metadata {
          float: right;
-         width: 45%;
+         width: 35%;
     }
     
+    /* Make it bigger on desktop */
     .searchform input {
         width: 16em;
     }
