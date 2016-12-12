@@ -21,11 +21,20 @@ body {
     font-family: "Source Sans Pro", Candara, "Fira Sans", Roboto, sans-serif;
     font-size: 1em;
     line-height: 1.2em;
-    margin: 0 auto; 
+    margin-right: auto; 
+    margin-left: auto;
 }
+
+/* basic styling for common elements */
 
 a {
     color: white;
+}
+
+blockquote {
+    margin: 0;
+    padding-left: 0.5em;
+    border-left: .5em solid #1c3d3e;
 }
 
 h1, 
@@ -47,10 +56,12 @@ ul {
     list-style-position: inside; 
 }
 
+/* Now main page blocks from the top down */
+
 /* I'll have this header scroll with the page to maximize room for large images */
 
 .page-header {
-    padding: .3em 0; 
+    padding: .3em; 
 }
 
 /* combined two generic single use classes since only used for this one thing. */
@@ -86,34 +97,37 @@ input {
     width: 10em;
 }
 
-article {
-    margin-bottom: 2em;
-    padding: 0.5em; 
-}
-
 /* let's try putting all the media query stuff in one place... */
 
 @media screen and (min-width: 481px) {
     
     body {
         font-size: 1.1em;
-        width: 90vw;
-    }
-    
-    /* I was trying to simplify... */
-    .comments {
-        float: left;
-        width: 55%;
-    }
-
-    .metadata {
-         float: right;
-         width: 35%;
     }
     
     /* Make it bigger on desktop */
     .searchform input {
         width: 16em;
+    }
+    
+    .row {
+        width: 90vw;
+        margin-right: auto;
+        margin-left: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap; 
+        justify-content: space-between;
+        margin-bottom: 64px;
+    }
+    
+    .comments {
+        flex: 0 0 65%; 
+    }
+
+    .metadata {
+        flex: 0 0 30%;
+        align-self: flex-start;
     }
 
 }
