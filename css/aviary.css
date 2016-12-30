@@ -1,0 +1,107 @@
+/* ATLAS. MIT license. Modern browsers, IE 11. 
+ * (desktop/tablet focus since big images)
+ * ------------------------------------------------------------------------- */
+
+/* just a tiny bit of normalize to make sure the HTML5 stuff works in IE11 and 
+ * Opera mini */
+
+article,
+aside,
+footer,
+header,
+main, 
+nav,
+section { 
+    display: block;
+}
+
+body {
+    background-color: #fbfcf7;
+    font-family: "Source Sans Pro", Candara, "Fira Sans", Roboto, sans-serif;
+    font-size: 1rem;
+    line-height: 1.1rem;
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+    font-family: "Gentium Basic", Cambria, Georgia, Palatino, serif; 
+}
+
+img {
+    max-width: 100%; /* keep from overflowing on tiny screens */
+}
+
+
+/* Now main page blocks from the top down ---------------------------------- */
+
+.page-header {
+    padding: .3em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    margin-bottom: 2rem;
+}
+
+nav a {
+    padding: 0 .3em; 
+    text-decoration: none; 
+}
+
+nav a:hover {
+    text-decoration: underline; 
+}
+
+input {
+    border: 3px solid #1c3e2e;
+    color: inherit;
+    font: inherit;
+    margin: 0;
+    width: 10rem;
+}
+
+main {
+    margin: 0 auto;
+    max-width: 50rem;
+    
+}
+
+/* article needs a bit of space between, and set up to flex sections */
+article {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+}
+
+article:nth-of-type(odd) {
+    flex-direction: row-reverse;
+}
+
+.words {
+    flex: 0 0 70%;
+}
+
+.pics{
+    flex: 0 0 25%;
+}
+
+/* use nth child to have images alternate btwn left and right sides... 
+but how, exactly? It's simple to have say every odd article have a blue bg, 
+but how do we reach inside it to change child elements? 
+this is the first thing I tohught of but going over the guide on tympanus 
+I realized can just do directly on <article>
+
+article.pics:nth-of-type(odd) {
+    
+}
+
+*/
+
+
+
+/* ------------------------------------------------------------------------- */

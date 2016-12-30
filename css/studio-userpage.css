@@ -1,33 +1,16 @@
-/*! normalize.css v4.1.1 | MIT License | git.io/normalize */
-/* Edited a bit for brevity and IE11+ focus: IE 8 + 9 + 10 = 1.5% usage 
-* IE 11 is 4% global, 8% USA so still large enough and modern enough to bother. 
+/*! normalize.css v4.1.1 | MIT License | git.io/normalize use for some parts */
+/* Edited a bit for brevity and IE11+ focus 
 * Safari 9+ is good target, older versions are > 1%
-* FF and Chrome, 45+ covers 99%  
-* Overall: 50% Chrome, 10% Safari, 7% UC browser, 6% FF, 5% Opera mini, 4% IE11, 3% samsung browser!? 
+* FF and Chrome, 45+ covers 99% 
+* Overall: 50% Chrome, 10% Safari, 7% UC browser, 6% FF, 5% Opera mini, 4% IE11, 
+* 3% samsung browser 
 */
 
 /**
- * Prevent adjustments of font size after orientation changes in IE and iOS.
+ * Add the correct display in IE.
  */
 
-html {
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-}
-
-/**
- * Add the correct display in IE 9-.
- * 1. Add the correct display in Edge, IE, and Firefox.
- * 2. Add the correct display in IE.
- */
-
-article,
-aside,
-footer,
-header,
-main, /* 2 */
-nav,
-section { 
+main { 
     display: block;
 }
 

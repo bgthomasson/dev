@@ -1,8 +1,9 @@
 /* ATLAS. MIT license. Modern browsers, IE 11. 
-* (desktop/tablet focus since big images)
-* -------------------------------------------------------------------------- */
+ * (desktop/tablet focus since big images)
+ * ------------------------------------------------------------------------- */
 
-/* just a tiny bit of normalize to make sure the HTML5 stuff works */
+/* just a tiny bit of normalize to make sure the HTML5 stuff works in IE11 and 
+ * Opera mini */
 
 article,
 footer,
@@ -56,9 +57,9 @@ ul {
     list-style-position: inside; 
 }
 
-/* Now main page blocks from the top down */
+/* Now main page blocks from the top down ---------------------------------- */
 
-/* I'll have this header scroll with the page to maximize room for large images */
+/* have this header scroll with the page to maximize room for large images */
 
 .page-header {
     padding: .3em; 

@@ -2,7 +2,6 @@ DESIGN NOTES___________________________________________________________________
 
 DRYR:
 
-
 > rearrange header? like on shop test: links- search - home
 
 > rearrange articles so icon is on top? in meta bar w/ other info. 
@@ -15,7 +14,6 @@ DRYR:
 > need a good place for a direct link to unique post page
 
 > replace UTF8 icons with SVG
-
 
 
 
@@ -70,7 +68,7 @@ light color palette
 
 
 
-riiculous idoea- super patriotic background. need 13 red/white stripes. resizable! 
+ridiculous idoea- super patriotic background. need 13 red/white stripes. resizable! 
 div over with blue and stars, top right or left?
 
 
