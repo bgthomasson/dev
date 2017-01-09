@@ -1,8 +1,8 @@
-/* ATLAS. MIT license. Modern browsers, IE 11. 
- * (desktop/tablet focus since big images)
+/* Aviary. MIT license. Modern browsers, IE 11. 
+* Use of rem influenced by Bootstrap 4. 
  * ------------------------------------------------------------------------- */
 
-/* just a tiny bit of normalize to make sure the HTML5 stuff works in IE11 and 
+/* just a tiny bit of normalize to make sure the HTML5 stuff works in IE and 
  * Opera mini */
 
 article,
@@ -16,10 +16,9 @@ section {
 }
 
 body {
-    background-color: #fbfcf7;
-    font-family: "Source Sans Pro", Candara, "Fira Sans", Roboto, sans-serif;
-    font-size: 1rem;
-    line-height: 1.1rem;
+    font-family: "Noto Serif", serif;
+    font-size: 1em;
+    line-height: 1.2em;
 }
 
 h1, 
@@ -28,18 +27,34 @@ h3,
 h4, 
 h5, 
 h6 {
-    font-family: "Gentium Basic", Cambria, Georgia, Palatino, serif; 
+    font-family: "Noto Sans", sans-serif;
+}
+
+/* fonts, fonts, fonts. 
+ * Source Serif is close to Cambria.
+ * Roboto Slab is a bit too firm. 
+ * Playfair Display, Merriweather, Tangerine, Niconne...
+ * Philosopher, Amaranth, 
+ * but with the reference/science-y basis, better have full UTF-8 support
+
+ * borrowing from normalize since it does get shrunk down by FF
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.3em 0;
 }
 
 img {
     max-width: 100%; /* keep from overflowing on tiny screens */
 }
 
-
 /* Now main page blocks from the top down ---------------------------------- */
 
 .page-header {
-    padding: .3em;
+    padding: .3rem;
     display: flex;
     align-items: center;
     justify-content: space-between; 
@@ -47,7 +62,7 @@ img {
 }
 
 nav a {
-    padding: 0 .3em; 
+    padding: 0 .3rem; 
     text-decoration: none; 
 }
 
@@ -56,7 +71,7 @@ nav a:hover {
 }
 
 input {
-    border: 3px solid #1c3e2e;
+    border: .125rem solid #02c04a; /* if 1 rem = 16px then .125 rem = 2px */
     color: inherit;
     font: inherit;
     margin: 0;
@@ -71,7 +86,7 @@ main {
 
 /* article needs a bit of space between, and set up to flex sections */
 article {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap; 
@@ -82,6 +97,8 @@ article:nth-of-type(odd) {
     flex-direction: row-reverse;
 }
 
+/* I was worried it would be hard but nth-* and flexbox save the day again. */
+
 .words {
     flex: 0 0 70%;
 }
@@ -89,18 +106,6 @@ article:nth-of-type(odd) {
 .pics{
     flex: 0 0 25%;
 }
-
-/* use nth child to have images alternate btwn left and right sides... 
-but how, exactly? It's simple to have say every odd article have a blue bg, 
-but how do we reach inside it to change child elements? 
-this is the first thing I tohught of but going over the guide on tympanus 
-I realized can just do directly on <article>
-
-article.pics:nth-of-type(odd) {
-    
-}
-
-*/
 
 
 
