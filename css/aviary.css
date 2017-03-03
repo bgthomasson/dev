@@ -16,10 +16,15 @@ section {
 }
 
 body {
-    font-family: "Noto Serif", serif;
+    font-family: "Noto Serif", Cambria, serif;
     font-size: 1em;
     line-height: 1.2em;
 }
+
+/* there is gore in mobile view when h1 on one line is broken down like 
+ * this here where it wraps. Would line-height or word-wrap work on it? hmm. 
+
+*/
 
 h1, 
 h2, 
@@ -27,7 +32,7 @@ h3,
 h4, 
 h5, 
 h6 {
-    font-family: "Noto Sans", sans-serif;
+    font-family: "Noto Sans", Candara, sans-serif;
 }
 
 /* fonts, fonts, fonts. 
@@ -36,7 +41,9 @@ h6 {
  * Playfair Display, Merriweather, Tangerine, Niconne...
  * Philosopher, Amaranth, 
  * but with the reference/science-y basis, better have full UTF-8 support
+*/
 
+/*
  * borrowing from normalize since it does get shrunk down by FF
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
@@ -47,14 +54,10 @@ h1 {
   margin: 0.3em 0;
 }
 
-img {
-    max-width: 100%; /* keep from overflowing on tiny screens */
-}
 
 /* Now main page blocks from the top down ---------------------------------- */
 
 .page-header {
-    padding: .3rem;
     display: flex;
     align-items: center;
     justify-content: space-between; 

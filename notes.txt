@@ -1,5 +1,102 @@
 DESIGN NOTES___________________________________________________________________
 
+
+a randomizer for wallpapers/headers/etc. 
+create array of existing images in dir in logical order. $img_existing_logical
+create $img_randomized
+every M minutes load the next item in array. 
+before each load, make sure nothing has changed so won't try to display deleted img
+so i suppose create a $img_existing_temp and compare to $img_existing_logical ????
+if any added/deleted, create a new array. 
+most recently used should be put last in this new array. $most_recently_displayed
+any new items should come first. [compare to $old_array]
+
+
+
+--------------------------------------------
+name numberology thing
+the magical unicorn will tell your fortune! just enter your name here! 
+
+simple script, take input as string, split by character (UTF8!!! sanitization!) 
+have array with number for each letter
+add all the numbers up and use total to pull a mystical prediction out of the unicorn's ass. 
+use JS to add HTML to the page. 
+
+
+The system can also be summarized like this:
+
+    1– A, J, S
+    2– B, K, T
+    3– C, L, U
+    4– D, M, V
+    5– E, N, W
+    6– F, O, X
+    7– G, P, Y
+    8– H, Q, Z
+    9– I, R
+
+> this will require string to upper|lower
+> any non A-Z either discard or find the unicode value and add that in
+
+1st: interpret() $string and return $total_sum 
+
+var username = numero.username.value;
+
+
+2nd: evaluate() $total_sum: if(T == 11 || 22 || 33) 
+that is a "master number" and result returns immediately.
+ELSE reduce( take integer as a string, split into digits, add together, return $reduced_sum )
+subroutine: if $reduced_sum > 1 digit, reiterate process. 
+output $N
+
+3rd: print()
+take N and find that number in the prediction db/array, then print to page: 
+
+result.textContent = lorem_ipsum;
+
+Some sources differ slightly in their descriptions of each number, but overall their general descriptors remain similar:
+
+    1 – Initiator action, pioneering, leading, independent, attaining, individualistic
+    2 – Cooperation, adaptability, consideration of others, partnering, mediating
+    3 – Expression, verbalization, socialization, the arts, the joy of living
+    4 – Values foundation, order, service, struggle against limits, steady growth
+    5 – Expansiveness, visionary, adventure, the constructive use of freedom
+    6 – Responsibility, protection, nurturing, community, balance, sympathy
+    7 – Analysis, understanding, knowledge, awareness, studious, meditating
+    8 – Practical endeavors, status oriented, power-seeking, high-material goals
+    9 – Humanitarian, giving nature, selflessness, obligations, creative expression
+    11 – Higher spiritual plane, intuitive, illumination, idealist, a dreamer
+    22 – The Master Builder, large endeavors, powerful force, leadership
+
+
+--------------------------------------------
+offline form editor: OFE
+
+HTML form at top
+when submit, the JS creates table with ID (so 90s)
+can edit by grabbing that ID- have an edit button, so this part works like PHP. 
+thought at first to have reload in form BUT could use html: <div contenteditable="true">
+and then use JS to save changes. oh you can use a button to enable editing, 
+so have it toggle between edit and save? 
+
+the page itself is the database (sounds absurd) maybe local storage?
+-don't- need "rich text" except maybe bold or strike thru
+
+OK let's look at contenteditable. of course IE can't use it in tables, so what, 
+we have to slap divs together with "display table"? 
+also it seems to be severely meglected. but the other option is shitty JS "rich text" thingers. 
+("meglected" is a blatant typo but could be a new combo of "meh" and "neglected")
+
+NEED two forms for orders. customer info and order info. 
+also every single table needs to be editable. increased complexity! 
+
+maybe python or C# would work better, use sqlite and a simple gui.
+i could do it with php since is basic php use but then have to run server etc.
+
+
+
+
+------------------------------------------------------------
 DRYR:
 
 > rearrange header? like on shop test: links- search - home
