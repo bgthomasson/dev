@@ -36,6 +36,8 @@ The system can also be summarized like this:
     9– I, R
 
 > this will require string to upper|lower
+var lowername = username.toLowerCase;
+
 > any non A-Z either discard or find the unicode value and add that in
 
 1st: interpret() $string and return $total_sum 

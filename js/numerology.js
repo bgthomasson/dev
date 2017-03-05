@@ -21,27 +21,28 @@ function generatePrediction() {
   
   if(isTextboxSet(nomen)) {
     namesplash.textContent = "The meaning of " + nomen;
+    // call function that does the thing
+    // results.innerHTML = lorem_ipsum;
   } else {
     results.innerHTML = "<p>Something went wrong...</p>";
   }
   
-  // OK testing of all this and above works. 
-  
-  // original intent was to have a db of values but will go simpler route for now. 
-  // putting all lowercase cuts effort of building db in half
-  // var lowername = username.toLowerCase;
+  // OK testing of all this and above works. ----------------------------------
   
   // will have to use substring() or related func regardless of method used to assign numerical values
-  
   // username.length may be useful. 
   // username.substring(0, n)
   
-  // instead of standard substitution table, all chars are assigned their UTF-16 code number.
+  // instead of standard substitution table, all chars are assigned their 
+  // UTF-16 code number. Since all digits will be added together, length is irrelevant. 
+  // also, since all of this is mumbo jumbo, we can call it unicorn style numerology. 
+  
   // username.charCodeAt(parameter); 
   // parameter is location within string, via substring access, so iterate over string, 
   // adding each result to a lump sum. 
+  
   // returned value is an integer, which is what we want for this. 
-  // IF 0 or NAN or anything else, error message
+  // IF n < 1 or NAN or anything else, error message
   // return lump sum integer
   
   // reduce- add together integers in array
@@ -49,9 +50,8 @@ function generatePrediction() {
   // EXCEPT: if(sum == 11 || 22 || 33) that is a "master number" and returns immediately.
   // return sum
   
-  // take the final number and look it up in prediction db/array
-  // result.textContent = lorem_ipsum;
-  // alternately, use case statement directly
+  // as long as can figure out right way to use substring for this, should come together by this point. 
+  
   // case N: result.innerHTML = '<p>blah blah blah</p><p>boop beep baap</p>';
   
   
