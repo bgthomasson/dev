@@ -22,7 +22,9 @@ function determineTotal(name) {
     var beta = alpha.charCodeAt(0); 
     total = total + beta; 
   }
-  return total;
+  // hang on, let's do a tiny error handler
+  if(total < 1) return 666; // cuz obviously the devil did it
+  else return total;
   // which then goes into the function that reduces it 
 }
 
@@ -32,17 +34,22 @@ function reducer(lump) {
   var sum = 0;
   for(var i = 0; i < lump.length; i++) {
     var digit = lump.substring(0);
-    // cool but now we don't need the char code, we need the value as an integer!!
+    // cool but now we don't need the char code, we need the value as an integer!
     // time to look up type casting? well we didn't need to before so let's just go. 
     sum = sum + digit;
+    }
     
-    // OK BUT. if this works. "Ben Thomasson" resulted in 858. 8 + 5 + 8 = 21. 
-    // the goal is to get a single digit. SO we need to check 
-    // if sum.length > 1 then go into sub loop to check for master numbers-
-    //   if(sum == 11 || 22 || 33) return sum
-    //   else reiterate loop... how do we do that efficiently?
-    // else /sum is one digit/ return sum
-  }
+    // OK BUT. "Ben Thomasson" resulted in 858. 8 + 5 + 8 = 21. 
+    // the goal is to get a single digit. SO we need to check. 
+    if (sum.length == 1) { 
+      return sum
+    }
+    else {
+       if(sum == 11 || sum == 22 || sum == 33) return sum
+       else // reiterate loop... how do we do that efficiently?
+    }
+    
+    // maybe this part should be an outer loop? discrete func that calls reducer()?
   
 }
 
