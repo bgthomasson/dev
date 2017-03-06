@@ -3,7 +3,6 @@
 html {
     font-family: 'Open Sans', sans-serif; /* 1 */
     line-height: 1.15; /* 2 */
-    -ms-text-size-adjust: 100%; /* 3 */
     -webkit-text-size-adjust: 100%; /* 3 */
 }
 
@@ -11,6 +10,23 @@ html {
 
 body {
     margin: 0 auto;
+    
+    background:
+        linear-gradient(324deg, #026 4%,   transparent 4%) -70px 43px,
+        linear-gradient( 36deg, #026 4%,   transparent 4%) 30px 43px,
+        linear-gradient( 72deg, #fff 8.5%, transparent 8.5%) 30px 43px,
+        linear-gradient(288deg, #fff 8.5%, transparent 8.5%) -70px 43px,
+        linear-gradient(216deg, #fff 7.5%, transparent 7.5%) -70px 23px,
+        linear-gradient(144deg, #fff 7.5%, transparent 7.5%) 30px 23px,
+
+        linear-gradient(324deg, #026 4%,   transparent 4%) -20px 93px,
+        linear-gradient( 36deg, #026 4%,   transparent 4%) 80px 93px,
+        linear-gradient( 72deg, #fff 8.5%, transparent 8.5%) 80px 93px,
+        linear-gradient(288deg, #fff 8.5%, transparent 8.5%) -20px 93px,
+        linear-gradient(216deg, #fff 7.5%, transparent 7.5%) -20px 73px,
+        linear-gradient(144deg, #fff 7.5%, transparent 7.5%) 80px 73px;
+    background-color: #002868;
+    background-size: 100px 100px;
 }
 
 main {
@@ -21,25 +37,9 @@ main {
 }
 
 @media screen and (min-width: 600px) {
-    
     body {
         width: 40rem;
-        background:
-            linear-gradient(324deg, #026 4%,   transparent 4%) -70px 43px,
-            linear-gradient( 36deg, #026 4%,   transparent 4%) 30px 43px,
-            linear-gradient( 72deg, #fff 8.5%, transparent 8.5%) 30px 43px,
-            linear-gradient(288deg, #fff 8.5%, transparent 8.5%) -70px 43px,
-            linear-gradient(216deg, #fff 7.5%, transparent 7.5%) -70px 23px,
-            linear-gradient(144deg, #fff 7.5%, transparent 7.5%) 30px 23px,
-
-            linear-gradient(324deg, #026 4%,   transparent 4%) -20px 93px,
-            linear-gradient( 36deg, #026 4%,   transparent 4%) 80px 93px,
-            linear-gradient( 72deg, #fff 8.5%, transparent 8.5%) 80px 93px,
-            linear-gradient(288deg, #fff 8.5%, transparent 8.5%) -20px 93px,
-            linear-gradient(216deg, #fff 7.5%, transparent 7.5%) -20px 73px,
-            linear-gradient(144deg, #fff 7.5%, transparent 7.5%) 80px 73px;
-        background-color: #002868;
-        background-size: 100px 100px;
+        
     }
 }
 
