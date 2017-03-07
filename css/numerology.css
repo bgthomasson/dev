@@ -1,7 +1,7 @@
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 
 html {
-    font-family: 'Open Sans', sans-serif; /* 1 */
+    font-family: 'Open Sans', Candara, sans-serif; /* 1 */
     line-height: 1.15; /* 2 */
     -webkit-text-size-adjust: 100%; /* 3 */
 }
@@ -56,7 +56,7 @@ sup {
 
 h1,
 h2 {
-    font-family: 'Griffy', cursive;
+    font-family: 'Griffy', 'Segoe Script', cursive;
     color: rgb(120,0,170);
 }
 

@@ -17,46 +17,23 @@ any new items should come first. [compare to $old_array]
 name numberology thing
 the magical unicorn will tell your fortune! just enter your name here! 
 
-simple script, take input as string, split by character (UTF8!!! sanitization!) 
-have array with number for each letter
-add all the numbers up and use total to pull a mystical prediction out of the unicorn's ass. 
-use JS to add HTML to the page. 
+Page:
+// 0.8: html and css basics done and functional
+
+0.8.1: generic non-furry unicorn graphic- have to draw this 
+0.9.0: device and accessability testing
 
 
-The system can also be summarized like this:
+JS: 
+// 0.1: form handling works
+// 0.2: determineTotal() works
 
-    1– A, J, S
-    2– B, K, T
-    3– C, L, U
-    4– D, M, V
-    5– E, N, W
-    6– F, O, X
-    7– G, P, Y
-    8– H, Q, Z
-    9– I, R
+0.3: reducer() works
 
-> this will require string to upper|lower
-var lowername = username.toLowerCase;
+0.4: prognosticator() works
 
-> any non A-Z either discard or find the unicode value and add that in
-
-1st: interpret() $string and return $total_sum 
-
-var username = numero.username.value;
-
-
-2nd: evaluate() $total_sum: if(T == 11 || 22 || 33) 
-that is a "master number" and result returns immediately.
-ELSE reduce( take integer as a string, split into digits, add together, return $reduced_sum )
-subroutine: if $reduced_sum > 1 digit, reiterate process. 
-output $N
-
-3rd: print()
-take N and find that number in the prediction db/array, then print to page: 
-
-result.textContent = lorem_ipsum;
-
-Some sources differ slightly in their descriptions of each number, but overall their general descriptors remain similar:
+Some sources differ slightly in their descriptions of each number, 
+but overall their general descriptors remain similar:
 
     1 – Initiator action, pioneering, leading, independent, attaining, individualistic
     2 – Cooperation, adaptability, consideration of others, partnering, mediating
