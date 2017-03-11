@@ -1,0 +1,56 @@
+/* generic stuff ----------------------------------------------------------- */
+
+body {
+    background-color: rgb(219,226,234);
+    font-family: 'Source Sans Pro', Candara, sans-serif; 
+    line-height: 1.15; 
+    margin: 0 auto;
+}
+
+h1,
+h2 {
+    font-family: "Source Code Pro", "DejaVu Sans Mono", Consolas, monospace;
+    text-align: center;
+}
+
+/* fiddling around with the grid stuff ------------------------------------- */
+
+main {
+    padding: 1em;
+    width: 64rem;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 20rem 20rem 20rem;
+    grid-gap: 1rem;
+}
+
+.box {
+    background-color: #fff;
+    border-radius: 6px;
+    padding: .5rem;
+}
+
+.a {
+    grid-column: 1 / 3;
+    grid-row: 1;
+}
+
+.b {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.c {
+    grid-column: 3;
+    grid-row: 1 / 4;
+}
+
+.d {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+
+
