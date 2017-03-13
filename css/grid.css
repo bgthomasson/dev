@@ -4,7 +4,6 @@ body {
     background-color: rgb(219,226,234);
     font-family: 'Source Sans Pro', Candara, sans-serif; 
     line-height: 1.15; 
-    margin: 0 auto;
 }
 
 h1,
@@ -16,13 +15,14 @@ h2 {
 /* fiddling around with the grid stuff ------------------------------------- */
 
 main {
+    margin: 0 auto; /* OH NOW FINALLY I get it to center align */
+    max-width: 64em; 
     padding: 1em;
-    width: 64rem;
 }
 
 .wrapper {
     display: grid;
-    grid-template-columns: 20rem 20rem 20rem;
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 1rem;
 }
 
