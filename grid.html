@@ -7,20 +7,20 @@
 </head>
 <body>
 <main>
-    <h1>GRID test</h1>
-    <div class="wrapper">
-        <div class="box a">
-            This will only work on Firefox 52 and Chrome 57!
-        </div>
-        
+    <div class="grid-3">
+        <h2 class="a">GRID test- line based placement</h2>
         <div class="box b">
-            I'm just throwing some text in here so I can test the layout. 
-            The CSS to control rows and columns is clever but tricky with the 
-            slash notation, tho to be fair I didn't read a how-to beforehand, 
-            just copied code to mess with. 
+            <strong>This will only work on Firefox 52 and Chrome 57!</strong>
         </div>
         
         <div class="box c">
+            <p>
+            I'm just throwing some text in here so I can test the layout. 
+            This example, each box is placed precisely- This one in column 2, row 3.
+            </p>
+        </div>
+        
+        <div class="box d">
             <p>
             I thought today we would do a happy little picture. 
             We artists are a different breed of people. We're a happy bunch. 
@@ -30,11 +30,42 @@
             <img src="img/parrots.jpg" alt="parrots" />
         </div>
         
-        <div class="box d">
+        <div class="box e">
+            <p>
             'Thank you, it's a very interesting dance to watch,' 
             said Alice, feeling very glad that it was over at last: 
             'and I do so like that curious song about the whiting!'
+            </p>
         </div>
+    </div>
+    <div class="grid-news">
+        <header class="header">
+            <h2>Grid test- areas</h2>
+            <p class="byline">by Clark Kent | April 1, 1943 | Metropolis</p>
+        </header>
+        
+        <article class="content">
+            <p>Let's see if we can combine the grid-area property to set 
+            semantic HTML5 elements in a grid defined layout. Or not.  
+            Failure is always an option!</p>
+            <p>
+            *Five minutes later* Oh it works! It needs to be responsive etc. 
+            but that is easily done. 
+            </p>
+            <p>
+            Merriweather would be a good header font on a formal article demo. 
+            </p>
+        </article>
+        
+        <aside class="aside">
+            <p>
+            I thought today we would do a happy little picture. 
+            We artists are a different breed of people. We're a happy bunch. 
+            Didn't you know you had that much power? You can move mountains. 
+            You can do anything. Get tough with it, get strong.
+            </p>
+            <img src="img/parrots.jpg" alt="parrots" />
+        </aside>
     </div>
 </main>
 </body>
