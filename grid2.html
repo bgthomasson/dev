@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    <meta charset="utf-8" />
+    <title>GRID test 2</title>
+    <link rel="stylesheet" type="text/css" href="css/grid2.css" />
+</head>
+<body>
+<header class="page-header">
+    <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="2.html">Dos</a>
+        <a href="3.html">Tres</a>
+        <a href="4.html">Quatro</a>
+        <a href="5.html">Cinco</a>
+        <a href="help.html">Help</a>
+    </nav>
+    <form name="searchform" class="searchform">
+        <input type="search" name="search-input" placeholder="Search here" />
+    </form>
+</header>
+<main>
+    <!-- Basic use -------------------------------------------------------- -->
+    <div class="grid-news">
+        <h2 class="grid-header">Grid test- areas</h2>
+        <article class="grid-content">
+            <p>
+            We can use grid now! If everyone is using Chrome and Firefox. 
+            That they updated recently. Otherwise it'll be oh 2022 before we can. 
+            Time to look up fallback techniques. 
+            </p>
+            <p>
+            I think this would work for news/blog or shopping layout, both are basically 
+            articles with a header, text content, and image. Tho now it's popular 
+            to have an image with the text on top of it. 
+            </p>
+            <p>
+            I've got some examples for simple layouts here, have yet to think of 
+            something complicated yet logical. So far it just seems to be a replacement 
+            for Bootstrap etc. 
+            If you could get interactivity going it might 
+            have some nifty use, like choosing options when ordering a pizza? 
+            </p>
+            <p class="byline">
+            2 minutes ago | Technology
+            </p>
+        </article>
+        <aside class="grid-aside">
+            <img src="img/parrots.jpg" alt="parrots" />
+        </aside>
+    </div>
+    
+    <!-- TWO COL --------------------------------------------------------- -->
+    <div class="grid-col2">
+        <div class="divitis">
+            <h3 class="mini-header">Grid test- areas</h3>
+            <article class="mini-content">
+                <p>
+                I think flexbox could get the same effect since this is a simple 
+                layout, but grid feels more precise. 
+                </p>
+                <p class="byline">
+                2 minutes ago | Technology
+                </p>
+            </article>
+            <aside class="mini-aside">
+                <img src="img/parrots.jpg" alt="parrots" />
+            </aside>
+        </div>
+        
+        <div class="divitis">
+            <h3 class="mini-header">Grid test- areas</h3>
+            <article class="mini-content">
+                <p>
+                After some mucking about, having the image beside 
+                the text would limit to 2 columns. But moving to top like the 
+                BBC news would elminate need for grid. Hmm. OK toss third, 
+                leave rest as example of grid-in-grid. 
+                </p>
+                <p class="byline">2 minutes ago | Technology</p>
+            </article>
+            <aside class="mini-aside">
+                <img src="img/parrots.jpg" alt="parrots" />
+            </aside>
+        </div>
+    </div>
+    
+    <!-- FOUR COL -------------------------------------------------------- -->
+    
+    <div class="grid-col4">
+        <article>
+            <h3>Dead simple markup that'll drive your webdev wild</h3>
+            <p class="byline">2 minutes ago | Technology</p>
+        </article>
+        <article>
+            <h3>Doctors hate this one thing</h3>
+            <img src="img/apples.jpg" alt="apple basket" width="100px" height="100px" />
+            <p class="byline">2 minutes ago | It's an apple joke</p>
+        </article>
+        <article>
+            <h3>Unconfirmed reports of seismic activity near graves of deceased statesmen</h3>
+            <p class="byline">2 minutes ago | Geology</p>
+        </article>
+        <article>
+            <h3>Seven shocking things that will successfully clickbait you!!!!!!!</h3>
+            <img src="img/4694-icon.jpg" alt="snoot" width="100px" height="100px" />
+            <p class="byline">2 minutes ago | Psychology</p>
+        </article>
+    </div>
+</main>
+</body>
+</html>

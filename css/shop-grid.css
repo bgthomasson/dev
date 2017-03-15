@@ -1,0 +1,242 @@
+/* BROWSER SUPPORT: Chrome 57+, FF 52+, Safari 2017 
+ * Which again means this will only be useful as an experiment until 2022, 2025...
+*/
+
+/* SECTION 1: OVERALL LAYOUT ................................................. */
+
+html {
+    -webkit-text-size-adjust: 100%; 
+}
+
+/* defaults that will work on phones */
+
+body {
+  background-color: #fbfcf7;
+  color: #111;
+  font-family: Candara, "Lucida Sans Unicode", "Liberation Sans", "Fira Sans", Sans-Serif;
+  font-size: 1em;
+  line-height: 1.1;
+  margin: 0 .3em; 
+}
+
+/* iPads and small windows on desktop */
+@media screen and (min-width: 481px) and (max-width: 900px) {
+    body {
+        margin: 0 1em; 
+    } 
+}
+
+@media screen and (min-width: 900px) {
+    body {
+        font-size: 105%;
+        line-height: 1.2;
+        margin: 0 2em;
+    } 
+}
+
+a {
+    -webkit-text-decoration-skip: objects;
+}
+
+/* 2: HEADER AND FOOTER ------------------------------------------------------- */
+
+.page-header {
+    margin-bottom: 2em;
+    padding-top: 0.5em; 
+}
+
+.cell {
+    padding-bottom: 0.5em;
+    max-width: 100%; 
+}
+
+nav a {
+    padding: 0 .3em; 
+}
+
+/* all the header stuff can stay flexbox */
+
+@media screen and (min-width: 481px) {
+    .page-header {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center; 
+    }
+
+    .cell {
+        flex: 1; 
+    }
+
+    nav {
+        text-align: right; 
+    }
+
+    nav a {
+        text-decoration: none; 
+    }
+
+    nav a:hover {
+        text-decoration: underline; 
+    } 
+}
+.nomen {
+    display: inline-block;
+    margin: 0; 
+}
+
+.search-input {
+    border: 3px solid #c7e1fb;
+    width: 15rem; 
+}
+
+@media only screen and (min-width: 900px){
+    .search-input {
+        width: 25rem;
+    }
+    
+}
+.page-footer {
+    border-top: 1px solid #66360f;
+    margin-top: 1rem;
+    margin-bottom: 2rem; 
+}
+
+/* SECTION 3: ARTICLE RELATED ---------------------------------------------- */
+
+.product-media {
+    text-align: center;
+}
+
+.product-purchase {
+    border: 1px solid #66360f;
+    text-align: center;
+}
+
+.product-review {
+    border: 1px dotted #66360f; 
+}
+
+@media only screen and (min-width: 481px){
+    .product-listing{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1rem;
+        margin-bottom: 5rem;
+    }
+    
+    .product-media {
+        grid-column: 1 / 4;
+        grid-row: 1 / 3;
+    }
+    
+    .product-text {
+        grid-column: 1 / 3;
+        grid-row: 3 / 6;
+    }
+    
+    .product-purchase {
+        grid-column: 3;
+        grid-row: 3 / 6;
+    }
+    
+    .product-reviews {
+        grid-column: 1 / 4;
+        /* this really needs to be less than half the page at max, for legibility */
+        grid-row: 7;
+    }
+    
+}
+
+@media only screen and (min-width: 900px){
+    .product-listing{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 1rem;
+        margin-bottom: 5rem;
+    }
+    
+    .product-media {
+        grid-column: 1 / 3;
+        grid-row: 1 / 4;
+    }
+    
+    .product-text {
+        grid-column: 3 / 6;
+        grid-row: 1 / 5;
+    }
+    
+    .product-purchase {
+        grid-column: 6;
+        grid-row: 1 / 6;
+    }
+    
+    .product-reviews {
+        grid-column: 2 / 6;
+        /* this really needs to be less than half the page at max, for legibility */
+        grid-row: 6;
+    }
+    
+}
+
+.product-text h2 {
+    margin-top: 0; 
+}
+
+.stock-in {
+    color: green; 
+}
+
+.stock-out {
+    color: #d31603; 
+}
+
+.warning-minor {
+    color: #ed810f; 
+}
+
+/* SECTION 4: MISC ELEMENTS ------------------------------------------------ */
+
+blockquote {
+    margin: 0;
+    padding-left: 0.25em; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Cambria, Georgia, Palatino, serif; 
+}
+
+ol, ul {
+    padding: 0.5em;
+    list-style-position: inside; 
+}
+
+
+/* SECTION 5: FORM ELEMENTS ----------------------------------------------- */
+
+button {
+    background-color: #c7e1fb;
+    border: none;
+    border-radius: 3px;
+    padding: 0.5em; 
+}
+
+button:hover {
+    background-color: #97c8f8; 
+}
+
+/* Too flat, do something shiny with these. */
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
+}
