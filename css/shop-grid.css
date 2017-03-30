@@ -14,7 +14,13 @@ body {
   background-color: #fbfcf7;
   color: #111;
   font-family: Candara, "Lucida Sans Unicode", "Liberation Sans", "Fira Sans", Sans-Serif;
-  font-size: 1em;
+  font-size: calc(0.6em + 1vw);
+  
+  /* can use REM to set size for block, EM inside which will be relative to 
+  * this base measure. Or, calc() is supported on fun browsers and combined with 
+  * a screen size based relative unit can do some fluid mojo. 
+  */
+  
   line-height: 1.1;
   margin: 0 .3em; 
 }
@@ -28,7 +34,7 @@ body {
 
 @media screen and (min-width: 900px) {
     body {
-        font-size: 105%;
+        font-size: 1.1rem;
         line-height: 1.2;
         margin: 0 2em;
     } 
@@ -87,19 +93,19 @@ nav a {
 
 .search-input {
     border: 3px solid #c7e1fb;
-    width: 15rem; 
+    width: 15em; 
 }
 
 @media only screen and (min-width: 900px){
     .search-input {
-        width: 25rem;
+        width: 25em;
     }
     
 }
 .page-footer {
     border-top: 1px solid #66360f;
-    margin-top: 1rem;
-    margin-bottom: 2rem; 
+    margin-top: 1em;
+    margin-bottom: 2em; 
 }
 
 /* SECTION 3: ARTICLE RELATED ---------------------------------------------- */
@@ -121,8 +127,8 @@ nav a {
     .product-listing{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-gap: 1rem;
-        margin-bottom: 5rem;
+        grid-gap: 1em;
+        margin-bottom: 5em;
     }
     
     .product-media {
@@ -152,8 +158,8 @@ nav a {
     .product-listing{
         display: grid;
         grid-template-columns: repeat(6, 1fr);
-        grid-gap: 1rem;
-        margin-bottom: 5rem;
+        grid-gap: 1em;
+        margin-bottom: 5em;
     }
     
     .product-media {

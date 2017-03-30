@@ -79,6 +79,8 @@ main {
 }
 
 /* ------------------------------------------------------------------------- */
+/* Yes my style of naming here is just like Bootstrap! 
+*/
 
 @media only screen and (min-width: 800px){
     .grid-col2 {
@@ -95,6 +97,8 @@ main {
         margin-bottom: 5rem;
     }
 }
+
+/* well not this one, it's obviously a programmer joke */
 
 .divitis {
     display: grid;
@@ -115,15 +119,6 @@ main {
     grid-column: 2;
     grid-row: 1 / 3;
 }
-
-
-
-
-
-
-
-
-
 
 
 
