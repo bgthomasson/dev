@@ -1,6 +1,6 @@
 /*! normalize.css| MIT License | git.io/normalize 
-* experimental 2016 edit w/ some other bits, support focus on: 
-* IE11+, FF43+, Chrome 43+, Android 4.4+, Safari 9+
+* 2017 edit w/ some other bits, support focus on: 
+* Chrome 55+, Firefox 50+, Safari 10+, IE 11, Edge 14
 */
 *,
 *:before,
@@ -8,19 +8,18 @@
   box-sizing: border-box; }
 
 html {
-  -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%; }
 
-details,
-main,
-summary {
+/* For IE 11 */
+main {
   display: block; }
 
-audio,
-canvas,
-progress,
-video {
-  vertical-align: baseline; }
+a {
+  -webkit-text-decoration-skip: objects; }
+
+b,
+strong {
+  font-weight: bolder; }
 
 small {
   font-size: 80%; }
@@ -62,7 +61,8 @@ input,
 select,
 textarea {
   font: inherit;
-  margin: 0; }
+  margin: 0;
+  text-transform: none; }
 
 button {
   cursor: pointer; }
@@ -72,7 +72,6 @@ html input[disabled] {
   cursor: default; }
 
 fieldset {
-  border: 1px solid #c0c0c0;
   margin-bottom: 1em;
   padding: 0.35em; }
 
@@ -80,23 +79,11 @@ legend {
   border: 0;
   padding: 0; }
 
-/* EOF -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
-/* TABLE OF CONTENTS ------------------------------------------------------- ||
- * 0: Imports and mixins, etc
- * 1. Overall layout: body, main
- * 2. header and footer for page 
- * 3. <article> and <section> 
- * 4. Misc elements, inline and block
- * 5. Tables
- * 6. Forms default, search-form 
- * 7. Misc custom
-*/
 /* VARS */
 /* SECTION 1: OVERALL LAYOUT ................................................. */
 body {
-  font-family: Candara, Tahoma, "Fira Sans", Roboto, Sans-Serif;
-  font-size: 1em;
-  line-height: 1.1em;
+  font-size: 1rem;
+  line-height: 1.1;
   margin: 0;
   padding: 0; }
 
@@ -110,8 +97,7 @@ main {
     width: 95vw; } }
 @media screen and (min-width: 900px) {
   body {
-    font-size: 105%;
-    line-height: 1.3em; }
+    line-height: 1.2; }
 
   main {
     width: 50em;
@@ -139,7 +125,7 @@ main {
   padding: 0.5em; }
 
 .page-nav {
-  font-size: 110%; }
+  font-size: 105%; }
 
 nav a {
   padding: 0 .2em;
@@ -177,14 +163,8 @@ blockquote {
   height: 1em;
   width: 1em; }
 
-code {
-  font-family: "Source Code Pro", "DejaVu Sans Mono", Consolas, monospace; }
-
 pre {
   padding: .5em; }
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: Cambria, Georgia, Palatino, serif; }
 
 ol, ul {
   padding: 0.5em;
@@ -220,7 +200,6 @@ legend {
   border-radius: 10px;
   flex: 1; }
 
-/* EOF --------------------------------------------------------------------- */
 /* prism lite -------------------------------------------------------------- */
 pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
 code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
@@ -288,7 +267,8 @@ pre[class*="language-"] {
 /* ------------------------------------------------------------------------- */
 body {
   background: linear-gradient(90deg, #070d11, #5a93bd, #070d11);
-  background-color: #5a93bd; }
+  background-color: #5a93bd;
+  font-family: Candara, "Fira Sans", Roboto, Sans-Serif; }
 
 .page-header {
   background-color: ivory;
@@ -326,6 +306,18 @@ nav a:hover {
 blockquote {
   border-left: 2px solid #070d11;
   border-top: 2px solid #070d11; }
+
+code,
+pre {
+  font-family: "DejaVu Sans Mono", "Ubuntu Mono", Consolas, monospace; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Cambria, Georgia, Palatino, serif; }
 
 ul, ol {
   border: 1px solid #070d11; }

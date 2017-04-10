@@ -1,31 +1,15 @@
-/* TABLE OF CONTENTS ------------------------------------------------------- ||
- * 0: Imports and mixins, etc
- * 1. Overall layout: body, main
- * 2. header and footer for page 
- * 3. <article> and <section> 
- * 4. Misc elements, inline and block
- * 5. Tables
- * 6. Forms default, search-form 
- * 7. Misc custom
-*/ 
 
 /* VARS */
-
-$fonts-sans: Candara, Tahoma, "Fira Sans", Roboto, Sans-Serif;
-$fonts-serif: Cambria, Georgia, Palatino, serif;
-$fonts-mono: 'Source Code Pro', 'DejaVu Sans Mono', Consolas, monospace;
 
 $media-small: 481px;
 $media-big: 900px;
 
 
-
 /* SECTION 1: OVERALL LAYOUT ................................................. */
 
 body {  
-    font-family: $fonts-sans;
-    font-size: 1em;
-    line-height: 1.1em;
+    font-size: 1rem;
+    line-height: 1.1;
     margin: 0; 
     padding: 0;
 }
@@ -43,8 +27,7 @@ main {
 
 @media screen and (min-width: $media-big) {
     body {
-        font-size: 105%;
-        line-height: 1.3em;
+        line-height: 1.2;
     }
     main {
         width: 50em; /* about 800px */
@@ -82,7 +65,7 @@ main {
 }
 
 .page-nav {
-    font-size: 110%;
+    font-size: 105%;
 }
 
 nav a {
@@ -133,16 +116,8 @@ blockquote {
     width: 1em;
 }
 
-code {
-	font-family: $fonts-mono;
-}
-
 pre {
     padding: .5em;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: $fonts-serif;
 }
 
 ol, ul {
@@ -191,4 +166,3 @@ legend {
     flex: 1;
 }
 
-/* EOF --------------------------------------------------------------------- */

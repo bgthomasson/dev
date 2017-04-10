@@ -1,6 +1,6 @@
 /*! normalize.css| MIT License | git.io/normalize 
-* experimental 2016 edit w/ some other bits, support focus on: 
-* IE11+, FF43+, Chrome 43+, Android 4.4+, Safari 9+
+* 2017 edit w/ some other bits, support focus on: 
+* Chrome 55+, Firefox 50+, Safari 10+, IE 11, Edge 14
 */
 
 *, 
@@ -10,27 +10,26 @@
 }
 
 html {
-    -ms-text-size-adjust: 100%; 
     -webkit-text-size-adjust: 100%; 
 }
 
-details,
-main,
-summary {
+/* For IE 11 */
+main {
     display: block;
 }
 
-audio,
-canvas,
-progress,
-video {
-    vertical-align: baseline; 
+a {
+    -webkit-text-decoration-skip: objects;
+}
+
+b,
+strong {
+    font-weight: bolder;
 }
 
 small {
     font-size: 80%;
 }
-
 
 sub,
 sup {
@@ -77,6 +76,7 @@ select,
 textarea {
   font: inherit; 
   margin: 0; 
+  text-transform: none;
 }
 
 button {
@@ -89,7 +89,6 @@ html input[disabled] {
 }
 
 fieldset {
-    border: 1px solid #c0c0c0;
     margin-bottom: 1em;
     padding: 0.35em;
 }
@@ -99,5 +98,3 @@ legend {
     padding: 0; 
 }
 
-
-/* EOF -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */

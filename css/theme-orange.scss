@@ -11,6 +11,10 @@ $action-color: #c7e1fb;
 $action-muted: #ecf5fe;
 $action-shadow: darken($action-color, 80%);
 
+$fonts-sans: Candara, "Fira Sans", Roboto, Sans-Serif;
+$fonts-serif: Cambria, Georgia, Palatino, serif;
+$fonts-mono: 'DejaVu Sans Mono', 'Ubuntu Mono', Consolas, monospace;
+
 $paper1: white;
 $paper2: ivory;
 
@@ -25,6 +29,7 @@ $zebra: rgb(255,235,200);
 body {
     background: linear-gradient($theme-color, $theme-shadow);
     background-color: $theme-color;
+    font-family: $fonts-sans;
 }
 
 .page-header {
@@ -76,6 +81,20 @@ nav a:hover {
 blockquote {
     border-left: 2px solid $theme-shadow;
     border-top:  2px solid $theme-shadow;
+}
+
+code, 
+pre {
+    font-family: $fonts-mono;
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+    font-family: $fonts-serif;
 }
 
 ul, ol {

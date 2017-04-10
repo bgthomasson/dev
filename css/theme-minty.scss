@@ -11,15 +11,14 @@ $action-color: rgb(176,224,230);
 $action-muted: rgb(224,245,255);
 $action-shadow: darken($action-color, 80%);
 
+$fonts-sans: Candara, "Fira Sans", Roboto, Sans-Serif;
+$fonts-serif: Cambria, Georgia, Palatino, serif;
+$fonts-mono: 'DejaVu Sans Mono', 'Ubuntu Mono', Consolas, monospace;
+
 $paper1: white;
 $paper2: rgb(245,240,222);
 $font-color: black; /* no need to specify here but listed for consistency */
 $text-muted: gray;
-
-$fonts-sans: Candara, Tahoma, "Fira Sans", Roboto, Sans-Serif;
-$fonts-serif: Cambria, Georgia, Palatino, serif;
-$fonts-mono: 'Source Code Pro', 'DejaVu Sans Mono', Consolas, Monaco, 
-                 'Andale Mono', 'Ubuntu Mono', monospace;
 
 $th-color: darken($paper2, 20%);
 $zebra: $paper2;
@@ -35,7 +34,7 @@ body {
         linear-gradient(90deg, transparent 50%, rgba(128,163,128,.17) 50%),
         linear-gradient(90deg, transparent 50%, rgba(190,235,190,.19) 50%);
     background-size: 13px, 29px, 37px, 53px;
-    
+    font-family: $fonts-sans; 
 }
 
 .page-header {
@@ -89,6 +88,20 @@ blockquote {
     border-top:  2px solid $theme-shadow;
 }
 
+code, 
+pre {
+    font-family: $fonts-mono;
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+    font-family: $fonts-serif;
+}
+
 ul, ol {
     background-color: $paper2;
     border: 1px solid $theme-shadow;
@@ -101,7 +114,6 @@ ul li {
 ul li:before {
     content: "\2744"; 
 }
-
 
 table { 
     border: 1px solid $theme-shadow;

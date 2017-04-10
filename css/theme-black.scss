@@ -7,8 +7,10 @@
 $theme-color: #111;
 $theme-shadow: #444;
 
-$action-color: #00d2cb;
-$action-muted: #c7e1fb;
+$action-color: #ffefb1;
+$action-muted: #ecbd00;
+
+/* I was aiming for color blind safe but this yellow is blinding me, lol */
 
 $paper1: #111;
 $paper2: black;
@@ -16,10 +18,9 @@ $font-color: white;
 
 $text-muted: #399996;
 
-$fonts-sans: Candara, Tahoma, "Fira Sans", Roboto, Sans-Serif;
-$fonts-serif: Cambria, Georgia, Palatino, serif;
-$fonts-mono: 'Source Code Pro', 'DejaVu Sans Mono', Consolas, Monaco, 
-                 'Andale Mono', 'Ubuntu Mono', monospace;
+$fonts-sans: 'Noto Sans', Candara, 'Fira Sans', Sans-Serif;
+$fonts-serif: 'Noto Serif', Cambria, Georgia, serif;
+$fonts-mono: 'Oxygen Mono', 'DejaVu Sans Mono', Consolas, monospace;
 
 $th-color: #777;
 $zebra: #222;
@@ -30,7 +31,7 @@ $zebra: #222;
 body {
     background-color: $theme-color;
     color: $font-color;
-    font-family: $fonts-mono;
+    font-family: $fonts-serif;
 }
 
 .page-header {
@@ -72,6 +73,21 @@ blockquote {
     border-top:  2px solid $theme-shadow;
 }
 
+code, 
+pre {
+    font-family: $fonts-mono;
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+    font-family: $fonts-sans;
+}
+
+
 ul, ol {
     border: 1px solid $theme-shadow;
 }
@@ -99,6 +115,8 @@ th {
 button {
     background-color: $action-muted;
     border: none;
+    border-radius: 3px; 
+    padding: 5px;
 }
 
 button:hover {
@@ -107,5 +125,6 @@ button:hover {
 
 input {
     background-color: $action-muted;
+    border: none; 
 }
 
