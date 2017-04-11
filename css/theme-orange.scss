@@ -7,13 +7,13 @@
 $theme-color: rgb(243,134,48);
 $theme-shadow: rgb(55,30,4);
 
-$action-color: #c7e1fb;
+$action-color: #399996;
 $action-muted: #ecf5fe;
 $action-shadow: darken($action-color, 80%);
 
-$fonts-sans: Candara, "Fira Sans", Roboto, Sans-Serif;
-$fonts-serif: Cambria, Georgia, Palatino, serif;
-$fonts-mono: 'DejaVu Sans Mono', 'Ubuntu Mono', Consolas, monospace;
+$fonts-sans: 'Noto Sans', Candara, 'Fira Sans', Sans-Serif;
+$fonts-serif: 'Noto Serif', Cambria, Georgia, serif;
+$fonts-mono: 'Oxygen Mono', 'DejaVu Sans Mono', Consolas, monospace;
 
 $paper1: white;
 $paper2: ivory;
@@ -21,13 +21,12 @@ $paper2: ivory;
 $text-muted: gray;
 
 $th-color: $theme-color;
-$zebra: rgb(255,235,200);
+$zebra: rgb(255,200,100);
 
 
 /* ------------------------------------------------------------------------- */
 
 body {
-    background: linear-gradient($theme-color, $theme-shadow);
     background-color: $theme-color;
     font-family: $fonts-sans;
 }

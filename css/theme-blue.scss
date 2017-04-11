@@ -11,14 +11,14 @@ $action-color: rgb(243,134,48);
 $action-muted: lighten($action-color, 20%);
 $action-shadow: darken($action-color, 80%);
 
-$fonts-sans: Candara, "Fira Sans", Roboto, Sans-Serif;
-$fonts-serif: Cambria, Georgia, Palatino, serif;
-$fonts-mono: 'DejaVu Sans Mono', 'Ubuntu Mono', Consolas, monospace;
-
 $paper1: white;
 $paper2: ivory;
 
 $text-muted: grey;
+
+$fonts-sans: 'Noto Sans', Candara, 'Fira Sans', Sans-Serif;
+$fonts-serif: 'Noto Serif', Cambria, Georgia, serif;
+$fonts-mono: 'Oxygen Mono', 'DejaVu Sans Mono', Consolas, monospace;
 
 $th-color: $theme-color;
 $zebra: lighten($theme-color, 20%);

@@ -37,16 +37,6 @@ sup {
 sub {
   bottom: -0.25em; }
 
-pre {
-  overflow: auto;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  /* if console complains about not recognizing overflow-wrap see this: */
-  /* https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/ */
-  padding: .5em;
-  white-space: pre;
-  white-space: pre-wrap; }
-
 code,
 pre {
   font-family: monospace, monospace;
@@ -209,15 +199,12 @@ legend {
 code[class*="language-"],
 pre[class*="language-"] {
   color: #f8f8f2;
-  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
-  text-align: left;
   white-space: pre;
   word-spacing: normal;
   word-break: normal;
   word-wrap: normal;
   line-height: 1.5;
   -webkit-hyphens: none;
-  -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none; }
 
@@ -230,7 +217,7 @@ pre[class*="language-"] {
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-  background: #272822; }
+  border-left: 2px solid #222; }
 
 /* Inline code */
 :not(pre) > code[class*="language-"] {
@@ -255,7 +242,7 @@ pre[class*="language-"] {
 .token.constant,
 .token.symbol,
 .token.deleted {
-  color: #f92672; }
+  color: #fb72a3; }
 
 .token.boolean,
 .token.number {
@@ -266,8 +253,9 @@ pre[class*="language-"] {
 .token.string,
 .token.char,
 .token.builtin,
-.token.inserted {
-  color: #a6e22e; }
+.token.inserted,
+.token.keyword {
+  color: #72e8fb; }
 
 .token.operator,
 .token.entity,
@@ -281,9 +269,6 @@ pre[class*="language-"] {
 .token.attr-value,
 .token.function {
   color: #e6db74; }
-
-.token.keyword {
-  color: #66d9ef; }
 
 .token.regex,
 .token.important {
@@ -308,32 +293,23 @@ body {
 .page-header {
   background-color: black; }
 
-nav a {
-  color: white; }
-
-nav a:hover {
-  text-decoration: underline; }
-
-.post-controls,
 .post-tags {
-  border-top: 1px solid #444;
+  border-top: 1px solid #555;
   font-size: 0.9em; }
 
-.post-tags a {
-  color: #399996; }
-
-.post-tags a:hover {
-  text-decoration: underline; }
-
 .activated {
-  color: #399996; }
+  color: #74919d; }
 
 a {
-  color: #ecbd00; }
+  color: #74919d; }
+
+a:hover {
+  color: #ecbd00;
+  text-decoration: underline; }
 
 blockquote {
-  border-left: 2px solid #444;
-  border-top: 2px solid #444; }
+  border-left: 2px solid #555;
+  border-top: 2px solid #555; }
 
 code,
 pre {
@@ -348,16 +324,16 @@ h6 {
   font-family: "Noto Sans", Candara, "Fira Sans", Sans-Serif; }
 
 ul, ol {
-  border: 1px solid #444; }
+  border: 1px dotted #555; }
 
 ul li {
   list-style-type: none; }
 
 ul li:before {
-  content: "\2744"; }
+  content: "\2605"; }
 
 table {
-  border: 1px solid #444; }
+  border: 1px solid #555; }
 
 tr:nth-of-type(odd) {
   background-color: #222; }
@@ -366,16 +342,16 @@ th {
   background-color: #777; }
 
 button {
-  background-color: #ecbd00;
+  background-color: #ffefb1;
   border: none;
   border-radius: 3px;
   padding: 5px; }
 
 button:hover {
-  background-color: #ffefb1; }
+  background-color: #ecbd00; }
 
 input {
-  background-color: #ecbd00;
+  background-color: #74919d;
   border: none; }
 
 /*# sourceMappingURL=theme-black.css.map */

@@ -5,18 +5,16 @@
 
 
 $theme-color: #111;
-$theme-shadow: #444;
+$theme-shadow: #555;
 
-$action-color: #ffefb1;
-$action-muted: #ecbd00;
-
-/* I was aiming for color blind safe but this yellow is blinding me, lol */
+$action-color: #ecbd00;
+$action-muted: #ffefb1;
 
 $paper1: #111;
 $paper2: black;
-$font-color: white;
 
-$text-muted: #399996;
+$font-color: white;
+$text-muted: #74919d;
 
 $fonts-sans: 'Noto Sans', Candara, 'Fira Sans', Sans-Serif;
 $fonts-serif: 'Noto Serif', Cambria, Georgia, serif;
@@ -37,27 +35,10 @@ body {
 .page-header {
     background-color: $paper2;
 }
-
-nav a {
-    color: white;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-.post-controls, 
+ 
 .post-tags {
     border-top: 1px solid $theme-shadow; 
     font-size: 0.9em;
-}
-
-.post-tags a {
-    color: $text-muted;
-}
-
-.post-tags a:hover {
-    text-decoration: underline;
 }
 
 .activated {
@@ -65,7 +46,12 @@ nav a:hover {
 }
 
 a {
-    color: $action-muted;
+    color: $text-muted;
+}
+
+a:hover {
+    color: $action-color;
+    text-decoration: underline;
 }
 
 blockquote {
@@ -89,7 +75,7 @@ h6 {
 
 
 ul, ol {
-    border: 1px solid $theme-shadow;
+    border: 1px dotted $theme-shadow;
 }
 
 ul li {
@@ -97,7 +83,7 @@ ul li {
 }
 
 ul li:before {
-    content: "\2744"; 
+    content: "\2605"; 
 }
 
 table { 
@@ -124,7 +110,7 @@ button:hover {
 }
 
 input {
-    background-color: $action-muted;
+    background-color: $text-muted;
     border: none; 
 }
 

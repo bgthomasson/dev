@@ -37,16 +37,6 @@ sup {
 sub {
   bottom: -0.25em; }
 
-pre {
-  overflow: auto;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  /* if console complains about not recognizing overflow-wrap see this: */
-  /* https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/ */
-  padding: .5em;
-  white-space: pre;
-  white-space: pre-wrap; }
-
 code,
 pre {
   font-family: monospace, monospace;
@@ -266,16 +256,15 @@ pre[class*="language-"] {
 
 /* ------------------------------------------------------------------------- */
 body {
-  background: linear-gradient(#f38630, #371e04);
   background-color: #f38630;
-  font-family: Candara, "Fira Sans", Roboto, Sans-Serif; }
+  font-family: "Noto Sans", Candara, "Fira Sans", Sans-Serif; }
 
 .page-header {
   background-color: ivory; }
 
 @media screen and (min-width: 481px) {
   .page-header {
-    box-shadow: 0px 6px 4px rgba(3, 21, 39, 0.5); } }
+    box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.5); } }
 .page-footer {
   background-color: ivory; }
 
@@ -310,7 +299,7 @@ blockquote {
 
 code,
 pre {
-  font-family: "DejaVu Sans Mono", "Ubuntu Mono", Consolas, monospace; }
+  font-family: "Oxygen Mono", "DejaVu Sans Mono", Consolas, monospace; }
 
 h1,
 h2,
@@ -318,7 +307,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Cambria, Georgia, Palatino, serif; }
+  font-family: "Noto Serif", Cambria, Georgia, serif; }
 
 ul, ol {
   border: 1px solid #371e04; }
@@ -333,7 +322,7 @@ table {
   border: 1px solid #371e04; }
 
 tr:nth-of-type(odd) {
-  background-color: #ffebc8; }
+  background-color: #ffc864; }
 
 th {
   background-color: #f38630; }
@@ -346,6 +335,6 @@ button {
   border: none; }
 
 button:hover {
-  background-color: #c7e1fb; }
+  background-color: #399996; }
 
 /*# sourceMappingURL=theme-orange.css.map */

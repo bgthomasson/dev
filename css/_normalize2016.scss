@@ -47,18 +47,6 @@ sub {
     bottom: -0.25em;
 }
 
-pre {
-    overflow: auto;
-    overflow-wrap: break-word; 
-    word-wrap: break-word; 
-    /* if console complains about not recognizing overflow-wrap see this: */
-    /* https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/ */
-    padding: .5em;
-    white-space: pre;
-    white-space: pre-wrap;
-    
-}
-
 code,
 pre {
     font-family: monospace, monospace;

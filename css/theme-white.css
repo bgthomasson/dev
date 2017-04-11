@@ -37,16 +37,6 @@ sup {
 sub {
   bottom: -0.25em; }
 
-pre {
-  overflow: auto;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  /* if console complains about not recognizing overflow-wrap see this: */
-  /* https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/ */
-  padding: .5em;
-  white-space: pre;
-  white-space: pre-wrap; }
-
 code,
 pre {
   font-family: monospace, monospace;
@@ -266,7 +256,7 @@ pre[class*="language-"] {
 
 /* ------------------------------------------------------------------------- */
 body {
-  font-family: Candara, "Fira Sans", Roboto, Sans-Serif; }
+  font-family: "Noto Sans", Candara, "Fira Sans", Sans-Serif; }
 
 .page-header {
   background: white; }
@@ -292,7 +282,7 @@ nav a:hover {
   text-decoration: underline; }
 
 .activated {
-  background-color: #ecf5fe;
+  background-color: #a1b5bd;
   color: gray; }
 
 blockquote {
@@ -301,7 +291,7 @@ blockquote {
 
 code,
 pre {
-  font-family: "DejaVu Sans Mono", "Ubuntu Mono", Consolas, monospace; }
+  font-family: "Oxygen Mono", "DejaVu Sans Mono", Consolas, monospace; }
 
 h1,
 h2,
@@ -309,7 +299,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Cambria, Georgia, Palatino, serif; }
+  font-family: "Noto Serif", Cambria, Georgia, serif; }
 
 ul, ol {
   border: 1px solid #444; }
@@ -318,7 +308,7 @@ ul li {
   list-style-type: none; }
 
 ul li:before {
-  content: "\2744"; }
+  content: "\2605"; }
 
 table {
   border: 1px solid #444; }
@@ -330,10 +320,12 @@ th {
   background-color: #f5b16a; }
 
 button {
-  background-color: #ecf5fe;
-  border: none; }
+  background-color: #a1b5bd;
+  border: none;
+  border-radius: 3px;
+  padding: 5px; }
 
 button:hover {
-  background-color: #c7e1fb; }
+  background-color: #5a93bd; }
 
 /*# sourceMappingURL=theme-white.css.map */

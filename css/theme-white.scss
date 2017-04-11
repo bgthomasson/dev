@@ -6,24 +6,22 @@
 
 $theme-shadow: #444;
 
-$action-color: #c7e1fb;
-$action-muted: #ecf5fe;
+$action-color: rgb(90,147,189);
+$action-muted: #a1b5bd;
 $action-shadow: darken($action-color, 80%);
-
-$fonts-sans: Candara, "Fira Sans", Roboto, Sans-Serif;
-$fonts-serif: Cambria, Georgia, Palatino, serif;
-$fonts-mono: 'DejaVu Sans Mono', 'Ubuntu Mono', Consolas, monospace;
 
 $paper1: white;
 $paper2: ivory;
 
 $text-muted: gray;
 
+$fonts-sans: 'Noto Sans', Candara, 'Fira Sans', Sans-Serif;
+$fonts-serif: 'Noto Serif', Cambria, Georgia, serif;
+$fonts-mono: 'Oxygen Mono', 'DejaVu Sans Mono', Consolas, monospace;
+
 $th-color: #f5b16a;
 $zebra: #fad8b5;
 
-$rainbow1: linear-gradient(red, orange, yellow, green, blue, purple);
-$rainbow45: linear-gradient(45deg, red, orange, yellow, green, blue, purple);
 
 /* ------------------------------------------------------------------------- */
 
@@ -96,7 +94,7 @@ ul li {
 }
 
 ul li:before {
-    content: "\2744"; 
+    content: "\2605"; 
 }
 
 table { 
@@ -114,6 +112,8 @@ th {
 button {
     background-color: $action-muted;
     border: none;
+    border-radius: 3px; 
+    padding: 5px;
 }
 
 button:hover {
