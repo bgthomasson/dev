@@ -20,66 +20,82 @@
     </form>
 </header>
 <main>
-    <!-- Basic use -------------------------------------------------------- -->
-    <div class="grid-news">
-        <h2 class="grid-header">Grid test- areas</h2>
-        <article class="grid-content">
-            <p>
-            We can use grid now! If everyone is using Chrome and Firefox. 
-            That they updated recently. Otherwise it'll be oh 2022 before we can. 
-            Time to look up fallback techniques. 
-            </p>
-            <p>
-            I think this would work for news/blog or shopping layout, both are basically 
-            articles with a header, text content, and image. Tho now it's popular 
-            to have an image with the text on top of it. 
-            </p>
-            <p>
-            I've got some examples for simple layouts here, have yet to think of 
-            something complicated yet logical. So far it just seems to be a replacement 
-            for Bootstrap etc. 
-            If you could get interactivity going it might 
-            have some nifty use, like choosing options when ordering a pizza? 
-            </p>
+    <!-- Basic use ....................................................... -->
+    <div class="news-fullpage">
+        <h2 class="news-header">People who complained about the use of tables for layout take 20 years to make alternative</h2>
+        <article class="news-content">
             <p class="byline">
-            2 minutes ago | Technology
+                2 minutes ago | Technology
             </p>
-        </article>
-        <aside class="grid-aside">
+            
             <img src="img/parrots.jpg" alt="parrots" />
+            <p>
+                We can use grid now! If everyone is using Chrome and Firefox. 
+                That they updated recently. Otherwise it'll be oh 2022 before we can. 
+                Time to look up fallback techniques. And how to use it in IE. Ugh. 
+            </p>
+            <p>
+                Supporting IE/Edge would mean effectively doubling all grid code with prefixed versions. 
+                And bug hunting. 
+            </p>
+            <p>
+                I think this would work for news/blog or shopping layout, both are basically 
+                articles with a header, text content, and image. Tho now it's popular 
+                to have an image with the text on top of it. 
+            </p>
+            <p>
+                I've got some examples for simple layouts here, have yet to think of 
+                something complicated yet logical. So far it just seems to be a replacement 
+                for Bootstrap etc. 
+                If you could get interactivity going it might 
+                have some nifty use, like choosing options when ordering a pizza? 
+            </p>
+            
+        </article>
+        <aside class="news-aside">
+            <article>
+                <h3>55 apple recipes</h3>
+                <img src="img/apples.jpg" alt="apple basket" width="100px" height="100px" />
+                <p class="byline">2 minutes ago | Food</p>
+            </article>
+            <article>
+                <h3>Hippo isn't that hungry after all</h3>
+                <img src="img/4694-icon.jpg" alt="snoot" width="100px" height="100px" />
+                <p class="byline">2 minutes ago | Psychology</p>
+            </article>
         </aside>
     </div>
     
-    <!-- TWO COL --------------------------------------------------------- -->
+    <!-- TWO COL ......................................................... -->
     <div class="grid-col2">
-        <div class="divitis">
-            <h3 class="mini-header">Grid test- areas</h3>
-            <article class="mini-content">
+        <div class="news-small">
+            <h3 class="news-header">Grid test</h3>
+            <article class="news-content">
                 <p>
-                I think flexbox could get the same effect since this is a simple 
-                layout, but grid feels more precise. 
+                    I think flexbox could get the same effect since this is a simple 
+                    layout, but grid feels more precise. 
                 </p>
                 <p class="byline">
-                2 minutes ago | Technology
+                    2 minutes ago | Technology
                 </p>
             </article>
-            <aside class="mini-aside">
+            <aside class="news-aside">
                 <img src="img/parrots.jpg" alt="parrots" />
             </aside>
         </div>
         
-        <div class="divitis">
-            <h3 class="mini-header">Grid test- areas</h3>
-            <article class="mini-content">
+        <div class="news-small">
+            <h3 class="news-header">Grid test</h3>
+            <article class="news-content">
                 <p>
-                After some mucking about, having the image beside 
-                the text would limit to 2 columns. But moving to top like the 
-                BBC news would elminate need for grid. Hmm. OK toss third, 
-                leave rest as example of grid-in-grid. 
+                    After some mucking about, having the image beside 
+                    the text would limit to 2 columns. But moving to top like the 
+                    BBC news would elminate need for grid. Hmm. OK toss third, 
+                    leave rest as example of grid-in-grid. 
                 </p>
                 <p class="byline">2 minutes ago | Technology</p>
             </article>
-            <aside class="mini-aside">
+            <aside class="news-aside">
                 <img src="img/parrots.jpg" alt="parrots" />
             </aside>
         </div>

@@ -1,13 +1,13 @@
 /* generic stuff ----------------------------------------------------------- */
 
+html, 
 body {
-    background-color: #fff;
+    background-color: #fbfcf7;
     color: #404040; 
     font-family: 'Source Sans Pro', 'Trebuchet MS', sans-serif;
-    font-size: 1.1rem;
+    font-size: 1rem; /* set rem on html to set the root size, which does make a difference */
     line-height: 1.2; 
     -webkit-text-size-adjust: 100%; 
-    /* Safari will support grid in 2017. We aren't supporting IE or Edge. */
 }
 
 h2 {
@@ -18,6 +18,7 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: space-between; 
+    flex-wrap: wrap;
     margin-bottom: 2em;
 }
 
@@ -34,93 +35,70 @@ input {
     width: 10em;
 }
 
-main {
-    margin: 0 auto; 
-    padding: 1em;
-}
-
 .byline {
     font-size: 0.8em;
 }
 
 /* the grid stuff ---------------------------------------------------------- */
 
-.grid-news {
-    display: grid;
-    grid-template-areas: 
-        "header"
-        "content" 
-        "aside";
-    margin-bottom: 5em;
-}
+/* So the plan is, at full desktop size, have all the columns. 
+ * Between 800px and 481, the larger grids will have modified sizes, while 4col just collapses. 
+ * Below 481, just let everything collapse into single column. 
+ */
 
-@media only screen and (min-width: 600px){
-    .grid-news{
-        grid-template-columns: 66% 33%;
-        grid-template-areas:
-            "header header"
-            "content aside";
-    }
-}
-
-.grid-header {
-    grid-area: header;
-}
-
-.grid-content {
-    grid-area: content;
-    padding: 1em;
-}
-
-.grid-aside {
-    grid-area: aside;
-    padding: .5em;
-    text-align: center;
-}
-
-/* ------------------------------------------------------------------------- */
-/* Yes my style of naming here is just like Bootstrap! 
-*/
-
-@media only screen and (min-width: 800px){
-    .grid-col2 {
+@media screen and (min-width: 800px){
+    
+    .news-fullpage, 
+    .grid-col2, 
+    .grid-col4 {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
         grid-gap: 2em;
         margin-bottom: 5em;
+    }
+
+    .news-fullpage {
+        grid-template-columns: 3fr 1fr;
+        width: 80vw;
+        /* It's a bit too big when browser is at 1370ish px */
+        margin-left: auto;
+        margin-right: auto;
+        /* a more precise version of the auto zero hack */
+    }
+    
+    .news-small {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+    
+    /* format is exactly the same, simply wider for full page! */
+    
+    .news-header {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    
+    .news-content {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .news-aside {
+        grid-column: 2;
+        grid-row: 1 / 3;
+        text-align: center;
+    }
+    
+    .grid-col2 {
+        grid-template-columns: repeat(2, 1fr);
     }
     
     .grid-col4 {
-        display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-gap: 2em;
-        margin-bottom: 5em;
+    }
+    
+    main {
+        margin: 0 auto; 
+        padding: 0 2em;
     }
 }
-
-/* well not this one, it's obviously a programmer joke */
-
-.divitis {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-}
-
-.mini-header {
-    grid-column: 1;
-    grid-row: 1;
-}
-
-.mini-content {
-    grid-column: 1;
-    grid-row: 2;
-}
-
-.mini-aside {
-    grid-column: 2;
-    grid-row: 1 / 3;
-}
-
-
-
-
 

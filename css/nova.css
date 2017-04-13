@@ -65,9 +65,8 @@ h1 {
 
 /* plucked from http://www.codesmite.com/article/fixing-raleway-and-similar-fonts-numerals
  * As Raleway comes with both text figures and lining figures for web use you can 
- * use the CSS3 descriptor "font-feature-settings" to enable lining figures. 
- * For Chrome 21-47 and FF 15-33 need to prefix. 
- * Works in IE10! Safari only added in 9.1 one tho, how lame.  
+ * use the CSS3 descriptor "font-feature-settings" to enable lining figures.  
+ * Works in IE10! 
  *
  * Side note: To avoid reloading web fonts, I've installed the ones I use. 
  * Raleway, Source Sans Pro, etc are all free so no problem, plus more fun for me. 
