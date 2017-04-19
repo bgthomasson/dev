@@ -16,6 +16,7 @@
         <a href="https://css-tricks.com/make-super-quick-little-slider-play-values/">Sauce</a>
         </p>
         <input type="range" id="range" min="1" max="9" step="1" value="1" />
+        <!-- TODO: style this nicely -->
     </article>
     
     <article>
@@ -28,12 +29,14 @@
         you just need 3 lines of code to use the "lining figures" instead, 
         and 2 of those are for old Chrome and Firefox, so just 1 if you're bleeding edge. 
         </p>
+        <!-- TODO: include the Raleway font so nobody gets confused... -->
     </article>
     
     <article>
         <h2>Filters: not just for hipsters?</h2>
         <p>I'm not sure exact use yet but say we've got several images to pick from, 
-        and want to make deselected ones inconspicuous, but still there for reference.
+        and want to make deselected ones inconspicuous, but still there for reference. 
+        This obviously calls for some :hover and/or javascript.  
         </p>
         <p>
         <img src="img/parrots.jpg" alt="parrots" />
@@ -43,8 +46,12 @@
     </article>
     
     <article>
-        <h2 class="brand-name">Yoga for the browser</h2>
-        <p>Some flexbox stuff here, compare to display: table also</p>
+        <h2 class="brand-name">Hover me</h2>
+        <p>
+        <img src="img/parrots.jpg" alt="parrots" class="foggy" />
+        <img src="img/parrots.jpg" alt="parrots" class="foggy" />
+        <img src="img/parrots.jpg" alt="parrots" class="foggy" />
+        </p>
     </article>
     
     <script type="text/javascript" src="js/bgSlider.js"></script>

@@ -5,7 +5,8 @@ body {
     background-color: #fbfcf7;
     color: #404040; 
     font-family: 'Source Sans Pro', 'Trebuchet MS', sans-serif;
-    font-size: 1rem; /* set rem on html to set the root size, which does make a difference */
+    font-size: 1rem; 
+    /* set rem on html to set the root size, which does make a difference */
     line-height: 1.2; 
     -webkit-text-size-adjust: 100%; 
 }
@@ -28,7 +29,8 @@ h2 {
 }
 
 input {
-    border: .125em solid #02c04a; /* if 1 em = 16px then .125 em = 2px */
+    border: .125em solid #02c04a; 
+    /* if 1 em = 16px then .125 em = 2px */
     color: inherit;
     font: inherit;
     margin: 0;
@@ -48,6 +50,11 @@ input {
 
 @media screen and (min-width: 800px){
     
+    main {
+        margin: 0 auto; 
+        padding: 0 2em;
+    }
+
     .news-fullpage, 
     .grid-col2, 
     .grid-col4 {
@@ -62,7 +69,7 @@ input {
         /* It's a bit too big when browser is at 1370ish px */
         margin-left: auto;
         margin-right: auto;
-        /* a more precise version of the auto zero hack */
+        /* a more precise version of margin: 0 auto */
     }
     
     .news-small {
@@ -96,9 +103,5 @@ input {
         grid-template-columns: repeat(4, 1fr);
     }
     
-    main {
-        margin: 0 auto; 
-        padding: 0 2em;
-    }
 }
 

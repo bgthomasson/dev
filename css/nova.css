@@ -1,22 +1,13 @@
-/*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
-/* I borrowed a few small pieces, mostly for forms. 
- * FF 45+, Chrome 50+. Some things work in Edge, will try to note if don't. 
- * Safari is not supported at all beyond basics. 
- */
- 
 /* Block level and global elements --------------------------------------- */
 
 body {
-    /* Use off-white and off-black to lessen eye strain */
     background-color: #fbfcf7;
     color: #080401;
-    /* A decent tho long font stack. */
-	font-family: "Source Sans Pro", Candara, Geneva, "Fira Sans", Roboto, sans-serif;
+	font-family: "Source Sans Pro", Candara, "Fira Sans", sans-serif;
 	font-size: 1em;
 	line-height: 1.2em;
 }
 
-/* whatever element is used as wrapper, turn into centered single column */
 /* Phat phone and tablet size */
 @media screen and (min-width: 481px) {
     body {
@@ -95,6 +86,20 @@ h1 {
     filter: blur(3px);
 }
 
+.foggy {
+    filter: blur(3px);
+}
+
+.foggy:hover {
+    filter: none;
+}
+
+/* make a 2 col article, with the right being an aside with beveled corner */
+
+.beveled{
+    background: linear-gradient(-45deg, transparent 15px, white 0);
+}
+
 
 /* Forms
    ========================================================================== */
@@ -104,7 +109,7 @@ h1 {
 */
 
 fieldset {
-    border: 1px solid rgb(176,148,127);
+    border: 3px solid rgba(176,148,127,.5);
 	margin-bottom: 1em;
 }
 
@@ -124,7 +129,6 @@ textarea {
 button {
     background-color: rgb(190,230,250);
     border: none;
-    /* try using proportional instead of pixel */
     border-radius: .5em;
     box-shadow: 5px 5px 5px rgba(64,16,0,.4);
     cursor: pointer;
@@ -143,6 +147,12 @@ button:active {
 	background-color: rgb(105,210,231);
 	box-shadow:  0 1px 0 rgb(64,16,0);
 	transform: translateY(3px);
+}
+
+/* FF on Linux won't show the slider, just a button floating in space, hahaha... */
+
+input[type=range]{
+    background-color: rgba(190,230,250,.5);
 }
 
 input:focus {
