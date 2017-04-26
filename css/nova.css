@@ -1,11 +1,14 @@
 /* Block level and global elements --------------------------------------- */
 
+html {
+    font-family: "Source Sans Pro", Candara, sans-serif;
+	font-size: 1em;
+	line-height: 1.2;
+}
+
 body {
     background-color: #fbfcf7;
     color: #080401;
-	font-family: "Source Sans Pro", Candara, "Fira Sans", sans-serif;
-	font-size: 1em;
-	line-height: 1.2em;
 }
 
 /* Phat phone and tablet size */
@@ -30,17 +33,6 @@ article {
     margin-bottom: 2em;
 }
 
-/* Edge doesn't support color variables, but the other main browsers do. 
- * I think SASS works better for this ATM but will test for shiggles. 
- */
-
-:root {
-    --brand-color: #00aa33;
-}
-
-.brand-name {
-    color: var(--brand-color);
-}
 
 /* low level things -------------------------------------------------------- */
 
@@ -54,14 +46,13 @@ h1 {
     text-align: center;
 }
 
-/* plucked from http://www.codesmite.com/article/fixing-raleway-and-similar-fonts-numerals
+/* http://www.codesmite.com/article/fixing-raleway-and-similar-fonts-numerals
  * As Raleway comes with both text figures and lining figures for web use you can 
  * use the CSS3 descriptor "font-feature-settings" to enable lining figures.  
  * Works in IE10! 
- *
- * Side note: To avoid reloading web fonts, I've installed the ones I use. 
- * Raleway, Source Sans Pro, etc are all free so no problem, plus more fun for me. 
- * That's why there's no @import etc. YET, I'm saving that mess for last. 
+ * But not in FF on Ubuntu!? 
+ * <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"> 
+ * 
  */
 
 .raleway-lining {
@@ -70,6 +61,14 @@ h1 {
 }
 .raleway-default {
     font-family: Raleway, sans-serif;
+}
+
+
+.fleximg {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    flex-wrap: wrap;
 }
 
 /* CSS filter effects would be great for interaction, e.g. greyscale for inactive img. 
@@ -92,12 +91,37 @@ h1 {
 
 .foggy:hover {
     filter: none;
+    transition: filter 1s; 
 }
 
 /* make a 2 col article, with the right being an aside with beveled corner */
 
-.beveled{
-    background: linear-gradient(-45deg, transparent 15px, white 0);
+.beveled {
+    background: linear-gradient(-45deg, transparent 35px, white 0);
+}
+
+
+.griddish {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: 66% 33%;
+
+}
+
+.flipper {
+    display: block;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.flipper:hover {
+    transform: rotateY(180deg);
+}
+
+.info {
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    background: rgba(255,255,255,0.7);
 }
 
 

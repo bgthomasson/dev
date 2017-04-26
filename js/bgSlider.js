@@ -18,22 +18,22 @@ range.addEventListener("input", function() {
       mutant.style.background = "#ffc733"; //orange
       break;
     case "4":
-      mutant.style.background = "#ffd700"; // gooooold
+      mutant.style.background = "#feee88"; // flower
       break;
     case "5":
       mutant.style.background = "#98fb98"; // green
       break;
     case "6":
-      mutant.style.background = "#e0ffff"; // cyan 
+      mutant.style.background = "#99badd"; // cyan 
       break;
     case "7":
       mutant.style.background = "#b0e0e6"; // blue
       break;
     case "8":
-      mutant.style.background = "#e6e6fa"; // purple
+      mutant.style.background = "#a45de5"; // amethyst
       break;
     case "9":
-      mutant.style.background = "#dcdcdc"; //grey
+      mutant.style.background = "#787276"; //grey
       break;
     default:
       mutant.style.background = "#fbfcf7";

@@ -20,25 +20,12 @@
     </article>
     
     <article>
-        <h2 class="raleway-lining">1234567890 ways to play with fonts</h2>
-        <p class="raleway-default">
-        So it turns out, some fonts have variations, like in text- 1234567890- 
-        they use "text figures" that deliberately go out of line for visibility. 
-        So everyone is using Raleway because they like it in headers and are like WTF!? 
-        Over 678,903 nerds are confused by how drunk it looks, but with 90% of browsers 
-        you just need 3 lines of code to use the "lining figures" instead, 
-        and 2 of those are for old Chrome and Firefox, so just 1 if you're bleeding edge. 
-        </p>
-        <!-- TODO: include the Raleway font so nobody gets confused... -->
-    </article>
-    
-    <article>
         <h2>Filters: not just for hipsters?</h2>
         <p>I'm not sure exact use yet but say we've got several images to pick from, 
         and want to make deselected ones inconspicuous, but still there for reference. 
         This obviously calls for some :hover and/or javascript.  
         </p>
-        <p>
+        <p class="fleximg">
         <img src="img/parrots.jpg" alt="parrots" />
         <img src="img/parrots.jpg" alt="parrots" class="grayscale" />
         <img src="img/parrots.jpg" alt="parrots" class="blur" />
@@ -46,14 +33,22 @@
     </article>
     
     <article>
-        <h2 class="brand-name">Hover me</h2>
+        <h2>Hover over these images</h2>
+        <p>Well, if you're on a desktop...</p>
         <p>
-        <img src="img/parrots.jpg" alt="parrots" class="foggy" />
-        <img src="img/parrots.jpg" alt="parrots" class="foggy" />
         <img src="img/parrots.jpg" alt="parrots" class="foggy" />
         </p>
     </article>
     
+    <!-- What if we combine this with a form, selected ones will grey or blur, 
+         depending on the option chosen. -->
+    
+    <article class="flipper">
+        <img src="img/parrots.jpg" alt="parrots" />
+        <div class="info">I bet you're tired of seeing these birds!</div>
+    </article>
+
+
     <script type="text/javascript" src="js/bgSlider.js"></script>
 </body>
 </html>
