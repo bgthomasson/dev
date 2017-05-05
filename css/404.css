@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Kurale');
+
+
+html {
+    font-size: 1rem;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.15; 
+    -ms-text-size-adjust: 100%; 
+    -webkit-text-size-adjust: 100%; 
+}
+
+body {
+    background-color: #f38630;
+    margin: 0;
+    padding: 0;
+}
+
+article,
+header,
+nav {
+    display: block;
+}
+
+h2 {
+    font-family: 'Kurale', serif; 
+    text-align: center; 
+}
+
+main { 
+    display: block;
+    margin: 0 auto;
+    background-color: rgb(246,240,220);
+}
+
+.page-header {
+    margin-bottom: 1em;
+    padding: 0 1em;
+    background-color: rgba(246,240,220,.9);
+}
+
+.page-nav {
+    font-size: 105%;
+}
+
+nav a {
+    padding: 0 .2em;
+    text-decoration: none;
+}
+
+.nomen {
+    display: inline-block;
+    margin: 0 auto;
+    font-size: inherit;
+}
+
+input {
+    font-family: sans-serif; 
+    font-size: 100%; 
+    line-height: 1.15;
+    margin: 0; 
+    overflow: visible;
+}
+
+article {
+    margin-bottom: 2em;
+    padding: 1em;
+}
+
+canvas {
+    display: inline-block;
+}
+
+
+@media screen and (min-width: 481px) {
+    main {
+        width: 95vw;
+    }
+    
+    .page-header{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    main {
+        width: 50em; /* about 800px */
+    }
+}
+

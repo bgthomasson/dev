@@ -1,9 +1,14 @@
 /* generic stuff ----------------------------------------------------------- */
 
+html {
+    font-size: 1rem;
+    line-height: 1.2;
+}
+
+
 body {
     background-color: rgb(219,226,234);
     font-family: 'Source Sans Pro', Candara, sans-serif; 
-    line-height: 1.15; 
 }
 
 h1,
@@ -14,12 +19,12 @@ h2 {
 
 main {
     margin: 0 auto; /* OH NOW FINALLY I get it to center align */
-    padding: 1rem;
+    padding: 1em;
 }
 
 @media only screen and (min-width: 600px){
     main {
-        width: 64rem;
+        width: 64em;
     }
 }
 
@@ -30,14 +35,14 @@ main {
     border-radius: 6px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1rem;
-    margin-bottom: 5rem;
+    grid-gap: 1em;
+    margin-bottom: 5em;
 }
 
 .box {
     background-color: #fff;
     border-radius: 6px;
-    padding: .5rem;
+    padding: .5em;
 }
 
 .a {
@@ -78,7 +83,7 @@ main {
 
 @media only screen and (min-width: 600px){
     .grid-news{
-        grid-template-columns: 40rem 24rem;
+        grid-template-columns: 40em 24em;
         grid-template-areas:
             "header header"
             "content aside";
@@ -92,18 +97,18 @@ main {
 
 .content {
     grid-area: content;
-    padding: 1rem;
+    padding: 1em;
 }
 
 .aside {
     grid-area: aside;
     background-color: #deb887;
-    padding: .5rem;
+    padding: .5em;
     text-align: center;
 }
 
 .byline {
-    padding-left: .5rem;
+    padding-left: .5em;
     
 }
 

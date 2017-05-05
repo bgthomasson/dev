@@ -1,0 +1,121 @@
+html {
+    font-family: 'Open Sans', Candara, sans-serif;
+    font-size: 1rem;
+    line-height: 1.2;
+    
+}
+
+main {
+    margin: 0 auto;
+    width: 50em;
+}
+
+section {
+    margin-bottom: 5em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em;
+}
+
+.box {
+    padding: 2em;
+}
+
+
+
+.apricot {
+    background-color: #ed810f;
+}
+
+.burlywood {
+    background-color: #deb887;
+}
+
+.buttermilk {
+    background-color: #fdefb2;
+}
+
+.caramel {
+    background-color: #66360f;
+}
+
+.cerulean {
+    background-color: #0592c2;
+}
+
+.cinnamon {
+    background-color: #642b0d;
+}
+
+.cobalt {
+    background-color: #1e456e;
+}
+
+.coral {
+    background-color: #fe7d67;
+}
+
+.cornflower {
+    background-color: #6495ed;
+}
+
+.emerald {
+    background-color: #038911;
+}
+
+.evergreen {
+    background-color: #24501e;
+}
+
+.iris {
+    background-color: #9866c5;
+}
+
+.ivory {
+    background-color: #fef7e5;
+}
+
+.koi {
+    background-color: #f38630;
+}
+
+.pearl {
+    background-color: #fbfcf7;
+}
+
+.pineapple {
+    background-color: #ffe327;
+}
+
+.plum {
+    background-color: #601a36;
+}
+
+.raisin {
+    background-color: #290916;
+}
+
+.raspberry {
+    background-color: #a91b0d;
+}
+
+.ruby {
+    background-color: #900503;
+}
+
+.sportscar {
+    background-color: #d31603;
+}
+
+.skyblue {
+    background-color: #c7e1fb;
+}
+
+.trueblue {
+    background-color: #0074d9;
+}
+
+.walnut {
+    background-color: #432711;
+}
+
