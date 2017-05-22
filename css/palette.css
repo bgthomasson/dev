@@ -11,17 +11,18 @@ main {
 }
 
 section {
-    margin-bottom: 5em;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1em;
+    margin-bottom: 3em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .box {
     padding: 2em;
+    flex: 0 0 80%;
 }
-
-
 
 .apricot {
     background-color: #ed810f;
