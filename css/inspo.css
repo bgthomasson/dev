@@ -1,3 +1,5 @@
+/* Only supporting browsers that support grid. */
+
 html {
     font-size: 1rem;
 }
@@ -6,7 +8,7 @@ body {
     background-color: #404040;
     color: #fbfcf7; 
     font-family: 'Open Sans', Candara, sans-serif; 
-    font-size: 1.1em; 
+    font-size: 1em; 
     line-height: 1.3; 
 }
 
@@ -28,7 +30,7 @@ a {
     main {
         margin: 0 auto; 
         display: grid;
-        grid-gap: 1em;
+        grid-gap: .4em;
         grid-template-columns: repeat(8, 1fr);
     }
     
