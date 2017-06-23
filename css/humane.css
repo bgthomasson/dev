@@ -1,0 +1,59 @@
+/* modern and mobile, it's simple enough to not worry about IE 11. 
+ * I wanted the number for the local humane society, used internet,  
+ * and their website is using HTML4 with tables, so why not donate something
+ * that will work on phones so people will be able to find the phone number 
+ * etc when they're out driving and see a stray animal. 
+ */
+
+html {
+    font-size: 1 rem;
+    line-height: 1.2; 
+    -ms-text-size-adjust: 100%; 
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    background-color: #fbfcf7;
+    color: #080401;
+    font-family: Candara, "Open Sans", "Noto Sans", sans-serif;
+    font-size: 1em;
+}
+
+@media screen and (min-width: 600px) {
+    body {
+        font-size: 1.1em;
+        line-height: 1.3;
+    }
+    main {
+        width: 40em;
+        margin: 0 auto;
+    }
+}
+/* I'm not sure yet if should ditch header/main/footer for simple stacked boxes */
+
+/* this is a weird combo but currently is most efficient */
+
+.contactinfo,  
+h1, 
+h2, 
+nav {
+    text-align: center;
+}
+
+ul {
+    padding: 0;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+nav a {
+    padding: 0.2em;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
