@@ -26,13 +26,13 @@ body {
 }
 
 /* iPads and small windows on desktop */
-@media screen and (min-width: 481px) and (max-width: 900px) {
+@media screen and (min-width: 481px) and (max-width: 800px) {
     body {
         margin: 0 1em; 
     } 
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 800px) {
     body {
         font-size: 1.1rem;
         line-height: 1.2;
@@ -62,7 +62,7 @@ nav a {
 
 /* all the header stuff can stay flexbox */
 
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 600px) {
     .page-header {
         display: flex;
         flex-direction: row;
