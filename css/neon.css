@@ -1,0 +1,36 @@
+
+
+html {
+    font-size: 1rem;
+}
+
+body {
+    background-color: #080401;
+    font-family: Candara, "Open Sans", "Noto Sans", sans-serif;
+    font-size: 1em;
+    line-height: 1.3;
+}
+
+@media screen and (min-width: 800px) {
+    body {
+        width: 40em;
+        margin: 0 auto;
+    }
+}
+
+h1 {
+    font-size: 3em;
+    text-align: center;
+}
+
+.neon {
+    color: #fbe27c;
+    text-shadow:
+      0 0 7px #f5b16a,
+      0 0 14px #f5b16a,
+      0 0 28px #f5b16a,
+      0 0 56px #f38630,
+      0 0 112px #f38630,
+      0 0 124px #f38630
+}
+
