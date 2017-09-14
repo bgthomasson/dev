@@ -5,7 +5,8 @@ html {
 }
 
 body {
-    background-color: #080401;
+    background-color: #040404;
+    color: #fbfcf7;
     font-family: Candara, "Open Sans", "Noto Sans", sans-serif;
     font-size: 1em;
     line-height: 1.3;
@@ -25,6 +26,8 @@ h1 {
 
 .neon {
     color: #fbe27c;
+    font-family: "Lato Black", sans-serif;
+    margin-bottom: 124px;
     text-shadow:
       0 0 7px #f5b16a,
       0 0 14px #f5b16a,
@@ -32,5 +35,11 @@ h1 {
       0 0 56px #f38630,
       0 0 112px #f38630,
       0 0 124px #f38630
+}
+
+.frilly {
+    border: 3px solid;
+    border-image: linear-gradient(#fbe27c, #b93a0d, #720908) 10;
+    padding: 1em;
 }
 

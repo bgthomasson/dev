@@ -67,6 +67,7 @@ body {
     main {
         padding-top: 3em;
         width: 90vw;
+        margin: 0 auto;
     }
     
 }

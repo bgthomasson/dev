@@ -74,59 +74,59 @@ function generateCharacterSheet() {
     error_role.textContent = "You need to select a role.";
   }
 
-	// make changes depending on role chosen
-	switch (role) {
-		case 'magic':
-      wisdom += 10;
-      magicka +=50;
-      alteration += 10;
-      conjuration += 10;
-      destruction += 10;
-      illusion += 10;
-      restoration += 10;
-      enchantment += 10;
-      alchemy += 10;
-		break;
-		case 'combat':
-      strength +=10;
-      health += 50;
-      archery += 10;
-      block += 10;
-      heavyarmor += 10;
-      onehanded += 10;
-      twohanded += 10;
-      unarmed += 10;
-      smith += 10;
-		break;
-		case 'stealth':
-      agility += 10;
-      stamina += 50;
-      acrobatics += 10;
-      disguise += 10;
-      lightarmor += 10;
-      fraud += 10;
-      security += 10;
-      sneak += 10;
-      archery += 10;
-		break;
-		case 'craft':
-      luck += 10;
-      intelligence += 10;
-      alchemy += 10;
-      speech += 10;
-      survival += 10;
-      handcraft += 10;
-      perform += 10;
-      smith += 10;
-      unarmed += 10;
-		break;
-		default:
-		break;
-	}
-  
-  // should be a function 
+// make changes depending on role chosen
+  switch (role) {
+  case 'magic':
+    wisdom += 10;
+    magicka +=50;
+    alteration += 10;
+    conjuration += 10;
+    destruction += 10;
+    illusion += 10;
+    restoration += 10;
+    enchantment += 10;
+    alchemy += 10;
+    break;
+  case 'combat':
+    strength +=10;
+    health += 50;
+    archery += 10;
+    block += 10;
+    heavyarmor += 10;
+    onehanded += 10;
+    twohanded += 10;
+    unarmed += 10;
+    smith += 10;
+    break;
+  case 'stealth':
+    agility += 10;
+    stamina += 50;
+    acrobatics += 10;
+    disguise += 10;
+    lightarmor += 10;
+    fraud += 10;
+    security += 10;
+    sneak += 10;
+    archery += 10;
+    break;
+  case 'craft':
+    luck += 10;
+    intelligence += 10;
+    alchemy += 10;
+    speech += 10;
+    survival += 10;
+    handcraft += 10;
+    perform += 10;
+    smith += 10;
+    unarmed += 10;
+    break;
+  default:
+    break;
+}
+
+// should be a function 
   var morph = 'morph';
-	var morphcheck = kcg.elements[morph];
+  var morphcheck = kcg.elements[morph];
   
   if(validateRadio(morphcheck)){
     for(var i = 0; i < morphcheck.length; i++) {
@@ -139,26 +139,26 @@ function generateCharacterSheet() {
     error_morph.textContent = "You need to select a morph.";
   }
    
-	// make changes depending on morph chosen
-	switch (morph) {
-		case 'ohmes':
+// make changes depending on morph chosen
+  switch (morph) {
+    case 'ohmes':
       charisma += 5;
       strength -= 5;
       disguise += 10;
-		break;
-		case 'dagi':
+      break;
+    case 'dagi':
       wisdom += 10;
       strength -= 10;
       magicka += 10;
       sneak += 10;
       acrobatics += 5;
-		break;
-		case 'cathay':
+      break;
+    case 'cathay':
       strength += 5;
       agility -= 5;
       stamina += 10;
-		break;
-		case 'alfiq':
+      break;
+    case 'alfiq':
       agility += 10;
       strength -= 10;
       unarmed += 5;
@@ -169,8 +169,8 @@ function generateCharacterSheet() {
       smith = 0;
       twohanded = 0;
       security = 0;
-		break;
-		case 'pahmar':
+      break;
+    case 'pahmar':
       strength +=5;
       unarmed += 10;
       speed += 10;
@@ -179,8 +179,8 @@ function generateCharacterSheet() {
       onehanded = 0;
       smith = 0;
       twohanded = 0;
-		break;
-		case 'senche':
+      break;
+    case 'senche':
       strength += 10;
       agility -= 10;
       unarmed += 15;
@@ -190,12 +190,12 @@ function generateCharacterSheet() {
       onehanded = 0;
       smith = 0;
       twohanded = 0;
-		break;
-		default:
-		break;
-	}
+      break;
+    default:
+      break;
+  }
   
-  // the actual core part of this function -----------------------------------
+  // the actual core part of this function -----------------------------------|
   
   // error check the input
   var namecheck = kcg.charname.value;
@@ -208,114 +208,114 @@ function generateCharacterSheet() {
   }
   
   // print out attributes
-	attributes1.innerHTML = "<td>" + health + "</td><td>" + magicka + "</td><td>" 
+  attributes1.innerHTML = "<td>" + health + "</td><td>" + magicka + "</td><td>" 
     + stamina + "</td><td>" + speed + "</td><td>" + morph + "</td><td>" 
     + kcg.charage.value + "</td><td>" + kcg.chargend.value + "</td>";
-  
-	attributes2.innerHTML = "<td>" + strength + "</td><td>" + wisdom + "</td><td>" 
+
+  attributes2.innerHTML = "<td>" + strength + "</td><td>" + wisdom + "</td><td>" 
     + endurance + "</td><td>" + charisma + "</td><td>" + intelligence + "</td><td>" 
     + agility + "</td><td>" + luck + "</td>";
   
   rolecall.textContent = role;
   
-	// the skills table 
-	skills_magic.innerHTML = "<td>" + alteration + "</td><td>" + conjuration + "</td><td>" 
+// the skills table 
+  skills_magic.innerHTML = "<td>" + alteration + "</td><td>" + conjuration + "</td><td>" 
     + destruction + "</td><td>" + illusion + "</td><td>" + restoration + "</td><td>" 
     + enchantment + "</td>";
   
-	skills_combat.innerHTML = "<td>" + archery + "</td><td>" + block + "</td><td>" 
+  skills_combat.innerHTML = "<td>" + archery + "</td><td>" + block + "</td><td>" 
     + heavyarmor + "</td><td>" + onehanded + "</td><td>" + twohanded + "</td><td>" 
     + unarmed + "</td>";
   
-	skills_rogue.innerHTML = "<td>" + acrobatics + "</td><td>" + disguise + "</td><td>" 
+  skills_rogue.innerHTML = "<td>" + acrobatics + "</td><td>" + disguise + "</td><td>" 
     + lightarmor + "</td><td>" + fraud + "</td><td>" + security + "</td><td>" + sneak 
     + "</td>";
   
-	skills_craft.innerHTML = "<td>" + alchemy + "</td><td>" + speech + "</td><td>" 
+  skills_craft.innerHTML = "<td>" + alchemy + "</td><td>" + speech + "</td><td>" 
     + survival + "</td><td>" + handcraft + "</td><td>" + perform + "</td><td>" 
     + smith + "</td>";
 
   // special morph abilities
-		switch (morph) {
-		case 'ohmes':
-		  morph_abilities.textContent = 'As an Ohmes, you have Claws (8 pt).';
-		break;
-		case 'dagi':
-		  morph_abilities.textContent = 'As a Dagi, you have Bite (6 points) and Claws (8 pt).';
-		break;
-		case 'suthay':
-		  morph_abilities.textContent = 'As a Suthay, you have Bite (8 pt) and Claws (12 pt).';
-		break;
-		case 'cathay':
-		  morph_abilities.textContent = 'As a Cathay, you have Bite (10 points) and Claws (15 pt).';
-		break;
-		case 'alfiq':
-		  morph_abilities.textContent = 'As an Alfiq you have Bite (6 points) and Claws (6 pt). ' 
+  switch (morph) {
+    case 'ohmes':
+      morph_abilities.textContent = 'As an Ohmes, you have Claws (8 pt).';
+      break;
+    case 'dagi':
+      morph_abilities.textContent = 'As a Dagi, you have Bite (6 points) and Claws (8 pt).';
+      break;
+    case 'suthay':
+      morph_abilities.textContent = 'As a Suthay, you have Bite (8 pt) and Claws (12 pt).';
+      break;
+    case 'cathay':
+      morph_abilities.textContent = 'As a Cathay, you have Bite (10 points) and Claws (15 pt).';
+      break;
+    case 'alfiq':
+      morph_abilities.textContent = 'As an Alfiq you have Bite (6 points) and Claws (6 pt). ' 
       + 'You are unable to speak anything but Miu, but you can understand speech. ' 
       + 'As a quadruped, you cannot use skills that require opposable thumbs.';
-		break;
-		case 'pahmar':
-		  morph_abilities.textContent = 'As a Pahmar, you have Bite(20 points) and Claws (18 pt). ' 
+      break;
+    case 'pahmar':
+      morph_abilities.textContent = 'As a Pahmar, you have Bite(20 points) and Claws (18 pt). ' 
       + 'As a quadruped, you cannot use skills that require opposable thumbs.';
-		break;
-		case 'senche':
-		  morph_abilities.textContent = 'As a Senche, you have Bite (30 points) and Claws(25 pt). '
+      break;
+    case 'senche':
+      morph_abilities.textContent = 'As a Senche, you have Bite (30 points) and Claws(25 pt). '
       + 'As a quadruped, you cannot use skills that require opposable thumbs.';
-		break;
-		default:
-		break;
-	}
-	
+      break;
+    default:
+      break;
+}
+
 // spells known- if mage or other
-		switch(role){
-		case 'magic':
-		  spells1.textContent = 'As a mage you have learned Heal Self; Shield (10 Points); ' 
+  switch(role){
+    case 'magic':
+      spells1.textContent = 'As a mage you have learned Heal Self; Shield (10 Points); ' 
       + 'Candlelight; Courage; and your choice of Flames, Frost, or Sparks.';
-		break;
-		default:
-		  spells1.textContent = 'All non-mages are taught Heal Self (Restore HP and SP 10 points for 1 second).';
-		break;
-	}
-  
+      break;
+    default:
+      spells1.textContent = 'All non-mages are taught Heal Self (Restore HP and SP 10 points for 1 second).';
+      break;
+  }
+
 // spells known by each morph
-		switch (morph) {
-		case 'dagi':
-		  spells2.textContent = 'As a Dagi, regardless of role you know Heal Other (5 points), '
+  switch (morph) {
+    case 'dagi':
+      spells2.textContent = 'As a Dagi, regardless of role you know Heal Other (5 points), '
       + 'Shield (10 points), and Chameleon (10 percent).';
-		break;
-		case 'alfiq':
-		  spells2.textContent = 'As an Alfiq has no hands, you have learned Telekinesis (5 pounds). '
+      break;
+    case 'alfiq':
+      spells2.textContent = 'As an Alfiq has no hands, you have learned Telekinesis (5 pounds). '
       + 'Alfiq have the powers of Calming Purr and Eye of Kitten.';
-		break;
-		case 'pahmar':
-		  spells2.textContent = 'As a Pahmar has no hands, you have learned Telekinesis (10 pounds).';
-		break;
-		case 'senche':
-		  spells2.textContent = 'As a Senche has no hands, you have learned Telekinesis (15 pounds).';
-		break;
-		default:
-		break;
-	}
-	
+      break;
+    case 'pahmar':
+      spells2.textContent = 'As a Pahmar has no hands, you have learned Telekinesis (10 pounds).';
+      break;
+    case 'senche':
+      spells2.textContent = 'As a Senche has no hands, you have learned Telekinesis (15 pounds).';
+      break;
+    default:
+      break;
+    }
+
 // inventory
-	switch(role){
-		case 'magic':
-		  inventory.textContent = 'As a magic specialist, you have a tattered star covered robe '
+  switch(role){
+    case 'magic':
+      inventory.textContent = 'As a magic specialist, you have a tattered star covered robe '
       +'(+13 to magicka), socks that are two sizes too big, and a sweet roll.';
-		break;
-		case 'combat':
-		  inventory.textContent = 'As a combat specialist, you have rusty iron chainmail, '
+      break;
+    case 'combat':
+      inventory.textContent = 'As a combat specialist, you have rusty iron chainmail, '
       + 'a big stick with a nail in it, and a ration of jerky.';
-		break;
-		case 'stealth': 
-		  inventory.textContent = 'As a stealth specialist, you have greasy leather armor, a ski mask, and a lockpick.';
-		break;
-		case 'craft':
-		  inventory.textContent = 'As a craft specialist, you have a dirty peasant shirt, yarn, a bag of seeds, and a shovel.';
-		break;
-		default:
-		break;
-	}
+      break;
+    case 'stealth': 
+      inventory.textContent = 'As a stealth specialist, you have greasy leather armor, a ski mask, and a lockpick.';
+      break;
+    case 'craft':
+      inventory.textContent = 'As a craft specialist, you have a dirty peasant shirt, yarn, a bag of seeds, and a shovel.';
+      break;
+    default:
+      break;
+  }
   
 }
 
