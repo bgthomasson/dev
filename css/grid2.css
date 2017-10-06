@@ -1,17 +1,19 @@
 /* generic stuff ----------------------------------------------------------- */
 
-html, 
+html {
+    font-size: 1rem; 
+    /* set rem on html to set the root size, which does make a difference */
+} 
+
 body {
     background-color: #fbfcf7;
     color: #404040; 
     font-family: 'Source Sans Pro', 'Trebuchet MS', sans-serif;
-    font-size: 1rem; 
-    /* set rem on html to set the root size, which does make a difference */
     line-height: 1.2; 
-    -webkit-text-size-adjust: 100%; 
 }
 
 h2 {
+    font-family: Merriweather, serif;
     margin: .3em;
 }
 
@@ -49,6 +51,10 @@ input {
  */
 
 @media screen and (min-width: 800px){
+    
+    body {
+        font-size: 1.1em;
+    }
     
     main {
         margin: 0 auto; 
