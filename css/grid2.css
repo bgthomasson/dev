@@ -14,7 +14,7 @@ body {
 
 h2 {
     font-family: Merriweather, serif;
-    margin: .3em;
+    margin: 0;
 }
 
 .page-header {
@@ -41,6 +41,13 @@ input {
 
 .byline {
     font-size: 0.8em;
+}
+
+/* looks better if text wraps around image */
+.lefty {
+    float: left;
+    margin-right: 2em;
+    margin-bottom: 1em;
 }
 
 /* the grid stuff ---------------------------------------------------------- */
@@ -110,4 +117,3 @@ input {
     }
     
 }
-
