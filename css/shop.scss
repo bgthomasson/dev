@@ -1,5 +1,5 @@
 /* TABLE OF CONTENTS ------------------------------------------------------- ||
- * 0: Imports and mixins, etc
+ * 0: Imports, mixins, variables
  * 1. Overall layout: body, main
  * 2. header and footer for page 
  * 3. <article> and <section> 
@@ -8,109 +8,87 @@
  * 6. Forms default, search-form 
 */ 
 
-/* BROWSER SUPPORT
- * Primary: current version - 2: Chrome, FF, Safari, Edge
- * Secondary: Android 4.4, IE 8 (so can shop at work lol)
- * Note that it currently falls apart in IE 8 and 9 as there is no flexbox fallback yet...
+/* BROWSER SUPPORT 2017.11
+ * Primary: Chrome 60+, FF 52+, Safari 10.3+, Edge
+ * Secondary: IE 10 (so can shop at work lol)
 */
 
-/* IMPORTS */@import 'normalize4';
+/* IMPORTS */
+/* dropped full normalize.css, instead just insert the few pieces needed 
+ * normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css 
+*/
 
 /* MIXINS */
 
 /* VARS */
 
-$font-sans-1: Candara, 'Lucida Sans Unicode', 'Liberation Sans', 'Fira Sans', Roboto, Sans-Serif;
-$font-serif-1: Cambria, Georgia, Palatino, serif;
-$font-serif-2: Constantia, "Palatino Linotype", Palatino, Gentium, serif;
+$font-sans-1: Candara, 'Lucida Sans Unicode', 'Fira Sans', Roboto, Sans-Serif;
+$font-serif-1: Cambria, Georgia, serif;
+$font-serif-2: Constantia, "Palatino Linotype", Gentium, serif;
 
 $media-small: 481px;
 $media-big: 900px;
 
-
 $action-color: #c7e1fb;
 $action-darker: darken($action-color, 10%);
 
-$text-color: #111;
+$text-color: #222;
 $text-muted: #787276;
 
 $apricot: #ed810f;
 
-$buttermilk: #fdefb2;
-
 $caramel: #66360f;
-
-$koi: #f38630;
 
 $pearl: #fbfcf7;
 
-$pineapple: #ffe327;
-
-$plum: #601a36;
-
-$raspberry: #a91b0d;
+$sky: #97c8f8;
 
 $sportscar: #d31603;
-
-$sky: #c7e1fb;
 
 
 /* SECTION 1: OVERALL LAYOUT ................................................. */
 
-/* defaults that will work on phones */
-body {  
-    background-color: $pearl;
+
+html {
     color: $text-color;
     font-family: $font-sans-1;
-    font-size: 1em;
-    line-height: 1.1em;
-    margin: 0 .3em;
+    font-size: 1rem;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
 }
 
-/* iPads and small windows on desktop */
-@media screen and (min-width: $media-small) and (max-width: $media-big) {
-    body {
-        margin: 0 1em;
-    }
+body {  
+    background-color: $pearl;
+    margin: 0;
 }
 
 @media screen and (min-width: $media-big) {
     body {
         font-size: 105%;
-        line-height: 1.2em;
-        margin: 0 auto;
-        width: 50em;
+        line-height: 1.3;
     }
 }
 
 
 /* 2: HEADER AND FOOTER ------------------------------------------------------- */
 .page-header {
+    background-color: $sky;
     margin-bottom: 2em;
-    padding-top: 0.5em;
-}
-
-.cell {
-    padding-bottom: 0.5em;
-    max-width: 100%;
+    padding: 0.5em 2em 0 2em; 
 }
 
 nav a {
+    color: inherit;
     padding: 0 .3em;
 }
-    
 
-
-@media screen and ( min-width: $media-small ) {
+@media screen and ( min-width: $media-big ) {
     .page-header {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         align-items: center;
-    }
-    
-    .cell {
-        flex: 1;
+        justify-content: space-between;
     }
     
     nav {
@@ -126,7 +104,6 @@ nav a {
     }
 }
 
-
 .nomen {
     display: inline-block;
     margin: 0;
@@ -134,9 +111,8 @@ nav a {
 
 .search-input {
     border: 3px solid $action-color;
-    max-width: 300px;
+    width: 30vw;
 }
-
 
 .page-footer {
     border-top: 1px solid $caramel;
@@ -147,34 +123,55 @@ nav a {
 
 /* SECTION 3: ARTICLE RELATED ---------------------------------------------- */
 
-article {
-    margin-bottom: 2em;
-}
-
 .product-media {
     text-align: center;
-    margin-bottom: 1em;
 }
-/* media: not simply image, can be set of jpgs, <picture>, video, etc. 
- * text is just plain text 
-*/
 
 .product-purchase {
     border: 1px solid $caramel;
     text-align: center;
-    padding: 0 0.5em; 
 }
 
-@media screen and ( min-width: $media-small ) {
-    
-    .product-text {
-        flex: 0 0 70%;
+.product-review {
+    border: 1px dotted $caramel; 
+}
+
+.product-text h2 {
+    margin-top: 0; 
+}
+
+.news-good {
+    color: green; 
+}
+
+.news-bad {
+    color: $sportscar; 
+}
+
+@media screen and ( min-width: $media-big ) {
+    main {
+        display: block; /* IE 11 */
+        margin-bottom: 5em;
+        padding: 0 3vw;
+    }
+
+    .product-listing {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .product-media {
+        flex: 0 0 25%;
+    }
+
+    .product-promo {
+        flex: 0 0 45%;
     }
 
     .product-purchase {
-        flex: 0 0 25%;
+        flex: 0 1 25%;
         align-self: flex-start;
-        flex-grow: 1;
     }
     
     /* IE 10-11 don't respect border-box here. You can set the total to 
@@ -182,41 +179,26 @@ article {
     However, flex-grow will let it fill up the remaining space.... 
     */
 
-    .product-review {
-        border: 1px dotted $caramel;
-    }
-
-    .row {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-    }
-}
-
-.product-text h2 {
-    margin-top: 0;
-}
-
-.stock-in {
-    color: green;
-}
-
-.stock-out {
-    color: $sportscar;
-}
-
-.warning-minor {
-    color: $apricot;
 }
 
 /* SECTION 4: MISC ELEMENTS ------------------------------------------------ */
+
+a {
+    background-color: transparent; 
+    -webkit-text-decoration-skip: objects;
+}
 
 blockquote {
     margin: 0;
     padding-left: 0.25em;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
     font-family: $font-serif-1;
 }
 
@@ -224,15 +206,19 @@ img {
     max-width: 98vw;
 }
 
-ol, ul {
+ol, 
+ul {
     padding: 0.5em;
     list-style-position: inside;
+}
+
+strong {
+    font-weight: bolder;
 }
 
 video { 
     margin: 1em 0;
 }
-
 
 /* SECTION 5: TABLES ------------------------------------------------------ */
 
@@ -243,33 +229,27 @@ table {
 /* SECTION 6: FORM ELEMENTS ----------------------------------------------- */
 
 button {
-    background-color: $action-color;
+    background-color: $apricot;
     border: none;
-    border-radius: 3px;
-    padding: 0.5em;
+    border-radius: .5em;
+    cursor: pointer;
+    padding: .5em;
 }
 
-button:hover {
-    background-color: $action-darker;
+button,
+input,
+select,
+textarea {
+    box-sizing: border-box; 
+    color: inherit;
+    font: inherit; 
+    margin: 0; 
 }
 
-/* -----
-SVG Icons - svgicons.sparkk.fr
------ */
-
-.svg-icon {
-  width: 1em;
-  height: 1em;
-}
-
-.svg-icon path,
-.svg-icon polygon,
-.svg-icon rect {
-  fill: #4691f6;
-}
-
-.svg-icon circle {
-  stroke: #4691f6;
-  stroke-width: 1;
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
 }
 

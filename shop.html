@@ -4,73 +4,80 @@
     <meta charset="utf-8" />
     <title>Shop test</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <link rel="stylesheet" type="text/css" media="all" href="css/shop.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="css/shop-grid.css" />
 </head>
 <body>
 
 <header class="page-header" role="banner">
-    <h1 class="cell nomen">Orinoco</h1>
-
-    <form name="searchform" class="cell search-form" method="POST" action="search.php">
-        <input type="search" name="search-input" class="search-input" placeholder="Search here" />
+    <h1 class="nomen">Orinoco</h1>
+    <form name="searchform" class="search-form" method="POST" action="search.php">
+        <input type="search" name="search-input" class="search-input" placeholder="Search" />
     </form>
-    <nav class="cell">
+    <nav>
         <a href="/account">account</a>
         <a href="/wishlists">wishlists</a>
         <a href="/cart">cart</a>
     </nav>
-
 </header>
 
 <main>
-
     <article class="product-listing">
         <section class="product-media">
             <img src="img/apples.jpg" alt="apples" height="300px" width="300px" />
         </section>
-        
-        <div class="row">
-        <section class="product-text">
+
+        <section class="product-promo">
             <h2>Basket of Apples</h2>
-            <p>Made by <a href="/apples">Apple Inc</a></p> 
-            <p>Item #1234567</p>
-            <p>A well made basket, filled with ripe apples [fruit of Malus domestica]</p>
-            <p><strong>Available Colors:</strong> red, yellow, green, mixed</p>
-            <p><strong>Basket styles:</strong> traditional, laundry</p>
-            <p><strong>Shipping weight:</strong> 20 pounds</p>
-            <p><strong>Product of:</strong> USA, Italy, Turkey, and/or Poland</p>
-            <h3 class="warning-minor">Caveat emptor:</h3>
-            <ul>
-                <li>number of apples may vary</li>
-                <li>pony not included</li>
-                <li>ability to repel medical professionals is unsubstantiated</li>
-            </ul>
+            <p>Made by <a href="/apples">Apple Inc</a> Item #314159</p>
+            <p>
+                A well made basket, filled with ripe apples 
+                [fruit of Malus domestica]. Delicious crisp farm-fresh fruit 
+                delivered by pegasus from magical lands. 
+            </p>
         </section>
         
         <section class="product-purchase">
-            <p>price: $19.99</p>
-            <p><span class="stock-in">In Stock &#x2611;</span></p>
+            <p>price: <span class="news-good">$19.99</span></p>
+            <p>Quantity: 1</p>
+            <p><span class="news-good">In Stock &#x2611;</span></p>
             <p><button>Add to cart</button></p> 
+            <p>
+                Want it tomorrow? Order in 6 hours and select 
+                superduper shiparooni at checkout.</p>
             <p>You have not purchased this item before</p>
             <p><button>Add to a wishlist</button></p> 
         </section>
-        </div>
-        
-        <section class="product-reviews">
-            <h4>Reviews</h4>
-            
-            <blockquote class="product-review">
-            <p class="username">&#x2605;&#x2605;&#x2605;&#x2605;&#x2606; by Bumpkin on 2014-12-12</p>
-            <p>Yep that's a lotta dang ol apples man talk about fruits basket</p>
-            </blockquote>
-            <blockquote class="product-review">
-            <p class="username">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605; by Applejack on 2015-04-05</p>
-            <p>Mmm delicious!</p>
-            </blockquote>
-        
-        </section>
-        
     </article>
+
+    <section class="product-related">
+        <p>Add in a row of images/links to related products here</p>
+    </section>
+
+    <section class="product-details">
+        <h2>Basket of Apples</h2>
+        <p><strong>Available Colors:</strong> red, yellow, green, mixed</p>
+        <p><strong>Basket styles:</strong> traditional, laundry</p>
+        <p><strong>Shipping weight:</strong> 20 pounds</p>
+        <p><strong>Product of:</strong> USA, Italy, Turkey, and/or Poland</p>
+        <h3>Caveat emptor:</h3>
+        <ul>
+            <li>number of apples may vary</li>
+            <li>pony not included</li>
+            <li>ability to repel medical professionals is unsubstantiated</li>
+        </ul>
+    </section>
+    
+    <section class="product-reviews">
+        <h4>Reviews</h4>
+        <blockquote class="product-review">
+        <p class="username">&#x2605;&#x2605;&#x2605;&#x2605;&#x2606; by Bumpkin on 2014-12-12</p>
+        <p>Yep that's a lotta dang ol apples man talk about fruits basket</p>
+        </blockquote>
+        <blockquote class="product-review">
+        <p class="username">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605; by Applejack on 2015-04-05</p>
+        <p>Mmm delicious!</p>
+        </blockquote>
+    </section>
 
 </main>
 

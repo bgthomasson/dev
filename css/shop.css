@@ -1,5 +1,5 @@
 /* TABLE OF CONTENTS ------------------------------------------------------- ||
- * 0: Imports and mixins, etc
+ * 0: Imports, mixins, variables
  * 1. Overall layout: body, main
  * 2. header and footer for page 
  * 3. <article> and <section> 
@@ -7,221 +7,64 @@
  * 5. Tables
  * 6. Forms default, search-form 
 */
-/* BROWSER SUPPORT
- * Primary: current version - 2: Chrome, FF, Safari, Edge
- * Secondary: Android 4.4, IE 8 (so can shop at work lol)
+/* BROWSER SUPPORT 2017.11
+ * Primary: Chrome 60+, FF 52+, Safari 10.3+, Edge
+ * Secondary: IE 10 (so can shop at work lol)
 */
 /* IMPORTS */
-/*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
-/* Deleted the opinionated bits and obscure unused things, keeping stuff for IE<11, etc */
-/**
- * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
- */
-html {
-  -ms-text-size-adjust: 100%;
-  /* 2 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */ }
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-main,
-menu,
-nav,
-section,
-summary {
-  /* 1 */
-  display: block; }
-
-audio,
-canvas,
-progress,
-video {
-  display: inline-block; }
-
-progress {
-  vertical-align: baseline; }
-
-template,
-[hidden] {
-  display: none; }
-
-a {
-  background-color: transparent;
-  /* 1 */
-  -webkit-text-decoration-skip: objects;
-  /* 2 */ }
-
-b,
-strong {
-  font-weight: bolder; }
-
-small {
-  font-size: 80%; }
-
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline; }
-
-sub {
-  bottom: -0.25em; }
-
-sup {
-  top: -0.5em; }
-
-img {
-  border-style: none; }
-
-svg:not(:root) {
-  overflow: hidden; }
-
-code,
-pre {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */ }
-
-button,
-input,
-select,
-textarea {
-  font: inherit;
-  /* 1 */
-  margin: 0;
-  /* 2 */ }
-
-button,
-input {
-  /* 1 */
-  overflow: visible; }
-
-button,
-select {
-  /* 1 */
-  text-transform: none; }
-
-button,
-html [type="button"],
-[type="reset"],
-[type="submit"] {
-  -webkit-appearance: button;
-  /* 2 */ }
-
-button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
-  border-style: none;
-  padding: 0; }
-
-button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
-  outline: 1px dotted ButtonText; }
-
-legend {
-  box-sizing: border-box;
-  /* 1 */
-  color: inherit;
-  /* 2 */
-  display: table;
-  /* 1 */
-  max-width: 100%;
-  /* 1 */
-  padding: 0;
-  /* 3 */
-  white-space: normal;
-  /* 1 */ }
-
-textarea {
-  overflow: auto; }
-
-[type="checkbox"],
-[type="radio"] {
-  box-sizing: border-box;
-  /* 1 */
-  padding: 0;
-  /* 2 */ }
-
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-  height: auto; }
-
-[type="search"] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  outline-offset: -2px;
-  /* 2 */ }
-
+/* dropped full normalize.css, instead just insert the few pieces needed 
+ * normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css 
+*/
 /* MIXINS */
 /* VARS */
 /* SECTION 1: OVERALL LAYOUT ................................................. */
-/* defaults that will work on phones */
+html {
+  color: #222;
+  font-family: Candara, "Lucida Sans Unicode", "Fira Sans", Roboto, Sans-Serif;
+  font-size: 1rem;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%; }
+
 body {
   background-color: #fbfcf7;
-  color: #111;
-  font-family: Candara, "Lucida Sans Unicode", "Liberation Sans", "Fira Sans", Roboto, Sans-Serif;
-  font-size: 1em;
-  line-height: 1.1em;
-  margin: 0 .3em; }
+  margin: 0; }
 
-/* iPads and small windows on desktop */
-@media screen and (min-width: 481px) and (max-width: 900px) {
-  body {
-    margin: 0 1em; } }
 @media screen and (min-width: 900px) {
   body {
     font-size: 105%;
-    line-height: 1.2em;
-    margin: 0 auto;
-    width: 50em; } }
+    line-height: 1.3; } }
+
 /* 2: HEADER AND FOOTER ------------------------------------------------------- */
 .page-header {
+  background-color: #97c8f8;
   margin-bottom: 2em;
-  padding-top: 0.5em; }
-
-.cell {
-  padding-bottom: 0.5em;
-  max-width: 100%; }
+  padding: 0.5em 2em 0 2em; }
 
 nav a {
+  color: inherit;
   padding: 0 .3em; }
 
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 900px) {
   .page-header {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: center; }
-
-  .cell {
-    flex: 1; }
-
+    align-items: center;
+    justify-content: space-between; }
   nav {
     text-align: right; }
-
   nav a {
     text-decoration: none; }
-
   nav a:hover {
     text-decoration: underline; } }
+
 .nomen {
   display: inline-block;
   margin: 0; }
 
 .search-input {
   border: 3px solid #c7e1fb;
-  max-width: 300px; }
+  width: 30vw; }
 
 .page-footer {
   border-top: 1px solid #66360f;
@@ -229,67 +72,74 @@ nav a {
   margin-bottom: 2em; }
 
 /* SECTION 3: ARTICLE RELATED ---------------------------------------------- */
-article {
-  margin-bottom: 2em; }
-
 .product-media {
-  text-align: center;
-  margin-bottom: 1em; }
+  text-align: center; }
 
-/* media: not simply image, can be set of jpgs, <picture>, video, etc. 
- * text is just plain text 
-*/
 .product-purchase {
   border: 1px solid #66360f;
-  text-align: center;
-  padding: 0 0.5em; }
+  text-align: center; }
 
-@media screen and (min-width: 481px) {
-  .product-text {
-    flex: 0 0 70%; }
+.product-review {
+  border: 1px dotted #66360f; }
 
-  .product-purchase {
-    flex: 0 0 25%;
-    align-self: flex-start;
-    flex-grow: 1; }
-
-  /* IE 10-11 don't respect border-box here. You can set the total to 
-  less than 100%, but then it doesn't line up neatly on the right.  
-  However, flex-grow will let it fill up the remaining space.... 
-  */
-  .product-review {
-    border: 1px dotted #66360f; }
-
-  .row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap; } }
 .product-text h2 {
   margin-top: 0; }
 
-.stock-in {
+.news-good {
   color: green; }
 
-.stock-out {
+.news-bad {
   color: #d31603; }
 
-.warning-minor {
-  color: #ed810f; }
+@media screen and (min-width: 900px) {
+  main {
+    display: block;
+    /* IE 11 */
+    margin-bottom: 5em;
+    padding: 0 3vw; }
+  .product-listing {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; }
+  .product-media {
+    flex: 0 0 25%; }
+  .product-promo {
+    flex: 0 0 45%; }
+  .product-purchase {
+    flex: 0 1 25%;
+    align-self: flex-start; }
+  /* IE 10-11 don't respect border-box here. You can set the total to 
+    less than 100%, but then it doesn't line up neatly on the right.  
+    However, flex-grow will let it fill up the remaining space.... 
+    */ }
 
 /* SECTION 4: MISC ELEMENTS ------------------------------------------------ */
+a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects; }
+
 blockquote {
   margin: 0;
   padding-left: 0.25em; }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: Cambria, Georgia, Palatino, serif; }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Cambria, Georgia, serif; }
 
 img {
   max-width: 98vw; }
 
-ol, ul {
+ol,
+ul {
   padding: 0.5em;
   list-style-position: inside; }
+
+strong {
+  font-weight: bolder; }
 
 video {
   margin: 1em 0; }
@@ -300,28 +150,23 @@ table {
 
 /* SECTION 6: FORM ELEMENTS ----------------------------------------------- */
 button {
-  background-color: #c7e1fb;
+  background-color: #ed810f;
   border: none;
-  border-radius: 3px;
-  padding: 0.5em; }
+  border-radius: .5em;
+  cursor: pointer;
+  padding: .5em; }
 
-button:hover {
-  background-color: #97c8f8; }
+button,
+input,
+select,
+textarea {
+  box-sizing: border-box;
+  color: inherit;
+  font: inherit;
+  margin: 0; }
 
-/* -----
-SVG Icons - svgicons.sparkk.fr
------ */
-.svg-icon {
-  width: 1em;
-  height: 1em; }
-
-.svg-icon path,
-.svg-icon polygon,
-.svg-icon rect {
-  fill: #4691f6; }
-
-.svg-icon circle {
-  stroke: #4691f6;
-  stroke-width: 1; }
-
-/*# sourceMappingURL=shop.css.map */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; }
