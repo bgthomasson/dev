@@ -5,43 +5,44 @@ html {
     line-height: 1.2;
 }
 
-
 body {
-    background-color: rgb(219,226,234);
+    background-color: #222;
     font-family: 'Source Sans Pro', Candara, sans-serif; 
+    margin: 0;
+    padding: 0;
 }
 
 h1,
 h2 {
-    font-family: "Source Code Pro", "DejaVu Sans Mono", Consolas, monospace;
+    font-family: Merriweather, Cambria, Georgia, serif;
     text-align: center;
 }
 
-main {
-    margin: 0 auto; /* OH NOW FINALLY I get it to center align */
-    padding: 1em;
-}
-
-@media only screen and (min-width: 600px){
+@media only screen and (min-width: 700px){
     main {
-        width: 64em;
+        margin: 0 auto;
+        width: 80vw;
     }
 }
 
-/* fiddling around with the grid stuff ------------------------------------- */
+
+/* TEST ONE */
 
 .grid-3 {
     background-color: #5a93bd;
-    border-radius: 6px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1em;
-    margin-bottom: 5em;
+}
+
+@media only screen and (min-width: 700px){
+    .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1em;
+        margin-bottom: 5em;
+    }
 }
 
 .box {
     background-color: #fff;
-    border-radius: 6px;
     padding: .5em;
 }
 
@@ -81,7 +82,7 @@ main {
         "aside";
 }
 
-@media only screen and (min-width: 600px){
+@media only screen and (min-width: 64em){
     .grid-news{
         grid-template-columns: 40em 24em;
         grid-template-areas:

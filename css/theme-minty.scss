@@ -1,8 +1,6 @@
 
-@import 'normalize2016';
 @import 'core';
 @import 'prism-lite';
-
 
 $theme-color: rgb(143,188,143);
 $theme-shadow: rgb(176,148,127);
@@ -17,7 +15,7 @@ $paper2: rgb(245,240,222);
 $font-color: black; /* no need to specify here but listed for consistency */
 $text-muted: gray;
 
-$fonts-sans: 'Noto Sans', Candara, 'Fira Sans', Sans-Serif;
+$fonts-sans: 'Noto Sans', Candara, 'Fira Sans', sans-serif;
 $fonts-serif: 'Noto Serif', Cambria, Georgia, serif;
 $fonts-mono: 'Oxygen Mono', 'DejaVu Sans Mono', Consolas, monospace;
 
@@ -35,7 +33,7 @@ body {
         linear-gradient(90deg, transparent 50%, rgba(128,163,128,.17) 50%),
         linear-gradient(90deg, transparent 50%, rgba(190,235,190,.19) 50%);
     background-size: 13px, 29px, 37px, 53px;
-    font-family: $fonts-sans; 
+    font-family: 'Noto Sans', Candara, sans-serif; 
 }
 
 .page-header {
@@ -91,7 +89,7 @@ blockquote {
 
 code, 
 pre {
-    font-family: $fonts-mono;
+    font-family: 'Oxygen Mono', 'DejaVu Sans Mono', Consolas, monospace;
 }
 
 h1, 
@@ -100,7 +98,7 @@ h3,
 h4, 
 h5, 
 h6 {
-    font-family: $fonts-serif;
+    font-family: 'Noto Serif', Cambria, Georgia, serif;
 }
 
 ul, ol {
