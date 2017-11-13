@@ -1,13 +1,13 @@
-/* generic stuff ----------------------------------------------------------- */
+/* generic stuff ------------------------------------------------------------ */
 
 html {
     font-size: 1rem;
-    line-height: 1.2;
+    line-height: 1.3;
 }
 
 body {
     background-color: #222;
-    font-family: 'Source Sans Pro', Candara, sans-serif; 
+    font-family: 'Noto Sans', Candara, sans-serif; 
     margin: 0;
     padding: 0;
 }
@@ -18,7 +18,7 @@ h2 {
     text-align: center;
 }
 
-@media only screen and (min-width: 700px){
+@media screen and (min-width: 64em){
     main {
         margin: 0 auto;
         width: 80vw;
@@ -26,13 +26,13 @@ h2 {
 }
 
 
-/* TEST ONE */
+/* TEST ONE ----------------------------------------------------------------- */
 
 .grid-3 {
     background-color: #5a93bd;
 }
 
-@media only screen and (min-width: 700px){
+@media screen and (min-width: 64em){
     .grid-3 {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -71,20 +71,16 @@ h2 {
     grid-row: 4;
 }
 
-/* TEST TWO ---------------------------------------------------------------- */
+/* TEST TWO ----------------------------------------------------------------- */
 
 .grid-news {
     background-color: #fff;
-    display: grid;
-    grid-template-areas: 
-        "header"
-        "content" 
-        "aside";
 }
 
-@media only screen and (min-width: 64em){
+@media screen and (min-width: 64em){
     .grid-news{
-        grid-template-columns: 40em 24em;
+        display: grid;
+        grid-template-columns: 66% 33%;
         grid-template-areas:
             "header header"
             "content aside";
