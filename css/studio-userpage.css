@@ -1,167 +1,22 @@
-/*! normalize.css v4.1.1 | MIT License | git.io/normalize use for some parts */
-/* Edited a bit for brevity and IE11+ focus 
-* Safari 9+ is good target, older versions are > 1%
-* FF and Chrome, 45+ covers 99% 
-* Overall: 50% Chrome, 10% Safari, 7% UC browser, 6% FF, 5% Opera mini, 4% IE11, 
-* 3% samsung browser 
-*/
 
-/**
- * Add the correct display in IE.
- */
+/* SECTION: 1 BASIC LAYOUT ----------------------------------------------*/
 
-main { 
-    display: block;
+html {
+    font-size: 1rem;
+    -webkit-text-size-adjust: 100%;
 }
-
-/**
- * Add the correct font weight in Chrome, Edge, and Safari.
- */
-
-b,
-strong {
-  font-weight: bolder;
-}
-
-/**
- * Prevent `sub` and `sup` elements from affecting the line height in
- * all browsers.
- */
-
-sub,
-sup {
-    font-size: 75%;
-    line-height: 0;
-    position: relative;
-    vertical-align: baseline; 
-}
-
-sup {
-    top: -0.5em; 
-}
-
-sub {
-    bottom: -0.25em; 
-}
-
-/**
- * Hide the overflow in IE.
- */
-
-svg:not(:root) {
-    overflow: hidden; 
-}
-
-/* END NORMALIZE, BEGIN CUSTOM -------------------------------------------- */
 
 body {
     background-color: #1e1e1e;
     color: #fbfcf7;
-    font-family: "Source Sans Pro", Candara, "Fira Sans", Roboto, sans-serif;
-    font-size: 1em;
-    line-height: 1.1em;
+    font-family: "Source Sans Pro", Candara, sans-serif;
+    line-height: 1.15;
     margin: 0 auto; 
 }
-
-@media screen and (min-width: 481px) {    
-    main {
-        padding-top: 3em;
-        width: 90vw;
-        margin: 0 auto;
-    }
-    
-}
-
-@media screen and (min-width: 800px) {
-    body {
-        font-size: 105%;
-        line-height: 1.2em;
-    }
-
-    .float-left {
-        float: left;
-        width: 49%;
-    }
-    .float-right {
-        float: right;
-        width: 49%;
-    }
-}
-
-
-a {
-    color: white;
-}
-
-h1, 
-h2, 
-h3, 
-h4, 
-h5, 
-h6 {
-    font-family: "Gentium Basic", Cambria, Georgia, Palatino, serif; 
-}
-
-/* plan to use h1 for main page title (so only use once)
-* and h2 for main article titles */
-
-h2 {
-    padding-top: 0.75em; /* this keeps some space away from other elements */
-    margin-top: 0;
-    text-align: center;
-}
-
-img {
-    border: 0; 
-    max-width: 100%; /* keep from overflowing on tiny screens */
-}
-
-ol, 
-ul {
-    padding: 0.5em;
-    list-style-position: inside; 
-}
-
-ul li {
-    list-style-type: none; 
-}
-
-ul li:before {
-    content: "\2605"; 
-}
-
-
-/* SECTION 2: HEADER AND FOOTER ------------------------------------------ */
 
 .page-header {
     background-color: #0e0e0e;
     padding: .3em 0; 
-    font-size: 110%;
-}
-
-@media screen and (min-width: 481px) {
-    .page-header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        position: fixed;
-        top: 0px;
-        width: 100%;
-        z-index: 9;
-    }
-
-}
-
-/* sometimes you just want to shove things in the middle */
-
-.centered {
-    text-align: center;
-}
-
-/* simply give some space below */
- 
-.pushup {
-    margin-bottom: 1em;
 }
 
 nav a {
@@ -185,8 +40,52 @@ nav a:hover {
     width: 20em; 
 }
 
+.special-actions {
+    background-color: #1c3d3e;
+    padding: 0.3em;
+    margin-bottom: 3em;
+    text-align: center;
+}
 
-/* SECTION 3: ARTICLE RELATED ---------------------------------------------- */
+.thumbs {
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+@media screen and (min-width: 800px) {
+    body {
+        font-size: 1.1em;
+        line-height: 1.3;
+    }
+
+    .page-header {
+        position: fixed;
+        top: 0px;
+        width: 100%;
+        z-index: 9;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    main {
+        display: block; /* one last IE hack */
+        padding-top: 3em;
+        width: 90vw;
+        margin: 0 auto;
+    }
+    
+    .float-left {
+        float: left;
+        width: 49%;
+    }
+    .float-right {
+        float: right;
+        width: 49%;
+    }
+}
+
+/* ARTICLE RELATED ---------------------------------------------- */
 article {
     background-color: #0e0e0e;
     margin-bottom: 2em;
@@ -218,6 +117,51 @@ article {
 
 }
 
+/* SECTION: basic inline elements ----------------------------------------*/
+
+a {
+    color: white;
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+    font-family: Cambria, Georgia, Palatino, serif; 
+}
+
+/* 
+ * h1 for main page title 
+ * h2 for article titles and username
+ * h3 for minor subheadings
+*/
+
+h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+img {
+    border: 0; 
+    max-width: 100%; /* keep from overflowing on tiny screens */
+}
+
+ol, 
+ul {
+    padding: 0.5em;
+    list-style-position: inside; 
+}
+
+ul li {
+    list-style-type: none; 
+}
+
+ul li:before {
+    content: "\2605"; 
+}
+
 /* Some generic colors for emphasis- make sure are colorblind safe */
 
 .success {
@@ -228,22 +172,21 @@ article {
     color: #f38630; 
 }
 
-.hilite-blue {
-    background-color: #1c3d3e;
-    padding: 0.3em;
-}
-
 /* SECTION 4: FORM ELEMENTS ----------------------------------------------- */
 
 button {
-    background-color: #c7e1fb;
+    background-color: #fbfcf7;
+    color: #0e0e0e;
     border: none;
     border-radius: 3px;
-    padding: 0.5em; 
+    font: inherit;
+    padding: 0.25em; 
+    cursor: pointer;
 }
 
 button:hover {
-    background-color: #97c8f8; 
+    background-color: #ed810f;
+    color: #0e0e0e;
 }
 
 input {
@@ -256,85 +199,9 @@ fieldset {
     padding: 0.5em; 
 }
 
-/* put normalize form stuff down here for convenience, with some random edits */
-
-/**
- * 1. Change font properties to `inherit` in all browsers (opinionated).
- * 2. Remove the margin in Firefox and Safari.
- */
-
-button,
 input,
-select,
 textarea {
     color: inherit;
     font: inherit;
     margin: 0;
 }
-
-/**
- * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
- *    controls in Android 4. Note- still 3% usage. 
- * 2. Correct the inability to style clickable types in iOS and Safari.
- */
-
-button,
-html [type="button"], /* 1 */
-[type="reset"],
-[type="submit"] {
-    -webkit-appearance: button; /* 2 */
-}
-
-/**
- * 1. Correct the text wrapping in Edge and IE.
- * 2. Correct the color inheritance from `fieldset` elements in IE.
- * 3. Remove the padding so developers are not caught out when they zero out
- *    `fieldset` elements in all browsers.
- */
-
-legend {
-    box-sizing: border-box; /* 1 */
-    color: inherit; /* 2 */
-    display: table; /* 1 */
-    max-width: 100%; /* 1 */
-    padding: 0; /* 3 */
-    white-space: normal; /* 1 */
-}
-
-/**
- * Remove the default vertical scrollbar in IE.
- */
-
-textarea {
-    overflow: auto;
-}
-
-/**
- * 1. Correct the odd appearance in Chrome and Safari.
- * 2. Correct the outline style in Safari.
- */
-
-[type="search"] {
-    -webkit-appearance: textfield; /* 1 */
-    outline-offset: -2px; /* 2 */
-}
-
-/**
- * Correct the text style of placeholders in Chrome, Edge, and Safari.
- */
-
-::-webkit-input-placeholder {
-    color: inherit;
-    opacity: 0.54;
-}
-
-/**
- * 1. Correct the inability to style clickable types in iOS and Safari.
- * 2. Change font properties to `inherit` in Safari.
- */
-
-::-webkit-file-upload-button {
-    -webkit-appearance: button; /* 1 */
-    font: inherit; /* 2 */
-}
-
