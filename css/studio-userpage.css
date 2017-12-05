@@ -3,6 +3,8 @@
 
 html {
     font-size: 1rem;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
 }
 
@@ -172,20 +174,33 @@ ul li:before {
     color: #f38630; 
 }
 
+
+/* censor naughty things */
+.blur {
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
+}
+
+.blur:hover {
+    -webkit-filter: none;
+    filter: none;
+    transition: filter 1s;
+}
+
 /* SECTION 4: FORM ELEMENTS ----------------------------------------------- */
 
 button {
-    background-color: #fbfcf7;
-    color: #0e0e0e;
+    background: none;
     border: none;
     border-radius: 3px;
+    color: inherit;
     font: inherit;
     padding: 0.25em; 
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #ed810f;
+    background-color: #fbfcf7;
     color: #0e0e0e;
 }
 
