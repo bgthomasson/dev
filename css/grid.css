@@ -10,6 +10,8 @@ body {
     font-family: 'Noto Sans', Candara, sans-serif; 
     margin: 0;
     padding: 0;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
 }
 
 h1,
