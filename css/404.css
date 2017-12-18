@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Kurale');
+/* @import url('https://fonts.googleapis.com/css?family=Kurale');
+* I do like this font but isn't practical, 404 page should be FAST */
 
 html {
     font-size: 1rem;
@@ -16,8 +17,7 @@ body {
 }
 
 h2 {
-    font-family: 'Kurale', serif; 
-    /* I know an import isn't best for just this page but it looks good... */
+    font-family: 'Kurale', 'Noto Serif', serif; 
     text-align: center; 
 }
 
