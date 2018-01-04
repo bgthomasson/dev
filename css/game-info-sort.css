@@ -1,0 +1,108 @@
+/* Since this is so simple, support is IE9+ and everything else. */
+
+html {
+    font-size: 1rem; 
+    line-height: 1.15;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%; 
+}
+
+body {
+    background-color: #314159;
+    font-family: Lato, Candara, sans-serif; 
+}
+
+@media screen and (min-width: 800px) and (orientation: landscape) {
+    body {
+        margin: 0 auto;
+        width: 40em;
+    }
+}
+
+h1 {
+    font-family: Merriweather, serif; /* maybe Orbitron? */
+    margin: 0;
+}
+
+header, 
+footer, 
+main {
+    background-color: #f7f5ee;
+    display: block;
+    padding: 1em;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+main {
+    margin-bottom: 3em;
+}
+
+/* TABLES --------------------------------------------------------------------*/
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: fixed;
+    width: 100%;
+}
+
+/* IE 8 and lower are the only things that don't support nth-child, 
+ * which coincides with CSS3 color support. */
+tbody tr:nth-child(odd) {
+    background-color: burlywood;
+}
+
+td,
+th {
+    padding: 0.5em;
+}
+
+th {
+    text-align: left; /* It throws off the flow of reading to have this centered */
+}
+
+/* FORMS ---------------------------------------------------------------------*/
+
+button, 
+input,
+textarea {
+    box-sizing: border-box; 
+    color: inherit;
+    font: inherit; 
+    margin: 0; 
+}
+
+button {
+    background-color: rgb(105,210,231);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    padding: .5em;
+}
+
+fieldset {
+    border: none;
+    margin-bottom: 1em;
+    padding: 0;
+}
+
+/* MISC ----------------------------------------------------------------------*/
+
+.success, 
+.error {
+    font-weight: 700;
+    padding: .5em;
+}
+
+.success {
+    border: 3px solid rgb(105,210,231);
+}
+
+.error {
+    border: 3px solid red;
+}
