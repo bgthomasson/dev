@@ -22,24 +22,13 @@ body {
 
 h1 {
     font-family: Merriweather, serif; /* maybe Orbitron? */
-    margin: 0;
+    text-align: center;
 }
 
-header, 
-footer, 
 main {
     background-color: #f7f5ee;
     display: block;
     padding: 1em;
-}
-
-header {
-    text-align: center;
-    margin-bottom: 1em;
-}
-
-main {
-    margin-bottom: 3em;
 }
 
 /* TABLES --------------------------------------------------------------------*/
@@ -78,11 +67,15 @@ textarea {
 }
 
 button {
-    background-color: rgb(105,210,231);
+    background-color: rgb(245, 197, 143);
     border: none;
-    border-radius: 12px;
     cursor: pointer;
     padding: .5em;
+}
+
+button:hover,
+button:active {
+    background-color: rgb(255, 115, 0);
 }
 
 fieldset {
@@ -92,12 +85,6 @@ fieldset {
 }
 
 /* MISC ----------------------------------------------------------------------*/
-
-.success, 
-.error {
-    font-weight: 700;
-    padding: .5em;
-}
 
 .success {
     border: 3px solid rgb(105,210,231);
