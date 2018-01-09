@@ -69,6 +69,7 @@ textarea {
 button {
     background-color: rgb(245, 197, 143);
     border: none;
+    border-radius: 8px 8px 0 0;
     cursor: pointer;
     padding: .5em;
 }
@@ -76,6 +77,10 @@ button {
 button:hover,
 button:active {
     background-color: rgb(255, 115, 0);
+}
+
+button:active {
+    transform: translateY(.3em);
 }
 
 fieldset {
