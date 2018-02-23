@@ -101,6 +101,7 @@ article {
 
 .leader {
     font-size: 1.2em;
+    text-justify: auto;
 }
 
 
@@ -141,6 +142,13 @@ th {
 }
 
 /* SECTION 6: FORM ELEMENTS ----------------------------------------------- */
+
+button {
+    color: inherit;
+    font: inherit;
+    padding: 0.25em; 
+    cursor: pointer;
+}
 
 label {
     display: inline-block;

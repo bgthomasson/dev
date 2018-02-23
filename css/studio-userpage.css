@@ -1,4 +1,3 @@
-
 /* SECTION: 1 BASIC LAYOUT ----------------------------------------------*/
 
 html {
@@ -71,12 +70,11 @@ nav a:hover {
     }
 
     main {
-        display: block; /* one last IE hack */
         padding-top: 3em;
         width: 90vw;
         margin: 0 auto;
     }
-    
+
     .float-left {
         float: left;
         width: 49%;
@@ -85,6 +83,10 @@ nav a:hover {
         float: right;
         width: 49%;
     }
+    /* Trying to modernize by adding flexbox or grid just adds code that complicates 
+    * things, this is one case where simple is better. Especially since float is 
+    * the fallback for grid, seems easier to just use it. 
+    */
 }
 
 /* ARTICLE RELATED ---------------------------------------------- */
