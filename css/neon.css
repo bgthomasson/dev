@@ -1,14 +1,8 @@
-
-
 html {
     font-size: 1rem;
-}
-
-body {
     background-color: #040404;
     color: #fbfcf7;
-    font-family: Candara, "Open Sans", "Noto Sans", sans-serif;
-    font-size: 1em;
+    font-family: Cambria, Merriweather, serif;
     line-height: 1.3;
 }
 
@@ -16,6 +10,7 @@ body {
     body {
         width: 40em;
         margin: 0 auto;
+        font-size: 1.1em;
     }
 }
 
@@ -34,7 +29,14 @@ h1 {
       0 0 28px #f5b16a,
       0 0 56px #f38630,
       0 0 112px #f38630,
-      0 0 124px #f38630
+      0 0 124px #f38630;
+}
+
+.shadowmere {
+    text-shadow: 
+        3px 3px 0 #f38630,
+        6px 6px 0 #b93a0d, 
+        9px 9px 0 #720908; 
 }
 
 .frilly {
