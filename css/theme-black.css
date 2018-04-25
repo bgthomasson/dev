@@ -224,7 +224,7 @@ pre[class*="language-"] {
 /* ------------------------------------------------------------------------- */
 body {
   background-color: #111;
-  color: white;
+  color: #ebebeb;
   font-family: "Noto Serif", Cambria, Georgia, serif; }
 
 .page-header {
@@ -273,20 +273,20 @@ table {
   border: 1px solid #555; }
 
 tr:nth-of-type(odd) {
-  background-color: #222; }
+  background-color: #4b4239; }
 
 th {
-  background-color: #777; }
+  background-color: #362513; }
 
 button {
-  background-color: #ffefb1;
+  background-color: #74919d;
   border: none;
   border-radius: 3px;
   padding: 5px; }
 
 button:hover {
-  background-color: #ecbd00; }
+  background-color: #ebebeb;
+  color: #111; }
 
 input {
-  background-color: #74919d;
   border: none; }

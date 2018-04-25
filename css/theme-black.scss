@@ -7,20 +7,19 @@ $theme-color: #111;
 $theme-shadow: #555;
 
 $action-color: #ecbd00;
-$action-muted: #ffefb1;
+$action-muted: #74919d;
 
-$paper1: #111;
 $paper2: black;
 
-$font-color: white;
+$font-color: rgb(235, 235, 235);
 $text-muted: #74919d;
 
 $fonts-sans: 'Noto Sans', Candara, 'Fira Sans', Sans-Serif;
 $fonts-serif: 'Noto Serif', Cambria, Georgia, serif;
 $fonts-mono: 'Oxygen Mono', 'DejaVu Sans Mono', Consolas, monospace;
 
-$th-color: #777;
-$zebra: #222;
+$th-color: #362513;
+$zebra: #4b4239;
 
 
 /* ------------------------------------------------------------------------- */
@@ -72,7 +71,6 @@ h6 {
     font-family: $fonts-sans;
 }
 
-
 ul, ol {
     border: 1px dotted $theme-shadow;
 }
@@ -105,11 +103,11 @@ button {
 }
 
 button:hover {
-    background-color: $action-color;
+    background-color: $font-color;
+    color: $theme-color;
 }
 
 input {
-    background-color: $text-muted;
     border: none; 
 }
 

@@ -193,16 +193,11 @@ pre[class*="language-"] {
 
 /* ------------------------------------------------------------------------- */
 body {
+  background: linear-gradient(90deg, #f38630, #ffc864, #f38630);
   background-color: #f38630;
   font-family: "Noto Sans", Candara, "Fira Sans", Sans-Serif; }
 
-.page-header {
-  background-color: ivory; }
-
-@media screen and (min-width: 481px) {
-  .page-header {
-    box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.5); } }
-
+.page-header,
 .page-footer {
   background-color: ivory; }
 
@@ -213,7 +208,7 @@ nav a:hover {
   text-decoration: underline; }
 
 .post {
-  background-color: white;
+  background-color: ivory;
   border-radius: 12px; }
 
 .post-controls,
@@ -269,8 +264,8 @@ form {
   background-color: ivory; }
 
 button {
-  background-color: white;
+  background-color: ivory;
   border: none; }
 
 button:hover {
-  background-color: #399996; }
+  background-color: #9abaff; }
