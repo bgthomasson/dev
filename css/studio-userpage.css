@@ -3,7 +3,6 @@
 html {
     font-size: 1rem;
     text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
 }
 
@@ -11,7 +10,7 @@ body {
     background-color: #1e1e1e;
     color: #fbfcf7;
     font-family: "Source Sans Pro", Candara, sans-serif;
-    line-height: 1.15;
+    line-height: 1.2;
     margin: 0 auto; 
 }
 
@@ -70,23 +69,22 @@ nav a:hover {
     }
 
     main {
-        padding-top: 3em;
+        padding-top: 5em;
         width: 90vw;
         margin: 0 auto;
     }
 
-    .float-left {
-        float: left;
-        width: 49%;
+    .flexy {
+        box-sizing: border-box;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
     }
-    .float-right {
-        float: right;
-        width: 49%;
+    
+    .cell50 {
+        flex: 0 0 49%;
     }
-    /* Trying to modernize by adding flexbox or grid just adds code that complicates 
-    * things, this is one case where simple is better. Especially since float is 
-    * the fallback for grid, seems easier to just use it. 
-    */
+
 }
 
 /* ARTICLE RELATED ---------------------------------------------- */
