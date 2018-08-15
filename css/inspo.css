@@ -1,7 +1,6 @@
 html {
     font-size: 1rem;
     line-height: 1.15;
-    -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%; 
 }
 
@@ -29,11 +28,15 @@ main {
 img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 /* Originally each tile had specific grid location but left ugly gaps. 
 * https://medium.com/deemaze-software/css-grid-responsive-layouts-and-components-eee1badd5a2f
 * This is a good tutorial on fixing that and simplifies everything. 
 * Ideally this is all auto-gen server side so no time for that fussy amount of detail. 
+* https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit
+* object-fit: cover will cause the image to expand to cover the entire box but may stretch or clip. 
+* object-fit: contain will maintain the aspect ratio, but this again leaves random gaps. 
+* (at least now though it's more flexible)
 */
