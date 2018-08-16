@@ -1,0 +1,108 @@
+/* generic stuff ----------------------------------------------------------- */
+
+html {
+    font-size: 1rem; 
+} 
+
+body {
+    background-color: #fbfcf7;
+    color: #404040; 
+    font-family: 'Source Sans Pro', 'Trebuchet MS', sans-serif;
+    line-height: 1.2; 
+}
+
+h2,
+h3 {
+    font-family: Merriweather, serif;
+}
+
+.page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    flex-wrap: wrap;
+    margin-bottom: 2em;
+}
+
+.site-nav a {
+    padding: 0 .3em;
+    color: inherit;
+}
+
+input {
+    border: .125em solid #02c04a; 
+    color: inherit;
+    font: inherit;
+    margin: 0;
+    width: 10em;
+}
+
+.byline {
+    font-size: 0.8em;
+}
+
+.lefty {
+    float: left;
+    margin-right: 2em;
+    margin-bottom: 1em;
+}
+
+.shape {
+    shape-outside: circle(50%);
+}
+
+/* the grid stuff ---------------------------------------------------------- */
+
+@media screen and (min-width: 800px){
+    
+    body {
+        font-size: 1.2em;
+    }
+    
+    main {
+        padding: 0 2em;
+    }
+
+    .news-fullpage {
+        display: grid;
+        grid-gap: 2em;
+        grid-template-columns: 3fr 1fr;
+        margin-bottom: 4em;
+    }
+    
+    .news-small {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-gap: 1em; 
+        border-top: 2px solid #404040;
+        border-left: 1px solid #404040;
+        padding: 1em;
+    }
+    
+    .news-content {
+        grid-column: 1;
+    }
+
+    .news-aside {
+        grid-column: 2;
+        grid-row: 1 / 3;
+        text-align: center;
+    }
+    
+    .grid-col2 {
+        display: grid;
+        grid-gap: 3em; 
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 6em;
+    }
+
+    .vertical {
+        /*writing-mode: vertical-rl;
+        * this doesn't line break in FF.
+        */
+        transform: rotate(-12.5deg);
+        /* this doesn't rotate the BOX, just the CONTENT which spills over */
+        padding-bottom: 4em;
+    }
+    
+}
