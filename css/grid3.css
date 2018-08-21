@@ -22,11 +22,11 @@ h3 {
     justify-content: space-between; 
     flex-wrap: wrap;
     margin-bottom: 2em;
+    border-bottom: 2px solid #c0b283;
 }
 
 .site-nav a {
     padding: 0 .3em;
-    color: inherit;
 }
 
 input {
@@ -74,8 +74,8 @@ input {
         display: grid;
         grid-template-columns: 2fr 1fr;
         grid-gap: 1em; 
-        border-top: 2px solid #404040;
-        border-left: 1px solid #404040;
+        border-top: 4px solid #c0b283;
+        border-left: 2px solid #c0b283;
         padding: 1em;
     }
     
