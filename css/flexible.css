@@ -1,0 +1,59 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    line-height: 1.2; 
+}
+
+article {
+    margin-bottom: 42px;
+}
+
+ul {
+    list-style: none;
+}
+
+h2,
+h3 {
+    font-family: Merriweather, serif;
+}
+
+section {
+    background-color: #fbfcf7;
+    color: #404040; 
+    padding: 1em;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.col-2 {
+    flex: 2;
+}
+
+.col-3 {
+    flex: 3;
+}
+
+.col-4 {
+    flex: 4;
+}
+
+.col-7 {
+    flex: 7;
+}
+
+.blue {
+    background-color: #314159;
+}
+
+.orange {
+    background-color: #f38630;
+}
+
+.vertibird {
+    writing-mode: vertical-rl;
+}
+
