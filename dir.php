@@ -4,7 +4,6 @@
     <meta charset="utf-8" />
     <title>directory listing</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <link href="https://fonts.googleapis.com/css?family=Merriweather|Overpass" rel="stylesheet"> 
     <style type="text/css">
     body {
         background-color: #314159;
@@ -14,18 +13,12 @@
         margin: 0 auto;
         max-width: 40em;
     }
-    a,
-    a:visited {
-        color: #000;
-    }
     table {
-        background-color: #9099a2;
+        background-color: #c5cacf;
         border-collapse: collapse; 
     }
-    tr:nth-of-type(even) {
-        background-color: #6d7993;
-    }
     td, th {
+        border-top: 3px solid #6d7993;
         padding: 0.5em;
         text-align: left;
     }
