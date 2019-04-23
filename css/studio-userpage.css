@@ -59,17 +59,12 @@ nav a:hover {
     }
 
     .page-header {
-        position: fixed;
-        top: 0px;
-        width: 100%;
-        z-index: 9;
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
 
     main {
-        padding-top: 5em;
         width: 90vw;
         margin: 0 auto;
     }
@@ -131,7 +126,7 @@ h3,
 h4, 
 h5, 
 h6 {
-    font-family: Cambria, Georgia, Palatino, serif; 
+    font-family: Merriweather, Cambria, Georgia, Palatino, serif; 
 }
 
 /* 
@@ -147,7 +142,6 @@ h2 {
 
 img {
     border: 0; 
-    max-width: 100%; /* keep from overflowing on tiny screens */
 }
 
 ol, 
