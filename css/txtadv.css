@@ -1,0 +1,72 @@
+/* LAYOUT and universal fiddling */
+html {
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    background-color: #1e1e1e;
+    color: #fbfcf7;
+    font-family: "Source Sans Pro", Candara, sans-serif;
+    font-size: 1.2em;
+    line-height: 1.4;
+    display: flex; 
+    align-items: top;
+    justify-content: space-between;
+}
+
+/* on desktop take advantage of horizontal space, ofcourseneedmobile.
+ * This is a mockup. */
+
+header {
+    font-size: 1.4em;
+    flex: 1;
+}
+
+main {
+    flex: 7;
+    padding-left: 1em;
+}
+
+
+/* misc TEXT elements */
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+    font-family: Merriweather, Cambria, Georgia, Palatino, serif; 
+}
+
+/* any character dialogue in the main narrative text needs to be distinguished */
+.quoth {
+    color: #ffea05
+}
+
+
+/* BUTTONS */
+button {
+    background-color: rgb(90,147,189);
+    border: none;
+    color: inherit;
+    font: inherit;
+    padding: 12px; 
+    cursor: pointer;
+}
+button:hover {
+    background-color: rgb(90, 189, 103);
+}
+
+.navbutton {
+    border-radius: 1em;
+    display: list-item;
+    width: 100%;
+}
+
+
+
+/* the menu buttons are rhombus, character choice in scene is rectangle, 
+ * and "next scene" should have arrow like shape. */
+
