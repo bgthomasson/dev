@@ -1,3 +1,6 @@
+/* SUPPORT: Firefox 63 + Chrome 70 + Safari 12 
+ * PARTIAL: Firefox 30 - Chrome 30 - Safari 9 - Edge 12
+ */
 /* LAYOUT and universal fiddling */
 html {
     text-rendering: optimizeLegibility;
@@ -5,29 +8,37 @@ html {
 }
 
 body {
-    background-color: #1e1e1e;
-    color: #fbfcf7;
+    background-color: rgb(30,30,30);
+    color: rgb(254,253,229);
     font-family: "Source Sans Pro", Candara, sans-serif;
-    font-size: 1.2em;
+    font-size: 1.3em;
     line-height: 1.4;
-    display: flex; 
-    align-items: top;
-    justify-content: space-between;
 }
 
-/* on desktop take advantage of horizontal space, ofcourseneedmobile.
- * This is a mockup. */
+/* just go ahead and do this for mobile fallback */
+@media screen and (min-width: 600px) {
+    body {
+        display: flex; 
+        justify-content: space-between;
+    }
 
-header {
-    font-size: 1.4em;
-    flex: 1;
+    /* Does this need to be sticky for constant access? */
+    header {
+        font-size: 1.4em;
+        flex: 1;
+    }
+
+    main {
+        flex: 7;
+        padding-left: 4em;
+    }
+
+    .navbutton {
+        display: list-item;
+        width: 100%;
+    }
+
 }
-
-main {
-    flex: 7;
-    padding-left: 1em;
-}
-
 
 /* misc TEXT elements */
 
@@ -40,11 +51,17 @@ h6 {
     font-family: Merriweather, Cambria, Georgia, Palatino, serif; 
 }
 
-/* any character dialogue in the main narrative text needs to be distinguished */
-.quoth {
-    color: #ffea05
+.title {
+    text-shadow: 
+      3px 3px 0 rgb(192,192,192),
+      6px 6px 0 rgb(128,128,128),
+      9px 9px 0 rgb(64,64,64);
 }
 
+/* any character dialogue in the main narrative text needs to be distinguished */
+.quoth {
+    color: rgb(243,234,5);
+}
 
 /* BUTTONS */
 button {
@@ -56,17 +73,20 @@ button {
     cursor: pointer;
 }
 button:hover {
-    background-color: rgb(90, 189, 103);
+    background-color: rgb(216, 203, 59);
+    /* orange has good visibility but I worry it clashes with the blue too much. 
+     * green is nice, but isn't entirel colorblind safe. Yellow is OK I guess. */
+    color: rgb(30,30,30);
 }
 
 .navbutton {
     border-radius: 1em;
-    display: list-item;
-    width: 100%;
+    margin-bottom: .5em;
 }
 
-
-
-/* the menu buttons are rhombus, character choice in scene is rectangle, 
- * and "next scene" should have arrow like shape. */
+input {
+    border: 3px solid rgb(90, 189, 132);
+    width: 20em; 
+    font: inherit;
+}
 
