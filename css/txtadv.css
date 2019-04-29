@@ -1,4 +1,4 @@
-/* SUPPORT: Firefox 63 + Chrome 70 + Safari 12 
+/* SUPPORTED: Firefox 63 + Chrome 70 + Safari 12 
  * PARTIAL: Firefox 30 - Chrome 30 - Safari 9 - Edge 12
  */
 /* LAYOUT and universal fiddling */
@@ -15,7 +15,7 @@ body {
     line-height: 1.4;
 }
 
-/* just go ahead and do this for mobile fallback */
+/* resizing ----------------------------------------------------------------- */
 @media screen and (min-width: 600px) {
     body {
         display: flex; 
@@ -31,6 +31,7 @@ body {
     main {
         flex: 7;
         padding-left: 4em;
+        /* still needs to be limited to ~50em max-width */
     }
 
     .navbutton {
@@ -40,7 +41,7 @@ body {
 
 }
 
-/* misc TEXT elements */
+/* misc TEXT elements ------------------------------------------------------- */
 
 h1, 
 h2, 
@@ -58,25 +59,27 @@ h6 {
       9px 9px 0 rgb(64,64,64);
 }
 
-/* any character dialogue in the main narrative text needs to be distinguished */
+/* for character dialogue in the main narrative text */
 .quoth {
     color: rgb(243,234,5);
 }
 
-/* BUTTONS */
+/* BUTTONS ------------------------------------------------------------------ */
 button {
     background-color: rgb(90,147,189);
     border: none;
     color: inherit;
+    cursor: pointer;
     font: inherit;
     padding: 12px; 
-    cursor: pointer;
+    transition: background-color 300ms, transform 300ms;
 }
 button:hover {
-    background-color: rgb(216, 203, 59);
-    /* orange has good visibility but I worry it clashes with the blue too much. 
-     * green is nice, but isn't entirel colorblind safe. Yellow is OK I guess. */
+    background-color: rgb(216,203,59);
     color: rgb(30,30,30);
+}
+button:active {
+    transform: translateY(.6em);
 }
 
 .navbutton {
@@ -85,8 +88,12 @@ button:hover {
 }
 
 input {
-    border: 3px solid rgb(90, 189, 132);
+    background-color: rgb(64,64,64);
+    border: 3px solid rgb(90,147,189);
     width: 20em; 
     font: inherit;
 }
 
+input:focus {
+    border-color: rgb(216,203,59);
+}
