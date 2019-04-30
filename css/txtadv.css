@@ -1,11 +1,5 @@
-/* SUPPORTED: Firefox 63 + Chrome 70 + Safari 12 
- * PARTIAL: Firefox 30 - Chrome 30 - Safari 9 - Edge 12
- */
+/* SUPPORTED: Firefox 63+ / Chrome 70+ / Safari 12+ */
 /* LAYOUT and universal fiddling */
-html {
-    text-rendering: optimizeLegibility;
-    -webkit-text-size-adjust: 100%;
-}
 
 body {
     background-color: rgb(30,30,30);
@@ -17,21 +11,16 @@ body {
 
 /* resizing ----------------------------------------------------------------- */
 @media screen and (min-width: 600px) {
-    body {
-        display: flex; 
-        justify-content: space-between;
-    }
-
-    /* Does this need to be sticky for constant access? */
     header {
         font-size: 1.4em;
-        flex: 1;
+        position: fixed;
+        top: 12px;
+        z-index: 4;
     }
 
     main {
-        flex: 7;
-        padding-left: 4em;
-        /* still needs to be limited to ~50em max-width */
+        margin-left: 10em; 
+        max-width: 40em;
     }
 
     .navbutton {
@@ -40,6 +29,11 @@ body {
     }
 
 }
+
+/* right now I'm just letting the small screen collapse BUT if only had 4 buttons 
+ * that would fit into one row, would it be good to have a fixed top bar for phones??? 
+ * FLEXBOX the buttons. 
+ */
 
 /* misc TEXT elements ------------------------------------------------------- */
 
@@ -52,6 +46,7 @@ h6 {
     font-family: Merriweather, Cambria, Georgia, Palatino, serif; 
 }
 
+/* this is kind of annoying and can be dropped, just a goofy 80s thing */
 .title {
     text-shadow: 
       3px 3px 0 rgb(192,192,192),
@@ -59,7 +54,7 @@ h6 {
       9px 9px 0 rgb(64,64,64);
 }
 
-/* for character dialogue in the main narrative text */
+/* for character dialogue in the main narrative text, entirely optional */
 .quoth {
     color: rgb(243,234,5);
 }
@@ -74,7 +69,8 @@ button {
     padding: 12px; 
     transition: background-color 300ms, transform 300ms;
 }
-button:hover {
+button:hover,
+.glowingbutton {
     background-color: rgb(216,203,59);
     color: rgb(30,30,30);
 }
@@ -82,18 +78,20 @@ button:active {
     transform: translateY(.6em);
 }
 
+/* need JS to do but make "selected" appearance/highlighting */
+
 .navbutton {
     border-radius: 1em;
     margin-bottom: .5em;
 }
 
+/* CHROME has its own styling, won't change the font color via "inherit" while FF does. */
+
 input {
     background-color: rgb(64,64,64);
     border: 3px solid rgb(90,147,189);
-    width: 20em; 
     font: inherit;
 }
-
 input:focus {
     border-color: rgb(216,203,59);
 }
