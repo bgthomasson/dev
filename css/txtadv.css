@@ -11,7 +11,10 @@ body {
 }
 
 /* resizing ----------------------------------------------------------------- */
-/* <600 px make header FLEX so buttons neatly fill the top */
+/* <600 px make header FLEX so buttons neatly fill the top (hopefully).
+ * this could be refactored more neatly? Also it's doing that annoying thing where 
+ * the right edge goes outside the window. 
+ */
 
 header {
     position: fixed;
@@ -57,6 +60,8 @@ header {
 /* over 1200px- ? have status/inventory as third col on right? 
  * Could refactor based on that, only "save" button in far left, 
  * "save" and "Status" buttons make dialogue appear/vanish in respective cols. 
+ * The problem is grid would work great for that but how use it and have story col 
+ * scroll freely with other two fixed? 
 */
 
 /* misc TEXT elements ------------------------------------------------------- */
@@ -102,19 +107,26 @@ button:active {
     transform: translateY(.6em);
 }
 
-/* need JS to do but make "selected" appearance/highlighting */
+/* On each page the relevent button should be highlighted. 
+ * How get rid of the "active" outline in FF at least? 
+ */
 
 .navbutton {
     border-radius: 1em;
     margin-bottom: .5em;
 }
 
-/* CHROME has its own styling, won't change the font color via "inherit" while FF does. */
+/* CHROME has its own styling, when you type in stuff it won't change the 
+ * font color via "font:inherit" while FF does. 
+ * However, just setting "color:rgb" means the text is tiny! ha. ha. 
+ * So putting "color:inherit: tho redundant for FF fixes Chrome. 
+ */
 
 input {
     background-color: rgb(64,64,64);
     border: 3px solid rgb(90,147,189);
     font: inherit;
+    color: inherit;
 }
 input:focus {
     border-color: rgb(216,203,59);
