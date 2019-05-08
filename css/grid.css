@@ -1,17 +1,9 @@
 /* generic stuff ------------------------------------------------------------ */
-
-html {
-    font-size: 1rem;
-    line-height: 1.3;
-}
-
 body {
     background-color: #222;
     font-family: 'Noto Sans', Candara, sans-serif; 
-    margin: 0;
-    padding: 0;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
+    font-size: 1.2em;
+    line-height: 1.4; 
 }
 
 h1,
@@ -20,94 +12,72 @@ h2 {
     text-align: center;
 }
 
-@media screen and (min-width: 64em){
+a {
+    color: rgb(222,222,222);
+    text-decoration: none;
+}
+
+/* make the base fraction 2/4/8/16 instead of 12, since slicing it up like pie */
+
+@media screen and (min-width: 600px){
+    .page-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 2em;
+        background-color: rgb(40, 78, 105);
+        padding: 4px;
+    }
+
     main {
         margin: 0 auto;
-        width: 80vw;
-    }
-}
-
-
-/* TEST ONE ----------------------------------------------------------------- */
-
-.grid-3 {
-    background-color: #5a93bd;
-}
-
-@media screen and (min-width: 64em){
-    .grid-3 {
+        width: 90vw;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         grid-gap: 1em;
-        margin-bottom: 5em;
     }
-}
 
-.box {
-    background-color: #fff;
-    padding: .5em;
-}
-
-.a {
-    grid-column: 1 / 4;
-    grid-row: 1;
-}
-
-.b {
-    grid-column: 1 / 3;
-    grid-row: 2;
-}
-
-.c {
-    grid-column: 2;
-    grid-row: 3;
-}
-
-.d {
-    grid-column: 3;
-    grid-row: 2 / 5;
-}
-
-.e {
-    grid-column: 1;
-    grid-row: 4;
-}
-
-/* TEST TWO ----------------------------------------------------------------- */
-
-.grid-news {
-    background-color: #fff;
-}
-
-@media screen and (min-width: 64em){
-    .grid-news{
-        display: grid;
-        grid-template-columns: 66% 33%;
-        grid-template-areas:
-            "header header"
-            "content aside";
+    .continue-a {
+        grid-column: 1/3;
+        grid-row: 1/3;
     }
+
+    .continue-b {
+        grid-column: 3;
+        grid-row: 1;
+    }
+
+    .continue-c {
+        grid-column: 4;
+        grid-row: 1;
+    }
+
+    .continue-d {
+        grid-column: 3;
+        grid-row: 2;
+    }
+
+    .viewq {
+        grid-column: 4;
+        grid-row: 2;
+    }
+
+    .newshows {
+        grid-column: 1/3;
+        grid-row: 3;
+    }
+
+    .shopbox {
+        grid-column: 3/5;
+        grid-row: 3;
+    }
+
 }
 
-.header {
-    grid-area: header;
-    border-bottom: 1px solid #ddd;
-}
+/* after looking at all this it's a damn mess. Flexbox probably better. Oops. */
 
-.content {
-    grid-area: content;
-    padding: 1em;
-}
-
-.aside {
-    grid-area: aside;
-    background-color: #deb887;
+.cell {
+    background-color: rgb(90,147,189); 
     padding: .5em;
-    text-align: center;
-}
-
-.byline {
-    padding-left: .5em;
-    
 }
 
