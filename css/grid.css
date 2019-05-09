@@ -74,10 +74,32 @@ a {
 
 }
 
-/* after looking at all this it's a damn mess. Flexbox probably better. Oops. */
+/* after looking at all this it's a damn mess. Flexbox probably better. Oops. 
+ * At least this can serve as an example of what not to do, ha ha. 
+ */
 
 .cell {
     background-color: rgb(90,147,189); 
     padding: .5em;
 }
 
+.cell:hover {
+    animation: jelly .5s;
+}
+
+@keyframes jelly {
+    0%,
+    100% {
+      transform: scale(1, 1);
+    }
+    25% {
+      transform: scale(0.9, 1.1);
+    }
+    50% {
+      transform: scale(1.1, 0.9);
+    }
+    75% {
+      transform: scale(0.95, 1.05);
+    }
+}
+/* via cssfx.dev, I wanted some sort of animation on hover, this is nifty, for now. */
