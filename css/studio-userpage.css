@@ -114,6 +114,10 @@ article {
 
 }
 
+.unocommento {
+    max-width: 40em;
+}
+
 /* SECTION: basic inline elements ----------------------------------------*/
 
 a {
@@ -142,6 +146,7 @@ h2 {
 
 img {
     border: 0; 
+    max-width: 100%;
 }
 
 ol, 
@@ -156,29 +161,6 @@ ul li {
 
 ul li:before {
     content: "\2605"; 
-}
-
-/* Some generic colors for emphasis- make sure are colorblind safe */
-
-.success {
-    color: green; 
-}
-
-.failure {
-    color: #f38630; 
-}
-
-
-/* censor naughty things */
-.blur {
-    -webkit-filter: blur(3px);
-    filter: blur(3px);
-}
-
-.blur:hover {
-    -webkit-filter: none;
-    filter: none;
-    transition: filter 1s;
 }
 
 /* SECTION 4: FORM ELEMENTS ----------------------------------------------- */

@@ -31,10 +31,12 @@
 foreach (new DirectoryIterator('.') as $file) {
     if ($file->isFile()) {
         $filename = htmlentities($file->getFilename()); 
-        $viewtime = date("Y-m-d", $file->getATime());
-        print '<tr><td><a href="' . $filename . '">' . $filename . '</a></td><td> ' . $viewtime . ' </td></tr>';
+        $modtime = date("Y-m-d", $file->getMTime());
+        print '<tr><td><a href="' . $filename . '">' . $filename . '</a></td><td> ' . $modtime . ' </td></tr>';
     }
 }
+// what it NEEDs to do is basic SQL: SORT BY last modified 
+// also only HTML files but what even is regex 
 ?>
 </table>
 </body>
