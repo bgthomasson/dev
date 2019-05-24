@@ -17,8 +17,6 @@ a {
     text-decoration: none;
 }
 
-/* make the base fraction 2/4/8/16 instead of 12, since slicing it up like pie */
-
 @media screen and (min-width: 600px){
     .page-header {
         display: flex;
@@ -93,10 +91,10 @@ a {
       transform: scale(1, 1);
     }
     25% {
-      transform: scale(0.9, 1.1);
+      transform: scale(0.95, 1.05);
     }
     50% {
-      transform: scale(1.1, 0.9);
+      transform: scale(1.05, 0.95);
     }
     75% {
       transform: scale(0.95, 1.05);
