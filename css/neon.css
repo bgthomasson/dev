@@ -1,17 +1,11 @@
 html {
-    font-size: 1rem;
-    background-color: #040404;
-    color: #fbfcf7;
+    font-size: 1.1em;
     font-family: Cambria, Merriweather, serif;
     line-height: 1.3;
-}
-
-@media screen and (min-width: 800px) {
-    body {
-        width: 40em;
-        margin: 0 auto;
-        font-size: 1.1em;
-    }
+    background-color: #040404;
+    color: #fbfcf7;
+    max-width: 40em;
+    margin: 0 auto;
 }
 
 h1 {
@@ -21,7 +15,7 @@ h1 {
 
 .neon {
     color: #fbe27c;
-    font-family: "Lato Black", sans-serif;
+    font-family: "Lato Black", Candara, sans-serif;
     margin-bottom: 124px;
     text-shadow:
       0 0 7px #f5b16a,
@@ -43,5 +37,11 @@ h1 {
     border: 3px solid;
     border-image: linear-gradient(#fbe27c, #b93a0d, #720908) 10;
     padding: 1em;
+    margin-bottom: 10em;
 }
 
+.test1 {
+    box-shadow: 0 6px 12px rgb(1, 22, 37), 0 16px 40px rgba(15, 48, 71,.5);
+    margin-bottom: 10em; 
+    padding: 1em; 
+}
