@@ -1,5 +1,6 @@
-/* SUPPORTED: Firefox 63+ / Chrome 70+ / Safari 12+ */
-/* LAYOUT and universal fiddling */
+/* SUPPORTED: Firefox 60+ / Chrome 60+ / Safari 11+ 
+ * mostly based on use of grid. Opera 58 and Edge 16+ should work. 
+*/
 
 body {
     background-color: rgb(30,30,30);
@@ -10,22 +11,12 @@ body {
     margin: 0;
 }
 
-/* resizing ----------------------------------------------------------------- */
-/* <600 px make header FLEX so buttons neatly fill the top (hopefully).
- * this could be refactored more neatly? Also it's doing that annoying thing where 
- * the right edge goes outside the window. 
- */
-
 header {
-    position: fixed;
-    top: 0;
-    z-index: 4;
     padding: 12px;
 }
 
 @media screen and (max-width: 599px) {
     header {
-        width: 100vw;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -41,13 +32,23 @@ header {
 
 /* basic desktop window, 600-~1200px */
 @media screen and (min-width: 600px) {
-    header {
-        font-size: 1.4em;
+    body {
+        display: grid;
+        grid-template-columns: 8em 1fr;
+        grid-gap: 1em; 
     }
 
-    main {
-        margin-left: 10em; 
+    header {
+        font-size: 1.4em;
+        grid-column: 1;
+        position: fixed;
+        top: 0;
+        z-index: 4;
+    }
+
+    main { 
         max-width: 40em;
+        grid-column: 2;
     }
 
     .navbutton {
@@ -60,8 +61,6 @@ header {
 /* over 1200px- ? have status/inventory as third col on right? 
  * Could refactor based on that, only "save" button in far left, 
  * "save" and "Status" buttons make dialogue appear/vanish in respective cols. 
- * The problem is grid would work great for that but how use it and have story col 
- * scroll freely with other two fixed? 
 */
 
 /* misc TEXT elements ------------------------------------------------------- */
@@ -75,7 +74,6 @@ h6 {
     font-family: Merriweather, Cambria, Georgia, Palatino, serif; 
 }
 
-/* this is kind of annoying and can be dropped, just a goofy 80s thing */
 .title {
     text-shadow: 
       3px 3px 0 rgb(192,192,192),
@@ -98,11 +96,13 @@ button {
     padding: .3em; 
     transition: background-color 300ms, transform 300ms;
 }
+
 button:hover,
 .glowingbutton {
     background-color: rgb(216,203,59);
     color: rgb(30,30,30);
 }
+
 button:active {
     transform: translateY(.6em);
 }
@@ -128,6 +128,7 @@ input {
     font: inherit;
     color: inherit;
 }
+
 input:focus {
     border-color: rgb(216,203,59);
 }
