@@ -7,20 +7,26 @@
     <style type="text/css">
     body {
         background-color: #314159;
-        font-family: Merriweather, serif;
+        font-family: Merriweather, Cambria, serif;
         font-size: 1.2em;
         line-height: 1.5;
         margin: 0 auto;
-        max-width: 40em;
+        max-width: 24em;
     }
     table {
         background-color: #c5cacf;
         border-collapse: collapse; 
     }
-    td, th {
+    td {
         border-top: 3px solid #6d7993;
         padding: 0.5em;
+        font-family: 'Oxygen Mono', 'DejaVu Sans Mono', Consolas, monospace;
+    }
+    th {
         text-align: left;
+    }
+    a {
+        text-decoration: none;
     }
     </style>
 </head>
@@ -36,7 +42,7 @@ foreach (new DirectoryIterator('.') as $file) {
     }
 }
 // what it NEEDs to do is basic SQL: SORT BY last modified 
-// also only HTML files but what even is regex 
+// Why does it output in random order? Not alpha, date, or size related. 
 ?>
 </table>
 </body>

@@ -64,7 +64,6 @@ input {
     }
     
     main {
-        margin: 0 auto; 
         padding: 0 2em;
     }
 
@@ -95,6 +94,7 @@ input {
     .news-header {
         grid-column: 1;
         grid-row: 1;
+        margin: 0;
     }
     
     .news-content {
