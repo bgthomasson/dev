@@ -3,23 +3,23 @@
 @import 'prism-dark';
 
 
-$theme-color: #111;
-$theme-shadow: #555;
+$theme-color: rgb(17, 11, 11);
+$theme-shadow: rgb(100,100,100);
 
-$action-color: #ecbd00;
-$action-muted: #74919d;
+$action-color: rgb(216, 203, 59);
+$action-muted: rgb(90, 147, 189);
 
-$paper2: black;
+$paper1: rgb(22, 22, 22);
 
 $font-color: rgb(235, 235, 235);
-$text-muted: #74919d;
+$text-muted: rgb(151, 179, 211);
 
 $fonts-sans: 'Noto Sans', Candara, 'Fira Sans', Sans-Serif;
 $fonts-serif: 'Noto Serif', Cambria, Georgia, serif;
 $fonts-mono: 'Oxygen Mono', 'DejaVu Sans Mono', Consolas, monospace;
 
-$th-color: #362513;
-$zebra: #4b4239;
+$th-color: rgb(70, 55, 41);
+$zebra: rgb(100,85,70);
 
 
 /* ------------------------------------------------------------------------- */
@@ -30,10 +30,11 @@ body {
     font-family: $fonts-serif;
 }
 
-.page-header {
-    background-color: $paper2;
+article,
+header {
+    background-color: $paper1; 
 }
- 
+
 .post-tags {
     border-top: 1px solid $theme-shadow; 
     font-size: 0.9em;
@@ -103,11 +104,10 @@ button {
 }
 
 button:hover {
-    background-color: $font-color;
+    background-color: $action-color;
     color: $theme-color;
 }
 
 input {
     border: none; 
 }
-

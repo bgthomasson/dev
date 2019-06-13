@@ -223,30 +223,31 @@ pre[class*="language-"] {
 
 /* ------------------------------------------------------------------------- */
 body {
-  background-color: #111;
+  background-color: #110b0b;
   color: #ebebeb;
   font-family: "Noto Serif", Cambria, Georgia, serif; }
 
-.page-header {
-  background-color: black; }
+article,
+header {
+  background-color: #161616; }
 
 .post-tags {
-  border-top: 1px solid #555;
+  border-top: 1px solid #646464;
   font-size: 0.9em; }
 
 .activated {
-  color: #74919d; }
+  color: #97b3d3; }
 
 a {
-  color: #74919d; }
+  color: #97b3d3; }
 
 a:hover {
-  color: #ecbd00;
+  color: #d8cb3b;
   text-decoration: underline; }
 
 blockquote {
-  border-left: 2px solid #555;
-  border-top: 2px solid #555; }
+  border-left: 2px solid #646464;
+  border-top: 2px solid #646464; }
 
 code,
 pre {
@@ -261,7 +262,7 @@ h6 {
   font-family: "Noto Sans", Candara, "Fira Sans", Sans-Serif; }
 
 ul, ol {
-  border: 1px dotted #555; }
+  border: 1px dotted #646464; }
 
 ul li {
   list-style-type: none; }
@@ -270,23 +271,23 @@ ul li:before {
   content: "\2605"; }
 
 table {
-  border: 1px solid #555; }
+  border: 1px solid #646464; }
 
 tr:nth-of-type(odd) {
-  background-color: #4b4239; }
+  background-color: #645546; }
 
 th {
-  background-color: #362513; }
+  background-color: #463729; }
 
 button {
-  background-color: #74919d;
+  background-color: #5a93bd;
   border: none;
   border-radius: 3px;
   padding: 5px; }
 
 button:hover {
-  background-color: #ebebeb;
-  color: #111; }
+  background-color: #d8cb3b;
+  color: #110b0b; }
 
 input {
   border: none; }
