@@ -10,12 +10,14 @@
         font-family: Merriweather, Cambria, serif;
         font-size: 1.2em;
         line-height: 1.5;
-        margin: 0 auto;
-        max-width: 24em;
+        display: flex;
+        justify-content: center; 
+        align-items: center;
     }
     table {
         background-color: #c5cacf;
         border-collapse: collapse; 
+        max-width: 24em;
     }
     td {
         border-top: 3px solid #6d7993;
@@ -23,6 +25,7 @@
         font-family: 'Oxygen Mono', 'DejaVu Sans Mono', Consolas, monospace;
     }
     th {
+        padding: 1em .5em 1em .5em;
         text-align: left;
     }
     a {

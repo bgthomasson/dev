@@ -1,9 +1,16 @@
 /* generic stuff ----------------------------------------------------------- */
 
 html {
+    box-sizing: border-box;
     font-size: 1rem; 
     /* set rem on html to set the root size, which does make a difference */
 } 
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
 
 body {
     background-color: #fbfcf7;
