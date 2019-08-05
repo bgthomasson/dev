@@ -2,13 +2,17 @@
 
 html {
     font-family: "Source Sans Pro", Candara, sans-serif;
-	font-size: 1em;
+	font-size: 1rem;
 	line-height: 1.2;
-}
-
-body {
     background-color: #fbfcf7;
     color: #080401;
+    box-sizing: border-box;
+}
+
+*, 
+*::before,
+*::after {
+    box-sizing: inherit;
 }
 
 /* Phat phone and tablet size */
@@ -30,7 +34,7 @@ body {
 }
 
 article {
-    margin-bottom: 2em;
+    margin-bottom: 10vh;
 }
 
 
@@ -41,28 +45,9 @@ a:hover {
     outline-width: 0;
 }
 
-/* Stick the h1 page title out in the middle so it'll stand out and look fancy */
 h1 {
     text-align: center;
 }
-
-/* http://www.codesmite.com/article/fixing-raleway-and-similar-fonts-numerals
- * As Raleway comes with both text figures and lining figures for web use you can 
- * use the CSS3 descriptor "font-feature-settings" to enable lining figures.  
- * Works in IE10! 
- * But not in FF on Ubuntu!? 
- * <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"> 
- * 
- */
-
-.raleway-lining {
-    font-family: Raleway, sans-serif;
-    font-feature-settings: "lnum"; 
-}
-.raleway-default {
-    font-family: Raleway, sans-serif;
-}
-
 
 .fleximg {
     display: flex;
@@ -71,17 +56,11 @@ h1 {
     flex-wrap: wrap;
 }
 
-/* CSS filter effects would be great for interaction, e.g. greyscale for inactive img. 
- * Works in FF, Chrome, Safari 9, and Edge [except for url() thingy]. 
-*/
-
 .grayscale {
-    -webkit-filter: grayscale(1);
     filter: grayscale(1);
 }
 
 .blur {
-    -webkit-filter: blur(3px);
     filter: blur(3px);
 }
 
@@ -125,29 +104,19 @@ h1 {
 }
 
 
-/* Forms
-   ========================================================================== */
-
-/* most of the colors here are RGB so can play with transparency.  
- * Note EVERYTHING other than IE 6-7-8 supports rgba() and hsl()
-*/
+/* Forms -------------------------------------------------------------------- */
 
 fieldset {
     border: 3px solid rgba(176,148,127,.5);
 	margin-bottom: 1em;
 }
 
-/**
- * 1. Change font properties to `inherit` in all browsers (opinionated).
- * 2. Remove the margin in Firefox and Safari.
- */
-
 button,
 input,
 select,
 textarea {
-    font: inherit; /* 1 */
-    margin: 0; /* 2 */
+    font: inherit; 
+    margin: 0; 
 }
 
 button {
