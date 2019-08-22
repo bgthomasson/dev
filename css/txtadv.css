@@ -53,6 +53,7 @@ header {
 
     .navbutton {
         display: list-item;
+        list-style-type: none;
         width: 100%;
     }
 
@@ -74,21 +75,31 @@ h6 {
     font-family: Merriweather, Cambria, Georgia, Palatino, serif; 
 }
 
-.title {
-    text-shadow: 
-      3px 3px 0 rgb(192,192,192),
-      6px 6px 0 rgb(128,128,128),
-      9px 9px 0 rgb(64,64,64);
-}
 
-/* for character dialogue in the main narrative text, entirely optional */
-.quoth {
-    color: rgb(243,234,5);
+/* for character dialogue in the main narrative text, entirely optional 
+ * Is rgb(243,234,5) the best choice? colorblind safe but overlaps with buttons. 
+ * soft cyan: rgb(123,229,220) blends in too well. 
+ * rgb(167, 123, 229) variations on purple/lavender look too goth haha. 
+ * I thought a bit of color would liven things up but for now stick to quotation marks!
+ * (can test blockquotes tho...)
+*/
+
+blockquote {
+    border: 2px solid #646464; 
+    border-radius: 1em; 
+    margin: 0; 
+    padding: .5em;
 }
 
 /* BUTTONS ------------------------------------------------------------------ */
+/* Now this I had to poke at. Color blind safe first of all, but also wanted to 
+ * check grayscale appearance, inactive should be lower tone. 
+ * rgb(90, 147, 189) https://www.colorhexa.com/5a93bd is nice but is a bit light. 
+ * darkening makes it better, most colorblind will see as powder blue which is OK. 
+ * Random: VS code has color thing pop up and can click to change rgb-hsl-hex. 
+*/
 button {
-    background-color: rgb(90,147,189);
+    background-color: rgb(65,121,163);
     border: none;
     color: inherit;
     cursor: pointer;
@@ -97,6 +108,7 @@ button {
     transition: background-color 300ms, transform 300ms;
 }
 
+/* complementary, color blind safe mellow yellow */
 button:hover,
 .glowingbutton {
     background-color: rgb(216,203,59);
