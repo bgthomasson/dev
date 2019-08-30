@@ -12,21 +12,25 @@ body {
 }
 
 header {
-    padding: 12px;
+    position: fixed;
+    top: 0;
+    z-index: 4;
 }
 
+/* phone size special layout */
 @media screen and (max-width: 599px) {
     header {
+        background-color: rgb(30,30,30); /* or else can see text scroll under! */
         display: flex;
         align-items: center;
         justify-content: space-between;
-        background-color: rgb(30,30,30);
+        width: 100%; 
     }
     .navbutton {
         flex: 1 1 auto;
     }
     main {
-        margin: 5em .5em 0 .5em;
+        margin: 3em .5em 0 .5em;
     }
 }
 
@@ -41,9 +45,7 @@ header {
     header {
         font-size: 1.4em;
         grid-column: 1;
-        position: fixed;
-        top: 0;
-        z-index: 4;
+        padding: 12px;
     }
 
     main { 
@@ -119,7 +121,7 @@ button:active {
     transform: translateY(.6em);
 }
 
-/* On each page the relevent button should be highlighted. 
+/* On each page the relevant button should be highlighted. 
  * How get rid of the "active" outline in FF at least? 
  */
 
