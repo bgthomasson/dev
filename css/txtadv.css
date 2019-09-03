@@ -39,13 +39,12 @@ header {
     body {
         display: grid;
         grid-template-columns: 8em 1fr;
-        grid-gap: 1em; 
     }
 
     header {
         font-size: 1.4em;
         grid-column: 1;
-        padding: 12px;
+        padding: 12px 0 0 12px;
     }
 
     main { 
@@ -57,6 +56,8 @@ header {
         display: list-item;
         list-style-type: none;
         width: 100%;
+        border-radius: 1em 0 0 1em;
+        margin-bottom: .5em;
     }
 
 }
@@ -87,8 +88,8 @@ h6 {
 */
 
 blockquote {
-    border: 2px solid #646464; 
-    border-radius: 1em; 
+    border: 4px solid #646464; 
+    border-radius: 0 1em; 
     margin: 0; 
     padding: .5em;
 }
@@ -123,14 +124,7 @@ button:active {
 
 /* On each page the relevant button should be highlighted. 
  * How get rid of the "active" outline in FF at least? 
- */
-
-.navbutton {
-    border-radius: 1em;
-    margin-bottom: .5em;
-}
-
-/* CHROME has its own styling, when you type in stuff it won't change the 
+ * CHROME has its own styling, when you type in stuff it won't change the 
  * font color via "font:inherit" while FF does. 
  * However, just setting "color:rgb" means the text is tiny! ha. ha. 
  * So putting "color:inherit: tho redundant for FF fixes Chrome. 
