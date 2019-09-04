@@ -1,6 +1,4 @@
-/* SUPPORTED: Firefox 60+ / Chrome 60+ / Safari 11+ 
- * mostly based on use of grid. Opera 58 and Edge 16+ should work. 
-*/
+/* SUPPORTED: Firefox 60+ / Chrome 60+ / Safari 11+ */
 
 body {
     background-color: rgb(30,30,30);
@@ -11,26 +9,21 @@ body {
     margin: 0;
 }
 
-header {
-    position: fixed;
-    top: 0;
-    z-index: 4;
-}
-
-/* phone size special layout */
+/* phone size layout */
 @media screen and (max-width: 599px) {
     header {
-        background-color: rgb(30,30,30); /* or else can see text scroll under! */
         display: flex;
-        align-items: center;
-        justify-content: space-between;
         width: 100%; 
+        position: fixed;
+        bottom: 0;
+        z-index: 4;
     }
     .navbutton {
         flex: 1 1 auto;
+        border-right: 1px solid rgb(30,30,30);
     }
     main {
-        margin: 3em .5em 0 .5em;
+        margin: 0 .5em 3em 0.5em;
     }
 }
 
@@ -45,11 +38,15 @@ header {
         font-size: 1.4em;
         grid-column: 1;
         padding: 12px 0 0 12px;
+        position: fixed;
+        top: 0;
+        z-index: 4;
     }
 
     main { 
-        max-width: 40em;
         grid-column: 2;
+        margin-right: 1em; 
+        max-width: 40em;
     }
 
     .navbutton {
@@ -62,11 +59,6 @@ header {
 
 }
 
-/* over 1200px- ? have status/inventory as third col on right? 
- * Could refactor based on that, only "save" button in far left, 
- * "save" and "Status" buttons make dialogue appear/vanish in respective cols. 
-*/
-
 /* misc TEXT elements ------------------------------------------------------- */
 
 h1, 
@@ -78,13 +70,12 @@ h6 {
     font-family: Merriweather, Cambria, Georgia, Palatino, serif; 
 }
 
-
 /* for character dialogue in the main narrative text, entirely optional 
  * Is rgb(243,234,5) the best choice? colorblind safe but overlaps with buttons. 
  * soft cyan: rgb(123,229,220) blends in too well. 
  * rgb(167, 123, 229) variations on purple/lavender look too goth haha. 
  * I thought a bit of color would liven things up but for now stick to quotation marks!
- * (can test blockquotes tho...)
+ * (can test blockquotes for now)
 */
 
 blockquote {
