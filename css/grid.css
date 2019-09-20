@@ -1,43 +1,80 @@
-/* generic stuff ------------------------------------------------------------ */
+/* SUPPORTED: Firefox 60+ / Chrome 60+ / Safari 11+ // Edge 16+ / Opera 60+ */
+
+/* basic layout and inline elements */
+
+html {
+    font-size: 1rem;
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%;
+}
+
 body {
-    background-color: #222;
+    background-color: hsl(0, 0%, 13%);
+    color: hsl(0, 0%, 87%);
     font-family: 'Noto Sans', Candara, sans-serif; 
     font-size: 1.2em;
     line-height: 1.4; 
 }
 
-h1,
-h2 {
-    font-family: Merriweather, Cambria, Georgia, serif;
-    text-align: center;
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+    font-family: Merriweather, Cambria, Georgia, Palatino, serif; 
+    line-height: 1.125; 
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+input {
+    font: inherit;
+    margin: 0;
 }
 
 a {
-    color: rgb(222,222,222);
+    color: hsl(0, 0%, 87%);
     text-decoration: none;
 }
+
+
+/* big screen layout */
 
 @media screen and (min-width: 600px){
     .page-header {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-bottom: 2em;
-        background-color: rgb(40, 78, 105);
+        background-color: hsl(205, 49%, 19%);
         padding: 4px;
     }
 
-    main {
-        margin: 0 auto;
-        width: 90vw;
+    .page-header a:hover {
+        text-decoration: underline; 
+    }
+
+    body {
+        margin: 0 1em;
+    }
+
+/* make a space like Funimation has for recent shows, grid to be ergonomic etc */
+    .topbox {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-gap: 1em;
+        margin: 2em 0;
     }
 
     .continue-a {
         grid-column: 1/3;
         grid-row: 1/3;
+        background: no-repeat url("https://i.imgur.com/JdlYGp0.jpg");
+        background-size: cover; 
     }
 
     .continue-b {
@@ -60,44 +97,28 @@ a {
         grid-row: 2;
     }
 
-    .newshows {
-        grid-column: 1/3;
-        grid-row: 3;
-    }
-
-    .shopbox {
-        grid-column: 3/5;
-        grid-row: 3;
-    }
-
 }
 
-/* after looking at all this it's a damn mess. Flexbox probably better. Oops. 
- * At least this can serve as an example of what not to do, ha ha. 
- */
+/* the Netflix/YouTube style sidways lists can be flexbox. 
+ * Its PURPOSE is to offer up ~20 "obvious" choices, click on H2 for plain list. 
+*/
 
+.sidelist {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* need little boxes for the video info */
 .cell {
-    background-color: rgb(90,147,189); 
+    border: 2px solid hsl(205, 45%, 28%); 
     padding: .5em;
 }
 
 .cell:hover {
-    animation: jelly .5s;
+    border: 2px solid hsl(205, 43%, 55%);
+    box-shadow: 0 0 1em hsl(205, 43%, 55%);
+    transform: scale(1.02, 1.02);
 }
 
-@keyframes jelly {
-    0%,
-    100% {
-      transform: scale(1, 1);
-    }
-    25% {
-      transform: scale(0.95, 1.05);
-    }
-    50% {
-      transform: scale(1.05, 0.95);
-    }
-    75% {
-      transform: scale(0.95, 1.05);
-    }
-}
-/* via cssfx.dev, I wanted some sort of animation on hover, this is nifty, for now. */
+
