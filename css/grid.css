@@ -43,6 +43,7 @@ a {
 }
 
 .page-header {
+    background-color: hsl(205, 49%, 19%);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -78,75 +79,72 @@ a {
 
 /* big screen layout -------------------------------------------------------- */
 @media screen and (min-width: 600px) {
-.page-header {
-    background-color: hsl(205, 49%, 19%);
-    flex-direction: row; 
-    padding: .25em;
-}
+    .page-header {
+        
+        flex-direction: row; 
+        padding: .25em;
+    }
 
-.page-header a:hover {
-    text-decoration: underline; 
-}
+    .page-header a:hover {
+        text-decoration: underline; 
+    }
 
-body {
-    margin: 0 1em;
-}
+    body {
+        margin: 0 1em;
+    }
 
 /* make a space like Funimation has for recent shows, grid to be ergonomic etc */
-.historia {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 1em;
-}
+    .historia {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 1em;
+    }
 
-.continue-a {
-    grid-column: 1/3;
-    grid-row: 1/3;
-    background: no-repeat url("https://i.imgur.com/JdlYGp0.jpg");
-    background-size: cover; 
-}
+    .continue-a {
+        grid-column: 1/3;
+        grid-row: 1/3;
+        background: no-repeat url("https://i.imgur.com/JdlYGp0.jpg");
+        background-size: cover; 
+    }
 
-.continue-b {
-    grid-column: 3;
-    grid-row: 1;
-}
+    .continue-b {
+        grid-column: 3;
+        grid-row: 1;
+    }
 
-.continue-c {
-    grid-column: 4;
-    grid-row: 1;
-}
+    .continue-c {
+        grid-column: 4;
+        grid-row: 1;
+    }
 
-.continue-d {
-    grid-column: 3;
-    grid-row: 2;
-}
+    .continue-d {
+        grid-column: 3;
+        grid-row: 2;
+    }
 
-.viewq {
-    grid-column: 4;
-    grid-row: 2;
-}
+    .viewq {
+        grid-column: 4;
+        grid-row: 2;
+    }
 
+    /* need preview box --------------------------------------------------------- */
 
+    .preview {
+        height: 20vw;
+        width: 100%; 
+    }
 
-/* need preview box --------------------------------------------------------- */
+    /* the main repeating element, the line of little boxes to hold all the shows */
 
-.preview {
-    box-shadow: 0 0 1em hsl(205, 43%, 55%);
-    height: 20vw;
-    width: 100%; 
-}
+    .thumblist {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 
-/* the main repeating element, the line of little boxes to hold all the shows */
-
-.thumblist {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.thumbbox {
-    width: 12vw;
-    height: 12vw; 
-}
-} /* end big screen */
+    .thumbbox {
+        width: 12vw;
+        height: 12vw; 
+    }
+} /* end big screen --------------------------------------------------------- */
 
