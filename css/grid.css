@@ -17,7 +17,6 @@ body {
     font-size: 1.2em;
     line-height: 1.4; 
     scroll-behavior: smooth;
-
 }
 
 h1, 
@@ -50,6 +49,10 @@ a {
     flex-direction: column; 
 }
 
+.page-header a:hover {
+    text-decoration: underline; 
+}
+
 .historia {
     display: flex;
     flex-direction: column;
@@ -66,7 +69,7 @@ a {
 .cell:hover {
     border: 2px solid hsl(205, 43%, 55%);
     box-shadow: 0 0 1em hsl(205, 43%, 55%);
-    transform: scale(1.02, 1.02);
+    transform: scale(1.03, 1.03);
 }
 
 /* at least they won't go spilling off the side right? */
@@ -80,13 +83,8 @@ a {
 /* big screen layout -------------------------------------------------------- */
 @media screen and (min-width: 600px) {
     .page-header {
-        
         flex-direction: row; 
         padding: .25em;
-    }
-
-    .page-header a:hover {
-        text-decoration: underline; 
     }
 
     body {
@@ -127,7 +125,7 @@ a {
         grid-row: 2;
     }
 
-    /* need preview box --------------------------------------------------------- */
+    /* need preview box??? */
 
     .preview {
         height: 20vw;
