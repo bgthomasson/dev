@@ -1,49 +1,33 @@
-/* Since this is so simple, support is IE9+ and everything else. */
+/* Support is aiming for 95% aside from some icing like rounded corners etc. 
+ * IE9 (98%): hsla(), nth-child(), box-shadow, box-sizing, 
+ * IE10 (95%): transform(), 
+*/
 
 html {
     font-size: 1rem; 
-    line-height: 1.15;
+    line-height: 1.3;
     text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%; 
 }
 
 body {
-    background-color: #314159;
+    background-color: hsl(216, 29%, 27%);
     font-family: Lato, Candara, sans-serif; 
-}
-
-@media screen and (min-width: 800px) and (orientation: landscape) {
-    body {
-        margin: 0 auto;
-        width: 40em;
-    }
-}
-
-h1 {
-    font-family: Merriweather, serif; /* maybe Orbitron? */
-    text-align: center;
-}
-
-main {
-    background-color: #f7f5ee;
-    display: block;
-    padding: 1em;
+    font-size: 1.1em;
 }
 
 /* TABLES --------------------------------------------------------------------*/
 
 table {
+    background-color: hsl(47, 36%, 95%);
     border-collapse: collapse;
     border-spacing: 0;
     table-layout: fixed;
     width: 100%;
 }
 
-/* IE 8 and lower are the only things that don't support nth-child, 
- * which coincides with CSS3 color support. */
 tbody tr:nth-child(odd) {
-    background-color: burlywood;
+    background-color: hsl(34, 57%, 70%);
 }
 
 td,
@@ -52,7 +36,7 @@ th {
 }
 
 th {
-    text-align: left; /* It throws off the flow of reading to have this centered */
+    text-align: left; 
 }
 
 /* FORMS ---------------------------------------------------------------------*/
@@ -67,20 +51,22 @@ textarea {
 }
 
 button {
-    background-color: rgb(245, 197, 143);
+    background-color: hsl(32, 84%, 76%);
     border: none;
     border-radius: 8px 8px 0 0;
     cursor: pointer;
+    font: inherit; 
     padding: .5em;
+    transition: transform 300ms;
 }
 
 button:hover,
 button:active {
-    background-color: rgb(255, 115, 0);
+    background-color: hsl(27, 100%, 50%);
 }
 
 button:active {
-    transform: translateY(.3em);
+    transform: scale(0.9,0.9);
 }
 
 fieldset {
@@ -91,10 +77,6 @@ fieldset {
 
 /* MISC ----------------------------------------------------------------------*/
 
-.success {
-    border: 3px solid rgb(105,210,231);
-}
-
 .error {
-    border: 3px solid red;
+    border: 3px solid hsl(55, 67%, 54%);
 }

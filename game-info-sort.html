@@ -7,8 +7,7 @@
     <link rel="stylesheet" type="text/css" media="all" href="css/game-info-sort.css" />
 </head>
 <body>
-<main>
-    <h1>Game Info Sort!</h1>
+
     <p>
         <button type="button">All</button> <button type="button">Unowned</button> 
         <button type="button">Linux</button> <button type="button">Cost</button>
@@ -17,83 +16,84 @@
         <thead>
             <tr>
                 <th scope="col">Game</th>
-                <th scope="col">OS</th>
-                <th scope="col">Hardware</th>
+                <th scope="col">Platforms</th>
+                <th scope="col">Format</th>
+                <th scope="col">Installed?</th>
+                <th scope="col">Cost</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td>AD 2044</td>
                 <td>Windows</td>
-                <td>laptop</td>
+                <td>digital</td>
+                <td>no</td>
+                <td>free</td>
             </tr>
             <tr>
                 <td>DOOM 1993</td>
                 <td>DOS</td>
-                <td>toaster</td>
+                <td>CD</td>
+                <td>yes</td>
+                <td>$10</td>
             </tr>
             <tr>
                 <td>DOOM 2016</td>
                 <td>Windows</td>
-                <td>card</td>
+                <td></td>
+                <td></td>
+                <td></td>
             </tr>
             <tr>
                 <td>TES Morrowind</td>
                 <td>Windows, <a href="https://openmw.org/downloads/">OpenMW</a></td>
-                <td>laptop</td>
+                <td></td>
+                <td></td>
+                <td></td>
             </tr>
             <tr>
                 <td>TES Oblivion</td>
-                <td>Windows, WINE</td>
-                <td>desktop</td>
+                <td>Windows</td>
+                <td>DVD</td>
+                <td></td>
+                <td></td>
             </tr>
             <tr>
                 <td>TES Skyrim</td>
-                <td>Windows, WINE</td>
-                <td>desktop</td>
+                <td>Xbox 360, Windows</td>
+                <td>Disc</td>
+                <td></td>
+                <td></td>
             </tr>
             <tr>
                 <td>Fallout 1</td>
-                <td>Windows, WINE</td>
-                <td>laptop</td>
+                <td>Windows</td>
+                <td></td>
+                <td></td>
+                <td></td>
             </tr>
             <tr>
                 <td>Fallout 2</td>
-                <td>Windows, WINE</td>
-                <td>laptop</td>
+                <td>Windows</td>
+                <td></td>
+                <td></td>
+                <td></td>
             </tr>
             <tr>
                 <td>Fallout 3</td>
-                <td>Windows XP, WINE</td>
-                <td>desktop</td>
+                <td>Windows XP</td>
+                <td></td>
+                <td></td>
+                <td></td>
             </tr>
             <tr>
                 <td>Fallout NV</td>
-                <td>Windows, WINE</td>
-                <td>desktop</td>
+                <td>Xbox 360, Windows</td>
+                <td></td>
+                <td></td>
+                <td></td>
             </tr>
         </tbody>
     </table>
-
-    <p>
-        This is meant to be a quick reference for buying games for Linux. 
-        The OS options are thus simply DOS (so use DOSBOX), Windows (and WINE), 
-        and Linux (natively). 
-        Hardware requirements are personal notes- laptop is my old craptop, 
-        desktop is my i5-7500, and "card" just means a decent one whenever prices aren't insane. 
-        (Later I can add more details in-page) 
-    </p>
-    <p>
-        So the basic idea is there will be buttons to click that can SORT the INFO 
-        (like e-commerce sites) and display only those with "Linux" or "laptop" etc. 
-
-    </p>
-    <p>
-        CSS can stay simple, the main effort needs to be the backend. 
-        It needs a database and one page input, instead of old PHP style pages. 
-        So a form pops up at the top, when enter data it magically adds to the end 
-        of the list on the page. The buttons at the top reload the list in new views. 
-    </p>
-</main>
 </body>
 </html>
