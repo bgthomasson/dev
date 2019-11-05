@@ -29,11 +29,7 @@ body {
 
 /* basic desktop window, 600-~1200px */
 @media screen and (min-width: 600px) {
-    body {
-        display: grid;
-        grid-template-columns: 8em 1fr;
-    }
-
+    /* I had this as grid BUt absolute positioning removes header from the grid layout */
     header {
         font-size: 1.4em;
         grid-column: 1;
@@ -44,7 +40,7 @@ body {
     }
 
     main { 
-        grid-column: 2;
+        margin-left: 8em;
         margin-right: 1em; 
         max-width: 40em;
     }
@@ -111,7 +107,7 @@ button:hover,
 }
 
 button:active {
-    transform: translateY(.6em);
+    transform: scale(.8, .9);
 }
 
 /* On each page the relevant button should be highlighted. 

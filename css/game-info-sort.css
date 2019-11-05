@@ -1,6 +1,8 @@
 /* Support is aiming for 95% aside from some icing like rounded corners etc. 
  * IE9 (98%): hsla(), nth-child(), box-shadow, box-sizing, 
  * IE10 (95%): transform(), 
+ * In case this seems absurd, it's basically just a glorified spreadsheet. 
+ * So I might as well have one project where I'm supporting old junk instead of just the newest. 
 */
 
 html {
