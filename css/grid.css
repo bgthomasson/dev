@@ -60,7 +60,10 @@ a {
     margin: 2em 0;
 }
 
-/* need little boxes for the video info */
+/* need little boxes for the video info 
+ * I stuck a border on since I didn't have little album cover art but it makes 
+ * a fugly gap around the boxes that are images. 
+*/
 .cell {
     border: 2px solid hsl(205, 45%, 28%); 
     padding: .5em;
@@ -72,7 +75,7 @@ a {
     transform: scale(1.03, 1.03);
 }
 
-/* at least they won't go spilling off the side right? */
+/* at least they won't go spilling off the side */
 .preview,
 .thumbbox {
     width: 90%;
@@ -91,7 +94,10 @@ a {
         margin: 0 1em;
     }
 
-/* make a space like Funimation has for recent shows, grid to be ergonomic etc */
+/* make a space like Funimation has for recent shows, grid to be ergonomic etc 
+ * I'm not especially confident in this layout but worried just having 100 rows of boxes is mind numbing. 
+*/
+
     .historia {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -123,13 +129,6 @@ a {
     .viewq {
         grid-column: 4;
         grid-row: 2;
-    }
-
-    /* need preview box??? */
-
-    .preview {
-        height: 20vw;
-        width: 100%; 
     }
 
     /* the main repeating element, the line of little boxes to hold all the shows */
