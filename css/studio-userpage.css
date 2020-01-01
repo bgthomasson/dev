@@ -1,7 +1,8 @@
-/* SECTION: 1 BASIC LAYOUT ----------------------------------------------*/
+/* SECTION 1: BASIC LAYOUT ----------------------------------------------*/
 
 html {
     font-size: 1rem;
+    line-height: 1.2;
     text-rendering: optimizeLegibility;
     -webkit-text-size-adjust: 100%;
 }
@@ -10,8 +11,7 @@ body {
     background-color: #1e1e1e;
     color: #fbfcf7;
     font-family: "Source Sans Pro", Candara, sans-serif;
-    line-height: 1.2;
-    margin: 0 auto; 
+    margin: 1px; 
 }
 
 .page-header {
@@ -28,28 +28,29 @@ nav a:hover {
     text-decoration: underline; 
 }
 
-/* I wanted the H1 for the page name to fit into the main nav easily */
-
 .nomen {
     display: inline-block;
     margin: 0; 
 }
 
 .searchform input {
-    border: 3px solid #1c3e2e;
+    border: 3px solid #2a5c44;
     width: 20em; 
 }
 
 .special-actions {
-    background-color: #1c3d3e;
+    background-color: #2d5c5e;
     padding: 0.3em;
     margin-bottom: 3em;
     text-align: center;
 }
 
 .thumbs {
-    text-align: center;
+    display: grid;
+    grid-gap: .4em;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     margin-bottom: 3em;
+    text-align: center;
 }
 
 @media screen and (min-width: 800px) {
@@ -82,7 +83,7 @@ nav a:hover {
 
 }
 
-/* ARTICLE RELATED ---------------------------------------------- */
+/* SECTION 2: ARTICLE RELATED ---------------------------------------------- */
 article {
     background-color: #0e0e0e;
     margin-bottom: 2em;
@@ -118,7 +119,7 @@ article {
     max-width: 40em;
 }
 
-/* SECTION: basic inline elements ----------------------------------------*/
+/* SECTION 3: basic inline elements ----------------------------------------*/
 
 a {
     color: white;
@@ -133,12 +134,6 @@ h6 {
     font-family: Merriweather, Cambria, Georgia, Palatino, serif; 
 }
 
-/* 
- * h1 for main page title 
- * h2 for article titles and username
- * h3 for minor subheadings
-*/
-
 h2 {
     margin-top: 0;
     text-align: center;
@@ -147,20 +142,8 @@ h2 {
 img {
     border: 0; 
     max-width: 100%;
-}
-
-ol, 
-ul {
-    padding: 0.5em;
-    list-style-position: inside; 
-}
-
-ul li {
-    list-style-type: none; 
-}
-
-ul li:before {
-    content: "\2605"; 
+    max-height: 100%;
+    object-fit: contain;
 }
 
 /* SECTION 4: FORM ELEMENTS ----------------------------------------------- */
