@@ -8,14 +8,14 @@ html {
 }
 
 body {
-    background-color: #1e1e1e;
+    background-color: hsl(0, 0%, 16%);
     color: #fbfcf7;
     font-family: "Source Sans Pro", Candara, sans-serif;
     margin: 1px; 
 }
 
 .page-header {
-    background-color: #0e0e0e;
+    background-color: hsl(0, 0%, 12%);
     padding: .3em 0; 
 }
 
@@ -34,12 +34,12 @@ nav a:hover {
 }
 
 .searchform input {
-    border: 3px solid #2a5c44;
+    border: 3px solid hsl(151, 37%, 26%);
     width: 20em; 
 }
 
 .special-actions {
-    background-color: #2d5c5e;
+    background-color: hsl(182, 35%, 27%);
     padding: 0.3em;
     margin-bottom: 3em;
     text-align: center;
@@ -48,7 +48,7 @@ nav a:hover {
 .thumbs {
     display: grid;
     grid-gap: .4em;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     margin-bottom: 3em;
     text-align: center;
 }
@@ -85,13 +85,13 @@ nav a:hover {
 
 /* SECTION 2: ARTICLE RELATED ---------------------------------------------- */
 article {
-    background-color: #0e0e0e;
+    background-color: hsl(0, 0%, 12%);
     margin-bottom: 2em;
     padding: 0.5em; 
 }
 
 .product-purchase {
-    border: 2px solid #601a36;
+    border: 2px solid hsl(336, 57%, 24%);
     text-align: center;
     padding: 0 0.5em; 
 }
@@ -159,16 +159,16 @@ button {
 }
 
 button:hover {
-    background-color: #fbfcf7;
-    color: #0e0e0e;
+    background-color: hsl(72, 45%, 98%);
+    color: hsl(0, 0%, 5%);
 }
 
 input {
-    background-color: #0e0e0e;
+    background-color: hsl(0, 0%, 12%);
 }
 
 fieldset {
-    border: 1px solid rgb(123,196,134);
+    border: 1px solid hsl(129, 38%, 63%);
     margin: 0 2px;
     padding: 0.5em; 
 }
