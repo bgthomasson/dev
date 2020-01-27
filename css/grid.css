@@ -1,5 +1,5 @@
-/* SUPPORTED: Firefox 60+ / Chrome 60+ / Safari 11+ // Edge 16+ / Opera 60+ 
- * 
+/* SUPPORTED: Firefox 60+ / Chrome 60+ / Safari 11+ 
+ * If we're using modern codecs then only need to support modern browsers, right???  
  * basic layout and inline elements up top. 
  * Since mobile has least to add, throw that into the default, what could go wrong? 
 * --------------------------------------------------------------------------- */
@@ -47,9 +47,10 @@ a {
     align-items: center;
     justify-content: space-between;
     flex-direction: column; 
+    margin-bottom: 1em;
 }
 
-.page-header a:hover {
+a:hover {
     text-decoration: underline; 
 }
 
@@ -57,12 +58,12 @@ a {
     display: flex;
     flex-direction: column;
     align-content: space-between; 
-    margin: 2em 0;
 }
 
 /* need little boxes for the video info 
  * I stuck a border on since I didn't have little album cover art but it makes 
- * a fugly gap around the boxes that are images. 
+ * a fugly gap around the boxes that are images. I could make it a background 
+ * image instead... 
 */
 .cell {
     border: 2px solid hsl(205, 45%, 28%); 
@@ -82,6 +83,9 @@ a {
     height: 90%; 
 }
 
+section {
+    margin-bottom: 2em;
+}
 
 /* big screen layout -------------------------------------------------------- */
 @media screen and (min-width: 600px) {

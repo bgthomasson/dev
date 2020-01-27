@@ -1,8 +1,13 @@
-/* SUPPORTED: Firefox 65+ / Chrome 70+ / Safari 12+ */
+/* SUPPORTED 2020: Firefox 70+ / Chrome 70+ / Safari 12+ -------------------- */
+html {
+    font-size: 1rem;
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%;
+}
 
 body {
-    background-color: rgb(30,30,30);
-    color: rgb(254,253,229);
+    background-color: hsl(0, 0%, 12%);
+    color: hsl(58, 93%, 95%);
     font-family: "Source Sans Pro", Candara, sans-serif;
     font-size: 1.3em;
     line-height: 1.4;
@@ -20,16 +25,15 @@ body {
     }
     .navbutton {
         flex: 1 1 auto;
-        border-right: 1px solid rgb(30,30,30);
+        border-right: 1px solid hsl(0, 0%, 12%);
     }
     main {
         margin: 0 .5em 3em 0.5em;
     }
 }
 
-/* basic desktop window, 600-~1200px */
+/* basic desktop window, 600-~1200px ---------------------------------------- */
 @media screen and (min-width: 600px) {
-    /* I had this as grid BUt absolute positioning removes header from the grid layout */
     header {
         font-size: 1.4em;
         grid-column: 1;
@@ -67,30 +71,17 @@ h6 {
     line-height: 1.125; 
 }
 
-/* for character dialogue in the main narrative text, entirely optional 
- * Is rgb(243,234,5) the best choice? colorblind safe but overlaps with buttons. 
- * soft cyan: rgb(123,229,220) blends in too well. 
- * rgb(167, 123, 229) variations on purple/lavender look too goth haha. 
- * I thought a bit of color would liven things up but for now stick to quotation marks!
- * (can test blockquotes for now)
-*/
-
 blockquote {
-    border: 4px solid #646464; 
+    border: 4px solid hsl(0, 0%, 39%); 
     border-radius: 0 1em; 
     margin: 0; 
     padding: .5em;
 }
 
 /* BUTTONS ------------------------------------------------------------------ */
-/* Now this I had to poke at. Color blind safe first of all, but also wanted to 
- * check grayscale appearance, inactive should be lower tone. 
- * rgb(90, 147, 189) https://www.colorhexa.com/5a93bd is nice but is a bit light. 
- * darkening makes it better, most colorblind will see as powder blue which is OK. 
- * Random: VS code has color thing pop up and can click to change rgb-hsl-hex. 
-*/
+
 button {
-    background-color: rgb(65,121,163);
+    background-color: hsl(206, 43%, 45%);
     border: none;
     color: inherit;
     cursor: pointer;
@@ -102,7 +93,7 @@ button {
 /* complementary, color blind safe mellow yellow */
 button:hover,
 .glowingbutton {
-    background-color: rgb(216,203,59);
+    background-color: hsl(55, 67%, 54%);
     color: rgb(30,30,30);
 }
 
@@ -119,12 +110,12 @@ button:active {
  */
 
 input {
-    background-color: rgb(64,64,64);
-    border: 3px solid rgb(90,147,189);
+    background-color: hsl(0, 0%, 25%);
+    border: 3px solid hsl(205, 43%, 55%);
     font: inherit;
     color: inherit;
 }
 
 input:focus {
-    border-color: rgb(216,203,59);
+    border-color: hsl(55, 67%, 54%);
 }
