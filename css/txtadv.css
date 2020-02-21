@@ -3,10 +3,26 @@ html {
     font-size: 1rem;
     -webkit-text-size-adjust: 100%;
 }
+/* TODO: light mode. As just the paper and ink need changing try @prefer... 
+ * Or is it better to have it in "settings" for user at-will? OR BOTH!? seems best.  
+ * I'll just split for now and deal with switching later. 
+*/
 
-body {
+.night {
     background-color: hsl(0, 0%, 12%);
     color: hsl(58, 93%, 95%);
+}
+
+.day {
+    color: hsl(0, 0%, 12%);
+    background-color: hsl(0, 0%, 93%);
+}
+/* notes: yellow is too pale now? 
+ * form bg is still dark whoops- give it the class too!? 
+ * - that works but resets size. BETTER is to set bg to INHERIT! 
+*/
+
+body {
     font-family: "Source Sans Pro", Candara, sans-serif;
     font-size: 1.3em;
     line-height: 1.4;
@@ -117,16 +133,8 @@ button:active {
     transform: scale(.8, .9);
 }
 
-/* On each page the relevant button should be highlighted. 
- * How get rid of the "active" outline in FF at least? 
- * CHROME has its own styling, when you type in stuff it won't change the 
- * font color via "font:inherit" while FF does. 
- * However, just setting "color:rgb" means the text is tiny! ha. ha. 
- * So putting "color:inherit: tho redundant for FF fixes Chrome. 
- */
-
 input {
-    background-color: hsl(0, 0%, 25%);
+    background-color: inherit;
     border: 3px solid hsl(205, 43%, 55%);
     font: inherit;
     color: inherit;
