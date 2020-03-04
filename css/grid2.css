@@ -57,6 +57,18 @@ input {
     margin-bottom: 1em;
 }
 
+/* CSS is the stupidest thing ever created. God forbid angles should be built in. 
+.diagonal-box {
+    background-color: crimson;
+    transform: skewY(-10deg);
+}
+
+.diagonal-content {
+    margin: 0 auto;
+    max-width: 50em;
+    transform: skewY(10deg);
+}
+*/
 /* the grid stuff ---------------------------------------------------------- */
 
 /* So the plan is, at full desktop size, have all the columns. 

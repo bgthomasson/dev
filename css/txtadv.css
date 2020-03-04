@@ -1,12 +1,11 @@
-/* SUPPORTED 2020: Firefox 70+ / Chrome 70+ / Safari 12+ -------------------- */
+/* SUPPORTED 2020: Firefox 70+ / Chrome 70+ / Safari 12+ -------------------- 
+ * BASIC layout and theme --------------------------------------------------- 
+*/
+
 html {
     font-size: 1rem;
     -webkit-text-size-adjust: 100%;
 }
-/* TODO: light mode. As just the paper and ink need changing try @prefer... 
- * Or is it better to have it in "settings" for user at-will? OR BOTH!? seems best.  
- * I'll just split for now and deal with switching later. 
-*/
 
 .night {
     background-color: hsl(0, 0%, 12%);
@@ -17,10 +16,7 @@ html {
     color: hsl(0, 0%, 12%);
     background-color: hsl(0, 0%, 93%);
 }
-/* notes: yellow is too pale now? 
- * form bg is still dark whoops- give it the class too!? 
- * - that works but resets size. BETTER is to set bg to INHERIT! 
-*/
+/* notes: yellow is too pale now? */
 
 body {
     font-family: "Source Sans Pro", Candara, sans-serif;
@@ -110,6 +106,7 @@ li {
     padding: .5em;
 }
 
+
 /* BUTTONS ------------------------------------------------------------------ */
 
 button {
@@ -135,6 +132,7 @@ button:active {
 
 input {
     background-color: inherit;
+    /* this makes it match the body bg w/out using variables */
     border: 3px solid hsl(205, 43%, 55%);
     font: inherit;
     color: inherit;
