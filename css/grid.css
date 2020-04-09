@@ -2,12 +2,19 @@
  * If we're using modern codecs then only need to support modern browsers, right???  
  * basic layout and inline elements up top. 
  * Since mobile has least to add, throw that into the default, what could go wrong? 
+ * https://css-tricks.com/how-to-re-create-a-nifty-netflix-animation-in-css/
 * --------------------------------------------------------------------------- */
 
 html {
     box-sizing: border-box; 
     font-size: 1rem;
     text-rendering: optimizeLegibility;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
 }
 
 body {
@@ -17,6 +24,7 @@ body {
     font-size: 1.2em;
     line-height: 1.4; 
     scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
 }
 
 h1, 
@@ -68,19 +76,20 @@ a:hover {
 .cell {
     border: 2px solid hsl(205, 45%, 28%); 
     padding: .5em;
+    transition: 300ms;
 }
 
+.cell:focus,
 .cell:hover {
     border: 2px solid hsl(205, 43%, 55%);
     box-shadow: 0 0 1em hsl(205, 43%, 55%);
-    transform: scale(1.03, 1.03);
+    transform: scale(1.3, 1.3);
 }
 
 /* at least they won't go spilling off the side */
-.preview,
-.thumbbox {
-    width: 90%;
-    height: 90%; 
+img {
+    width: 100%;
+    height: 100%; 
 }
 
 section {
