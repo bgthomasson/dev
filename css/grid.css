@@ -83,7 +83,7 @@ a:hover {
 .cell:hover {
     border: 2px solid hsl(205, 43%, 55%);
     box-shadow: 0 0 1em hsl(205, 43%, 55%);
-    transform: scale(1.3);
+    transform: scale(1.1, 1.3);
 }
 
 /* at least they won't go spilling off the side */
