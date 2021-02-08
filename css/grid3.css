@@ -1,82 +1,66 @@
 /* generic stuff ----------------------------------------------------------- */
 
+:root {
+    --ink: hsl(0, 0%, 25%);
+    --paper: hsl(0, 0%, 98%);
+    --tan: hsl(46, 33%, 63%);
+}
+
 html {
     font-size: 1rem; 
 } 
 
 body {
-    background-color: #fbfcf7;
-    color: #404040; 
+    background-color: var(--paper);
+    color: var(--ink);
+    font-size: 1.2em;
     font-family: 'Source Sans Pro', 'Trebuchet MS', sans-serif;
-    line-height: 1.2; 
+    line-height: 1.4;
 }
 
 h2,
-h3 {
+h3,
+legend {
     font-family: Merriweather, serif;
 }
+
+/* Layout ................................................................... */
 
 .page-header {
     display: flex;
     align-items: center;
     justify-content: space-between; 
     flex-wrap: wrap;
-    margin-bottom: 2em;
-    border-bottom: 2px solid #c0b283;
+    padding-bottom: 1ch;
+    margin-bottom: 2ch;
+    border-bottom: 2px solid var(--tan);
 }
 
 .site-nav a {
-    padding: 0 .3em;
-}
-
-input {
-    border: .125em solid #02c04a; 
-    color: inherit;
-    font: inherit;
-    margin: 0;
-    width: 10em;
-}
-
-.byline {
-    font-size: 0.8em;
-}
-
-.lefty {
-    float: left;
-    margin-right: 2em;
-    margin-bottom: 1em;
-}
-
-.shape {
-    shape-outside: circle(50%);
+    padding: 0 .4ch;
 }
 
 /* the grid stuff ---------------------------------------------------------- */
 
 @media screen and (min-width: 800px){
     
-    body {
-        font-size: 1.2em;
-    }
-    
     main {
-        padding: 0 2em;
-    }
-
-    .news-fullpage {
-        display: grid;
-        grid-gap: 2em;
-        grid-template-columns: 3fr 1fr;
-        margin-bottom: 4em;
+        padding: 0 1ch;
     }
     
+    .grid-col2 {
+        display: grid;
+        grid-gap: 2ch;
+        grid-template-columns: repeat(2,1fr);
+        margin-bottom: 5ch;
+    }
     .news-small {
         display: grid;
         grid-template-columns: 2fr 1fr;
-        grid-gap: 1em; 
-        border-top: 4px solid #c0b283;
-        border-left: 2px solid #c0b283;
-        padding: 1em;
+        grid-gap: 1ch;
+        border-top: 4px solid var(--tan);
+        border-left: 2px solid var(--tan);
+        padding: 1ch;
     }
     
     .news-content {
@@ -88,21 +72,36 @@ input {
         grid-row: 1 / 3;
         text-align: center;
     }
-    
-    .grid-col2 {
-        display: grid;
-        grid-gap: 3em; 
-        grid-template-columns: repeat(2, 1fr);
-        margin-bottom: 6em;
-    }
 
-    .vertical {
-        /*writing-mode: vertical-rl;
-        * this doesn't line break in FF.
-        */
-        transform: rotate(-12.5deg);
-        /* this doesn't rotate the BOX, just the CONTENT which spills over */
-        padding-bottom: 4em;
+    .flexy {
+        display: flex;
+        align-items: top;
+        justify-content: left;
+        gap: 3ch;
     }
     
+}
+
+/* Forms ==================================================================== */
+
+/* Remember BOTH the type="search" AND type="checkbox" are <input> -
+ * To specify use input[type=""]
+ * https://css-tricks.com/custom-styling-form-inputs-with-modern-css-features/
+*/
+button,
+input {
+    color: inherit;
+    font: inherit;
+}
+
+.quiz {
+    margin-bottom: 6ch;
+}
+
+.quiz-fieldset {
+    border: 1px dashed var(--tan);
+}
+
+.quiz-btn {
+    margin-top: 2ch;
 }

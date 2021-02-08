@@ -20,51 +20,48 @@
     </form>
 </header>
 <main>
-    <div class="news-fullpage">
-        <article class="news-content">
-            <h2 class="vertical">Breaking in to new angles</h2>
-            <p class="byline">2 minutes ago | Technology</p>
-            <p>
-                Crazy fun stuff! Look at it go! Just relax and let it flow. 
-                That easy. Water's like me. It's laaazy ... Boy, it always looks 
-                for the easiest way to do things. See how easy it is to create a 
-                little tree right in your world. You got your heavy coat out yet? 
-                It's getting colder. Very easy to work these to death. 
-                A tree needs to be your friend if you're going to paint him.
-            </p>
-            <img src="img/parrots.jpg" alt="parrots" class="lefty" />
-            <p>
-                Woo so exciting. So eye catching. Much interest. 
-                Everyone wants to enjoy the good parts - but you have to build 
-                the framework first. Talk to trees, look at the birds. Whatever it takes. 
-                In your imagination you can go anywhere you want. 
-                Let's put some happy little clouds in our world.
-            </p>
+    <div class="flexy">
+        <form class="quiz">
+            <fieldset class="quiz-fieldset">
+                <legend>What languages would you like to learn?</legend>
+                <div>
+                    <input type="checkbox" id="Spanish" name="languages" value="Spanish">
+                    <label for="Spanish">Spanish</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="French" name="languages" value="French">
+                    <label for="French">French</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="Mandarin" name="languages" value="Mandarin">
+                    <label for="Mandarin">Mandarin</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="Japanese" name="languages" value="Japanese">
+                    <label for="Japanese">Japanese</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="Sindarin" name="languages" value="Sindarin">
+                    <label for="Sindarin">Sindarin</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="Wookie" name="languages" value="Wookie">
+                    <label for="Wookie">Wookie</label>
+                </div>
+                <button type="submit" class="quiz-btn">Submit</button>
+            </fieldset>
+        </form>
+        <article>
+            <h3>About languages</h3>
+            <p>Over here we'll have a long paragraph about languages or the quiz or whatever.</p>
         </article>
-        <aside class="news-aside">
-            <article>
-                <h3>55 apple recipes</h3>
-                <img src="img/apples.jpg" alt="apple basket" width="100px" height="100px" />
-                <p class="byline">2 minutes ago | Food</p>
-            </article>
-            <article>
-                <h3>Hippo isn't that hungry after all</h3>
-                <img src="img/4694-icon.jpg" alt="snoot" width="100px" height="100px" />
-                <p class="byline">2 minutes ago | Psychology</p>
-            </article>
-        </aside>
     </div>
-    
     <div class="grid-col2">
         <div class="news-small">
             <article class="news-content">
-                <h3>Grid test</h3>
+                <h3>Spanish</h3>
                 <p>
-                    I think flexbox could get the same effect since this is a simple 
-                    layout, but grid feels more precise. 
-                </p>
-                <p class="byline">
-                    2 minutes ago | Technology
+                    A whole bunch of words go here. 
                 </p>
             </article>
             <aside class="news-aside">
@@ -74,18 +71,16 @@
         
         <div class="news-small">
             <article class="news-content">
-                <h3>Grid test</h3>
+                <h3>French</h3>
                 <p>
                     Stuff goes here. 
                 </p>
-                <p class="byline">2 minutes ago | Technology</p>
             </article>
             <aside class="news-aside">
                 <img src="img/parrots.jpg" alt="parrots" />
             </aside>
         </div>
     </div>
-    
 </main>
 </body>
 </html>
