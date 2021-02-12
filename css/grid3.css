@@ -1,9 +1,11 @@
 /* generic stuff ----------------------------------------------------------- */
 
 :root {
-    --ink: hsl(0, 0%, 25%);
+    --ink: hsl(0, 0%, 15%);
     --paper: hsl(0, 0%, 98%);
-    --tan: hsl(46, 33%, 63%);
+    --trim: hsl(45, 33%, 63%);
+    --active: hsl(226, 84%, 88%);
+    --inactive: hsl(225, 59%, 73%);
 }
 
 html {
@@ -21,7 +23,7 @@ body {
 h2,
 h3,
 legend {
-    font-family: Merriweather, serif;
+    font-family: Merriweather, Cambria, serif;
 }
 
 /* Layout ................................................................... */
@@ -33,7 +35,7 @@ legend {
     flex-wrap: wrap;
     padding-bottom: 1ch;
     margin-bottom: 2ch;
-    border-bottom: 2px solid var(--tan);
+    border-bottom: 2px solid var(--trim);
 }
 
 .site-nav a {
@@ -58,8 +60,8 @@ legend {
         display: grid;
         grid-template-columns: 2fr 1fr;
         grid-gap: 1ch;
-        border-top: 4px solid var(--tan);
-        border-left: 2px solid var(--tan);
+        border-top: 4px solid var(--trim);
+        border-left: 2px solid var(--trim);
         padding: 1ch;
     }
     
@@ -75,7 +77,7 @@ legend {
 
     .flexy {
         display: flex;
-        align-items: top;
+        align-items: baseline;
         justify-content: left;
         gap: 3ch;
     }
@@ -84,22 +86,33 @@ legend {
 
 /* Forms ==================================================================== */
 
-/* Remember BOTH the type="search" AND type="checkbox" are <input> -
- * To specify use input[type=""]
- * https://css-tricks.com/custom-styling-form-inputs-with-modern-css-features/
-*/
 button,
-input {
+input,
+label {
     color: inherit;
     font: inherit;
+    cursor: pointer;
 }
+
+button {
+    background-color: var(--inactive);
+    border: none;
+    border-radius: 12px;
+    padding: 1ch;
+}
+
+button:hover,
+label:hover {
+    background-color: var(--active);
+}
+
 
 .quiz {
     margin-bottom: 6ch;
 }
 
 .quiz-fieldset {
-    border: 1px dashed var(--tan);
+    border: 1px dashed var(--trim);
 }
 
 .quiz-btn {
