@@ -102,10 +102,9 @@ button {
 }
 
 button:hover,
-label:hover {
+.quiz-row:hover {
     background-color: var(--active);
 }
-
 
 .quiz {
     margin-bottom: 6ch;
