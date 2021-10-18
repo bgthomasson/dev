@@ -163,5 +163,15 @@ section {
         width: 12vw;
         height: 12vw; 
     }
+
+    /* hey what if we had just a big box full of random stuff */
+
+    .griddle {
+        display: grid;
+        gap: 3em;
+        grid-template-columns: repeat(auto-fit, 12em);
+        grid-auto-flow: dense;
+        justify-content: center;
+    }
 } /* end big screen --------------------------------------------------------- */
 
