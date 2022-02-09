@@ -1,8 +1,10 @@
 /* SUPPORTED: Firefox 60+ / Chrome 60+ / Safari 11+ 
- * If we're using modern codecs then only need to support modern browsers, right???  
- * basic layout and inline elements up top. 
+ * PREFERRED:  Chrome 90+ (Edge 90+, Opera 80+), Firefox 90+, Safari 14+ 
  * Since mobile has least to add, throw that into the default, what could go wrong? 
  * https://css-tricks.com/how-to-re-create-a-nifty-netflix-animation-in-css/
+ * Note: dark mode is default, wild assumption if there's glare you can't see the screen to watch a video anyways.
+ * If do need options, use @media (prefers-color-scheme: light){} ??
+ * Note I am aiming for monitors and TVs since that is where I watch videos. 
 * --------------------------------------------------------------------------- */
 
 html {
@@ -27,13 +29,8 @@ body {
     -webkit-text-size-adjust: 100%;
 }
 
-h1, 
-h2, 
-h3, 
-h4, 
-h5, 
-h6 {
-    font-family: Merriweather, Cambria, Georgia, Palatino, serif; 
+h1, h2, h3, h4, h5, h6 {
+    font-family: Merriweather, Cambria, Palatino, serif; 
     line-height: 1.25; 
 }
 
@@ -48,6 +45,9 @@ a {
     color: hsl(0, 0%, 87%);
     text-decoration: none;
 }
+a:hover {
+    text-decoration: underline; 
+}
 
 .page-header {
     background-color: hsl(205, 49%, 19%);
@@ -58,17 +58,15 @@ a {
     margin-bottom: 1em;
 }
 
-a:hover {
-    text-decoration: underline; 
-}
-
 .historia {
     display: flex;
     flex-direction: column;
     align-content: space-between; 
 }
 
-/* need little boxes for the video info */
+/* need little boxes for the video info. 
+ * I know this is currently very redundant, I'll refactor to either combine or do different color on .cell sometime. 
+*/
 .cell {
     border: 2px solid hsl(205, 45%, 28%); 
     padding: .5em;
@@ -92,8 +90,16 @@ a:hover {
     transform: scale(1.1, 1.1);
 }
 
+/* Placeholder to remember to research this in future */
+@media (prefers-reduced-motion: reduce){
+    .thumbbox{
+        transition: 900ms;
+    }
+}
 
-/* at least they won't go spilling off the side */
+/* at least they won't go spilling off the side.
+ * also current placeholder is SQUARE and should be like 150px wide 250px tall to fit common video card size on Netflix, Crunchyroll, etc.
+*/
 img {
     width: 100%;
     height: 100%; 
@@ -117,7 +123,6 @@ section {
 /* make a space like Funimation has for recent shows, grid to be ergonomic etc 
  * I'm not especially confident in this layout but worried just having 100 rows of boxes is mind numbing. 
 */
-
     .historia {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -152,26 +157,19 @@ section {
     }
 
     /* the main repeating element, the line of little boxes to hold all the shows */
-
     .thumblist {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        gap: 1.5em;
     }
 
-    .thumbbox {
-        width: 12vw;
-        height: 12vw; 
-    }
-
-    /* hey what if we had just a big box full of random stuff */
-
+    /* hey what if we had just a big box full of random stuff like Crunchyroll, YouTube */
     .griddle {
         display: grid;
-        gap: 3em;
+        gap: 1.5em;
         grid-template-columns: repeat(auto-fit, 12em);
         grid-auto-flow: dense;
         justify-content: center;
     }
 } /* end big screen --------------------------------------------------------- */
-
