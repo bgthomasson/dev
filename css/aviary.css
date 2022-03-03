@@ -1,59 +1,31 @@
-/* Aviary. MIT license. Modern browsers, IE 11. 
-* Use of rem influenced by Bootstrap 4. 
- * ------------------------------------------------------------------------- */
+/* SUPPORTED: Firefox 95+ / Chrome 90+ / Safari 13+ (???) */
 
-/* just a tiny bit of normalize to make sure the HTML5 stuff works in IE and 
- * Opera mini */
+html {
+    box-sizing: border-box; 
+    font-size: 1rem;
+    text-rendering: optimizeLegibility;
+}
 
-article,
-aside,
-footer,
-header,
-main, 
-nav,
-section { 
-    display: block;
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
 }
 
 body {
-    font-family: "Noto Serif", Cambria, serif;
+    font-family: 'Noto Sans', 'Open Sans', Candara, Geneva, Verdana, serif;
     font-size: 1em;
     line-height: 1.2em;
 }
 
-/* there is gore in mobile view when h1 on one line is broken down like 
- * this here where it wraps. Would line-height or word-wrap work on it? hmm. 
-
-*/
-
-h1, 
-h2, 
-h3, 
-h4, 
-h5, 
-h6 {
-    font-family: "Noto Sans", Candara, sans-serif;
+h1, h2, h3, h4, h5, h6 {
+    font-family: Merriweather, Cambria, Palatino, serif;
 }
-
-/* fonts, fonts, fonts. 
- * Source Serif is close to Cambria.
- * Roboto Slab is a bit too firm. 
- * Playfair Display, Merriweather, Tangerine, Niconne...
- * Philosopher, Amaranth, 
- * but with the reference/science-y basis, better have full UTF-8 support
-*/
-
-/*
- * borrowing from normalize since it does get shrunk down by FF
- * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Firefox, and Safari.
- */
 
 h1 {
-  font-size: 2em;
-  margin: 0.3em 0;
+    font-size: 2em;
+    margin: 0.3em 0;
 }
-
 
 /* Now main page blocks from the top down ---------------------------------- */
 
@@ -69,47 +41,24 @@ nav a {
     text-decoration: none; 
 }
 
-nav a:hover {
-    text-decoration: underline; 
+
+
+/* 
+The guide needs one row with TIME that "sticks" to top when scroll 
+the rest of it is simply a grid.
+yes technically a table would work but let's try grid. 
+*/
+
+
+
+.cell {
+    background-color: hsl(180, 24%, 63%);
+    border: 1px solid hsl(205, 45%, 28%); 
+    padding: .5em;
 }
 
-input {
-    border: .125rem solid #02c04a; /* if 1 rem = 16px then .125 rem = 2px */
-    color: inherit;
-    font: inherit;
-    margin: 0;
-    width: 10rem;
+.cell:focus,
+.cell:hover {
+    background-color: hsl(208, 100%, 97%);
+    border: 1px solid hsl(205, 43%, 55%);
 }
-
-main {
-    margin: 0 auto;
-    max-width: 50rem;
-    
-}
-
-/* article needs a bit of space between, and set up to flex sections */
-article {
-    margin-bottom: 3rem;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap; 
-    justify-content: space-between;
-}
-
-article:nth-of-type(odd) {
-    flex-direction: row-reverse;
-}
-
-/* I was worried it would be hard but nth-* and flexbox save the day again. */
-
-.words {
-    flex: 0 0 70%;
-}
-
-.pics{
-    flex: 0 0 25%;
-}
-
-
-
-/* ------------------------------------------------------------------------- */
