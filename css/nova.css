@@ -1,12 +1,28 @@
-/* Block level and global elements --------------------------------------- */
+/* Block level and global elements ------------------------------------------ */
+/* Let's use RGB as default color method. No real reason, HSL would work fine as well. 
+ * Also, dark/lite modes! 
+*/
+
+@media (prefers-color-scheme: dark){
+    body{
+        --wallpaper: rgb(41, 37, 37);
+        --ink: rgb(241, 237, 232);
+    }
+}
+@media (prefers-color-scheme: light){
+    body{
+        --wallpaper: rgb(251, 252, 248);
+        --ink: rgb(9, 5, 1);
+    }
+}
 
 html {
-    font-family: "Source Sans Pro", Candara, sans-serif;
+    font-family: 'Source Sans 3', Cantarell, sans-serif;
 	font-size: 1rem;
-	line-height: 1.2;
-    background-color: #fbfcf7;
-    color: #080401;
+	line-height: 1.3;
     box-sizing: border-box;
+    background-color: var(--wallpaper);
+    color: --ink;
 }
 
 *, 
@@ -15,35 +31,28 @@ html {
     box-sizing: inherit;
 }
 
-/* Phat phone and tablet size */
-@media screen and (min-width: 481px) {
-    body {
-        margin: 0 auto;
-        width: 95vw;
-    }
+/* the GRID way to center content! */
+body {
+    display: grid;
+    justify-content: center;
 }
 
-/* Desktop size */
+main {
+    max-width: 50em;
+}
+
 @media screen and (min-width: 800px) {
     body {
         font-size: 1.1em;
-        line-height: 1.3em;
-        width: 40em;
     }
-
 }
 
 article {
-    margin-bottom: 10vh;
+    margin-bottom: 5em;
 }
 
 
 /* low level things -------------------------------------------------------- */
-
-a:active,
-a:hover {
-    outline-width: 0;
-}
 
 h1 {
     text-align: center;
@@ -73,20 +82,6 @@ h1 {
     transition: filter 1s; 
 }
 
-/* make a 2 col article, with the right being an aside with beveled corner */
-
-.beveled {
-    background: linear-gradient(-45deg, transparent 35px, white 0);
-}
-
-
-.griddish {
-    display: grid;
-    grid-gap: 1em;
-    grid-template-columns: 66% 33%;
-
-}
-
 .flipper {
     display: block;
     transition: transform 1s;
@@ -100,14 +95,19 @@ h1 {
 .info {
     transform: rotateY(180deg);
     backface-visibility: hidden;
-    background: rgba(255,255,255,0.7);
+    background: rgb(255 255 255 / 0.7);
+    /*new style of doing alpha instead of rgba() */
+}
+
+.clip1 {
+    clip-path: ellipse(25% 45% at 50% 50%);
 }
 
 
 /* Forms -------------------------------------------------------------------- */
 
 fieldset {
-    border: 3px solid rgba(176,148,127,.5);
+    border: 3px solid rgb(176 148 127 / .5);
 	margin-bottom: 1em;
 }
 
@@ -120,36 +120,33 @@ textarea {
 }
 
 button {
-    background-color: rgb(190,230,250);
+    background-color: rgb(190 230 250);
     border: none;
     border-radius: .5em;
-    box-shadow: 5px 5px 5px rgba(64,16,0,.4);
+    box-shadow: 5px 5px 5px rgb(64 16 0 / .4);
     cursor: pointer;
     font-weight: 700;
     padding: .5em;
-    /* speed should be <=200ms, just from testing by clicking repeatedly */
     transition: all 0.1s;
 }
 
 button:hover {
-    background-color: rgb(105,210,231);
-    box-shadow: 5px 5px 5px rgba(64,16,0,.8);
+    background-color: rgb(105 210 231);
+    box-shadow: 5px 5px 5px rgb(64 16 0 / .8);
 }
 
 button:active {
-	background-color: rgb(105,210,231);
-	box-shadow:  0 1px 0 rgb(64,16,0);
+	background-color: rgb(105 210 231);
+	box-shadow:  0 1px 0 rgb(64 16 0);
 	transform: translateY(3px);
 }
 
-/* FF on Linux won't show the slider, just a button floating in space, hahaha... */
-
 input[type=range]{
-    background-color: rgba(190,230,250,.5);
+    background-color: rgb(190 230 250 / .5);
 }
 
 input:focus {
-    background-color: rgba(190,230,250,.5);
+    background-color: rgb(190 230 250 / .5);
     outline: none;
 }
 
@@ -163,4 +160,3 @@ textarea {
     margin-bottom: 1em;
 }
 
-/* All of this button and form stuff seems to work in IE10 */

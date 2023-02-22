@@ -7,13 +7,25 @@
     <link rel="stylesheet" type="text/css" media="all" href="css/nova.css" />
 </head>
 <body>
+<main>
     <h1>New CSS</h1>
+    <article>
+        <p>
+            This crap hasn't been updated since 2019 but CSS tricks (yet again) had 
+            <a href="https://css-tricks.com/whats-new-since-css3/">this about new things since CSS3</a> so let's play with some. 
+            This will probably require Chrome version 100 or higher, Safari 12 or higher, and if you use Firefox I'll assume it's close enough. 
+        </p>
+        <p>
+            I already used grid and flexbox on several things and they aren't much use for the main layout here. 
+        </p>
+    </article>
     <article>
         <h2>Color fiddler</h2>
         <p>
         Slide this thing to change the background color. 
         Mostly useless, tho might be a quick easy customization option. 
-        <a href="https://css-tricks.com/make-super-quick-little-slider-play-values/">Sauce</a>
+        Uses JavaScript btw. 
+        <a href="https://css-tricks.com/make-super-quick-little-slider-play-values/">From CSS tricks</a>
         </p>
         <input type="range" id="range" min="1" max="9" step="1" value="1" />
         <!-- TODO: style this nicely -->
@@ -23,28 +35,34 @@
         <h2>Filters</h2>
         <p>I'm not sure exact use yet but say we've got several images to pick from, 
         and want to make deselected ones inconspicuous, but still there for reference. 
-        This obviously calls for some :hover and/or javascript.  
+        This obviously calls for some :hover and/or javascript. 
         </p>
         <p class="fleximg">
-        <img src="img/parrots.jpg" alt="parrots" />
-        <img src="img/parrots.jpg" alt="parrots" class="grayscale" />
-        <img src="img/parrots.jpg" alt="parrots" class="blur" />
+        <img src="img/parrots.jpg" alt="parrots default" />
+        <img src="img/parrots.jpg" alt="parrots grayscale" class="grayscale" />
+        <img src="img/parrots.jpg" alt="parrots blurred" class="blur" />
         </p>
     </article>
     
     <article>
         <h2>Hover over these images</h2>
-        <p>Well, if you're on a desktop...</p>
+        <p>Well, if you're on a desktop. The flipper is kinda janky so IDK how useful that one is but the blur for censorship is a good use case.</p>
         <p>
-        <img src="img/parrots.jpg" alt="parrots" class="foggy" />
+        <img src="img/parrots.jpg" class="foggy" />
         </p>
     </article>
     
     <article class="flipper">
-        <img src="img/parrots.jpg" alt="parrots" />
+        <img src="img/parrots.jpg" />
         <div class="info">I bet you're tired of seeing these birds!</div>
     </article>
 
-    <script type="text/javascript" src="js/bgSlider.js"></script>
+    <article>
+        <p>SVG clip path!</p>
+        <img src="img/parrots.jpg" class="clip1" />
+    </article>
+
+</main>
+<script type="text/javascript" src="js/bgSlider.js"></script>
 </body>
 </html>
