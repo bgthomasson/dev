@@ -1,8 +1,9 @@
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* edit goals: 
  * strip out IE <11 (to go into own file) and various fiddly bits
- * aiming for simple and functional, not worrying about exact looks except 
- * things like text. 
+ * aiming for simple and functional, not worrying about exact looks except things like text. 
+ * 2023: not sure where all I used this other than as reference. 
+ * removed some things that had errors, webkit specific stuff. 
 */
 
 html {
@@ -73,21 +74,9 @@ select {
     text-transform: none;
 }
 
-button,
-html input[type="button"], 
-input[type="reset"],
-input[type="submit"] {
-    -webkit-appearance: button; 
-    cursor: pointer; 
-}
-
 button[disabled],
 html input[disabled] {
     cursor: default;
-}
-
-input[type="search"] {
-    -webkit-appearance: textfield; 
 }
 
 fieldset {

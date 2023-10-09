@@ -1,0 +1,108 @@
+
+@import 'core';
+@import 'prism-dark';
+
+
+$theme-color: hsl(18, 30%, 13%);
+$theme-shadow: hsl(20, 86%, 5%);
+
+$action-color: hsl(55, 69%, 45%);
+$action-muted: hsl(204, 51%, 29%);
+
+$paper1: hsl(17, 41%, 3%);
+
+$font-color: hsl(0, 0%, 92%);
+$text-muted: hsl(212, 41%, 71%);
+
+$fonts-sans: "Noto Sans", Candara, "Fira Sans", Sans-Serif;
+$fonts-serif: "Noto Serif", Cambria, Georgia, serif;
+$fonts-mono: "Oxygen Mono", "DejaVu Sans Mono", Consolas, monospace;
+
+$th-color: hsl(29, 26%, 22%);
+$zebra: hsl(30, 18%, 33%);
+
+
+/* ------------------------------------------------------------------------- */
+
+body {
+    background-color: $theme-color;
+    color: $font-color;
+    font-family: $fonts-sans;
+}
+
+article,
+header {
+    background-color: $paper1; 
+}
+
+.post-tags {
+    border-top: 1px solid $theme-shadow; 
+    font-size: 0.9em;
+}
+
+.activated {
+    color: $text-muted;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+blockquote {
+    border-left: 2px solid $theme-shadow;
+    border-top:  2px solid $theme-shadow;
+}
+
+code, 
+pre {
+    font-family: $fonts-mono;
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+    font-family: $fonts-serif;
+}
+
+ul, ol {
+    border: 1px dotted $theme-shadow;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+ul li:before {
+    content: "\2605"; 
+}
+
+table { 
+    border: 1px solid $theme-shadow;
+}
+
+tr:nth-of-type(odd) {
+    background-color: $zebra;
+}
+
+th {
+    background-color: $th-color;
+}
+
+button {
+    background-color: $action-muted;
+    border: none;
+    border-radius: 3px; 
+    padding: 5px;
+}
+
+button:hover {
+    background-color: $action-color;
+    color: $theme-color;
+}
+
+input {
+    border: none; 
+}
