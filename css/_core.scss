@@ -6,31 +6,32 @@ $media-big: 900px;
 
 
 /* SECTION 1: OVERALL LAYOUT ................................................. */
-
-body {  
+html {
     font-size: 1rem;
-    line-height: 1.1;
-    margin: 0; 
-    padding: 0;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.15;
+    display: grid;
+    justify-content: center;
 }
 
 main {
-    margin: 0 auto;
-}
-
-@media screen and (min-width: $media-small) {
-    main {
-        margin-top: 4em; /* about 64px if 1em = 16px */
-        width: 95vw;
-    }
+    margin-top: 4em; /* about 64px if 1em = 16px */
+    max-width: 95vw;
 }
 
 @media screen and (min-width: $media-big) {
-    body {
-        line-height: 1.2;
-    }
     main {
-        width: 50em; /* about 800px */
+        max-width: 50em; /* about 800px */
     }
 }
 
@@ -47,7 +48,6 @@ main {
         flex-flow: row wrap;
         align-items: center;
         justify-content: space-around;
-        
         position: fixed;
         top: 0px;
         width: 100vw;
@@ -110,6 +110,12 @@ article {
 blockquote {
     margin: 0;
     padding-left: 0.25em;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
 .quote-icon {
