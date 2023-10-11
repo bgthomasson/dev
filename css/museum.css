@@ -1,0 +1,81 @@
+/* Desktop: Chrome, Firefox current # - 3
+ * Phone: probably have to commit to older, assume at least half will be ppl out and
+ * about looking things up quick. 
+ * The plus is we can have a basic fallback for mobile but have fun with big screen. 
+ * 95% support even with those constraints: main, grid, CSS variables, calc(), prefers-color-scheme
+ * Use var() so can go back and implement changes more easily. 
+ * Not sure of light/dark themes or just one neutral is best goal. 
+*/
+
+:root {
+    --wallpaper: hsl(220, 4%, 85%);
+    --paper: hsl(220, 23%, 95%);
+    --ink: hsl(0, 0%, 8%);
+}
+
+html {
+    font-size: 1rem;
+    box-sizing: border-box;
+    font-family: 'Open Sans', Candara, 'Lucida Sans', Geneva, Verdana, sans-serif;
+    /* review font choices later, this is good default though */
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+} /* how important is this? does it impact speed?*/
+
+body {
+    background-color: var(--wallpaper);
+    color: var(--ink);
+    font-size: 1em;
+    line-height: 1.2;
+}
+
+main {
+    display: grid;
+    gap: 2em;
+    justify-content: center;
+}
+/* temp 1 col layout while testing, 2 col for desktop is goal */
+
+.page-header {
+    display: flex;
+    justify-content: space-evenly; /* spreads a bit too far on desktop */
+    margin-bottom: 3em;
+}
+
+.page-footer {
+    margin-top: 1em; 
+    padding: 0.5em; 
+}
+
+.page-footer,
+.page-header a {
+    text-decoration: none;
+}
+
+.page-footer,
+.page-header a:hover {
+    text-decoration: underline;
+}
+
+article {
+    background-color: var(--paper);
+    padding: 1em;
+}
+/* does it need "artsy" touches like a fancy frame???? */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto Slab', serif;
+    /* maybe something more playful? */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+
