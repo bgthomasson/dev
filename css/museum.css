@@ -8,68 +8,95 @@
 */
 
 :root {
-    --wallpaper: hsl(220, 4%, 85%);
-    --paper: hsl(220, 23%, 95%);
+    --wallpaper: hsl(220, 19%, 81%);
+    --paper: hsl(220, 3%, 95%);
     --ink: hsl(0, 0%, 8%);
+    --shadow1: hsl(0, 4%, 66%);
+    --shadow2: hsl(0, 0%, 45%);
+    --action1: hsl(207, 100%, 70%);
 }
 
 html {
     font-size: 1rem;
     box-sizing: border-box;
-    font-family: 'Open Sans', Candara, 'Lucida Sans', Geneva, Verdana, sans-serif;
-    /* review font choices later, this is good default though */
 }
 
 *,
 *::before,
 *::after {
     box-sizing: inherit;
-} /* how important is this? does it impact speed?*/
+} /* Is this a useful reset? Does it impact speed? */
 
 body {
     background-color: var(--wallpaper);
+    font-family: 'Noto Sans', Candara, 'Lucida Sans', Geneva, sans-serif;
     color: var(--ink);
-    font-size: 1em;
-    line-height: 1.2;
+    font-size: 1.1em;
+    line-height: 1.25;
+    margin: 0;
+    padding: 0;
 }
 
 main {
     display: grid;
-    gap: 2em;
+    gap: 4em;
     justify-content: center;
 }
 /* temp 1 col layout while testing, 2 col for desktop is goal */
 
 .page-header {
+    background-color: var(--paper);
     display: flex;
-    justify-content: space-evenly; /* spreads a bit too far on desktop */
-    margin-bottom: 3em;
+    justify-content: space-evenly; /* spreads a bit too far on desktop, and at max width for phone */
+    margin-bottom: 4em;
+    padding: .25em;
 }
 
 .page-footer {
-    margin-top: 1em; 
-    padding: 0.5em; 
+    background-color: var(--paper);
+    margin-top: 5em; 
+    padding: 2em; 
+    text-align: center;
 }
 
-.page-footer,
+.page-footer a,
 .page-header a {
     text-decoration: none;
 }
 
-.page-footer,
+.page-footer a:hover,
 .page-header a:hover {
     text-decoration: underline;
 }
 
+.buttonish {
+    background-color: var(--action1); 
+    border: 0;
+    border-radius: 1em;
+    color: inherit;
+    font-weight: bold;
+    padding: .5em;
+}
+
 article {
     background-color: var(--paper);
+    border-radius: 1em;
+    box-shadow: 0 2em 1em var(--shadow1); /* X, Y, blur, spread */
     padding: 1em;
 }
-/* does it need "artsy" touches like a fancy frame???? */
+/* border OR shadow but not both. 
+* border-image instead of plain old border????
+* Speaking of artsy, let's try giving the headings a bit of visual interest while staying legible. 
+* Courgette is OK, Merienda is interesting but not sure if legible enough. 
+* For final may default back to slab and use the script in imagery instead. 
+*/
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Roboto Slab', serif;
-    /* maybe something more playful? */
+h1, h2 {
+    font-family: Courgette, cursive;
+}
+
+h3, h4, h5, h6 {
+    font-family: 'Roboto Slab', 'Noto Serif', serif;
 }
 
 img {

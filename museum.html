@@ -3,16 +3,19 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>HTML5 template</title>
+    <title>Fancy Museum</title>
     <link rel="stylesheet" type="text/css" media="all" href="css/museum.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+    </style>
 </head>
 <body>
 <header class="page-header" role="banner"> 
-    <a href="#">Home</a>
-    <a href="#">Art</a> <!-- exhibits, collection, library, conservation -->
-    <a href="#">Garden</a> <!-- Is this needed? Details on plants and sculptures? -->
-    <a href="#">Events</a> <!-- discrete page so can change backend as needed -->
-    <a href="#">About</a> 
+    <a href="#" class="buttonish">Home</a>
+    <a href="#" class="buttonish">Art</a> <!-- exhibits, collection, library, conservation -->
+    <a href="#" class="buttonish">Garden</a> <!-- Is this needed? Details on plants and sculptures? -->
+    <a href="#" class="buttonish">Events</a> <!-- discrete page for more details  -->
+    <a href="#" class="buttonish">About</a> 
 </header>
 <main>
     <article>
@@ -24,12 +27,11 @@
         <p>Thursday: 1 PM &ndash; 5 PM</p>
         <p>Friday: 10 AM &ndash; 9 PM</p>
         <p>Saturday: 10 AM &ndash; 9 PM</p>
-        <h3>Holidays:</h3>
         <p>Closed on all Federal holidays, plus Christmas eve.</p>
-        <p>To request a group tour go here.</p>
-        <p>The building is fully handicapped accessible</p>
         <p>Admission info here.</p>
-        <p>Go here for more details.</p>
+        <p>To request a group tour go here.</p>
+        <p>The building is fully handicapped accessible etc.</p>
+        <p>Link for more details.</p>
     </article>
     <article>
         <h2>Garden hours</h2>
@@ -51,7 +53,7 @@
         <p>Parking info goes here.</p>
     </article>
     <article>
-        <h2>This Month</h2><!-- I assume some backend query to fetch 3-5 chronologically closest -->
+        <h2>This Month</h2>
         <h3>My kid could draw that!</h3>
         <p>We got tired of hearing that joke so we put kids' drawings alongside modern art. Guess which is which!</p>
         <h3>Friday Film Fest</h3>
@@ -66,7 +68,7 @@
         <p>Donation info etc.</p>
     </article>
 </main>
-<footer>
+<footer class="page-footer">
     <p>This is a footnote.</p>
 </footer>
 </body>
