@@ -11,15 +11,17 @@
 </head>
 <body>
 <header class="page-header" role="banner"> 
-    <a href="#" class="buttonish">Home</a>
-    <a href="#" class="buttonish">Art</a> <!-- exhibits, collection, library, conservation -->
-    <a href="#" class="buttonish">Garden</a> <!-- Is this needed? Details on plants and sculptures? -->
-    <a href="#" class="buttonish">Events</a> <!-- discrete page for more details  -->
-    <a href="#" class="buttonish">About</a> 
+    <nav class="navbar">
+        <a href="#" class="buttonish">Home</a>
+        <a href="#" class="buttonish">Art</a> <!-- exhibits, collection, library, conservation -->
+        <a href="#" class="buttonish">Garden</a> <!-- Is this needed? Details on plants and sculptures? -->
+        <a href="#" class="buttonish">Events</a> <!-- discrete page for more details  -->
+        <a href="#" class="buttonish">About</a> 
+    </nav>
 </header>
-<main>
-    <article>
-        <h2>Museum hours</h2>
+<main class="grid-auto">
+    <article><!-- Does the text all need to be in a /section/ with width 70em ??-->
+        <h2>Museum hours</h2><!-- Does this list need a border around it? -->
         <p>Sunday: 1 PM &ndash; 5 PM</p>
         <p>Monday: Closed</p>
         <p>Tuesday: 1 PM &ndash; 5 PM</p>
@@ -28,11 +30,11 @@
         <p>Friday: 10 AM &ndash; 9 PM</p>
         <p>Saturday: 10 AM &ndash; 9 PM</p>
         <p>Closed on all Federal holidays, plus Christmas eve.</p>
+        <p>(Phone, email, social media)</p>
         <p>Admission info here.</p>
-        <p>To request a group tour go here.</p>
-        <p>The building is fully handicapped accessible etc.</p>
-        <p>Link for more details.</p>
+        <p><a href="#" class="buttonish">More details here.</a></p>
     </article>
+    
     <article>
         <h2>Garden hours</h2>
         <p>Open year round sunrise to sunset except in case of emergency, storms, etc.</p>
@@ -42,17 +44,10 @@
         <p>Something about food trucks and picnics etc.</p>
         <p>Go here for more details.</p>
     </article>
-    <article>
-        <h2>Directions</h2>
-        <address>
-            123 Some Road<br />
-            Example TX<br />
-            123-555-7890<br />
-        </address>
-        <p>Include a custom drawn LOTR style map?</p>
-        <p>Parking info goes here.</p>
-    </article>
-    <article>
+
+    <!-- Those two need to be at top, but also needs photos and directions/parking info somewhere! -->
+
+    <article><!-- this could be fancier, with colored rows or something? -->
         <h2>This Month</h2>
         <h3>My kid could draw that!</h3>
         <p>We got tired of hearing that joke so we put kids' drawings alongside modern art. Guess which is which!</p>
@@ -62,6 +57,7 @@
         <p>Wine and grilled cheese.</p>
         <p>Go here to see full list.</p>
     </article>
+
     <article>
         <h2>About</h2>
         <p>Something about the people etc.</p>
@@ -69,7 +65,7 @@
     </article>
 </main>
 <footer class="page-footer">
-    <p>This is a footnote.</p>
+    <p><a href="#">Home</a> | <a href="#">Art</a> | <a href="#">Garden</a> | <a href="#">Events</a> | <a href="#">About</a> | <a href="#">Facebook</a> </p>
 </footer>
 </body>
 </html>

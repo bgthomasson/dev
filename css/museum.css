@@ -5,15 +5,16 @@
  * 95% support even with those constraints: main, grid, CSS variables, calc(), prefers-color-scheme
  * Use var() so can go back and implement changes more easily. 
  * Not sure of light/dark themes or just one neutral is best goal. 
+ * Also what palette? Using soft grayish since expecting images to be important. 
 */
 
 :root {
-    --wallpaper: hsl(220, 19%, 81%);
+    --backdrop: hsl(220, 9%, 81%);
     --paper: hsl(220, 3%, 95%);
     --ink: hsl(0, 0%, 8%);
-    --shadow1: hsl(0, 4%, 66%);
-    --shadow2: hsl(0, 0%, 45%);
-    --action1: hsl(207, 100%, 70%);
+    --shadow1: hsl(220, 4%, 66%);
+    --shadow2: hsl(220, 0%, 45%);
+    --action1: hsl(207, 100%, 80%);
 }
 
 html {
@@ -28,26 +29,17 @@ html {
 } /* Is this a useful reset? Does it impact speed? */
 
 body {
-    background-color: var(--wallpaper);
+    background-color: var(--backdrop);
     font-family: 'Noto Sans', Candara, 'Lucida Sans', Geneva, sans-serif;
     color: var(--ink);
     font-size: 1.1em;
-    line-height: 1.25;
-    margin: 0;
+    line-height: 1.3; 
+    margin: 0; /* simply to avoid empty space abover header etc. */
     padding: 0;
 }
 
-main {
-    display: grid;
-    gap: 4em;
-    justify-content: center;
-}
-/* temp 1 col layout while testing, 2 col for desktop is goal */
-
 .page-header {
     background-color: var(--paper);
-    display: flex;
-    justify-content: space-evenly; /* spreads a bit too far on desktop, and at max width for phone */
     margin-bottom: 4em;
     padding: .25em;
 }
@@ -69,19 +61,26 @@ main {
     text-decoration: underline;
 }
 
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+}
+
 .buttonish {
     background-color: var(--action1); 
     border: 0;
     border-radius: 1em;
     color: inherit;
     font-weight: bold;
-    padding: .5em;
+    padding: .5em 1em;
 }
 
 article {
     background-color: var(--paper);
     border-radius: 1em;
-    box-shadow: 0 2em 1em var(--shadow1); /* X, Y, blur, spread */
+    box-shadow: 0 1em 2em var(--shadow1); /* X, Y, blur, spread */
     padding: 1em;
 }
 /* border OR shadow but not both. 
@@ -105,4 +104,25 @@ img {
     object-fit: contain;
 }
 
+/* ONE of these will work!!! */
+
+.grid-auto {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 4em;
+    padding: 0 2em;
+}
+
+.grid-2col {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4em;
+    padding: 0 2em;
+}
+
+.grid-center {
+    display: grid;
+    gap: 4em;
+    justify-content: center;
+}
 
