@@ -6,7 +6,14 @@
  * Use var() so can go back and implement changes more easily. 
  * Not sure of light/dark themes or just one neutral is best goal. 
  * Also what palette? Using soft grayish since expecting images to be important. 
+ * border OR shadow but not both. 
+ * border-image instead of plain old border????
+ * Speaking of artsy, let's try giving the headings a bit of visual interest while staying legible. 
+ * Courgette is OK, Merienda is interesting but not sure if legible enough. 
+ * For final may default back to slab and use the script in imagery instead. 
 */
+
+/* basic overall settings and themes */
 
 :root {
     --backdrop: hsl(220, 9%, 81%);
@@ -15,6 +22,8 @@
     --shadow1: hsl(220, 4%, 66%);
     --shadow2: hsl(220, 0%, 45%);
     --action1: hsl(207, 100%, 80%);
+    --action2: hsl(56, 100%, 63%);
+    --border1: hsl(205, 45%, 28%);
 }
 
 html {
@@ -26,7 +35,7 @@ html {
 *::before,
 *::after {
     box-sizing: inherit;
-} /* Is this a useful reset? Does it impact speed? */
+}
 
 body {
     background-color: var(--backdrop);
@@ -38,6 +47,29 @@ body {
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1, h2 {
+    font-family: Courgette, cursive;
+}
+
+h3, h4, h5, h6 {
+    font-family: 'Roboto Slab', 'Noto Serif', serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* outer parts of the page -------------------------------------------------- */
 .page-header {
     background-color: var(--paper);
     margin-bottom: 2em;
@@ -49,14 +81,6 @@ body {
     margin-top: 5em; 
     padding: 2em; 
     text-align: center;
-}
-
-a {
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
 }
 
 .navbar {
@@ -75,52 +99,54 @@ a:hover {
     padding: .5em 1em;
 }
 
+.urhere {
+    border: 1px solid var(--border1);
+    background-color: var(--paper);
+}
+
+
+/* middle parts ------------------------------------------------------------- */
 article {
     background-color: var(--paper);
     border-radius: 1em;
     box-shadow: 0 1em 2em var(--shadow1); /* X, Y, blur, spread */
     padding: 1em;
 }
-/* border OR shadow but not both. 
-* border-image instead of plain old border????
-* Speaking of artsy, let's try giving the headings a bit of visual interest while staying legible. 
-* Courgette is OK, Merienda is interesting but not sure if legible enough. 
-* For final may default back to slab and use the script in imagery instead. 
-*/
 
-h1, h2 {
-    font-family: Courgette, cursive;
+.flexy {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+    gap: 1em; 
+    flex-direction: column;
+    margin-bottom: 8em;
 }
 
-h3, h4, h5, h6 {
-    font-family: 'Roboto Slab', 'Noto Serif', serif;
+.flex2 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
+@media screen and (min-width: 600px) and (orientation: landscape) {
+    main {
+        padding: 0 2em;
+    }
+
+    .flexy,
+    .flex2 {
+        flex-direction: row;
+    }
+    
+    .cell33 {
+        flex: 0 0 33%;
+    }
+    
+    .cell66{
+        flex: 0 0 66%;
+    }
+
 }
 
-/* ONE of these will work!!! */
 
-.grid-auto {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    gap: 4em;
-    padding: 0 2em;
-}
-
-.grid-2col {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 4em;
-    padding: 0 2em;
-}
-
-.grid-center {
-    display: grid;
-    gap: 4em;
-    justify-content: center;
-}
 

@@ -12,7 +12,7 @@
 <body>
 <header class="page-header" role="banner"> 
     <nav class="navbar">
-        <a href="#" class="buttonish">Home</a>
+        <a href="#" class="buttonish urhere">Home</a>
         <a href="#" class="buttonish">Art</a> <!-- exhibits, collection, library, conservation -->
         <a href="#" class="buttonish">Garden</a> <!-- Is this needed? Details on plants and sculptures? -->
         <a href="#" class="buttonish">Events</a> <!-- discrete page for more details  -->
@@ -20,55 +20,64 @@
     </nav>
 </header>
 <main>
-    <article><!-- Does the text all need to be in a /section/ with width 70em ??-->
-        <h2>Museum</h2><!-- Does this list need a border around it? -->
-        <p>Sunday: 1 PM &ndash; 5 PM</p>
-        <p>Monday: Closed</p>
-        <p>Tuesday: 1 PM &ndash; 5 PM</p>
-        <p>Wednesday: 1 PM &ndash; 5 PM</p>
-        <p>Thursday: 1 PM &ndash; 5 PM</p>
-        <p>Friday: 10 AM &ndash; 9 PM</p>
-        <p>Saturday: 10 AM &ndash; 9 PM</p>
-        <p>Closed on all Federal holidays, plus Christmas eve.</p>
-        <p>(Phone, email, social media)</p>
-        <p>Admission info here.</p>
-        <p><a href="#">More details here.</a></p>
-    </article>
+    <div class="flexy">
+        <article class="cell33">
+            <h2>Museum</h2>
+            <p>Sunday: 1 PM &ndash; 5 PM</p>
+            <p>Monday: Closed</p>
+            <p>Tuesday: 1 PM &ndash; 5 PM</p>
+            <p>Wednesday: 1 PM &ndash; 5 PM</p>
+            <p>Thursday: 1 PM &ndash; 5 PM</p>
+            <p>Friday: 10 AM &ndash; 9 PM</p>
+            <p>Saturday: 10 AM &ndash; 9 PM</p>
+            <p>Closed on all Federal holidays, plus Christmas eve.</p>
+            <p>(Phone, email, social media)</p>
+            <p>Admission info here.</p>
+            <p><a href="museum.html">More details here.</a></p>
+        </article>
+        <picture class="cell66">
+            <img src="img/pexels-loïc-manegarium-3724836.jpg" alt="" width="1920" height="1280" />
+        </picture>
+    </div>
     
-    <article>
-        <h2>Garden</h2>
-        <p>Open year round sunrise to sunset except in case of emergency, storms, etc.</p>
-        <p>Dogs must be leashed.</p>
-        <p>Don't disturb or feed the wildlife.</p>
-        <p>No bicycles etc.</p>
-        <p>Something about food trucks and picnics etc.</p>
-        <p><a href="#">More details here.</a></p>
-    </article>
-
-    <!-- 
-        Those two need to be at top, but also needs photos and directions/parking info somewhere! 
-        Maybe a section that has those 3 things in a grid where the text is ~400 px and photo for the rest; 
-        @media screen and (min-width: 800px) and (orientation: landscape) {}
-        So text is beside photos on desktop. BUT then would have to reconsider border stuff. 
-    -->
-
-    <article><!-- this could be fancier, with colored rows or something? -->
-        <h2>Events and Exhibits</h2>
-        <h3>My kid could draw that!</h3>
-        <p>We got tired of hearing that joke so we put kids' drawings alongside modern art. Guess which is which!</p>
-        <h3>Friday Film Fest</h3>
-        <p>Watch a movie.</p>
-        <h3>Fundraiser</h3>
-        <p>Wine and grilled cheese.</p>
-        <p><a href="#">Go here to see full list.</a></p>
-    </article>
-
+    <div class="flexy">
+        <article class="cell33">
+            <h2>Garden</h2>
+            <p>Open year round sunrise to sunset except in case of emergency, storms, etc.</p>
+            <p>Dogs must be leashed.</p>
+            <p>Don't disturb or feed the wildlife.</p>
+            <p>No bicycles etc.</p>
+            <p>Something about food trucks and picnics etc.</p>
+            <p><a href="garden.html">More details here.</a></p>
+        </article>
+        <picture class="cell66">
+            <img src="img/pexels-tom-swinnen-595386.jpg" alt="" width="1920" height="1280" loading="lazy" />
+        </picture>
+    </div>
+    
+    <div class="flexy">
+        <article class="cell33">
+            <h2>Events and Exhibits</h2>
+            <h3>My kid could draw that!</h3>
+            <p>We got tired of hearing that joke so we put kids' drawings alongside modern art. Guess which is which!</p>
+            <h3>Friday Film Fest</h3>
+            <p>Watch a movie.</p>
+            <h3>Fundraiser</h3>
+            <p>Wine and grilled cheese.</p>
+            <p><a href="events.html">Go here to see full list.</a></p>
+        </article>
+        <picture class="cell66">
+            <img src="img/pexels-valeriia-miller-3547625.jpg" alt="" width="1920" height="1440" loading="lazy" />
+        </picture>
+    </div>
+    
     <article>
         <h2>About</h2>
         <p>Something about the people etc.</p>
         <p>Donation info etc.</p>
-        <p><a href="#">More details here.</a></p>
+        <p><a href="about.html">More details here.</a></p>
     </article>
+
 </main>
 <footer class="page-footer">
     <p><a href="#">Home</a> | <a href="#">Art</a> | <a href="#">Garden</a> | <a href="#">Events</a> | <a href="#">About</a> | <a href="#">Facebook</a> </p>
