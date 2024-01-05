@@ -6,44 +6,50 @@
 @media (prefers-color-scheme: dark){
     body{
         --wallpaper: rgb(41, 37, 37);
-        --ink: rgb(241, 237, 232);
     }
 }
 @media (prefers-color-scheme: light){
     body{
         --wallpaper: rgb(251, 252, 248);
-        --ink: rgb(9, 5, 1);
     }
 }
 
-html {
-    font-family: 'Source Sans 3', Cantarell, sans-serif;
-	font-size: 1rem;
-	line-height: 1.3;
-    box-sizing: border-box;
-    background-color: var(--wallpaper);
-    color: --ink;
+:root {
+    --ink: rgb(9, 5, 1);
+    --mainpaper: rgb(247, 247, 247);
 }
 
-*, 
-*::before,
-*::after {
+html {
+	font-size: 1rem;
+    box-sizing: border-box;
+}
+
+* {
     box-sizing: inherit;
 }
 
 /* the GRID way to center content! */
 body {
+    background-color: var(--wallpaper);
+    color: var(--ink);
+    font-family: 'Noto Sans', 'Open Sans', sans-serif;
+	line-height: 1.3;
     display: grid;
     justify-content: center;
 }
 
 main {
-    max-width: 50em;
+    background-color: var(--mainpaper);
+    padding: 1em;
 }
 
 @media screen and (min-width: 800px) {
     body {
         font-size: 1.1em;
+        line-height: 1.5;
+    }
+    main {
+        width: 700px;
     }
 }
 
@@ -51,12 +57,20 @@ article {
     margin-bottom: 5em;
 }
 
-
-/* low level things -------------------------------------------------------- */
-
 h1 {
     text-align: center;
+    text-wrap: balance; 
 }
+
+img, 
+picture, 
+svg, 
+video {
+    display: block;
+    max-width: 100%;
+}
+
+/* ---------------------------------------------------------------------- */
 
 .fleximg {
     display: flex;
@@ -67,10 +81,6 @@ h1 {
 
 .grayscale {
     filter: grayscale(1);
-}
-
-.blur {
-    filter: blur(3px);
 }
 
 .foggy {
@@ -102,6 +112,35 @@ h1 {
 .clip1 {
     clip-path: ellipse(25% 45% at 50% 50%);
 }
+
+
+.progresso {
+    height: 0.5em;
+    position: fixed;
+    top: 0;
+    z-index: 123;
+    background-color: cornflowerblue;
+    width: 100%;
+    scale: 0 1;
+    animation: progresso linear;
+    animation-timeline: scroll();
+}
+@keyframes progresso {
+    to {
+        scale: 1 1;
+    }
+}
+
+
+.fadein {
+    animation: fade-in linear;
+    animation-timeline: view();
+}
+@keyframes fade-in {
+    from { opacity: .1; }
+    to { opacity: 1; }
+}
+
 
 
 /* Forms -------------------------------------------------------------------- */
@@ -159,4 +198,3 @@ textarea {
     display: block;
     margin-bottom: 1em;
 }
-
