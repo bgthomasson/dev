@@ -1,22 +1,33 @@
 html {
-    font-size: 1.1em;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
     font-family: Cambria, Merriweather, serif;
     line-height: 1.3;
-    background-color: #040404;
+    background-color: rgb(4, 4, 4);
     color: #fbfcf7;
     max-width: 40em;
     margin: 0 auto;
 }
 
-h1 {
-    font-size: 3em;
-    text-align: center;
+section {
+    margin-bottom: 108px; 
+    padding: 16px; 
 }
 
 .neon {
     color: #fbe27c;
-    font-family: "Lato Black", Candara, sans-serif;
-    margin-bottom: 124px;
+    font-family: "Lato Black", "Noto Sans", Candara, sans-serif;
+    font-size: 3em;
+    text-align: center;
     text-shadow:
       0 0 7px #f5b16a,
       0 0 14px #f5b16a,
@@ -27,6 +38,7 @@ h1 {
 }
 
 .shadowmere {
+    font-size: 2em;
     text-shadow: 
         3px 3px 0 #f38630,
         6px 6px 0 #b93a0d, 
@@ -36,12 +48,8 @@ h1 {
 .frilly {
     border: 3px solid;
     border-image: linear-gradient(#fbe27c, #b93a0d, #720908) 10;
-    padding: 1em;
-    margin-bottom: 10em;
 }
 
-.test1 {
-    box-shadow: 0 6px 12px rgb(1, 22, 37), 0 16px 40px rgba(15, 48, 71,.5);
-    margin-bottom: 10em; 
-    padding: 1em; 
+.darkglow {
+    box-shadow: 3px 6px 12px rgb(1, 28, 48), 6px 16px 48px rgba(33, 88, 128, 0.5);
 }
