@@ -4,12 +4,12 @@
 */
 
 @media (prefers-color-scheme: dark){
-    body{
+    body {
         --wallpaper: rgb(41, 37, 37);
     }
 }
 @media (prefers-color-scheme: light){
-    body{
+    body {
         --wallpaper: rgb(251, 252, 248);
     }
 }

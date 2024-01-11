@@ -6,13 +6,13 @@
     <title>Yatsokéwen</title>
     <link rel="stylesheet" type="text/css" media="all" href="css/txtadv.css" />
 </head>
-<body class="night">
-    <header>
-        <button class="navbutton glowingbutton">Story</button>
+<body>
+    <nav>
+        <button class="navbutton glowingbutton" aria-current="page">Story</button>
         <button class="navbutton">Status</button>
         <button class="navbutton">Save</button>
         <button class="navbutton">Settings</button>
-    </header>
+    </nav>
     <main>
         <h1 class="title">Yatsokéwen Chikazwen</h1>
         <h2>Chapter 1</h2>
@@ -27,7 +27,7 @@
         <p>Different results based on that choice appear here.</p>
         <p>Nije ezhnekazyen?</p>
         <form name="username">
-            <input type="text" name="username" placeholder="What is your name?" />
+            <input type="text" name="username" placeholder="What is your name?" autocomplete="given-name" />
         </form>
         <p>Rabbit says</p>
         <blockquote>Let's play a game.</blockquote>

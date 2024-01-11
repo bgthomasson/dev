@@ -1,33 +1,45 @@
-/* SUPPORTED 2020: Firefox 70+ / Chrome 70+ / Safari 12+ -------------------- 
+/* SUPPORTED 2024: Firefox 100+ / Chrome 100+ / Safari 15+ -------------------- 
  * BASIC layout and theme --------------------------------------------------- 
 */
+
+
+@media (prefers-color-scheme: dark){
+    :root {
+        --wallpaper:  hsl(0, 0%, 12%);
+        --ink: hsl(58, 93%, 95%);
+        --border1: hsl(0, 0%, 12%);
+    }
+}
+
+@media (prefers-color-scheme: light){
+    :root {
+        --ink: hsl(0, 0%, 12%);
+        --wallpaper: hsl(0, 0%, 93%);
+        --border1: hsl(0, 0%, 47%);
+    }
+}
 
 html {
     font-size: 1rem;
     -webkit-text-size-adjust: 100%;
+    box-sizing: border-box;
 }
 
-.night {
-    background-color: hsl(0, 0%, 12%);
-    color: hsl(58, 93%, 95%);
+* {
+    box-sizing: inherit;
 }
-
-.day {
-    color: hsl(0, 0%, 12%);
-    background-color: hsl(0, 0%, 93%);
-}
-/* notes: yellow is too pale now? */
 
 body {
-    font-family: "Source Sans Pro", Candara, sans-serif;
-    font-size: 1.3em;
+    background-color: var(--wallpaper);
+    color: var(--ink);
+    font-family: "Noto Sans", "Open Sans", Candara, sans-serif;
     line-height: 1.4;
     margin: 0;
 }
 
 /* phone size layout */
 @media screen and (max-width: 599px) {
-    header {
+    nav {
         display: flex;
         width: 100%; 
         position: fixed;
@@ -36,7 +48,7 @@ body {
     }
     .navbutton {
         flex: 1 1 auto;
-        border-right: 1px solid hsl(0, 0%, 12%);
+        border-right: 1px solid var(--border1);
     }
     main {
         margin: 0 .5em 3em 0.5em;
@@ -45,20 +57,23 @@ body {
 
 /* basic desktop window, 600-~1200px ---------------------------------------- */
 @media screen and (min-width: 600px) {
-    header {
+    /* changing this over to grid is much better and what I planned to begin with. */
+    body {
+        display: grid;
+        grid-template-columns: 10em 48em;
+        gap: 2em;
+    }
+    nav {
         font-size: 1.4em;
-        grid-column: 1;
-        padding: 12px 0 0 12px;
-        position: fixed;
+        position: sticky;
         top: 0;
-        z-index: 4;
+        max-height: 100svh;
+        margin-left: 1em;
     }
 
-    main { 
-        margin-left: 8em;
-        margin-right: 1em; 
-        max-width: 40em;
-        padding-bottom: 4em;
+    main {
+        font-size: 1.2em;
+        padding-bottom: 20em;
     }
 
     .navbutton {
