@@ -12,8 +12,8 @@ html {
 body {
     font-family: Cambria, Merriweather, serif;
     line-height: 1.3;
-    background-color: rgb(4, 4, 4);
-    color: #fbfcf7;
+    background-color: hsl(0, 0%, 2%);
+    color: hsl(225, 40%, 98%);
     max-width: 40em;
     margin: 0 auto;
 }
@@ -24,32 +24,71 @@ section {
 }
 
 .neon {
-    color: #fbe27c;
+    color: hsl(48, 94%, 74%);
     font-family: "Lato Black", "Noto Sans", Candara, sans-serif;
     font-size: 3em;
     text-align: center;
     text-shadow:
-      0 0 7px #f5b16a,
-      0 0 14px #f5b16a,
-      0 0 28px #f5b16a,
-      0 0 56px #f38630,
-      0 0 112px #f38630,
-      0 0 124px #f38630;
+      0 0 7px hsl(31, 87%, 69%),
+      0 0 14px hsl(31, 87%, 69%),
+      0 0 28px hsl(31, 87%, 69%),
+      0 0 56px hsl(26, 89%, 57%),
+      0 0 112px hsl(26, 89%, 57%),
+      0 0 124px hsl(26, 89%, 57%);
 }
 
 .shadowmere {
     font-size: 2em;
+    margin-top: 0; /* since we're putting this on H2 and have padding in the section */
     text-shadow: 
-        3px 3px 0 #f38630,
-        6px 6px 0 #b93a0d, 
-        9px 9px 0 #720908; 
+        3px 3px 0 hsl(26, 89%, 57%),
+        6px 6px 0 hsl(16, 87%, 39%), 
+        9px 9px 0 hsl(1, 87%, 24%); 
 }
 
 .frilly {
     border: 3px solid;
-    border-image: linear-gradient(#fbe27c, #b93a0d, #720908) 10;
+    border-image: linear-gradient(hsl(48, 94%, 74%), hsl(16, 87%, 39%), hsl(1, 87%, 24%)) 10;
 }
 
 .darkglow {
     box-shadow: 3px 6px 12px rgb(1, 28, 48), 6px 16px 48px rgba(33, 88, 128, 0.5);
 }
+
+/* Let's just make it an actual button and set up some defaults. */
+
+button {
+    border: none;
+    border-radius: .5em;
+    color: inherit;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1.5em;
+    font-weight: 700;
+    margin: 0;
+    padding: .5em 1em;
+    transform: all .1s;
+}
+
+.backlit-button {
+    background-color: hsl(206, 96%, 10%);
+    box-shadow: 0 0 18px hsl(206, 24%, 61%), 0 0 36px hsl(206, 45%, 83%);
+}
+
+.backlit-button:hover {
+    background-color: hsl(51, 96%, 10%);
+    box-shadow: 0 0 18px hsl(51, 24%, 61%), 0 0 36px hsl(51, 45%, 83%);
+}
+
+.neon-button {
+    background-color: hsl(206, 96%, 10%);
+    border: hsl(206, 24%, 61%) 4px solid;
+    box-shadow: inset 0 0 18px 0 hsl(206, 24%, 61%), 0 0 18px 0 hsl(206, 24%, 61%);
+}
+
+.neon-button:hover {
+    background-color: hsl(51, 96%, 10%);
+    border: hsl(51, 24%, 61%) 4px solid;
+    box-shadow: inset 0 0 18px 0 hsl(51, 24%, 61%), 0 0 18px 0 hsl(51, 24%, 61%);
+}
+
