@@ -1,6 +1,6 @@
 /* Block level and global elements ------------------------------------------ 
- * Not sure why I used RGB but it's not bad. HSL is just a different mindset. 
- * Planned on light/dark mode, thus a semantic palette. 
+* Not sure why I used RGB but it's not bad. HSL is just a different mindset. 
+* Planned on light/dark mode, thus a semantic palette. 
 */
 
 :root {
@@ -14,7 +14,9 @@ html {
     box-sizing: border-box;
 }
 
-* {
+*,
+*::before,
+*::after {
     box-sizing: inherit;
 }
 
@@ -23,25 +25,34 @@ body {
     color: var(--ink);
     font-family: 'Noto Sans', 'Open Sans', sans-serif;
 	line-height: 1.4;
-    display: grid;
-    justify-content: center;
+    margin: 0;
 }
 
 main {
     background-color: var(--mainpaper);
     padding: 1em;
-    max-width: 700px;
+    width: min(700px, 100%);
+    margin-inline: auto;
 }
 
-/* ^ Just wanted a simple centered column on desktop and this avoids @media query etc */
+/* ^ Just wanted a simple centered column on desktop and this avoids @media query etc 
+* using "display: grid; justify-content: center;" on the body is good but 
+* <main> is the only child element I'm using here so testing this out. 
+* "margin-inline" is 94% in 2024, so very usable. 
+*/
 
 article {
     margin-bottom: 5em;
 }
 
 h1 {
+    font-size: clamp(2em, 4vw, 4em);
     text-align: center;
     text-wrap: balance; 
+}
+
+p {
+    font-size: clamp(1em, 1.25vw, 1.3em);
 }
 
 img, 
