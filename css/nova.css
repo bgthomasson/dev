@@ -1,12 +1,28 @@
 /* Block level and global elements ------------------------------------------ 
 * Not sure why I used RGB but it's not bad. HSL is just a different mindset. 
-* Planned on light/dark mode, thus a semantic palette. 
+* ink is for font color. wallpaper is for the body. "mainpaper" is for <main>. 
+* Testing the light/dark tho I'm OK with the old "light middle, dark sides" style I was using. 
+* if it was just for desktop I'd leave it like that but phones only see the middle. 
+* A texture is tempting. 
+* Good news is you can declare a universal mix like so below ->
 */
 
 :root {
-    --ink: rgb(9, 5, 1);
-    --wallpaper: rgb(41, 37, 37);
-    --mainpaper: rgb(247, 247, 247);
+    --blend1: color-mix(in srgb, var(--ink), var(--mainpaper));
+}
+@media (prefers-color-scheme: light){
+    :root {
+        --ink: rgb(27, 27, 27); 
+        --wallpaper: rgb(220, 221, 228);
+        --mainpaper: rgb(243, 243, 243);   
+    }
+}
+@media (prefers-color-scheme: dark){
+    :root {
+        --ink: rgb(245, 244, 244);
+        --wallpaper: rgb(34, 27, 27);
+        --mainpaper: rgb(41, 37, 37);
+    }
 }
 
 html {
@@ -22,6 +38,8 @@ html {
 
 body {
     background-color: var(--wallpaper);
+    background-image: linear-gradient(90deg, var(--mainpaper) 50%, transparent 50%), linear-gradient(var(--mainpaper) 50%, transparent 50%);
+    background-size: .5em .5em;
     color: var(--ink);
     font-family: 'Noto Sans', 'Open Sans', sans-serif;
 	line-height: 1.4;
@@ -46,13 +64,16 @@ article {
 }
 
 h1 {
-    font-size: clamp(2em, 4vw, 4em);
+    font-size: clamp(2em, 3vw, 4em);
     text-align: center;
     text-wrap: balance; 
 }
 
 p {
-    font-size: clamp(1em, 1.25vw, 1.3em);
+    font-size: clamp(1em, 1.1vw, 1.2em);
+    /* this is a test of more flexible font size but fiddling takes time. 
+    * note that apparently the middle one HAS to be vw for fluid resizing. 
+    */
 }
 
 img, 
@@ -78,9 +99,8 @@ video {
     transition: filter 1s; 
 }
 
-
 /* This always looked awkward using :hover and can't work on mobile anyways so I dropped it.  
- * What use case for this then? 
+ * What use case for this then? Trigger with buttons instead? 
 */
 .flipper {
     display: block;
@@ -99,35 +119,18 @@ video {
     clip-path: ellipse(25% 45% at 50% 50%);
 }
 
-
-.progresso {
-    height: 0.5em;
-    position: fixed;
-    top: 0;
-    z-index: 123;
-    background-color: cornflowerblue;
-    width: 100%;
-    scale: 0 1;
-    animation: progresso linear;
-    animation-timeline: scroll();
-}
-@keyframes progresso {
-    to {
-        scale: 1 1;
-    }
-}
-
-
 .fadein {
     animation: fade-in linear;
-    animation-timeline: view();
+    animation-timeline: view(); /* seems to not be supported in Firefox 122, but is in Chrome */
 }
 @keyframes fade-in {
     from { opacity: .1; }
     to { opacity: 1; }
 }
 
-
+.colortest1 {
+    color: var(--blend1);
+}
 
 /* Forms -------------------------------------------------------------------- */
 
@@ -155,7 +158,8 @@ button {
     transition: all 0.1s;
 }
 
-button:hover {
+/* not using a button atm but upgrade to :has anyways */
+button:has(:hover, :focus) {
     background-color: rgb(105 210 231);
     box-shadow: 5px 5px 5px rgb(64 16 0 / .8);
 }
@@ -166,11 +170,14 @@ button:active {
 	transform: translateY(3px);
 }
 
+
+/* wait what was I doing here? */
+
 input[type=range]{
     background-color: rgb(190 230 250 / .5);
 }
 
-input:focus {
+input:has(:hover, :focus) {
     background-color: rgb(190 230 250 / .5);
     outline: none;
 }
