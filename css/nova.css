@@ -14,7 +14,10 @@
     :root {
         --ink: rgb(27, 27, 27); 
         --wallpaper: rgb(220, 221, 228);
-        --mainpaper: rgb(243, 243, 243);   
+        --mainpaper: rgb(243, 243, 243); 
+        --muted: rgb(219, 241, 252);
+        --focus: rgb(80, 195, 218);
+        --active: rgb(105 210 231);
     }
 }
 @media (prefers-color-scheme: dark){
@@ -22,6 +25,9 @@
         --ink: rgb(245, 244, 244);
         --wallpaper: rgb(34, 27, 27);
         --mainpaper: rgb(41, 37, 37);
+        --muted: rgb(17, 51, 68);
+        --focus: rgb(56, 94, 102);
+        --active: rgb(57, 153, 172);
     }
 }
 
@@ -82,6 +88,8 @@ svg,
 video {
     display: block;
     max-width: 100%;
+    object-fit: cover;
+    aspect-ratio: 1;
 }
 
 /* mess of random tests ----------------------------------------------------- */
@@ -163,7 +171,7 @@ textarea {
 }
 
 button {
-    background-color: rgb(219, 241, 252);
+    background-color: var(--muted);
     border: none;
     border-radius: .5em;
     cursor: pointer;
@@ -174,11 +182,11 @@ button {
 
 button:hover, 
 button:focus {
-    background-color: rgb(80, 195, 218);
+    background-color: var(--focus);
 }
 
 button:active {
-	background-color: rgb(105 210 231);
+	background-color: var(--active);
 	transform: translateY(3px);
 }
 
