@@ -11,30 +11,21 @@
     <link rel="alternate stylesheet" media="all" title="black" href="css/theme-black.css" />
 </head>
 <body>
-<header class="page-header" role="banner">
-    <nav class="cell page-nav" role="navigation">
-        <a href="dryrtest.html"><h1 class="nomen">&#8962; Dryr </h1></a>
+<div class="tortilla">
+<nav class="page-header" role="navigation">
+        <a href="dryrtest.html">&#8962; Home</a>
         <a href="#">&#x270d; Post</a> 
         <a href="#" id="mailbox" class="mailbox">&#x2709; Mail</a> 
         <a href="#">@username</a> 
         <a href="#">&#x21af; Settings</a> 
         <a href="#">&#x2205; Log out</a>
-    </nav>
     <form name="searchform" class="search-form" method="POST" action="search.php">
         <input type="search" name="searchbox" class="search-box" placeholder="Search" />
         <input type="hidden" name="stage" value="process" />
     </form>
-</header>
-
-<!-- MAIN ----------------------------------------------------------------- -->
-
+</nav>
 <main>
-
 <article class="post">
-    <section class="post-icon">
-        <p><a href="#"><img src="img/summer-11.png" alt="usericon" /></a> Username</p> 
-    </section>
-
     <section class="post-content">
     <p>
     Pick a theme: 
@@ -45,9 +36,9 @@
     <button onclick="setActiveStyleSheet('black'); return false;">Darkness</button>
     </p>
     
-    <h3>Target browsers 2023</h3>
+    <h3>Target browsers 2024</h3>
     <ul>
-        <li>Firefox 110+</li>
+        <li>Firefox 120+</li>
         <li>Chrome 110+</li>
         <li>Safari 16+</li>
     </ul>
@@ -96,12 +87,8 @@
     <section class="post-controls">
         <button type="button" class="ctrl-btn">&#x21bb; Reblog</button>
         <button type="button" class="ctrl-btn" id="like">&#x2714; Like</button>
-        <button type="button" class="ctrl-btn">&#x2764; Sympathy</button>
-        <button type="button" class="ctrl-btn">&#x2718; Disagree</button>
     </section>
-    
 </article>
-
 
 <article class="post">
     <section class="post-icon">
@@ -131,12 +118,8 @@
     <section class="post-controls">
         <button type="button">&#x21bb; Reblog</button>
         <button type="button">&#x2714; Like</button>
-        <button type="button">&#x2764; Sympathy</button>
-        <button type="button">&#x2718; Disagree</button>
     </section>
-    
 </article>
-
 
 <article class="post">
     <section class="post-icon">
@@ -175,66 +158,19 @@
     <section class="post-controls">
         <button type="button">&#x21bb; Reblog</button>
         <button type="button">&#x2714; Agree</button>
-        <button type="button">&#x2764; Sympathy</button>
-        <button type="button">&#x2718; Disagree</button>
     </section>
 </article>
-
-
 <article class="post">
     <section class="post-icon">
     <img src="img/summer-13.png" alt="usericon" />
     </section>
     
     <section class="post-content">
-    <h2>Code sample</h2>
-    <p>
-    Here's the CSS I use on my bookmarks page:
-    </p>
-<pre>
-<code class="language-css">
-body {
-    background-color: #111;
-    color: #fff;
-    font-family: "Source Code Pro", "DejaVu Sans Mono", monospace;
-    font-size: 1.2em;
-    margin: 0 auto;
-    max-width: 600px;
-}
-a {
-    color: #eee;
-    text-decoration: none;
-    display: list-item;
-    list-style-type: none;
-}
-a:hover {
-    color: #0f0;
-}
-p {
-    border: 1px solid #2f4f4f;
-    border-radius: 15px;
-    padding: 1em;
-    line-height: 200%;
-}
-</code>
-<code class="language-javascript">
-// a simple AJAXian script to change bg color on clicked buttons. 
-// We also need to change tense, so "like" becomes "liked", etc. 
-
-var $ = document.querySelectorAll.bind(document);
-Element.prototype.on = Element.prototype.addEventListener;
-$('#like')[0].on('click', addClass);
-
-function addClass(){
-  var className = "activated";
-  if (this.classList) {
-    this.classList.add(className);
-  } else {
-    this.className += ' ' + className;
-  }
-}
-</code>
-</pre>
+    <h2>Long text</h2>
+    <p class="leader">SASS seemslike a good idea until you're fiddling and have to keep rerunning it in command line plus refreshing.</p>
+    <p>Trying to copy the Twitter/Tumblr fixed sticky menu on the left is something I haven't done. I got it to work on the txtadv page tho.</p>
+    <p>But there I left everything un-centered and it seems you have to wrap an extra layer to do that which is annoying.</p>
+    <p>It is possible Twitter isn't fixed, and no telling what Tumblr does because it makes my CPU rev up like a jet.</p>
     </section>
     
     <section class="post-tags">
@@ -248,38 +184,11 @@ function addClass(){
     <section class="post-controls">
         <button type="button">&#x21bb; Reblog</button>
         <button type="button">&#x2714; Agree</button>
-        <button type="button">&#x2764; Sympathy</button>
-        <button type="button">&#x2718; Disagree</button>
     </section>
 </article>
-
-<!-- PAGINATION ----------------------------------------------------------- -->
-
-<div class="pagination">
-    <button class="pagination-button">&#x2708; Previous</button>
-    <button class="pagination-button">Next &#x2708;</button>
-</div>
-
 </main>
-
-<!-- FOOTER --------------------------------------------------------------- -->
-
-<footer class="page-footer">
-    <p>
-        Missing links: 
-        <a href="#">Help</a>
-        <a href="#">Bug bounty</a>
-        <a href="#">TOS</a>
-        <a href="#">Username</a> 
-        <a href="#">Settings</a> 
-        <a href="#">Stats</a>
-        <a href="#">Friends</a>
-    </p>
-</footer>
-<!-- JAVASCRIPT AREA ..................................................... -->
+</div>
 <script src="js/addClass.js"></script>
 <script src="js/styleswitcher.js"></script>
-<script src="js/prism.js"></script>
-
 </body>
 </html>
