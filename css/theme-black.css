@@ -19,13 +19,6 @@ body {
   justify-content: center;
 }
 
-.tortilla {
-  max-width: 60em;
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  gap: 1em;
-}
-
 /* 2: HEADER AND FOOTER ----------------------------------------------------- */
 .page-header {
   padding: 1em;
@@ -37,19 +30,21 @@ body {
 }
 
 @media screen and (min-width: 900px) {
+  .tortilla {
+    max-width: 60em;
+    display: grid;
+    grid-template-columns: 12em 48em;
+    gap: 1em;
+  }
   .page-header {
     flex-direction: column;
     justify-content: flex-start;
     position: sticky;
     top: 0;
     max-height: 24em;
+    z-index: 9;
   }
 }
-.page-footer {
-  margin-top: 1em;
-  padding: 0.5em;
-}
-
 .page-header a {
   text-decoration: none;
 }
@@ -118,11 +113,22 @@ th {
 }
 
 /* SECTION 6: FORM ELEMENTS ------------------------------------------------- */
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  margin: 0;
+}
+
 button {
   color: inherit;
-  font: inherit;
   padding: 0.25em;
   cursor: pointer;
+}
+
+input {
+  max-width: 10em;
 }
 
 label {
@@ -133,18 +139,6 @@ label {
 
 legend {
   font-weight: bold;
-}
-
-/* SECTION 7 ---------------------------------------------------------------- */
-.pagination {
-  display: flex;
-  flex-flow: row wrap;
-}
-
-.pagination-button {
-  padding: 0.5em;
-  border-radius: 10px;
-  flex: 1;
 }
 
 /* http://prismjs.com/download.html?themes=prism-okaidia&languages=markup+css+clike+javascript+php+python+scss */
