@@ -167,3 +167,9 @@ button {
     opacity: 0.5;
 }
 
+.bdfilter {
+    background-color: hsla(28, 100%, 55%, 0.4);
+    backdrop-filter: brightness(150%);
+}
+
+

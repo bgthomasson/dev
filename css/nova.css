@@ -31,6 +31,12 @@
     }
 }
 
+/* there is also 
+*  accent-color: rgb(1 2 3); 
+*  caret-color: rgb(1 2 3)
+*  though the default seems fine with the fairly simple color scheme I have here 
+*/
+
 html {
 	font-size: 1rem;
     box-sizing: border-box;
