@@ -1,7 +1,43 @@
-/* instead of bleeding edge I'll keep this sorta old for core layout, 2015 compatible. 
- * That should cover any old company devices, plus still get to use flexbox (except IE11 of course)
- * note IE11 -does- support HSL() but it turns out commas are now "legacy version" lol. 
-*/
+/* start with variables */
+:root {
+    --bg1: rgb(40, 51, 80);
+    --bg2: rgb(12, 16, 18);
+    --percent1: 12.5%;
+    --percent2: 25%; 
+    --font-sans: 'Noto Sans', 'Open Sans', sans-serif;
+    --font-serif: Merriweather, Cambria, Georgia, serif;
+    --font-mono: 'Oxygen Mono', Consolas, 'Courier New', Courier, monospace;
+}
+
+:root:has(#color [value="amethyst"]:checked) {
+    --bg1: rgb(150, 90, 172);
+    --bg2: rgb(78, 39, 94);
+}
+
+:root:has(#color [value="fire"]:checked) {
+    --bg1: rgb(209, 20, 6);
+    --bg2: rgb(201, 69, 8);
+}
+
+:root:has(#color [value="gold"]:checked) {
+    --bg1: rgb(238, 215, 114);
+    --bg2: rgb(243, 194, 59);
+}
+
+:root:has(#color [value="minty"]:checked) {
+    --bg1: rgb(192, 214, 194);
+    --bg2: rgb(143, 181, 143);
+}
+
+:root:has(#theme [value="pb"]:checked) {
+    --percent1: 6.25%;
+    --percent2: 12.5%; 
+}
+
+:root:has(#theme [value="pc"]:checked) {
+    --percent1: 3%;
+    --percent2: 6.25%; 
+}
 
 html {
     font-size: 1rem;
@@ -12,33 +48,26 @@ html {
 *::before,
 *::after {
     box-sizing: inherit;
-    border: 0;
-    margin: 0;
 }
 
 body {
-    font-family: Cambria, Merriweather, serif;
-    line-height: 1.4;
+    font-family: var(--font-serif);
+    line-height: 1.3;
     background-color: hsl(0, 0%, 2%);
     color: hsl(225, 40%, 98%);
-    max-width: 40em;
+    max-width: 60ch;
     margin: 0 auto;
-    padding-inline: 1em;
 }
 
 section {
-    margin-bottom: 108px; 
-    padding: 16px; 
-}
-
-article > p {
-    padding: 1em 0;
+    margin-bottom: 4em; 
+    padding: 1em; 
 }
 
 .neon {
     color: hsl(48, 94%, 74%);
-    font-family: "Lato Black", "Noto Sans", Candara, sans-serif;
-    font-size: 3em;
+    font-family: var(--font-sans);
+    font-size: 4em;
     text-align: center;
     text-shadow:
       0 0 7px hsl(31, 87%, 69%),
@@ -78,6 +107,7 @@ button {
     font-weight: 700;
     margin: 0;
     padding: .5em 1em;
+    transition: all 0.1s;
 }
 
 .backlit-button {
@@ -92,7 +122,8 @@ button {
 
 .backlit-button:active {
     background-color: hsl(206, 97%, 15%);
-    box-shadow: 0 0 18px hsl(206, 24%, 61%), 0 0 36px hsl(206, 45%, 83%);
+    box-shadow: 0 0 18px hsl(206, 66%, 86%), 0 0 36px hsl(204, 100%, 98%);
+    transform: translateY(6px);
 }
 
 .neon-button {
@@ -105,6 +136,13 @@ button {
     background-color: hsl(51, 96%, 10%);
     border: hsl(51, 76%, 83%) 4px solid;
     box-shadow: inset 0 0 18px 0 hsl(51, 62%, 80%), 0 0 18px 0 hsl(51, 66%, 66%);
+}
+
+.neon-button:active {
+    background-color: hsl(51, 96%, 10%);
+    border: hsl(51, 100%, 50%) 4px solid;
+    box-shadow: inset 0 0 18px 0 hsl(51, 100%, 84%), 0 0 18px 0 hsl(51, 100%, 66%);
+    transform: translateY(6px);
 }
 
 
@@ -144,32 +182,19 @@ button {
     opacity: 0.5;
 }
 
-
-.bg2 {
-    background: linear-gradient(45deg, hsl(206, 96%, 20%), hsl(6, 96%, 20%));
+.side-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1ch;
 }
 
-.bg2::before, 
-.bg2::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    background: inherit;
-}
-
-.bg2::before {
-    filter: blur(1em);
-}
-
-.bg2::after {
-    filter: blur(2.5m);
-    opacity: 0.5;
-}
-
-.bdfilter {
-    background-color: hsla(28, 100%, 55%, 0.4);
-    backdrop-filter: brightness(150%);
+.kaleido {
+    background-color: var(--bg1);
+    background-image: repeating-conic-gradient(var(--bg1) 0 var(--percent1), var(--bg2) 0 var(--percent2));
+    background-size: 48px 48px;
+    width: auto;
+    height: 50ch;
 }
 
 

@@ -8,7 +8,7 @@
 </head>
 <body>
     <section class="neon">
-        <h1>Open All Hours</h1>
+        <p>Open All Hours</p>
     </section>
     <section class="frilly">
         <article>
@@ -49,13 +49,25 @@
         </article>
     </section>
     <section>
-        <article class="card bg2">
-            <h2 class="card__title">Stunning Graphics</h2>
-            <p>A line of filler text goes here, Lorem ipsum, et cetera, ad infinitum.</p>
-        </article>
-    </section>
-    <section class="bdfilter">
-        <h2>Backdrop Filter</h2>
+        <div class="side-flex">
+            <label class="theme-picker">Color picker:
+                <select data-theme-picker name="colorpicker" id="color">
+                    <option value="system">Blue</option>
+                    <option value="amethyst">Amethyst</option>
+                    <option value="fire">Fire</option>
+                    <option value="gold">Gold</option>
+                    <option value="minty">Minty</option>
+                </select>
+            </label>
+            <label class="theme-picker">Pattern picker:
+                <select data-theme-picker name="themepicker" id="theme">
+                    <option value="pa">choice A</option>
+                    <option value="pb">choice B</option>
+                    <option value="pc">choice C</option>
+                </select>
+            </label>
+        </div>
+        <div class="kaleido"></div>
     </section>
 </body>
 </html>
